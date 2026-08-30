@@ -1,8 +1,14 @@
 # 302math 忽略清单
 #
-# 口径（2026-08-30 改定）：这个仓库要在服务器与 Windows 之间做全量同步，
-# 所以**数据一律入库**——study.db、真题原始 HTML、MinerU 解析产物、
-# 880 裁图、mvp 单页、.env.local 都提交。只排除跨平台不可用的产物和运行期噪声。
+# 口径（2026-08-30 二次改定）：全量同步阶段已结束。仓库里已入库的那份
+# study.db + 真题 HTML + MinerU 产物 + 880 分卷快照原样保留（这样 clone 下来
+# 就是个能跑的完整项目），但**此后新产生的数据不再入库**——见文件末尾的忽略段。
+#
+# study.db 已被 git 追踪，写 .gitignore 对它无效（.gitignore 只管未追踪文件），
+# 改用 skip-worktree 屏蔽它的后续变更：
+#     git update-index --skip-worktree backend/data/study.db
+# 恢复追踪用 --no-skip-worktree。注意这标记存在本机 .git/index 里、不随仓库
+# 分发，换机器 clone 后需要重新设一次。
 
 # 跨平台不可用（内含 Linux 绝对路径 / 平台专用二进制，两端各自重建）
 backend/.venv/
@@ -27,3 +33,8 @@ backend/data/study.backup-*.db
 # 已拆成 assets/880-answers/part.* 分卷提交，用该目录下的 restore 脚本还原
 # （还原出来的就是下面这个文件，所以排除它避免重复入库）。详见该目录 README。
 【PDF】27版880参考答案(1).pdf
+
+# 此后新增的学习数据不再入库。已入库的旧文件不受这里影响（.gitignore 不作用于
+# 已追踪文件），仓库里那份快照照旧在；这几条只挡住之后新抓的真题和新跑的解析产物。
+backend/data/raw/
+backend/_mineru_*/
