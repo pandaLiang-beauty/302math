@@ -1,30 +1,29 @@
-# 密钥 / 环境(绝不入库)
-.env.local
-.env
+# 302math 忽略清单
+#
+# 口径（2026-08-30 改定）：这个仓库要在服务器与 Windows 之间做全量同步，
+# 所以**数据一律入库**——study.db、真题原始 HTML、MinerU 解析产物、
+# 880 裁图、mvp 单页、.env.local 都提交。只排除跨平台不可用的产物和运行期噪声。
 
-# 数据与运行期
-backend/data/study.db
-backend/data/*.db-*
-backend/data/study.backup-*.db
-__pycache__/
+# 跨平台不可用（内含 Linux 绝对路径 / 平台专用二进制，两端各自重建）
+backend/.venv/
+.venv/
+frontend/node_modules/
+
+# 字节码
+**/__pycache__/
 *.pyc
+
+# 运行期噪声
 *.log
 *.pid
 
-# Python 虚拟环境
-backend/.venv/
-.venv/
+# SQLite 边车文件：提交前用 PRAGMA wal_checkpoint(TRUNCATE) 折进 study.db。
+# 本项目 journal_mode=delete，一般不会出现，留着兜底。
+backend/data/*.db-wal
+backend/data/*.db-shm
+backend/data/study.backup-*.db
 
-# MinerU 解析中间产物(体积大,可重跑)
-backend/_mineru_*/
-
-# mvp 生成的单文件页面(build.py 可重新生成)
-mvp/index.html
-
-# 生成物:李林880 裁图、前端构建
-frontend/880/
-frontend/dist/
-
-# 原始资料(体积大,另行备份)
-backend/data/raw/
-*.pdf
+# 232M 的《27版880参考答案》原件超过 Gitee 单文件 100M 上限，不能直接入库。
+# 已拆成 assets/880-answers/part.* 分卷提交，用该目录下的 restore 脚本还原
+# （还原出来的就是下面这个文件，所以排除它避免重复入库）。详见该目录 README。
+【PDF】27版880参考答案(1).pdf
