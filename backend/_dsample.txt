@@ -1,0 +1,89 @@
+共 83 道
+
+===== 导数与微分的概念 =====
+[math2 2009 #9 blank] （填空题）曲线{x=∫01−t​e−u2duy=t2ln(2−t2)​在 t=1 处的切线方程为
+[math2 2011 #2 choice] 已知 f(x) 在 x=0 处可导，且 f(0)=0 ，则x→0lim​x3x2f(x)−2f(x3)​等于（ ）
+[math3 2011 #2 choice] 设函数 f(x) 在 x=0 处可导，且 f(0)=0 ，则x→0lim​x3x2f(x)−2f(x3)​=()
+[math2 2015 #3 choice] 设函数f(x)={xαcosxβ1​,0,​x>0(α>0,β>0)x≤0​ ，f′(x) 在 x=0 处连续的充要条件是
+[math2 2016 #5 choice] 设函数 fi​(x) (i=1,2) 具有二阶连续导数，且 fi′′​(x0​)&lt;0 (i=1,2) ，若两条曲线 y=fi​(x) (i=1,2) 在点 (x0​,y0​) 处具有公切线 y=g(x) ，且在该点
+[math3 2017 #11 blank] （填空题）设生产某产品的平均成本为 Cˉ(Q)=1+e−Q ，其中产量为 Q ，则边际成本为 ​ 。
+[math1 2018 #1 choice] 下列函数中，在 x=0 处不可导的是（ ）
+[math2 2018 #2 choice] 下列函数在 x=0 处不可导的是
+[math3 2018 #1 choice] 下列函数中，在 x=0 处不可导的是（ ）。
+[math3 2018 #12 blank] （填空题）设函数 f(x) 满足f(x+Δx)−f(x)=2xf(x)Δx+o(Δx),且 f(0)=2 ，则 f(1)=
+[math1 2019 #2 choice] 设函数 f(x)={x∣x∣,xlnx,​x≤0x>0​ 则 x=0 是 f(x) 的
+[math1 2020 #2 choice] 设函数 f(x) 在区间 (−1,1) 内有定义,且 limx→0​f(x)=0 ,则
+[math3 2021 #2 choice] 设函数f(x)={xex−1​,1,​x0x=0​在 x=0 处
+[math2 2022 #17 subjective] （本题满分 10 分）已知函数 f(x) 在 x=1 处可导且x→0lim​x2f(ex2)−3f(1+sin2x)​=2求 f′(1) 。
+[math2 2023 #17 subjective] （本题满分 10 分）设曲线 L:y=y(x) (x>c) 经过点 (c2,0) 。 L 上任一点 P(x,y) 到 y 轴的距离等于该点处的切线在 y 轴上的截距。(1) 求 y(x) ；(2) 在 L 上求一点，使得
+[math1 2024 #4 choice] 设函数 f(x) 在区间 (−1,1) 上有定义，且 x→0lim​f(x)=0 ，则( )
+[math2 2025 #7 choice] 设函数 f(x) 连续，给出下列 4 个条件：① x→0lim​x∣f(x)∣−f(0)​ 存在；② x→0lim​xf(x)−∣f(0)∣​ 存在；③ x→0lim​x∣f(x)∣​ 存在；④ x→0lim​x∣f(x
+[math2 2025 #18 subjective] （本题满分12分）设函数 f(x) 在 x=0 处连续，且 x→0lim​ln(1+x)+ln(1−x)xf(x)−e2sinx+1​=−3 。证明 f(x) 在 x=0 处可导，并求 f′(0) 。
+[math3 2025 #18 subjective] （本题满分 12 分）设函数 f(x) 在 x=0 处连续，且x→0lim​ln(1+x)+ln(1−x)xf(x)−e2sinx+1​=−3证明： f(x) 在 x=0 处可导，并求 f′(0) 。
+===== 导数与微分的计算 =====
+[math1 2008 #1 choice] 设函数 f(x)=∫0x2​ln(2+t)dt ，则 f′(x) 的零点个数为（）。
+[math2 2009 #12 blank] （填空题）设 y=y(x) 是由方程 xy+ey=x+1 确定的函数，则 dx2d2y​​x=0​=
+[math2 2010 #11 blank] （填空题）函数 y=ln(1−2x) 在 x=0 处的 n 阶导数 y(n)(0)=
+[math2 2010 #17 subjective] （本题满分 10 分）设 y=f(x) 由参数方程{x=2t+t2y=ψ(t)​（ t>−1 ）所确定， ψ(1)=25​ ， ψ′(1)=6 ，已知 dx2d2y​=4(1+t)3​ ，求 ψ(t) 。
+[math3 2010 #9 blank] （填空题）设可导函数 y=y(x) 由方程∫0x+y​e−t2dt=∫0x​xsint2dt所确定，则dxdy​​x=0​=
+[math1 2012 #2 choice] 设函数 f(x)=(ex−1)(e2x−2)⋯(enx−n) ，其中 n 为正整数，则 f′(0)=
+[math2 2012 #2 choice] 设函数 f(x)=(ex−1)(e2x−2)⋯(enx−n) ，其中 n 为正整数，则 f′(0)=
+[math2 2012 #9 blank] （填空题）设 y=y(x) 是由方程 x2−y+1=ey 所确定的隐函数，则 ​dx2d2y​​x=0​=
+[math3 2012 #2 choice] 设函数 f(x)=(ex−1)(e2x−2)⋯(enx−n) ，其中 n 为正整数，则 f′(0)=
+[math3 2012 #10 blank] （填空题）设函数f(x)={lnx​,2x−1,​x≥1x&lt;1​y=f(f(x)) ，求 dxdy​​x=0​ 。
+[math1 2013 #9 blank] （填空题）设函数 y=f(x) 由方程 y−x=ex(1−y) 确定，则 limn→∞​n[f(n1​)−1]=
+[math1 2013 #11 blank] （填空题）设{x=sinty=tsint+cost​（ t 为参数），求dx2d2y​​t=4π​​=
+[math2 2013 #2 choice] 设函数 y=f(x) 由方程 cos(xy)+lny−x=1 确定，则n→∞lim​n[f(n2​)−1]=
+[math1 2014 #10 blank] （填空题）设 f(x) 是周期为 4 的可导奇函数，且 f′(x)=2(x−1) ， x∈[0,2] ，则 f(7)=
+[math2 2014 #10 blank] （填空题）设 f(x) 是周期为 4 的可导奇函数，且 f′(x)=2(x−1) ， x∈[0,2] ，则 f(7)=
+[math3 2014 #9 blank] （填空题）设某商品的需求函数为 Q=40−2p （ p 为商品的价格），则该商品的边际收益为
+[math1 2015 #18 subjective] （本题满分 10 分）(1) 设函数 u(x) ， v(x) 都可导，利用导数定义证明 (u(x)v(x))′=u′(x)v(x)+u(x)v′(x) ；(2) 设函数 u1​(x) ， u2​(x) ， ⋯ ， un​
+[math2 2015 #9 blank] （填空题）{x=arctanty=3t+t3​ ， 则 dx2d2y​​t=1​=
+[math3 2015 #19 subjective] （本题满分10分）(I) 设函数 u(x) 、 v(x) 可导，利用导数定义证明[u(x)v(x)]′=u′(x)v(x)+u(x)v′(x)(II) 设函数 u1​(x) 、 u2​(x) 、 ⋯ 、 un​(x) 可
+[math1 2016 #12 blank] （填空题）设函数 f(x)=arctanx−1+ax2x​ ，且 f′′(0)=1 ，则 a=
+[math2 2016 #13 blank] （填空题）已知动点 P 在曲线 y=x3 上运动，记坐标原点与点 P 间的距离为 l 。若点 P 的横坐标对时间的变化率为常数 v0​ ，则当点 P 运动到点 (1,1) 时， l 对时间的变化率是______。
+[math1 2017 #9 blank] （填空题）已知函数 f(x)=1+x21​ ，则 f(3)(0)= ______．
+[math2 2017 #10 blank] （填空题）设函数 y=y(x) 由参数方程{x=t+ety=sint​确定，则dx2d2y​​t=0​=______
+[math2 2019 #15 subjective] （本题满分 10 分）已知函数f(x)={x2κ,xex+1,​x>0x≤0​求 f′(x) ，并求 f(x) 的极值。
+[math3 2019 #15 subjective] （本题满分 10 分）已知函数f(x)={x2x,xex+1,​x>0,x≤0,​求 f′(x) 并讨论 f(x) 的极值情况。
+[math1 2020 #10 blank] （填空题）若 {x=t2+1​,y=ln(t+t2+1​),​ 则 dx2d2y​​t=1​=
+[math2 2020 #9 blank] （填空题）若{x=t2+1​,y=ln(t+t2+1​),​则 dx2d2y​​t=1​=
+[math1 2021 #12 blank] （填空题）设函数 y=y(x) 由参数方程 {x=2et+t+1,y=4(t−1)et+t2​ 所确定，则 dx2d2y​​t=0​= ______。
+[math2 2021 #12 blank] （填空题）已知参数方程{x=2et+t+1,y=4(t−1)et+t2​，求 dx2d2y​​t=0​=
+[math3 2021 #11 blank] （填空题）若 y=cos(e−x​) ，求 dxdy​ 在 x=1 处的值。
+[math3 2021 #15 blank] （填空题）设f(x)=​x122​xx1−1​12x1​2x−11x​​,求展开式中 x3 项的系数。
+[math3 2022 #13 blank] （填空题）已知函数 f(x)=esinx+e−sinx ，则 f′′′(2π)= ______。
+[math1 2023 #3 choice] 设函数 y=f(x) 由{x=2t+∣t∣y=∣t∣sint​确定，则（ ）
+[math2 2023 #5 choice] 设函数 y=f(x) 由{x=2t+∣t∣y=∣t∣sint​确定，则
+[math2 2023 #14 blank] （填空题）曲线 3x3=y5+2y3 在 x=1 对应点处的法线斜率为 ​ 。
+[math2 2024 #14 blank] （填空题）已知函数 f(x)=x2(ex−1) ,则 f(5)(1)=
+[math2 2025 #14 blank] （填空题）已知函数 y=y(x) 由{x=ln(1+2t)2t−∫1y+t2​e−u2du=0​确定，则 dxdy​​t=0​= ______ 。
+[math1 2026 #13 subjective] 设函数 y=y(x) 由参数方程{x=2sin2ty=t+cost​(t∈(0,2π​))确定，则 dx2d2y​​t=4π​​= ____________。
+[math2 2026 #6 choice] 已知函数 f(x)=∫1x​1+t2et​dt ， f 的反函数为 g ，则（ ）
+===== 导数的几何意义 =====
+[math1 2008 #10 blank] （填空题）曲线 sin(xy)+ln(y−x)=x 在点 (0,1) 处的切线方程为
+[math2 2008 #11 blank] （填空题）曲线 sin(xy)+ln(y−x)=x 在点 (0,1) 处的切线方程是
+[math3 2009 #12 blank] （填空题）设某产品的需求函数为 Q=Q(P) ，其对应价格 P 的弹性 ξP​=0.2 ，则当需求量为 10000 件时，价格增加 1 元会使产品收益增加
+[math2 2010 #3 choice] 曲线 y=x2 与曲线 y=alnx (a=0) 相切，则 a=()
+[math3 2011 #11 blank] （填空题）设 tan(x+y+4π​)=ey ，则在 (0,0) 处的切线方程为___
+[math1 2012 #18 subjective] （本题满分 10 分）已知曲线 L:{x=f(t)y=cost​(0≤t&lt;2π​) ，其中函数 f(t) 具有连续导数，且 f(0)=0 ， f′(t)>0 (0&lt;t&lt;2π​) 。若曲线 L 的切线与 
+[math2 2012 #13 blank] （填空题）曲线 y=x2+x （ x&lt;0 ）上曲率为 22​​ 的点的坐标是 ______
+[math2 2013 #12 blank] （填空题）曲线{x=arctanty=ln1+t2​​在 t=1 处的法线方程为
+[math3 2013 #18 subjective] （本题满分 10 分）设生产某产品的固定成本为6000元，可变成本为20元/件，价格函数为 P=60−1000Q​ （ P 是单价，单位：元； Q 是销量，单位：件）。已知产销平衡，求：该产品的边际利润。当 P=50 时
+[math2 2014 #12 blank] （填空题）曲线 L 的极坐标方程是 r=θ ，则 L 在点 (r,θ)=(2π​,2π​) 处的切线的直角坐标方程是 ____________。
+[math3 2015 #18 subjective] （本题满分10分）设函数 f(x) 在定义域 I 上的导数大于零。若对任意的 x0​∈I ，曲线 y=f(x) 在点 (x0​,f(x0​)) 处的切线与直线 x=x0​ 及 x 轴所围成区域的面积恒为 4，且 f(0)
+[math1 2017 #2 choice] 设函数 f(x) 可导，且 f(x)f′(x)>0 ，则（）
+[math2 2017 #21 subjective] （本题满分 11 分）设 y(x) 是区间 (0,23​) 内的函数， y(1)=0 ，设 P 是曲线 y=y(x) 上任意一点，曲线在点 P 处的切线与 y 轴相交于点 (0,YP​) ，法线与 x 轴相交于点 (XP
+[math3 2017 #3 choice] 设函数 f(x) 是可导函数，且满足 f(x)f′(x)>0 ，则（ ）
+[math2 2018 #12 blank] （填空题）曲线 {x=cos3t,y=sin3t​ 在 t=4π​ 处的曲率为（ ）。
+[math2 2019 #10 blank] （填空题）曲线{x=t−sint,y=1−cost​在 t=23π​ 对应点处的切线在 y 轴上的截距为（ ）
+[math2 2020 #21 subjective] （本题满分 11 分）设函数 f(x) 可导，且 f′(x)>0 (x≥0) ，过原点 O ，其上任意一点 M 处的切线与 x 轴交于 T ， MP⊥x 轴于点 P ，已知由曲线 y=f(x) 、直线 MP 以及 x 轴
+[math3 2020 #10 blank] （填空题）曲线 x+y+e2xy=0 在点 (0,−1) 处的切线方程为
+[math1 2023 #17 subjective] （本题满分 10 分）设曲线 y=y(x)(x>0) 经过点 (1,2) ，该曲线上任一点 P(x,y) 到 y 轴的距离等于该点处的切线在 y 轴上的截距.（1） 求 y(x) ；（2） 求函数 f(x)=∫1x​y(
+[math2 2023 #20 subjective] （本题满分 12 分）设平面有界区域 D 位于第一象限,由曲线 x2+y2−xy=1,x2+y2−xy=2 与直线 y=3​x 、 y=0 围成,计算 ∬D​3x2+y21​dxdy
+[math2 2024 #2 choice] 已知参数方程{x=1+t3y=et2​确定函数 y=f(x) ，则 limx→+∞​x[f(2+x2​)−f(2)]=
+[math1 2025 #19 subjective] （本题满分12分）设函数 f(x) 在区间 (a,b) 内可导.证明导函数 f′(x) 在 (a,b) 内严格单调增加的充分必要条件是:对 (a,b) 内任意的 x1​,x2​,x3​ ，当 x1​&lt;x2​&lt;
+[math2 2025 #2 choice] 已知函数 f(x)=∫0x​et2sintdt ， g(x)=∫0x​et2dt⋅sin2x ，则
+===== 导数的计算 =====
+[math2 2008 #1 choice] 设函数 f(x)=x2(x−1)(x−2) ，求 f′(x) 的零点个数为
+[math2 2022 #12 blank] （填空题）已知函数 y=y(x) 由方程 x2+xy+y3=3 确定，则 y′′(1)=

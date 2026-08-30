@@ -1,0 +1,30 @@
+# 密钥 / 环境(绝不入库)
+.env.local
+.env
+
+# 数据与运行期
+backend/data/study.db
+backend/data/*.db-*
+backend/data/study.backup-*.db
+__pycache__/
+*.pyc
+*.log
+*.pid
+
+# Python 虚拟环境
+backend/.venv/
+.venv/
+
+# MinerU 解析中间产物(体积大,可重跑)
+backend/_mineru_*/
+
+# mvp 生成的单文件页面(build.py 可重新生成)
+mvp/index.html
+
+# 生成物:李林880 裁图、前端构建
+frontend/880/
+frontend/dist/
+
+# 原始资料(体积大,另行备份)
+backend/data/raw/
+*.pdf
