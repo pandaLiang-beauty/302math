@@ -1,4 +1,6 @@
-"""数二·题型体系 后端:API + 托管前端。单端口 127.0.0.1:8200。
+"""数二·题型体系 后端:API + 托管前端。后端 127.0.0.1:8302。
+前后端分离双端口:前端另起 scripts/local_frontend_proxy.py 在 5302(静态 + /api 反代),
+对外只暴露 5302;下面 app.mount('/') 那份托管是本机直连后端时的备用入口。
 路由:体系树 / 具体点 / 题型(讲解+题簇)/ 单题解析 / 记录作答 / 掌握标记 / 复习推荐 / 统计。
 run: python server.py   （或 uvicorn server:app --reload）
 """
@@ -353,4 +355,6 @@ app.mount('/', StaticFiles(directory=FRONTEND, html=True), name='frontend')
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host='127.0.0.1', port=8200)
+    # 端口口径：前端 5+科目代码、后端 8+科目代码（302 → 5302/8302），子域能直接推出端口。
+    # 前端由 scripts/local_frontend_proxy.py 独立起在 5302，Cloudflare Tunnel 只指前端。
+    uvicorn.run(app, host='127.0.0.1', port=int(os.environ.get('STUDY_BACKEND_PORT', '8302')))
