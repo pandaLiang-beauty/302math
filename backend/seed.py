@@ -92,6 +92,7 @@ def main():
              json.dumps(jj.get('pitfalls', []), ensure_ascii=False),
              1 if jj else 0))
 
+    db.sync_880_fallback_types(conn)
     conn.commit()
     nq = conn.execute('SELECT COUNT(*) c FROM questions').fetchone()['c']
     nt = conn.execute('SELECT COUNT(*) c FROM types').fetchone()['c']

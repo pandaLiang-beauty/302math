@@ -8,9 +8,13 @@ import os
 import sys
 import json
 import re
+import threading
+import time
 import urllib.request
 import urllib.error
+from collections import deque
 from contextlib import asynccontextmanager
+from typing import Literal
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from fastapi import FastAPI, HTTPException                # noqa: E402
@@ -39,6 +43,9 @@ _load_env()
 LLM_BASE = (os.environ.get('GRADE_BASE_URL') or 'https://vyceai.com/v1').rstrip('/')
 LLM_KEY = os.environ.get('GRADE_API_KEY', '')
 LLM_MODEL = os.environ.get('GRADE_MODEL') or 'gpt-5.6-luna'
+AI_MAX_PER_HOUR = max(1, int(os.environ.get('STUDY_AI_MAX_PER_HOUR', '12')))
+_ai_calls = deque()
+_ai_lock = threading.Lock()
 
 
 def q(sql, args=()):
@@ -114,6 +121,7 @@ def tree():
         for k in ('tsub', 'tch', 'tpt'):
             t.pop(k, None)
         t['status'] = t['status'] or 'learning'
+        t['pending'] = db.is_pending_880_type(t['name'])
         subs.setdefault(subject, {}).setdefault(chapter, {}).setdefault(point or chapter, []).append(t)
 
     def sub_key(s):
@@ -170,6 +178,7 @@ def get_type(name: str):
             "FROM types WHERE name=?", (name,))
     if not t:
         raise HTTPException(404, '题型不存在')
+    t['pending'] = db.is_pending_880_type(t['name'])
     t['steps'] = json.loads(t.pop('steps_json'))
     t['pitfalls'] = json.loads(t.pop('pitfalls_json'))
     t['example_steps'] = json.loads(t.pop('example_steps_json'))
@@ -189,26 +198,35 @@ def question(id: int):
 
 class Attempt(BaseModel):
     question_id: int
-    result: str
+    result: Literal['correct', 'wrong', 'fuzzy']
+    reason: Literal['', 'idea', 'calculation', 'speed'] = ''
+    elapsed_seconds: int = 0
 
 
 @app.post('/api/attempt')
 def attempt(a: Attempt):
-    if a.result not in ('correct', 'wrong', 'fuzzy'):
-        raise HTTPException(400, 'result 非法')
-    write("INSERT INTO attempts(question_id,result) VALUES(?,?)", (a.question_id, a.result))
+    if not one("SELECT 1 FROM questions WHERE id=?", (a.question_id,)):
+        raise HTTPException(404, '题不存在')
+    if a.reason and a.result != 'wrong':
+        raise HTTPException(400, '错因只能记录在错题上')
+    if not 0 <= a.elapsed_seconds <= 24 * 60 * 60:
+        raise HTTPException(400, '作答用时非法')
+    write("INSERT INTO attempts(question_id,result,reason,elapsed_seconds) VALUES(?,?,?,?)",
+          (a.question_id, a.result, a.reason, a.elapsed_seconds))
     return {'ok': True}
 
 
 class TypeStatus(BaseModel):
     name: str
-    status: str
+    status: Literal['learning', 'mastered']
 
 
 @app.post('/api/type_status')
 def type_status(m: TypeStatus):
-    if m.status not in ('learning', 'mastered'):
-        raise HTTPException(400, 'status 非法')
+    if not one("SELECT 1 FROM types WHERE name=?", (m.name,)):
+        raise HTTPException(404, '题型不存在')
+    if db.is_pending_880_type(m.name):
+        raise HTTPException(400, '待归纳题簇不能标记掌握')
     write("INSERT INTO type_progress(type_name,status,updated_at) VALUES(?,?,CURRENT_TIMESTAMP) "
           "ON CONFLICT(type_name) DO UPDATE SET status=excluded.status,updated_at=CURRENT_TIMESTAMP",
           (m.name, m.status))
@@ -219,17 +237,20 @@ def type_status(m: TypeStatus):
 def review():
     wrong_types = q("""
       WITH latest AS (
-        SELECT question_id, result FROM attempts a
+        SELECT question_id, result, reason FROM attempts a
         WHERE a.id=(SELECT MAX(id) FROM attempts b WHERE b.question_id=a.question_id))
       SELECT q.type_name name, q.chapter,
              COUNT(*) wrong,
+             COALESCE(SUM(latest.reason='idea'),0) idea,
+             COALESCE(SUM(latest.reason='calculation'),0) calculation,
+             COALESCE(SUM(latest.reason='speed'),0) speed,
              (SELECT COUNT(*) FROM questions qq WHERE qq.type_name=q.type_name) total,
              (SELECT curated FROM types t WHERE t.name=q.type_name) curated
       FROM questions q JOIN latest ON latest.question_id=q.id
       WHERE latest.result='wrong'
         AND q.type_name NOT IN (SELECT type_name FROM type_progress WHERE status='mastered')
       GROUP BY q.type_name ORDER BY wrong DESC""")
-    recent = q("""SELECT a.question_id, q.type_name, q.paper, q.year, q.number
+    recent = q("""SELECT a.question_id, a.reason, q.type_name, q.paper, q.year, q.number
       FROM attempts a JOIN questions q ON q.id=a.question_id
       WHERE a.result='wrong' ORDER BY a.id DESC LIMIT 20""")
     seen = set()
@@ -307,7 +328,7 @@ def _llm(prompt: str) -> str:
 
 
 class Explain(BaseModel):
-    kind: str                # 'type' | 'question'
+    kind: Literal['type', 'question']
     name: str = ''
     question_id: int = 0
     force: bool = False
@@ -315,7 +336,18 @@ class Explain(BaseModel):
 
 @app.get('/api/llm_status')
 def llm_status():
-    return {'configured': bool(LLM_KEY), 'model': LLM_MODEL}
+    return {'configured': bool(LLM_KEY), 'model': LLM_MODEL, 'max_per_hour': AI_MAX_PER_HOUR}
+
+
+def _reserve_ai_call() -> None:
+    """Keep the optional temporary solver bounded even if an authenticated browser loops."""
+    now = time.monotonic()
+    with _ai_lock:
+        while _ai_calls and _ai_calls[0] <= now - 3600:
+            _ai_calls.popleft()
+        if len(_ai_calls) >= AI_MAX_PER_HOUR:
+            raise HTTPException(429, 'AI 临时试算已达到本小时上限，请稍后再试')
+        _ai_calls.append(now)
 
 
 @app.post('/api/explain')
@@ -328,6 +360,8 @@ def explain(e: Explain):
     if not LLM_KEY:
         raise HTTPException(400, '未配置大模型 key:请在 backend/.env.local 设置 GRADE_API_KEY 后重启')
     if e.kind == 'type':
+        if not one("SELECT 1 FROM types WHERE name=?", (e.name,)):
+            raise HTTPException(404, '题型不存在')
         probs = q("SELECT plain FROM questions WHERE type_name=? AND plain<>'' LIMIT 8", (e.name,))
         samples = '\n'.join('- ' + p['plain'][:200] for p in probs)
         prompt = ('你是考研数学(数二)辅导老师。下面是题型「%s」的若干同类题:\n%s\n\n'
@@ -343,6 +377,7 @@ def explain(e: Explain):
         prompt = ('你是考研数学(数二)辅导老师。请讲解这道题:\n%s\n\n%s'
                   '请给出:解题思路(为什么这样想)、关键步骤、最终答案。中文,简洁清楚。'
                   % (r['plain'], ('可参考的答案/解析:%s\n\n' % sol[:800]) if sol else ''))
+    _reserve_ai_call()
     content = _llm(prompt)
     write("INSERT INTO ai_explain(cache_key,content) VALUES(?,?) "
           "ON CONFLICT(cache_key) DO UPDATE SET content=excluded.content,created_at=CURRENT_TIMESTAMP",

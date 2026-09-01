@@ -105,21 +105,28 @@ def main():
                 gid += 1
                 pix = page.get_pixmap(clip=fitz.Rect(X_L, y - 6, X_R, bottom), matrix=fitz.Matrix(2, 2))
                 pix.save(os.path.join(IMG_DIR, '%d.png' % gid))
+                type_name = T.classify_880(chapter, txt, gid)
+                point = ''
+                if not type_name:
+                    type_name = db.fallback_880_type(chapter)
+                    point = '待归纳'
                 conn.execute(
                     "INSERT INTO questions(paper,year,number,qtype,subject,chapter,point,type_name,level,"
                     "stem_html,answer,answer_html,solution_html,score,source_url,plain) "
-                    "VALUES('lilin880',0,?,?,?,?,'',?,?,?,'','','',0,?,?)",
-                    (gid, qt, subject, chapter, T.classify_880(chapter, txt, gid), diff,
+                    "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                    ('lilin880', 0, gid, qt, subject, chapter, point, type_name, diff,
                      '<img class="p880" src="/880/%d.png" alt="李林880题">' % gid,
-                     '李林880·' + subject, txt))
+                     '', '', '', 0, '李林880·' + subject, txt))
         doc.close()
+    db.sync_880_fallback_types(conn)
     conn.commit()
     n = conn.execute("SELECT COUNT(*) c FROM questions WHERE paper='lilin880'").fetchone()['c']
     print('李林880 抽取完成:%d 道 → %s' % (n, IMG_DIR))
     print('  按难度:', {r['level']: r['c'] for r in conn.execute(
         "SELECT level,COUNT(*) c FROM questions WHERE paper='lilin880' GROUP BY level")})
-    print('  归入定积分应用:', conn.execute(
-        "SELECT COUNT(*) c FROM questions WHERE paper='lilin880' AND type_name<>''").fetchone()['c'], '道')
+    print('  已归入方法题型:', conn.execute(
+        "SELECT COUNT(*) c FROM questions WHERE paper='lilin880' "
+        "AND type_name NOT LIKE ?", (db.PENDING_880_PREFIX + '%' + db.PENDING_880_SUFFIX,)).fetchone()['c'], '道')
     conn.close()
 
 

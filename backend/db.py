@@ -4,6 +4,8 @@ import sqlite3
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(HERE, 'data', 'study.db')
+PENDING_880_PREFIX = '李林880·'
+PENDING_880_SUFFIX = '·待归纳'
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS questions(
@@ -49,6 +51,8 @@ CREATE TABLE IF NOT EXISTS attempts(
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
   question_id INTEGER NOT NULL,
   result      TEXT NOT NULL,                        -- correct | wrong | fuzzy
+  reason      TEXT NOT NULL DEFAULT '',             -- idea | calculation | speed
+  elapsed_seconds INTEGER NOT NULL DEFAULT 0,
   created_at  TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE INDEX IF NOT EXISTS idx_a_q ON attempts(question_id, id);
@@ -75,11 +79,59 @@ def connect() -> sqlite3.Connection:
     return conn
 
 
+def fallback_880_type(chapter: str) -> str:
+    """Stable, honest entry point for 880 questions not yet method-classified."""
+    return '%s%s%s' % (PENDING_880_PREFIX, chapter or '未分章', PENDING_880_SUFFIX)
+
+
+def is_pending_880_type(name: str) -> bool:
+    return name.startswith(PENDING_880_PREFIX) and name.endswith(PENDING_880_SUFFIX)
+
+
+def sync_880_fallback_types(conn) -> None:
+    """Make every 880 question reachable without pretending it has a fixed method.
+
+    Method-level classification is intentionally authored by hand. Until a question
+    has one, it belongs to its chapter's explicit “待归纳” cluster. This also repairs
+    databases created by older build_880.py versions which stored an empty type_name.
+    """
+    empty_rows = conn.execute(
+        "SELECT subject, chapter FROM questions "
+        "WHERE paper='lilin880' AND TRIM(type_name)='' "
+        "GROUP BY subject, chapter"
+    ).fetchall()
+    for row in empty_rows:
+        name = fallback_880_type(row['chapter'])
+        conn.execute(
+            "UPDATE questions SET type_name=?, point='待归纳' "
+            "WHERE paper='lilin880' AND subject=? AND chapter=? AND TRIM(type_name)=''",
+            (name, row['subject'], row['chapter']),
+        )
+
+    missing_rows = conn.execute(
+        "SELECT q.type_name, q.subject, q.chapter FROM questions q "
+        "LEFT JOIN types t ON t.name=q.type_name "
+        "WHERE q.paper='lilin880' AND q.type_name LIKE ? AND t.name IS NULL "
+        "GROUP BY q.type_name, q.subject, q.chapter",
+        (PENDING_880_PREFIX + '%' + PENDING_880_SUFFIX,),
+    ).fetchall()
+    for row in missing_rows:
+        conn.execute(
+            "INSERT OR IGNORE INTO types(name,subject,chapter,point,curated) VALUES(?,?,?,?,0)",
+            (row['type_name'], row['subject'], row['chapter'], '待归纳'),
+        )
+
+
 def init_db(conn) -> None:
     conn.executescript(SCHEMA)
     cols = {r[1] for r in conn.execute('PRAGMA table_info(questions)')}
     if 'plain' not in cols:
         conn.execute("ALTER TABLE questions ADD COLUMN plain TEXT NOT NULL DEFAULT ''")
+    acols = {r[1] for r in conn.execute('PRAGMA table_info(attempts)')}
+    for col, ddl in [('reason', "reason TEXT NOT NULL DEFAULT ''"),
+                     ('elapsed_seconds', 'elapsed_seconds INTEGER NOT NULL DEFAULT 0')]:
+        if col not in acols:
+            conn.execute('ALTER TABLE attempts ADD COLUMN ' + ddl)
     tcols = {r[1] for r in conn.execute('PRAGMA table_info(types)')}
     for col, ddl in [('intuition', "intuition TEXT NOT NULL DEFAULT ''"),
                      ('example_src', "example_src TEXT NOT NULL DEFAULT ''"),
@@ -90,4 +142,5 @@ def init_db(conn) -> None:
                      ('figures_json', "figures_json TEXT NOT NULL DEFAULT '[]'")]:
         if col not in tcols:
             conn.execute('ALTER TABLE types ADD COLUMN ' + ddl)
+    sync_880_fallback_types(conn)
     conn.commit()

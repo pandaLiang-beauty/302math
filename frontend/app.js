@@ -11,6 +11,47 @@ async function api(path, opts) {
 const post = (path, body) => api(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
 
 const RESULT_CN = { correct: '上次:对', wrong: '上次:错', fuzzy: '上次:模糊' };
+const WRONG_REASON_CN = { idea: '想不到', calculation: '算错', speed: '太慢' };
+const attemptIndicators = new Map();
+const attemptSaveErrors = new Map();
+
+function showAttemptIndicator(questionId, text = '', kind = '', retry = null) {
+  const indicator = attemptIndicators.get(Number(questionId));
+  if (!indicator) return;
+  indicator.textContent = text;
+  indicator.className = 'save-state ' + kind;
+  indicator.hidden = !text;
+  indicator.onclick = retry || null;
+  indicator.title = retry ? '点击重试保存' : '';
+}
+
+const attemptSaveQueue = window.MathAttemptSaveQueue.createAttemptSaveQueue({
+  save: (entry) => post('/attempt', { question_id: entry.questionId, ...entry.payload }),
+  onStateChange: ({ questionId, pending, active }) => {
+    if (attemptSaveErrors.has(questionId)) return;
+    showAttemptIndicator(questionId, pending || active ? '记录保存中…' : '', pending || active ? 'saving' : '');
+  },
+  onError: (error, entry) => {
+    const message = error?.message || '记录保存失败';
+    attemptSaveErrors.set(entry.questionId, message);
+    showAttemptIndicator(entry.questionId, '记录未保存，点击重试', 'error', () => {
+      attemptSaveErrors.delete(entry.questionId);
+      showAttemptIndicator(entry.questionId, '正在重试保存…', 'saving');
+      void attemptSaveQueue.retryQuestion(entry.questionId);
+    });
+  },
+  onSuccess: (entry) => {
+    attemptSaveErrors.delete(entry.questionId);
+    void renderStats();
+    void renderSidebar();
+  },
+});
+
+window.addEventListener('beforeunload', (event) => {
+  if (!attemptSaveQueue.hasPendingChanges()) return;
+  event.preventDefault();
+  event.returnValue = '';
+});
 const KATEX_OPTS = {
   delimiters: [{ left: '$$', right: '$$', display: true }, { left: '\\[', right: '\\]', display: true },
   { left: '\\(', right: '\\)', display: false }, { left: '$', right: '$', display: false }],
@@ -57,7 +98,7 @@ async function renderSidebar() {
 async function renderStats() {
   try {
     const s = await api('/stats');
-    $('stats').innerHTML = `真题 <b>${s.questions}</b> · 已做 <b>${s.done}</b> · 对 <b style="color:var(--ok)">${s.correct}</b> · 错 <b style="color:var(--bad)">${s.wrong}</b> · 掌握题型 <b>${s.mastered}</b>`;
+    $('stats').innerHTML = `题库 <b>${s.questions}</b> · 已做 <b>${s.done}</b> · 对 <b style="color:var(--ok)">${s.correct}</b> · 错 <b style="color:var(--bad)">${s.wrong}</b> · 掌握题型 <b>${s.mastered}</b>`;
   } catch (e) {}
 }
 
@@ -91,7 +132,20 @@ function progressBar(pg, opts = {}) {
   if (opts.masterName) {
     const mastered = opts.status === 'mastered';
     const btn = el('button', 'btn' + (mastered ? ' mastered' : ''), mastered ? '✓ 已掌握(点击撤销)' : '标记掌握(够了)');
-    btn.onclick = async () => { await post('/type_status', { name: opts.masterName, status: mastered ? 'learning' : 'mastered' }); viewType(opts.masterName); renderStats(); };
+    btn.onclick = async () => {
+      const old = btn.textContent;
+      btn.disabled = true; btn.textContent = '保存中…';
+      try {
+        await post('/type_status', { name: opts.masterName, status: mastered ? 'learning' : 'mastered' });
+        await viewType(opts.masterName); await renderStats();
+      } catch (e) {
+        btn.textContent = '保存失败，重试';
+        btn.title = e.message;
+      } finally {
+        btn.disabled = false;
+        if (btn.isConnected && btn.textContent === '保存中…') btn.textContent = old;
+      }
+    };
     wrap.appendChild(btn);
   }
   return wrap;
@@ -128,15 +182,32 @@ function problemCard(p, opts = {}) {
   q.appendChild(el('div', 'stem', p.stem_html));
 
   const acts = el('div', 'acts');
-  const mark = async (result) => {
-    await post('/attempt', { question_id: p.id, result });
+  const saveState = el('span', 'save-state');
+  saveState.hidden = true;
+  saveState.setAttribute('aria-live', 'polite');
+  attemptIndicators.set(Number(p.id), saveState);
+  const mark = (result, reason = '') => {
+    // Optimistic local state keeps a deliberate re-assessment visible while a
+    // slow network write is serialized in the background.
     p.last = result; last.className = 'badge last ' + result; last.textContent = RESULT_CN[result]; last.style.display = '';
-    refreshProgress(); renderStats(); renderSidebar();
+    attemptSaveErrors.delete(Number(p.id));
+    showAttemptIndicator(p.id, '记录保存中…', 'saving');
+    refreshProgress();
+    void attemptSaveQueue.enqueue({ questionId: p.id, payload: { result, reason } });
   };
   const b = (txt, r) => { const x = el('button', 'btn', txt); x.onclick = () => mark(r); return x; };
   acts.appendChild(b('✓ 我会了', 'correct'));
   acts.appendChild(b('～ 模糊', 'fuzzy'));
-  acts.appendChild(b('✗ 不会/错了', 'wrong'));
+  const wrong = el('button', 'btn', '✗ 不会/错了');
+  const reasons = el('div', 'reason-picker');
+  reasons.appendChild(el('span', 'reason-label', '主要卡在哪：'));
+  [['idea', '想不到 → 看套路'], ['calculation', '算错 → 练计算'], ['speed', '太慢 → 限时刷']].forEach(([reason, label]) => {
+    const button = el('button', 'btn reason', label);
+    button.onclick = () => mark('wrong', reason);
+    reasons.appendChild(button);
+  });
+  wrong.onclick = () => reasons.classList.toggle('open');
+  acts.appendChild(wrong);
   acts.appendChild(el('span', 'sp'));
   if (opts.typeLink && p.type_name) {
     const tl = el('a', 'btn typelink', p.type_curated ? '这类不会?讲解+同类 →' : '刷同类题 →');
@@ -161,6 +232,8 @@ function problemCard(p, opts = {}) {
   const bAI = el('button', 'btn ai', 'AI 试算(临时)');
   bAI.onclick = () => explainInto(ai, bAI, { kind: 'question', question_id: p.id });
   acts.appendChild(bAI);
+  acts.appendChild(reasons);
+  acts.appendChild(saveState);
   q.appendChild(acts); q.appendChild(sol); q.appendChild(ai);
   return q;
 }
@@ -237,13 +310,16 @@ async function viewType(name) {
     if (t.pitfalls.length) { const p = el('div', 'jj pit'); p.id = 'sec-pit'; p.appendChild(el('div', 'row', '<span class="k">坑</span><ul>' + t.pitfalls.map(x => '<li>' + fmt(x) + '</li>').join('') + '</ul>')); jw.appendChild(p); }
     m.appendChild(jw);
     renderMath(jw);
+  } else if (t.pending) {
+    m.appendChild(el('div', 'hint', '这是本章尚未逐题归纳的 <b>880 题簇</b>。可以先按基础/综合/拓展练题；它不是一个已经确认“同解法”的题型，因此不能标记掌握。'));
   } else {
     m.appendChild(el('div', 'hint', '这个题型的<b>通用解题方法</b>我还没写(正在按章补)。讲解是固定内容、不是现场生成的——下面可以先刷同类题。'));
   }
 
-  let bar = progressBar(d.progress, { masterName: name, status: d.progress.status });
+  const progressOpts = t.pending ? {} : { masterName: name, status: d.progress.status };
+  let bar = progressBar(d.progress, progressOpts);
   m.appendChild(bar);
-  refreshProgress = () => { const pg = computePg(d.problems); pg.status = d.progress.status; const nb = progressBar(pg, { masterName: name, status: d.progress.status }); bar.replaceWith(nb); bar = nb; };
+  refreshProgress = () => { const pg = computePg(d.problems); pg.status = d.progress.status; const nb = progressBar(pg, progressOpts); bar.replaceWith(nb); bar = nb; };
 
   const tiers = [
     { label: '真题(考过的)', test: p => p.paper !== 'lilin880' },
@@ -291,7 +367,9 @@ async function viewReview() {
   m.appendChild(el('div', 'crumb', '── 建议再刷的题型 ──'));
   d.wrong_types.forEach(t => {
     const r = el('div', 'rec');
-    r.appendChild(el('div', 'g', `<div class="t">${t.name}${t.curated ? ' ★' : ''}</div><div class="s">${t.chapter} · 待订正 <b style="color:var(--bad)">${t.wrong}</b> / 共 ${t.total} 道</div>`));
+    const reasons = [['idea', '想不到：先看套路'], ['calculation', '算错：再练计算'], ['speed', '太慢：限时刷题']]
+      .filter(([key]) => t[key]).map(([key, hint]) => `${WRONG_REASON_CN[key]} ${t[key]} · ${hint}`).join('　');
+    r.appendChild(el('div', 'g', `<div class="t">${t.name}${t.curated ? ' ★' : ''}</div><div class="s">${t.chapter} · 待订正 <b style="color:var(--bad)">${t.wrong}</b> / 共 ${t.total} 道${reasons ? '<br><span class="reason-summary">' + reasons + '</span>' : ''}</div>`));
     const b = el('a', 'btn primary', '去刷 →'); b.href = '#/type/' + enc(t.name); r.appendChild(b);
     m.appendChild(r);
   });

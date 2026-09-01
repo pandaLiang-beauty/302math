@@ -15,6 +15,11 @@ backend/.venv/
 .venv/
 frontend/node_modules/
 
+# 本机凭据；模板是唯一允许入库的环境文件。
+backend/.env*
+!backend/.env.example
+backend/.access-password
+
 # 字节码
 **/__pycache__/
 *.pyc
