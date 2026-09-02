@@ -152,12 +152,13 @@ def tree():
 
 def _progress(name):
     probs = q(
-        "SELECT q.id,q.paper,q.year,q.number,q.qtype,q.level,q.stem_html,"
+        "SELECT q.id,q.paper,q.year,q.number,q.qtype,q.level,q.stem_html,q.options_json,"
         "(q.solution_html<>'' OR q.answer_html<>'') has_sol,"
         "(SELECT result FROM attempts a WHERE a.question_id=q.id ORDER BY a.id DESC LIMIT 1) last "
         "FROM questions q WHERE q.type_name=? "
         "ORDER BY (q.qtype<>'choice'),(q.qtype<>'blank'),q.year DESC", (name,))
     for p in probs:
+        p['options'] = json.loads(p.pop('options_json') or '[]')
         if p['paper'] == 'lilin880':
             p['src'] = '李林880 · ' + p['level']
         else:
@@ -190,9 +191,11 @@ def get_type(name: str):
 
 @app.get('/api/question')
 def question(id: int):
-    r = one("SELECT id,paper,year,number,qtype,answer,answer_html,solution_html,source_url FROM questions WHERE id=?", (id,))
+    r = one("SELECT id,paper,year,number,qtype,options_json,answer,answer_html,solution_html,source_url "
+            "FROM questions WHERE id=?", (id,))
     if not r:
         raise HTTPException(404, '题不存在')
+    r['options'] = json.loads(r.pop('options_json') or '[]')
     return r
 
 
@@ -299,11 +302,13 @@ def paper(year: int):
     """一份套卷的题目(按题号),每题带最近作答与所属题型(供"卡住→看讲解")。"""
     probs = q("""
       SELECT q.id,q.number,q.qtype,q.type_name,q.point,q.chapter,q.stem_html,
+             q.options_json,
              (q.solution_html<>'' OR q.answer_html<>'') has_sol,
              (SELECT curated FROM types t WHERE t.name=q.type_name) type_curated,
              (SELECT result FROM attempts a WHERE a.question_id=q.id ORDER BY a.id DESC LIMIT 1) last
       FROM questions q WHERE q.paper='math2' AND q.year=? ORDER BY q.number""", (year,))
     for p in probs:
+        p['options'] = json.loads(p.pop('options_json') or '[]')
         p['qtype_cn'] = QTYPE_CN.get(p['qtype'], p['qtype'])
     return {'year': year, 'problems': probs, 'count': len(probs)}
 

@@ -59,10 +59,11 @@ def main():
             tn = point if point != '(未细分)' else chapter + '·未拆分'
         conn.execute(
             'INSERT INTO questions(paper,year,number,qtype,subject,chapter,point,type_name,level,'
-            'stem_html,answer,answer_html,solution_html,score,source_url,plain) '
-            'VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+            'stem_html,options_json,answer,answer_html,solution_html,score,source_url,plain) '
+            'VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
             (r['paper'], r['year'], r['number'], r['qtype'], subject, chapter, point, tn,
-             T.level_of(r['qtype']), r['stem_html'], r.get('answer', ''), r.get('answer_html', ''),
+             T.level_of(r['qtype']), r['stem_html'], json.dumps(r.get('options', []), ensure_ascii=False),
+             r.get('answer', ''), r.get('answer_html', ''),
              r.get('solution_html', ''), r.get('score', 0), r.get('source_url', ''),
              plain))
         types.setdefault(tn, {'subject': subject, 'chapter': chapter,

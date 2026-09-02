@@ -1,6 +1,7 @@
 """SQLite 连接 + 建表。数二·题型体系,单用户,业务表不带 user_id。"""
 import os
 import sqlite3
+import json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(HERE, 'data', 'study.db')
@@ -18,6 +19,7 @@ CREATE TABLE IF NOT EXISTS questions(
   type_name   TEXT NOT NULL DEFAULT '',            -- 题型(定积分应用=细分;其余=具体点直通)
   level       TEXT NOT NULL DEFAULT '基础',        -- 基础 | 综合(暂用题型代理,后续接880难度)
   stem_html   TEXT NOT NULL DEFAULT '',
+  options_json TEXT NOT NULL DEFAULT '[]',         -- 选择题选项 [{key,text}]
   answer      TEXT NOT NULL DEFAULT '',
   answer_html TEXT NOT NULL DEFAULT '',
   solution_html TEXT NOT NULL DEFAULT '',
@@ -73,9 +75,15 @@ CREATE TABLE IF NOT EXISTS ai_explain(
 
 def connect() -> sqlite3.Connection:
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+    conn = sqlite3.connect(DB_PATH, timeout=30, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     conn.execute('PRAGMA foreign_keys=ON')
+    # server.py 的 q/one/write 每次调用都开关一次连接，前端 attemptSaveQueue 还会
+    # 批量回写作答记录。没有 WAL 时读会挡住写，没有 busy_timeout 时撞上就直接抛
+    # "database is locked" 而不是等一等。这三行照搬 204english 的 platform/db.py。
+    conn.execute('PRAGMA journal_mode=WAL')
+    conn.execute('PRAGMA busy_timeout=30000')
+    conn.execute('PRAGMA synchronous=NORMAL')
     return conn
 
 
@@ -122,11 +130,51 @@ def sync_880_fallback_types(conn) -> None:
         )
 
 
+def backfill_choice_options(conn) -> int:
+    """从随项目保存的真题原页回填旧库遗漏的选择题选项。
+
+    早期版本的解析器已能提取选项，却没有把它写入 SQLite。这里按卷种、年份、题号
+    精确更新空数据，因而不会重灌题库或改变 attempts。
+    """
+    missing = conn.execute(
+        "SELECT DISTINCT paper,year FROM questions "
+        "WHERE paper LIKE 'math%' AND qtype='choice' AND options_json='[]'"
+    ).fetchall()
+    if not missing:
+        return 0
+
+    raw_dir = os.path.join(HERE, 'data', 'raw')
+    if not os.path.isdir(raw_dir):
+        return 0
+    import parse
+
+    updated = 0
+    for row in missing:
+        paper, year = row['paper'], row['year']
+        raw_path = os.path.join(raw_dir, '%s_%d.html' % (paper, year))
+        if not os.path.exists(raw_path):
+            continue
+        with open(raw_path, 'rb') as f:
+            source_rows = parse.parse_paper(paper, year, f.read().decode('utf-8', 'ignore'))
+        for source in source_rows:
+            if source['qtype'] != 'choice' or len(source.get('options', [])) < 2:
+                continue
+            cur = conn.execute(
+                "UPDATE questions SET options_json=? "
+                "WHERE paper=? AND year=? AND number=? AND qtype='choice' AND options_json='[]'",
+                (json.dumps(source['options'], ensure_ascii=False), paper, year, source['number']),
+            )
+            updated += cur.rowcount
+    return updated
+
+
 def init_db(conn) -> None:
     conn.executescript(SCHEMA)
     cols = {r[1] for r in conn.execute('PRAGMA table_info(questions)')}
     if 'plain' not in cols:
         conn.execute("ALTER TABLE questions ADD COLUMN plain TEXT NOT NULL DEFAULT ''")
+    if 'options_json' not in cols:
+        conn.execute("ALTER TABLE questions ADD COLUMN options_json TEXT NOT NULL DEFAULT '[]'")
     acols = {r[1] for r in conn.execute('PRAGMA table_info(attempts)')}
     for col, ddl in [('reason', "reason TEXT NOT NULL DEFAULT ''"),
                      ('elapsed_seconds', 'elapsed_seconds INTEGER NOT NULL DEFAULT 0')]:
@@ -143,4 +191,5 @@ def init_db(conn) -> None:
         if col not in tcols:
             conn.execute('ALTER TABLE types ADD COLUMN ' + ddl)
     sync_880_fallback_types(conn)
+    backfill_choice_options(conn)
     conn.commit()

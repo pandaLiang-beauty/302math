@@ -180,6 +180,29 @@ function problemCard(p, opts = {}) {
   head.appendChild(last);
   q.appendChild(head);
   q.appendChild(el('div', 'stem', p.stem_html));
+  if (p.qtype === 'choice' && Array.isArray(p.options) && p.options.length) {
+    const choices = el('div', 'choices');
+    choices.setAttribute('role', 'radiogroup');
+    choices.setAttribute('aria-label', '选择答案');
+    const buttons = [];
+    p.options.forEach(option => {
+      const choice = el('button', 'choice');
+      choice.type = 'button';
+      choice.setAttribute('role', 'radio');
+      choice.setAttribute('aria-checked', 'false');
+      choice.innerHTML = `<b class="choice-key">${option.key}</b><span class="choice-text">${option.text}</span>`;
+      choice.onclick = () => {
+        buttons.forEach(btn => {
+          const selected = btn === choice;
+          btn.classList.toggle('selected', selected);
+          btn.setAttribute('aria-checked', String(selected));
+        });
+      };
+      buttons.push(choice);
+      choices.appendChild(choice);
+    });
+    q.appendChild(choices);
+  }
 
   const acts = el('div', 'acts');
   const saveState = el('span', 'save-state');
