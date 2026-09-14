@@ -52,6 +52,8 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
     backend_host: str
     backend_port: int
     backend_scheme: str
+    newpoints_host: str = "127.0.0.1"
+    newpoints_port: int = 8312
     base_path: str
     auth_password: str
 
@@ -101,6 +103,10 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
             return
         if not self.authorized():
             self.redirect_to_login()
+            return
+        if path == "/newpoints" or path.startswith("/newpoints/"):
+            backend_path = path + (f"?{parsed.query}" if parsed.query else "")
+            self.proxy_to_newpoints(backend_path=backend_path, head_only=head_only)
             return
         if path.startswith("/api/"):
             backend_path = path + (f"?{parsed.query}" if parsed.query else "")
@@ -164,7 +170,7 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
         if not head_only:
             self.wfile.write(page)
 
-    def read_request_body(self) -> bytes | None:
+    def read_request_body(self, *, max_length: int = MAX_REQUEST_BODY) -> bytes | None:
         content_length = self.headers.get("Content-Length")
         if not content_length:
             return b""
@@ -173,7 +179,7 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
         except ValueError:
             self.send_error(400, "invalid Content-Length")
             return None
-        if length < 0 or length > MAX_REQUEST_BODY:
+        if length < 0 or length > max_length:
             self.send_error(413, "request body too large")
             return None
         return self.rfile.read(length)
@@ -234,6 +240,35 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
         finally:
             conn.close()
 
+    def proxy_to_newpoints(self, *, backend_path: str, head_only: bool = False) -> None:
+        """Independent app; allow photos and stream original books / backups."""
+        body = self.read_request_body(max_length=9 * 1024 * 1024)
+        if body is None:
+            return
+        headers = build_proxy_headers(self.headers, self.client_address[0])
+        conn = http.client.HTTPConnection(self.newpoints_host, self.newpoints_port, timeout=120)
+        started = False
+        try:
+            conn.request(self.command, backend_path, body=body, headers=headers)
+            response = conn.getresponse()
+            self.send_response(response.status, response.reason)
+            for key, value in response.getheaders():
+                if key.lower() not in HOP_BY_HOP_HEADERS:
+                    self.send_header(key, value)
+            self.end_headers()
+            started = True
+            if not head_only:
+                while chunk := response.read(65536):
+                    self.wfile.write(chunk)
+        except (OSError, http.client.HTTPException) as exc:
+            if not started:
+                self.send_error(502, "newpoints is temporarily unavailable")
+            else:
+                self.log_error("newpoints stream ended: %s", type(exc).__name__)
+                self.close_connection = True
+        finally:
+            conn.close()
+
     def serve_static(self, raw_path: str, *, head_only: bool = False) -> None:
         path = self.resolve_static_path(raw_path)
         is_asset_request = raw_path.startswith("/assets/")
@@ -277,6 +312,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="数二前端服务:静态托管 frontend/ 并把 /api 反代到后端(无 Docker/nginx)。前端是原生 SPA,没有构建步骤。")
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--backend", default="http://127.0.0.1:8302")
+    parser.add_argument("--newpoints-backend", default="http://127.0.0.1:8312")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=5302)
     parser.add_argument("--base-path", default="")
@@ -295,6 +331,9 @@ def main() -> int:
         raise SystemExit("Only http backend URLs are supported")
     host = backend.hostname or "127.0.0.1"
     port = backend.port or 8302
+    newpoints = urlparse(args.newpoints_backend)
+    if newpoints.scheme not in {"http", ""} or newpoints.hostname not in {"127.0.0.1", "localhost", "::1"}:
+        raise SystemExit("Newpoints backend must use loopback HTTP")
     auth_password = args.auth_password
     if args.auth_password_file:
         try:
@@ -307,6 +346,8 @@ def main() -> int:
     FrontendProxyHandler.backend_host = host
     FrontendProxyHandler.backend_port = port
     FrontendProxyHandler.backend_scheme = backend.scheme or "http"
+    FrontendProxyHandler.newpoints_host = newpoints.hostname
+    FrontendProxyHandler.newpoints_port = newpoints.port or 8312
     base_path = "/" + args.base_path.strip("/") if args.base_path.strip("/") else ""
     FrontendProxyHandler.base_path = base_path
     FrontendProxyHandler.auth_password = auth_password
