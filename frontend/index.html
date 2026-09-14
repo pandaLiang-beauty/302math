@@ -11,22 +11,20 @@
 </head>
 <body>
 <header>
-  <div class="brand">数二 · 真题与880</div>
+  <a class="brand" href="#/home">数二 · 真题套卷</a>
   <nav>
     <a href="#/home" data-nav="papers">真题套卷</a>
     <a href="#/chapters" data-nav="chapters">章节练习 · 880</a>
-    <a href="#/review" data-nav="review">复习推荐</a>
+    <a href="#/review" data-nav="review">历史错题</a>
     <a href="#/lib" data-nav="lib">题型讲解</a>
   </nav>
-  <div class="stats" id="stats"></div>
 </header>
-<div id="save-notice" class="save-notice" role="status" hidden></div>
 <div class="layout">
-  <aside id="tree"></aside>
   <main id="main"></main>
+  <aside id="tree" aria-label="学习侧栏"></aside>
 </div>
-<script src="attemptSaveQueue.js"></script>
 <script src="studyFlow.js"></script>
+<script src="studySidebar.js"></script>
 <script src="practiceViews.js"></script>
 <script src="app.js"></script>
 </body>
