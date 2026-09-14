@@ -289,8 +289,9 @@ a.btn{text-decoration:none;display:inline-flex;align-items:center;justify-conten
 .q{scroll-margin-top:calc(var(--header-height) + 160px)}
 .q.focus-question{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft),var(--shadow)}
 .q .head{flex-wrap:wrap}
-.stem,.sol,.source-option,.choice-text{overflow-x:auto}
-.katex-display{overflow-x:auto;overflow-y:hidden;padding:2px 0}
+/* Keep TeX ascenders/subscripts visible; scroll containers create spurious vertical bars. */
+.katex-display{padding:2px 0}
+.katex-display>.katex{white-space:normal}
 .question-image-zoom{display:block;color:var(--sub);text-decoration:none}
 .question-image-zoom img{display:block;cursor:zoom-in}
 .image-zoom-hint{display:block;margin-top:4px;font:12px/1.6 sans-serif;color:var(--accent)}
