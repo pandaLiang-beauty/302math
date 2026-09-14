@@ -56,3 +56,11 @@ test('blocked or malformed storage does not stop selecting an answer', () => {
     assert.equal(store.get(7), 'D');
   }
 });
+
+test('notebook return links locate a workbook question without confusing it with an exam origin', () => {
+  const route = flow.parseRoute(flow.practiceHash({ chapter: 'limits', focusId: 8807 }));
+  assert.equal(route.focusId, 8807);
+  assert.equal(route.questionId, null);
+  assert.equal(route.chapter, 'limits');
+  assert.deepEqual(flow.parseRoute('#/notes?query=%E9%AB%98%E4%BA%AE&source=lilin880'), { view: 'notes', query: '高亮', source: 'lilin880' });
+});

@@ -6,10 +6,9 @@
 <title>数二 · 真题与880</title>
 <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="favicon.ico?v=1">
 <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg?v=1">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="notes.css">
 </head>
 <body>
 <header>
@@ -17,6 +16,7 @@
   <nav>
     <a href="#/home" data-nav="papers">真题套卷</a>
     <a href="#/chapters" data-nav="chapters">章节练习 · 880</a>
+    <a href="#/notes" data-nav="notes">笔记本</a>
     <a href="#/review" data-nav="review">历史错题</a>
     <a href="#/lib" data-nav="lib">题型讲解</a>
   </nav>
@@ -26,6 +26,9 @@
   <aside id="tree" aria-label="学习侧栏"></aside>
 </div>
 <script src="studyFlow.js"></script>
+<script src="vendor/markdown.js"></script>
+<script src="noteDrafts.js"></script>
+<script src="notes.js"></script>
 <script src="studySidebar.js"></script>
 <script src="practiceViews.js"></script>
 <script src="app.js"></script>

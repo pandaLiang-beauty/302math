@@ -35,7 +35,7 @@ async function viewChapters() {
   window.scrollTo(0, 0);
 }
 
-async function viewPractice({ questionId, chapter, topic }) {
+async function viewPractice({ questionId, chapter, topic, focusId }) {
   const m = $('main');
   m.textContent = '正在加载对应的880练习…';
   const params = new URLSearchParams();
@@ -98,5 +98,11 @@ async function viewPractice({ questionId, chapter, topic }) {
   if (origin) m.appendChild(studyLink(backLabel + '，继续套卷 →', backHash, 'btn primary practice-return'));
   setStudySidebar({ kind: 'practice', data });
   renderMath(m);
-  window.scrollTo(0, 0);
+  if (focusId) requestAnimationFrame(() => {
+    const card = $('question-' + focusId);
+    if (!card || !m.isConnected) return;
+    card.closest('.tierbox')?.classList.add('open');
+    card.classList.add('focus-question'); card.scrollIntoView({ block: 'start' });
+  });
+  else window.scrollTo(0, 0);
 }

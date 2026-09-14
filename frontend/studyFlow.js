@@ -25,11 +25,12 @@
     return '#/paper/' + year + (positiveInt(questionId) ? '?question=' + questionId : '');
   }
 
-  function practiceHash({ questionId, chapter, topic } = {}) {
+  function practiceHash({ questionId, chapter, topic, focusId } = {}) {
     const params = new URLSearchParams();
     if (positiveInt(questionId)) params.set('question_id', questionId);
     if (chapter) params.set('chapter', chapter);
     if (topic) params.set('topic', topic);
+    if (positiveInt(focusId)) params.set('focus', focusId);
     return '#/practice' + (params.size ? '?' + params.toString() : '');
   }
 
@@ -40,13 +41,14 @@
     if (paper) return { view: 'paper', year: Number(paper[1]), questionId: positiveInt(params.get('question')) };
     if (path === '#/practice') {
       return { view: 'practice', questionId: positiveInt(params.get('question_id')),
-        chapter: params.get('chapter') || '', topic: params.get('topic') || '' };
+        chapter: params.get('chapter') || '', topic: params.get('topic') || '', focusId: positiveInt(params.get('focus')) };
     }
     if (path === '#/chapters') return { view: 'chapters' };
     if (path === '#/review') return { view: 'review' };
+    if (path === '#/notes') return { view: 'notes', query: params.get('query') || '', source: params.get('source') || '' };
     if (path === '#/lib') return { view: 'lib' };
     if (path.startsWith('#/type/')) {
-      try { return { view: 'type', name: decodeURIComponent(path.slice(7)) }; }
+      try { return { view: 'type', name: decodeURIComponent(path.slice(7)), questionId: positiveInt(params.get('question')) }; }
       catch { return { view: 'home' }; }
     }
     return { view: 'home' };

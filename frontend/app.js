@@ -22,7 +22,7 @@ const KATEX_OPTS = {
   { left: '\\(', right: '\\)', display: false }, { left: '$', right: '$', display: false }],
   throwOnError: false
 };
-function renderMath(node) { if (window.renderMathInElement) try { renderMathInElement(node, KATEX_OPTS); } catch (e) {} }
+function renderMath(node) { if (window.MathMarkdown) try { window.MathMarkdown.renderMath(node, KATEX_OPTS); } catch (e) {} }
 const fmt = (s) => (s || '').replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
 
 // ---------- 路由 ----------
@@ -36,14 +36,15 @@ async function route() {
   $('main').replaceWith(m);
   m.textContent = '加载中…';
   const nav = ['practice', 'chapters'].includes(current.view) ? 'chapters'
-    : ['type', 'lib'].includes(current.view) ? 'lib' : current.view === 'review' ? 'review' : 'papers';
+    : ['type', 'lib'].includes(current.view) ? 'lib' : ['review', 'notes'].includes(current.view) ? current.view : 'papers';
   setNav(nav);
   setStudySidebar(null);
   try {
     if (current.view === 'paper') await viewPaper(current.year, current.questionId);
     else if (current.view === 'practice') await viewPractice(current);
     else if (current.view === 'chapters') await viewChapters();
-    else if (current.view === 'type') await viewType(current.name);
+    else if (current.view === 'type') await viewType(current.name, current.questionId);
+    else if (current.view === 'notes') await viewNotes(current.query, current.source);
     else if (current.view === 'review') await viewReview();
     else if (current.view === 'lib') await viewLib();
     else await viewHome();
@@ -146,6 +147,7 @@ function problemCard(p, opts = {}) {
     zoom.appendChild(img);
     zoom.appendChild(textEl('span', 'image-zoom-hint', '点击题图放大 ↗'));
   });
+  attachQuestionNotes(q, p, head);
   return q;
 }
 
@@ -277,7 +279,7 @@ async function viewPaper(year, focusId = null) {
 }
 
 // ---------- 视图:题型(讲解 + 分层题簇) ----------
-async function viewType(name) {
+async function viewType(name, focusId = null) {
   const m = $('main'); m.innerHTML = '加载中…';
   let d; try { d = await api('/type?name=' + enc(name)); } catch (e) { m.innerHTML = ''; m.appendChild(el('div', 'empty', '出错:' + e.message)); return; }
   if (!m.isConnected) return;
@@ -355,7 +357,13 @@ async function viewType(name) {
     }
   });
   if (!shown) m.appendChild(el('div', 'empty', '此题型暂无题目。'));
-  window.scrollTo(0, 0);
+  if (focusId) requestAnimationFrame(() => {
+    const card = $('question-' + focusId);
+    if (!card || !m.isConnected) return;
+    card.closest('.tierbox')?.classList.add('open');
+    card.classList.add('focus-question'); card.scrollIntoView({ block: 'start' });
+  });
+  else window.scrollTo(0, 0);
 }
 
 // ---------- 视图:历史错题 ----------

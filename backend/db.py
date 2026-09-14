@@ -59,6 +59,17 @@ CREATE TABLE IF NOT EXISTS attempts(
 );
 CREATE INDEX IF NOT EXISTS idx_a_q ON attempts(question_id, id);
 
+CREATE TABLE IF NOT EXISTS notes(
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  question_id INTEGER NOT NULL REFERENCES questions(id) ON DELETE CASCADE,
+  body        TEXT NOT NULL,
+  client_id   TEXT NOT NULL UNIQUE,
+  revision    INTEGER NOT NULL DEFAULT 1,
+  created_at  TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at  TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_notes_question ON notes(question_id, id);
+
 CREATE TABLE IF NOT EXISTS type_progress(
   type_name  TEXT PRIMARY KEY,
   status     TEXT NOT NULL DEFAULT 'learning',      -- learning | mastered(够了)
