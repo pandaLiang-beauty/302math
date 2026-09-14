@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>数二 · 题型体系</title>
+<title>数二 · 真题与880</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
@@ -11,19 +11,23 @@
 </head>
 <body>
 <header>
-  <div class="brand">数二 · 题型体系</div>
+  <div class="brand">数二 · 真题与880</div>
   <nav>
-    <a href="#/home" data-nav="papers">套卷</a>
+    <a href="#/home" data-nav="papers">真题套卷</a>
+    <a href="#/chapters" data-nav="chapters">章节练习 · 880</a>
     <a href="#/review" data-nav="review">复习推荐</a>
-    <a href="#/lib" data-nav="lib">题型库</a>
+    <a href="#/lib" data-nav="lib">题型讲解</a>
   </nav>
   <div class="stats" id="stats"></div>
 </header>
+<div id="save-notice" class="save-notice" role="status" hidden></div>
 <div class="layout">
   <aside id="tree"></aside>
   <main id="main"></main>
 </div>
 <script src="attemptSaveQueue.js"></script>
+<script src="studyFlow.js"></script>
+<script src="practiceViews.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

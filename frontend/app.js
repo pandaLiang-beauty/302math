@@ -2,6 +2,19 @@
 const $ = (id) => document.getElementById(id);
 const el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h != null) e.innerHTML = h; return e; };
 const enc = encodeURIComponent;
+const flow = window.MathStudyFlow;
+const textEl = (tag, className, text) => { const node = el(tag, className); node.textContent = text; return node; };
+function studyLink(label, href, className = 'btn') {
+  const link = textEl('a', className, label); link.href = href; return link;
+}
+let choiceStorage;
+try { choiceStorage = window.localStorage; } catch { /* In-memory selection still works. */ }
+const savedChoices = flow.createChoiceStore(choiceStorage);
+const localAssessments = new Map();
+function applyLocalAssessment(problem) {
+  if (localAssessments.has(Number(problem.id))) problem.last = localAssessments.get(Number(problem.id));
+  return problem;
+}
 
 async function api(path, opts) {
   const r = await fetch('/api' + path, opts);
@@ -14,6 +27,21 @@ const RESULT_CN = { correct: '上次:对', wrong: '上次:错', fuzzy: '上次:�
 const WRONG_REASON_CN = { idea: '想不到', calculation: '算错', speed: '太慢' };
 const attemptIndicators = new Map();
 const attemptSaveErrors = new Map();
+
+function renderSaveNotice() {
+  const notice = $('save-notice');
+  notice.replaceChildren();
+  notice.hidden = !attemptSaveErrors.size;
+  if (notice.hidden) return;
+  notice.appendChild(textEl('span', '', '有做题记录尚未保存，请重试。'));
+  const retry = textEl('button', 'btn', '重试保存');
+  retry.onclick = async () => {
+    retry.disabled = true;
+    await attemptSaveQueue.flushAll();
+    renderSaveNotice();
+  };
+  notice.appendChild(retry);
+}
 
 function showAttemptIndicator(questionId, text = '', kind = '', retry = null) {
   const indicator = attemptIndicators.get(Number(questionId));
@@ -34,6 +62,7 @@ const attemptSaveQueue = window.MathAttemptSaveQueue.createAttemptSaveQueue({
   onError: (error, entry) => {
     const message = error?.message || '记录保存失败';
     attemptSaveErrors.set(entry.questionId, message);
+    renderSaveNotice();
     showAttemptIndicator(entry.questionId, '记录未保存，点击重试', 'error', () => {
       attemptSaveErrors.delete(entry.questionId);
       showAttemptIndicator(entry.questionId, '正在重试保存…', 'saving');
@@ -42,6 +71,7 @@ const attemptSaveQueue = window.MathAttemptSaveQueue.createAttemptSaveQueue({
   },
   onSuccess: (entry) => {
     attemptSaveErrors.delete(entry.questionId);
+    renderSaveNotice();
     void renderStats();
     void renderSidebar();
   },
@@ -61,38 +91,54 @@ function renderMath(node) { if (window.renderMathInElement) try { renderMathInEl
 const fmt = (s) => (s || '').replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
 let refreshProgress = () => {};   // 当前视图设置:重算并刷新进度条
 
-// ---------- 侧栏:套卷(扶手) + 已写讲解的题型 ----------
+// ---------- 侧栏:按年做真题，按知识点补880 ----------
+let sidebarRevision = 0;
 async function renderSidebar() {
-  const aside = $('tree'); aside.innerHTML = '';
-  aside.appendChild(el('div', 'subj', '数二真题 · 套卷'));
-  let papers = [];
-  try { papers = await api('/papers'); } catch (e) {}
-  papers.forEach(p => {
-    const a = el('a', 'yr');
-    a.href = '#/paper/' + p.year;
-    a.innerHTML = `<span>${p.year} 年</span><span class="cnt">${p.done}/${p.total}${p.wrong ? ' · <b style="color:var(--bad)">错' + p.wrong + '</b>' : ''}</span>`;
-    aside.appendChild(a);
-  });
-  aside.appendChild(el('div', 'hint', '从做一份真题开始。卡住/做错的题,点题下的「这类不会?」进题型:看讲解 + 刷同类。'));
-
-  // 已写讲解的题型:目前只有这些能给到完整体验(直觉+母题图文演算+套路+变式+坑)
+  const revision = ++sidebarRevision;
+  const aside = $('tree');
   try {
-    const tree = await api('/tree');
-    const rows = [];
-    tree.forEach(s => s.chapters.forEach(c => c.groups.forEach(g => g.types.forEach(t => {
-      if (t.curated) rows.push(Object.assign({ chapter: c.chapter }, t));
-    }))));
-    if (!rows.length) return;
-    aside.appendChild(el('div', 'subj', `已写讲解的题型 · ${rows.length}`));
-    let lastCh = null;
-    rows.forEach(t => {
-      if (t.chapter !== lastCh) { aside.appendChild(el('div', 'chlab', t.chapter)); lastCh = t.chapter; }
-      const a = el('a', 'pt live' + (t.status === 'mastered' ? ' ok' : ''));
-      a.href = '#/type/' + enc(t.name);
-      a.innerHTML = `<span>${t.name}</span><span class="cnt">${t.status === 'mastered' ? '✓' : t.n}</span>`;
-      aside.appendChild(a);
+    const [papers, chapters] = await Promise.all([api('/papers'), api('/chapters')]);
+    if (revision !== sidebarRevision) return;
+    const scrollTop = aside.scrollTop;
+    aside.replaceChildren();
+    aside.appendChild(textEl('div', 'subj', '先做这七套 · 2020 → 2026'));
+    const years = el('div', 'paper-years');
+    flow.focusPapers(papers).forEach(paper => {
+      const link = paper.available ? studyLink('', flow.paperHash(paper.year), 'yr') : el('span', 'yr unavailable');
+      link.dataset.year = paper.year;
+      link.appendChild(textEl('span', '', `${paper.year} 年`));
+      link.appendChild(textEl('span', 'cnt', paper.available ? `${paper.done}/${paper.total}` : '待补齐'));
+      years.appendChild(link);
     });
-  } catch (e) {}
+    aside.appendChild(years);
+    const chapterList = el('details', 'sidebar-chapters');
+    chapterList.open = window.matchMedia('(min-width: 821px)').matches;
+    chapterList.appendChild(textEl('summary', 'subj', '章节练习 · 李林880'));
+    chapters.forEach(chapter => {
+      const link = studyLink('', flow.practiceHash({ chapter: chapter.id }), 'yr chapter-nav');
+      link.dataset.chapter = chapter.id;
+      link.appendChild(textEl('span', '', chapter.name));
+      link.appendChild(textEl('span', 'cnt', chapter.total + '题'));
+      chapterList.appendChild(link);
+    });
+    aside.appendChild(chapterList);
+    aside.appendChild(studyLink('查看全部知识点 →', '#/chapters', 'sidebar-library'));
+    aside.scrollTop = scrollTop;
+    setSidebarActive();
+  } catch (error) {
+    if (revision === sidebarRevision && !aside.children.length) aside.appendChild(textEl('div', 'hint', '导航加载失败，请刷新重试。'));
+  }
+}
+
+function setSidebarActive() {
+  const current = flow.parseRoute(location.hash);
+  const year = current.view === 'paper' ? current.year : $('main').dataset.originYear;
+  const chapter = current.view === 'practice' ? ($('main').dataset.chapter || current.chapter) : '';
+  $('tree').querySelectorAll('[data-year], [data-chapter]').forEach(link => {
+    const active = link.dataset.year ? String(year) === link.dataset.year : chapter === link.dataset.chapter;
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
+  });
 }
 
 async function renderStats() {
@@ -104,14 +150,38 @@ async function renderStats() {
 
 // ---------- 路由 ----------
 function setNav(v) { document.querySelectorAll('nav a').forEach(a => a.classList.toggle('active', a.dataset.nav === v)); }
-function route() {
+let routeRevision = 0;
+async function route() {
+  const revision = ++routeRevision;
   refreshProgress = () => {};
-  const h = location.hash || '#/home';
-  if (h.startsWith('#/paper/')) { setNav('papers'); return viewPaper(parseInt(h.slice(8), 10)); }
-  if (h.startsWith('#/type/')) { setNav('lib'); return viewType(decodeURIComponent(h.slice(7))); }
-  if (h.startsWith('#/review')) { setNav('review'); return viewReview(); }
-  if (h.startsWith('#/lib')) { setNav('lib'); return viewLib(); }
-  setNav('papers'); return viewHome();
+  const current = flow.parseRoute(location.hash);
+  const m = el('main'); m.id = 'main';
+  $('main').replaceWith(m);
+  attemptIndicators.clear();
+  m.textContent = '加载中…';
+  const nav = ['practice', 'chapters'].includes(current.view) ? 'chapters'
+    : ['type', 'lib'].includes(current.view) ? 'lib' : current.view === 'review' ? 'review' : 'papers';
+  setNav(nav);
+  setSidebarActive();
+  // Wait for a pending self-assessment before loading the paper's progress again.
+  if (attemptSaveQueue.hasPendingChanges()) await attemptSaveQueue.flushAll();
+  if (revision !== routeRevision) return;
+  try {
+    if (current.view === 'paper') await viewPaper(current.year, current.questionId);
+    else if (current.view === 'practice') await viewPractice(current);
+    else if (current.view === 'chapters') await viewChapters();
+    else if (current.view === 'type') await viewType(current.name);
+    else if (current.view === 'review') await viewReview();
+    else if (current.view === 'lib') await viewLib();
+    else await viewHome();
+  } catch (error) {
+    if (!m.isConnected) return;
+    m.replaceChildren(textEl('div', 'empty', '加载失败：' + error.message));
+    const retry = textEl('button', 'btn', '重试'); retry.onclick = route;
+    m.appendChild(retry);
+    m.appendChild(studyLink('返回套卷', '#/home'));
+  }
+  if (m.isConnected) { renderMath(m); setSidebarActive(); }
 }
 
 // ---------- 进度条 ----------
@@ -137,7 +207,8 @@ function progressBar(pg, opts = {}) {
       btn.disabled = true; btn.textContent = '保存中…';
       try {
         await post('/type_status', { name: opts.masterName, status: mastered ? 'learning' : 'mastered' });
-        await viewType(opts.masterName); await renderStats();
+        if (btn.isConnected) await viewType(opts.masterName);
+        await renderStats();
       } catch (e) {
         btn.textContent = '保存失败，重试';
         btn.title = e.message;
@@ -170,7 +241,9 @@ async function explainInto(panel, btn, payload) {
 
 // ---------- 题目卡(套卷 & 题型 复用) ----------
 function problemCard(p, opts = {}) {
+  applyLocalAssessment(p);
   const q = el('div', 'q'); q.dataset.qid = p.id;
+  q.id = 'question-' + p.id;
   const head = el('div', 'head');
   head.appendChild(el('span', 'src', p.src || ('第 ' + p.number + ' 题')));
   if (p.level) head.appendChild(el('span', 'badge ' + p.level, p.level));
@@ -189,9 +262,12 @@ function problemCard(p, opts = {}) {
       const choice = el('button', 'choice');
       choice.type = 'button';
       choice.setAttribute('role', 'radio');
-      choice.setAttribute('aria-checked', 'false');
+      const selected = savedChoices.get(p.id) === option.key;
+      choice.setAttribute('aria-checked', String(selected));
+      choice.classList.toggle('selected', selected);
       choice.innerHTML = `<b class="choice-key">${option.key}</b><span class="choice-text">${option.text}</span>`;
       choice.onclick = () => {
+        savedChoices.set(p.id, option.key);
         buttons.forEach(btn => {
           const selected = btn === choice;
           btn.classList.toggle('selected', selected);
@@ -203,6 +279,9 @@ function problemCard(p, opts = {}) {
     });
     q.appendChild(choices);
   }
+  if (opts.practiceLink && p.practice) {
+    q.appendChild(textEl('div', 'question-topic', `${p.practice.name} · 对应880 ${p.practice.total}题`));
+  }
 
   const acts = el('div', 'acts');
   const saveState = el('span', 'save-state');
@@ -213,6 +292,7 @@ function problemCard(p, opts = {}) {
     // Optimistic local state keeps a deliberate re-assessment visible while a
     // slow network write is serialized in the background.
     p.last = result; last.className = 'badge last ' + result; last.textContent = RESULT_CN[result]; last.style.display = '';
+    localAssessments.set(Number(p.id), result);
     attemptSaveErrors.delete(Number(p.id));
     showAttemptIndicator(p.id, '记录保存中…', 'saving');
     refreshProgress();
@@ -232,6 +312,9 @@ function problemCard(p, opts = {}) {
   wrong.onclick = () => reasons.classList.toggle('open');
   acts.appendChild(wrong);
   acts.appendChild(el('span', 'sp'));
+  if (opts.practiceLink) {
+    acts.appendChild(studyLink('练这个知识点的880 →', p.practice ? flow.practiceHash({ questionId: p.id }) : '#/chapters', 'btn typelink practice-link'));
+  }
   if (opts.typeLink && p.type_name) {
     const tl = el('a', 'btn typelink', p.type_curated ? '这类不会?讲解+同类 →' : '刷同类题 →');
     tl.href = '#/type/' + enc(p.type_name);
@@ -248,54 +331,152 @@ function problemCard(p, opts = {}) {
         catch (e) { sol.innerHTML = '出错:' + e.message; }
       }
       sol.classList.add('open'); bSol.textContent = '收起解析 ▴';
+      renderMath(sol);
     };
     acts.appendChild(bSol);
   }
+  if (p.answer_url) {
+    const answer = studyLink('查880原版解析 ↗', p.answer_url, 'btn book-link');
+    answer.target = '_blank'; answer.rel = 'noopener';
+    answer.title = '打开本章对应难度的答案，按题型与原书题号查阅';
+    acts.appendChild(answer);
+  }
   const ai = el('div', 'sol ai');
-  const bAI = el('button', 'btn ai', 'AI 试算(临时)');
-  bAI.onclick = () => explainInto(ai, bAI, { kind: 'question', question_id: p.id });
-  acts.appendChild(bAI);
+  if (!opts.hideAI) {
+    const bAI = el('button', 'btn ai', 'AI 试算(临时)');
+    bAI.onclick = () => explainInto(ai, bAI, { kind: 'question', question_id: p.id });
+    acts.appendChild(bAI);
+  }
   acts.appendChild(reasons);
   acts.appendChild(saveState);
   q.appendChild(acts); q.appendChild(sol); q.appendChild(ai);
+  q.querySelectorAll('img').forEach(img => { img.loading = 'lazy'; });
+  q.querySelectorAll('img.p880').forEach(img => {
+    const zoom = studyLink('', img.src, 'question-image-zoom');
+    zoom.target = '_blank'; zoom.rel = 'noopener';
+    zoom.setAttribute('aria-label', '放大查看880题图');
+    img.replaceWith(zoom);
+    zoom.appendChild(img);
+    zoom.appendChild(textEl('span', 'image-zoom-hint', '点击题图放大 ↗'));
+  });
+  if (attemptSaveErrors.has(Number(p.id))) {
+    showAttemptIndicator(p.id, '记录未保存，点击重试', 'error', () => { void attemptSaveQueue.retryQuestion(p.id); });
+  }
   return q;
 }
 
 // ---------- 视图:首页(套卷) ----------
 async function viewHome() {
-  const m = $('main'); m.innerHTML = '';
-  m.appendChild(el('h1', 'title', '从一份真题套卷开始'));
-  m.appendChild(el('p', 'lead', '别翻大纲——直接做整份数二真题。做错、卡住的题,点题下的「这类不会?」进<b>题型</b>:看讲解(直觉→母题图文演算→套路→变式→坑)+ 把同类题刷透,自己觉得够了就点「标记掌握」。'));
-  let papers = []; try { papers = await api('/papers'); } catch (e) {}
-  const grid = el('div', 'grid');
-  papers.forEach(p => {
-    const c = el('a', 'yearcard'); c.href = '#/paper/' + p.year;
-    const pct = p.total ? Math.round(p.done / p.total * 100) : 0;
-    c.innerHTML = `<div class="y">${p.year}</div><div class="s">${p.done ? ('已做 ' + p.done + '/' + p.total + (p.wrong ? ' · 错 ' + p.wrong : '')) : (p.total + ' 题 · 未开始')}</div><div class="mini"><i style="width:${pct}%"></i></div>`;
-    grid.appendChild(c);
-  });
+  const m = $('main');
+  const papers = await api('/papers');
+  if (!m.isConnected) return;
+  m.replaceChildren();
+  m.appendChild(textEl('h1', 'title', '2020—2026 · 数二真题套卷'));
+  m.appendChild(textEl('p', 'lead', '按年份做套卷。遇到不会的题，进入对应知识点练880，练完返回原题继续。'));
+  const next = flow.nextPaper(papers);
+  const start = el('div', 'paper-start');
+  const intro = el('div');
+  if (next) {
+    intro.appendChild(textEl('div', 'eyebrow', '按顺序，下一套'));
+    intro.appendChild(textEl('h2', '', `${next.year} 年数学二`));
+    intro.appendChild(textEl('p', '', next.available ? (next.done ? `已做 ${next.done}/${next.total} 题，接着上次继续。` : `${next.total} 道真题，从第1题开始。`) : '这份套卷尚未入库。'));
+    start.appendChild(intro);
+    if (next.available) start.appendChild(studyLink(`${next.done ? '继续' : '开始'} ${next.year} 年真题 →`, flow.paperHash(next.year), 'btn primary start-paper'));
+  } else {
+    intro.appendChild(textEl('h2', '', '七套真题都已做过'));
+    intro.appendChild(textEl('p', '', '可以回看套卷，或把不会的知识点再练一遍。'));
+    start.appendChild(intro);
+    start.appendChild(studyLink('进入880章节练习 →', '#/chapters', 'btn primary'));
+  }
+  m.appendChild(start);
+  const grid = el('div', 'grid priority-papers');
+  flow.focusPapers(papers).forEach((paper, index) => grid.appendChild(yearCard(paper, index + 1)));
   m.appendChild(grid);
+  const older = papers.filter(paper => !flow.YEARS.includes(paper.year));
+  if (older.length) {
+    const detail = el('details', 'older-papers');
+    detail.appendChild(textEl('summary', '', `其他年份真题 · ${older.length}套`));
+    const oldGrid = el('div', 'grid');
+    older.forEach(paper => oldGrid.appendChild(yearCard({ ...paper, available: true })));
+    detail.appendChild(oldGrid);
+    m.appendChild(detail);
+  }
+  window.scrollTo(0, 0);
+}
+
+function yearCard(paper, order) {
+  const card = paper.available ? studyLink('', flow.paperHash(paper.year), 'yearcard') : el('div', 'yearcard unavailable');
+  if (order) card.appendChild(textEl('div', 'paper-order', `第 ${order} 套`));
+  card.appendChild(textEl('div', 'y', paper.year));
+  card.appendChild(textEl('div', 's', !paper.available ? '尚未入库' : paper.done
+    ? `已做 ${paper.done}/${paper.total}${paper.wrong ? ' · 不会 ' + paper.wrong : ''}` : `${paper.total} 题 · 未开始`));
+  const progress = el('div', 'mini');
+  const fill = el('i'); fill.style.width = (paper.total ? Math.round(paper.done / paper.total * 100) : 0) + '%';
+  progress.appendChild(fill); card.appendChild(progress);
+  if (paper.available) card.appendChild(textEl('span', 'year-action', paper.done ? '继续 / 回看 →' : '开始做题 →'));
+  return card;
 }
 
 // ---------- 视图:套卷(做题) ----------
-async function viewPaper(year) {
+async function viewPaper(year, focusId = null) {
   const m = $('main'); m.innerHTML = '加载中…';
   let d; try { d = await api('/paper?year=' + year); } catch (e) { m.innerHTML = ''; m.appendChild(el('div', 'empty', '出错:' + e.message)); return; }
+  if (!m.isConnected) return;
   m.innerHTML = '';
-  m.appendChild(el('div', 'crumb', '套卷 › <b>' + year + ' 年数二真题</b>'));
+  m.appendChild(studyLink('← 真题套卷', '#/home', 'back-link'));
   m.appendChild(el('h1', 'title', year + ' 年 · 数二真题'));
-  m.appendChild(el('p', 'lead', '按题号做,自己判对错(选择题也自评)。做错的题点「这类不会?」进题型看讲解、刷同类;错题也会进「复习推荐」。'));
+  m.appendChild(textEl('p', 'lead', '按题号做题并自评。卡住时点「练这个知识点的880」，补练后回到这道题；选择题已选的选项会保留。'));
+  d.problems.forEach(applyLocalAssessment);
+  const tools = el('div', 'paper-tools');
   let bar = progressBar(computePg(d.problems));
-  m.appendChild(bar);
-  refreshProgress = () => { const nb = progressBar(computePg(d.problems)); bar.replaceWith(nb); bar = nb; };
-  d.problems.forEach(p => m.appendChild(problemCard(p, { typeLink: true })));
-  window.scrollTo(0, 0);
+  tools.appendChild(bar);
+  const index = el('div', 'question-index');
+  index.setAttribute('aria-label', '按题号定位');
+  const jumps = new Map();
+  let activeId = focusId;
+  const jumpTo = id => {
+    const card = $('question-' + id);
+    if (!card || !m.contains(card)) return;
+    activeId = id;
+    m.querySelectorAll('.q.focus-question').forEach(node => node.classList.remove('focus-question'));
+    card.classList.add('focus-question');
+    jumps.forEach((button, key) => button.classList.toggle('current', Number(key) === Number(id)));
+    history.replaceState(null, '', flow.paperHash(year, id));
+    card.scrollIntoView({ block: 'start' });
+  };
+  d.problems.forEach(p => {
+    const button = textEl('button', 'question-jump ' + (p.last || ''), p.number);
+    button.setAttribute('aria-label', `定位第${p.number}题`);
+    button.onclick = () => jumpTo(p.id);
+    jumps.set(p.id, button);
+    index.appendChild(button);
+  });
+  tools.appendChild(index);
+  m.appendChild(tools);
+  d.problems.forEach(p => m.appendChild(problemCard(p, { practiceLink: true })));
+  const footer = el('div', 'paper-next');
+  const completion = textEl('span', '', '');
+  footer.appendChild(completion);
+  if (d.next_year) footer.appendChild(studyLink(`下一套 · ${d.next_year} 年 →`, flow.paperHash(d.next_year), 'btn'));
+  else footer.appendChild(studyLink('返回套卷列表 →', '#/home', 'btn'));
+  m.appendChild(footer);
+  refreshProgress = () => {
+    const pg = computePg(d.problems);
+    const next = progressBar(pg); bar.replaceWith(next); bar = next;
+    d.problems.forEach(p => { jumps.get(p.id).className = 'question-jump ' + (p.last || '') + (Number(p.id) === Number(activeId) ? ' current' : ''); });
+    completion.textContent = pg.done === pg.total ? '本套已做完，可以继续下一套或回看不会的题。' : `本套还有 ${pg.total - pg.done} 题未做`;
+  };
+  refreshProgress();
+  const resume = focusId || (d.problems.some(p => p.last) ? d.problems.find(p => !p.last)?.id : null);
+  if (resume) requestAnimationFrame(() => { if (m.isConnected) jumpTo(resume); });
+  else window.scrollTo(0, 0);
 }
 
 // ---------- 视图:题型(讲解 + 分层题簇) ----------
 async function viewType(name) {
   const m = $('main'); m.innerHTML = '加载中…';
   let d; try { d = await api('/type?name=' + enc(name)); } catch (e) { m.innerHTML = ''; m.appendChild(el('div', 'empty', '出错:' + e.message)); return; }
+  if (!m.isConnected) return;
   m.innerHTML = '';
   const t = d.type;
   m.appendChild(el('div', 'crumb', `题型 › ${t.chapter || ''} › <b>${t.name}</b>`));
@@ -383,7 +564,9 @@ async function viewType(name) {
 // ---------- 视图:复习推荐 ----------
 async function viewReview() {
   const m = $('main'); m.innerHTML = '加载中…';
-  const d = await api('/review'); m.innerHTML = '';
+  const d = await api('/review');
+  if (!m.isConnected) return;
+  m.innerHTML = '';
   m.appendChild(el('h1', 'title', '复习推荐'));
   m.appendChild(el('p', 'lead', '按你"最近一次做错"聚合。优先回到这些题型,把同类题刷到掌握。'));
   if (!d.wrong_types.length) { m.appendChild(el('div', 'empty', '还没有错题记录。去「套卷」做几道,做错的会出现在这里 →')); return; }
@@ -414,7 +597,9 @@ function typeRow(t) {
 
 async function viewLib() {
   const m = $('main'); m.innerHTML = '加载中…';
-  const tree = await api('/tree'); m.innerHTML = '';
+  const tree = await api('/tree');
+  if (!m.isConnected) return;
+  m.innerHTML = '';
   m.appendChild(el('h1', 'title', '题型库'));
   const tt = tree.reduce((a, s) => a + s.ntypes, 0), tc = tree.reduce((a, s) => a + s.ncurated, 0);
   m.appendChild(el('p', 'lead',
@@ -440,4 +625,11 @@ async function viewLib() {
 window.addEventListener('hashchange', route);
 
 // ---------- 启动 ----------
-(async () => { await renderSidebar(); await renderStats(); route(); })();
+if (window.ResizeObserver) {
+  new ResizeObserver(entries => {
+    document.documentElement.style.setProperty('--header-height', Math.ceil(entries[0].target.getBoundingClientRect().height) + 'px');
+  }).observe(document.querySelector('header'));
+}
+void renderSidebar();
+void renderStats();
+void route();

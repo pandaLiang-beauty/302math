@@ -21,6 +21,8 @@ from fastapi import FastAPI, HTTPException                # noqa: E402
 from fastapi.staticfiles import StaticFiles               # noqa: E402
 from pydantic import BaseModel                            # noqa: E402
 import db                                                 # noqa: E402
+import practice                                           # noqa: E402
+from practice_catalog import FOCUS_YEARS                   # noqa: E402
 from typedefs import PAPER_CN, QTYPE_CN                   # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -282,8 +284,8 @@ def stats():
 
 @app.get('/api/papers')
 def papers():
-    """套卷入口:数二真题按年份,带完成进度。"""
-    return q("""
+    """先按2020—2026年顺序做套卷，其余年份保留在历史套卷入口。"""
+    rows = q("""
       WITH latest AS (
         SELECT question_id, result FROM attempts a
         WHERE a.id=(SELECT MAX(id) FROM attempts b WHERE b.question_id=a.question_id))
@@ -295,22 +297,63 @@ def papers():
       FROM questions q LEFT JOIN latest ON latest.question_id=q.id
       WHERE q.paper='math2'
       GROUP BY q.year ORDER BY q.year DESC""")
+    for row in rows:
+        row['priority'] = row['year'] in FOCUS_YEARS
+    return sorted(rows, key=lambda row: (not row['priority'], row['year'] if row['priority'] else -row['year']))
 
 
 @app.get('/api/paper')
 def paper(year: int):
-    """一份套卷的题目(按题号),每题带最近作答与所属题型(供"卡住→看讲解")。"""
+    """按题号做真题；知识点入口直接连接880，已做记录沿用原来的题目ID。"""
     probs = q("""
-      SELECT q.id,q.number,q.qtype,q.type_name,q.point,q.chapter,q.stem_html,
+      SELECT q.id,q.paper,q.year,q.number,q.subject,q.qtype,q.type_name,q.point,q.chapter,q.stem_html,
              q.options_json,
              (q.solution_html<>'' OR q.answer_html<>'') has_sol,
              (SELECT curated FROM types t WHERE t.name=q.type_name) type_curated,
              (SELECT result FROM attempts a WHERE a.question_id=q.id ORDER BY a.id DESC LIMIT 1) last
       FROM questions q WHERE q.paper='math2' AND q.year=? ORDER BY q.number""", (year,))
+    if not probs:
+        raise HTTPException(404, '这年的数二套卷尚未入库')
+    conn = db.connect()
+    try:
+        chapters = practice.catalog(conn)
+    finally:
+        conn.close()
     for p in probs:
         p['options'] = json.loads(p.pop('options_json') or '[]')
         p['qtype_cn'] = QTYPE_CN.get(p['qtype'], p['qtype'])
-    return {'year': year, 'problems': probs, 'count': len(probs)}
+        p['practice'] = practice.recommendation(p, chapters)
+    return {'year': year, 'problems': probs, 'count': len(probs),
+            'next_year': year + 1 if year in FOCUS_YEARS[:-1] else None}
+
+
+@app.get('/api/chapters')
+def chapters():
+    conn = db.connect()
+    try:
+        return practice.catalog(conn)
+    finally:
+        conn.close()
+
+
+@app.get('/api/practice')
+def chapter_practice(question_id: int | None = None, chapter: str = '', topic: str = ''):
+    conn = db.connect()
+    try:
+        return practice.get_practice(conn, question_id=question_id, chapter=chapter, topic=topic)
+    finally:
+        conn.close()
+
+
+@app.api_route('/api/books/{book}', methods=['GET', 'HEAD'])
+def workbook(book: str):
+    from fastapi.responses import FileResponse
+
+    path = practice.BOOKS.get(book)
+    if path is None or not path.is_file():
+        raise HTTPException(404, '这本880资料暂未就绪')
+    return FileResponse(path, media_type='application/pdf', filename=path.name,
+                        content_disposition_type='inline')
 
 
 def _llm(prompt: str) -> str:

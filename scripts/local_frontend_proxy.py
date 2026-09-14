@@ -223,20 +223,26 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
         headers = build_proxy_headers(self.headers, self.client_address[0])
 
         conn = http.client.HTTPConnection(self.backend_host, self.backend_port, timeout=120)
+        started = False
         try:
             conn.request(self.command, backend_path, body=body, headers=headers)
             resp = conn.getresponse()
-            data = b"" if head_only else resp.read()
             self.send_response(resp.status, resp.reason)
             for key, value in resp.getheaders():
                 if key.lower() in HOP_BY_HOP_HEADERS:
                     continue
                 self.send_header(key, value)
             self.end_headers()
-            if data:
-                self.wfile.write(data)
-        except OSError as exc:
-            self.send_error(502, f"backend unavailable: {exc}")
+            started = True
+            if not head_only:
+                while chunk := resp.read(65536):
+                    self.wfile.write(chunk)
+        except (OSError, http.client.HTTPException) as exc:
+            if not started:
+                self.send_error(502, "backend is temporarily unavailable")
+            else:
+                self.log_error("backend stream ended: %s", type(exc).__name__)
+                self.close_connection = True
         finally:
             conn.close()
 

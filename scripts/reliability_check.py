@@ -22,7 +22,9 @@ if str(BACKEND_ROOT) not in sys.path:
     sys.path.insert(0, str(BACKEND_ROOT))
 
 import db  # noqa: E402
+import practice  # noqa: E402
 import server  # noqa: E402
+from practice_catalog import CHAPTER_BY_KEY, FOCUS_YEARS, TOPICS  # noqa: E402
 
 
 def _scalar(conn, sql: str, args: tuple = ()) -> int:
@@ -131,6 +133,36 @@ def check_learning_record_integrity(conn) -> None:
     )
 
 
+def check_exam_880_navigation(conn) -> None:
+    book = {
+        row["number"]: row["chapter"]
+        for row in conn.execute("SELECT number,chapter FROM questions WHERE paper='lilin880'")
+    }
+    for topic in TOPICS:
+        assert topic.numbers, f"知识点 {topic.name} 没有关联880习题"
+        assert len(topic.numbers) == len(set(topic.numbers)), f"知识点 {topic.name} 题号重复"
+        for number in topic.numbers:
+            assert number in book, f"知识点 {topic.name} 指向不存在的880题号 {number}"
+            assert book[number] == CHAPTER_BY_KEY[topic.chapter].book_chapter, (
+                f"知识点 {topic.name} 的880题号 {number} 不属于该章节"
+            )
+
+    for year in FOCUS_YEARS:
+        rows = conn.execute(
+            "SELECT id,number FROM questions WHERE paper='math2' AND year=? ORDER BY number", (year,)
+        ).fetchall()
+        expected = 23 if year == 2020 else 22
+        assert [row["number"] for row in rows] == list(range(1, expected + 1)), f"{year} 年数二套卷题目不完整"
+        for row in rows:
+            result = practice.get_practice(conn, question_id=row["id"])
+            label = f"{year} 年第 {row['number']} 题"
+            assert result["match"] == "topic", f"{label} 未对应到知识点"
+            assert result["problems"], f"{label} 没有对应880习题"
+            assert all(topic["total"] for topic in result["suggested_topics"]), f"{label} 的补练入口为空"
+            assert all(problem["paper"] == "lilin880" for problem in result["problems"]), f"{label} 混入其他题库"
+            assert result["origin"]["id"] == row["id"], f"{label} 返回原题定位错误"
+
+
 def check_api_shape(conn) -> None:
     assert server.health() == {"ok": True}
     tree = server.tree()
@@ -152,6 +184,7 @@ CHECKS = (
     check_curated_explanations,
     check_880_assets_and_clusters,
     check_learning_record_integrity,
+    check_exam_880_navigation,
     check_api_shape,
 )
 

@@ -18,7 +18,32 @@ SPEC.loader.exec_module(proxy)
 
 
 class JsonBackend(http.server.BaseHTTPRequestHandler):
+    PDF = b'%PDF-1.7\n' + bytes(range(256)) * 769 + b'\n%%EOF'
+
     def do_GET(self):
+        self.respond()
+
+    def do_HEAD(self):
+        self.respond(head_only=True)
+
+    def respond(self, *, head_only=False):
+        if self.path == '/api/books/880-answers':
+            payload = self.PDF
+            if self.headers.get('Range'):
+                start, end = map(int, self.headers['Range'].removeprefix('bytes=').split('-'))
+                payload = payload[start:end + 1]
+                self.send_response(206)
+                self.send_header('Content-Range', f'bytes {start}-{end}/{len(self.PDF)}')
+            else:
+                self.send_response(200)
+            self.send_header('Content-Type', 'application/pdf')
+            self.send_header('Content-Length', str(len(payload)))
+            self.send_header('Accept-Ranges', 'bytes')
+            self.send_header('Content-Disposition', 'inline; filename="answers.pdf"')
+            self.end_headers()
+            if not head_only:
+                self.wfile.write(payload)
+            return
         payload = json.dumps({'path': self.path}).encode()
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
@@ -92,6 +117,40 @@ class ProxyTest(unittest.TestCase):
     def test_health_check_stays_available_without_credentials(self):
         with urllib.request.urlopen(self.base_url + '/healthz') as response:
             self.assertEqual(response.read(), b'ok\n')
+
+    def test_original_answer_pdf_stream_and_range_preview(self):
+        opener = self.login_opener()
+        url = self.base_url + '/api/books/880-answers'
+        with opener.open(url) as response:
+            self.assertEqual(response.headers['Content-Type'], 'application/pdf')
+            self.assertEqual(response.headers['Accept-Ranges'], 'bytes')
+            self.assertTrue(response.headers['Content-Disposition'].startswith('inline;'))
+            self.assertEqual(response.read(), JsonBackend.PDF)
+
+        request = urllib.request.Request(url, headers={'Range': 'bytes=10-70000'})
+        with opener.open(request) as response:
+            self.assertEqual(response.status, 206)
+            self.assertEqual(response.headers['Content-Range'], f'bytes 10-70000/{len(JsonBackend.PDF)}')
+            self.assertEqual(response.read(), JsonBackend.PDF[10:70001])
+
+    def test_pdf_head_preserves_size_without_downloading_body(self):
+        opener = self.login_opener()
+        request = urllib.request.Request(self.base_url + '/api/books/880-answers', method='HEAD')
+        with opener.open(request) as response:
+            self.assertEqual(response.status, 200)
+            self.assertEqual(response.headers['Content-Length'], str(len(JsonBackend.PDF)))
+            self.assertEqual(response.headers['Content-Type'], 'application/pdf')
+            self.assertEqual(response.read(), b'')
+
+    def login_opener(self):
+        opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+        request = urllib.request.Request(
+            self.base_url + '/login', data=b'password=password',
+            headers={'Content-Type': 'application/x-www-form-urlencoded'},
+        )
+        with opener.open(request) as response:
+            response.read()
+        return opener
 
 
 if __name__ == '__main__':
