@@ -8,6 +8,7 @@ import http.client
 import html
 import mimetypes
 import posixpath
+import re
 import sys
 from http.cookies import CookieError, SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -28,6 +29,9 @@ HOP_BY_HOP_HEADERS = {
 FORWARDED_HEADERS = {"x-forwarded-for", "x-forwarded-proto", "x-real-ip"}
 SENSITIVE_HEADERS = {"authorization", "cookie"}
 MAX_REQUEST_BODY = 1_048_576
+MAX_DRAFT_REQUEST_BODY = 12_001_024
+PHONE_UPLOAD_PATH = re.compile(r"/api/draft-upload/[A-Za-z0-9_-]{43}")
+DRAFT_IMAGE_POST_PATH = re.compile(r"/api/questions/[1-9][0-9]*/drafts")
 ACCESS_COOKIE = "math_access"
 ACCESS_SESSION_SECONDS = 14 * 24 * 60 * 60
 
@@ -100,6 +104,11 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
             return
         if path == "/logout":
             self.logout(parsed.query)
+            return
+        # This exact route uses a short-lived, single-upload token instead of
+        # the site's password cookie. All photo reads and token issuance stay private.
+        if PHONE_UPLOAD_PATH.fullmatch(path) and self.command in {"GET", "HEAD", "POST"}:
+            self.proxy_to_backend(backend_path=path, head_only=head_only)
             return
         if not self.authorized():
             self.redirect_to_login()
@@ -216,7 +225,11 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def proxy_to_backend(self, *, backend_path: str, head_only: bool = False) -> None:
-        body = self.read_request_body()
+        path = urlparse(backend_path).path
+        is_draft_upload = self.command == "POST" and (
+            PHONE_UPLOAD_PATH.fullmatch(path) or DRAFT_IMAGE_POST_PATH.fullmatch(path)
+        )
+        body = self.read_request_body(max_length=MAX_DRAFT_REQUEST_BODY if is_draft_upload else MAX_REQUEST_BODY)
         if body is None:
             return
 
@@ -311,7 +324,9 @@ class FrontendProxyHandler(BaseHTTPRequestHandler):
         return self.static_root.joinpath(*parts).resolve()
 
     def log_message(self, fmt: str, *args) -> None:
-        sys.stderr.write("%s - - [%s] %s\n" % (self.client_address[0], self.log_date_time_string(), fmt % args))
+        message = re.sub(r"(/api/draft-upload/|%2Fapi%2Fdraft-upload%2F)[A-Za-z0-9_-]+",
+                         r"\1[redacted]", fmt % args, flags=re.IGNORECASE)
+        sys.stderr.write("%s - - [%s] %s\n" % (self.client_address[0], self.log_date_time_string(), message))
 
 
 def build_parser() -> argparse.ArgumentParser:

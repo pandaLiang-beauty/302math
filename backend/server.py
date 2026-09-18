@@ -23,6 +23,7 @@ from pydantic import BaseModel                            # noqa: E402
 import db                                                 # noqa: E402
 import practice                                           # noqa: E402
 import notes                                              # noqa: E402
+import drafts                                             # noqa: E402
 from practice_catalog import FOCUS_YEARS                   # noqa: E402
 from typedefs import PAPER_CN, QTYPE_CN                   # noqa: E402
 
@@ -83,6 +84,7 @@ async def lifespan(app):
 
 app = FastAPI(title='math-题型体系', lifespan=lifespan)
 app.include_router(notes.router)
+app.include_router(drafts.router)
 
 
 @app.exception_handler(HTTPException)
@@ -159,6 +161,7 @@ def _progress(name):
         "SELECT q.id,q.paper,q.year,q.number,q.qtype,q.level,q.stem_html,q.options_json,"
         "(q.solution_html<>'' OR q.answer_html<>'') has_sol,"
         "(SELECT COUNT(*) FROM notes n WHERE n.question_id=q.id) note_count,"
+        "(SELECT COUNT(*) FROM draft_images d WHERE d.question_id=q.id) draft_count,"
         "(SELECT result FROM attempts a WHERE a.question_id=q.id ORDER BY a.id DESC LIMIT 1) last "
         "FROM questions q WHERE q.type_name=? "
         "ORDER BY (q.qtype<>'choice'),(q.qtype<>'blank'),q.year DESC", (name,))
@@ -313,6 +316,7 @@ def paper(year: int):
              q.options_json,
              (q.solution_html<>'' OR q.answer_html<>'') has_sol,
              (SELECT COUNT(*) FROM notes n WHERE n.question_id=q.id) note_count,
+             (SELECT COUNT(*) FROM draft_images d WHERE d.question_id=q.id) draft_count,
              (SELECT curated FROM types t WHERE t.name=q.type_name) type_curated,
              (SELECT result FROM attempts a WHERE a.question_id=q.id ORDER BY a.id DESC LIMIT 1) last
       FROM questions q WHERE q.paper='math2' AND q.year=? ORDER BY q.number""", (year,))

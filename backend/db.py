@@ -70,6 +70,27 @@ CREATE TABLE IF NOT EXISTS notes(
 );
 CREATE INDEX IF NOT EXISTS idx_notes_question ON notes(question_id, id);
 
+CREATE TABLE IF NOT EXISTS draft_images(
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  question_id INTEGER NOT NULL REFERENCES questions(id) ON DELETE CASCADE,
+  stored_name TEXT NOT NULL UNIQUE,
+  content_type TEXT NOT NULL,
+  byte_size   INTEGER NOT NULL,
+  content_hash TEXT NOT NULL,
+  client_id   TEXT NOT NULL UNIQUE,
+  created_at  TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_draft_images_question ON draft_images(question_id, id);
+
+CREATE TABLE IF NOT EXISTS draft_tokens(
+  token_hash  TEXT PRIMARY KEY,
+  question_id INTEGER NOT NULL REFERENCES questions(id) ON DELETE CASCADE,
+  expires_at  INTEGER NOT NULL,
+  used_at     INTEGER,
+  image_id    INTEGER REFERENCES draft_images(id) ON DELETE SET NULL
+);
+CREATE INDEX IF NOT EXISTS idx_draft_tokens_expiry ON draft_tokens(expires_at);
+
 CREATE TABLE IF NOT EXISTS type_progress(
   type_name  TEXT PRIMARY KEY,
   status     TEXT NOT NULL DEFAULT 'learning',      -- learning | mastered(够了)

@@ -26,6 +26,15 @@ class JsonBackend(http.server.BaseHTTPRequestHandler):
     def do_HEAD(self):
         self.respond(head_only=True)
 
+    def do_POST(self):
+        body = self.rfile.read(int(self.headers.get('Content-Length', '0')))
+        payload = json.dumps({'path': self.path, 'bytes': len(body)}).encode()
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Content-Length', str(len(payload)))
+        self.end_headers()
+        self.wfile.write(payload)
+
     def respond(self, *, head_only=False):
         if self.path == '/api/books/880-answers':
             payload = self.PDF
@@ -141,6 +150,46 @@ class ProxyTest(unittest.TestCase):
             self.assertEqual(response.headers['Content-Length'], str(len(JsonBackend.PDF)))
             self.assertEqual(response.headers['Content-Type'], 'application/pdf')
             self.assertEqual(response.read(), b'')
+
+    def test_phone_upload_path_bypasses_login_but_all_other_draft_routes_stay_private(self):
+        path = '/api/draft-upload/' + 'a' * 43
+        with urllib.request.urlopen(self.base_url + path) as response:
+            self.assertEqual(json.loads(response.read()), {'path': path})
+        request = urllib.request.Request(self.base_url + path, data=b'{}',
+                                         headers={'Content-Type': 'application/json'})
+        with urllib.request.urlopen(request) as response:
+            self.assertEqual(json.loads(response.read()), {'path': path, 'bytes': 2})
+        for protected in ('/api/questions/1/drafts', '/api/questions/1/draft-token',
+                          '/api/draft-images/1', '/api/notes', path + '/extra', '/api/draft-upload/short'):
+            with urllib.request.urlopen(self.base_url + protected) as response:
+                self.assertIn('name="password"', response.read().decode())
+        request = urllib.request.Request(self.base_url + path, method='DELETE')
+        with self.assertRaises(urllib.error.HTTPError) as rejected:
+            urllib.request.urlopen(request)
+        self.assertEqual(rejected.exception.code, 303)
+        self.assertTrue(rejected.exception.headers['Location'].startswith('/login?'))
+
+    def test_photo_uploads_above_one_megabyte_pass_without_raising_other_api_limits(self):
+        body = b'x' * (proxy.MAX_REQUEST_BODY + 1)
+        opener = self.login_opener()
+        for path in ('/api/questions/1/drafts', '/api/draft-upload/' + 'b' * 43):
+            request = urllib.request.Request(self.base_url + path, data=body,
+                                             headers={'Content-Type': 'application/json'})
+            client = opener if '/questions/' in path else urllib.request.build_opener()
+            with client.open(request) as response:
+                self.assertEqual(json.loads(response.read()), {'path': path, 'bytes': len(body)})
+        request = urllib.request.Request(self.base_url + '/api/notes', data=body,
+                                         headers={'Content-Type': 'application/json'})
+        with self.assertRaises(urllib.error.HTTPError) as rejected:
+            opener.open(request)
+        self.assertEqual(rejected.exception.code, 413)
+
+    def test_phone_upload_limit_is_enforced_even_without_login(self):
+        request = urllib.request.Request(self.base_url + '/api/draft-upload/' + 'c' * 43,
+            data=b'', headers={'Content-Length': str(proxy.MAX_DRAFT_REQUEST_BODY + 1)})
+        with self.assertRaises(urllib.error.HTTPError) as rejected:
+            urllib.request.urlopen(request)
+        self.assertEqual(rejected.exception.code, 413)
 
     def login_opener(self):
         opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))

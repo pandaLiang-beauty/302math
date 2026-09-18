@@ -43,3 +43,5 @@ backend/data/study.backup-*.db
 # 已追踪文件），仓库里那份快照照旧在；这几条只挡住之后新抓的真题和新跑的解析产物。
 backend/data/raw/
 backend/_mineru_*/
+backend/data/drafts/
+backend/data/audits/

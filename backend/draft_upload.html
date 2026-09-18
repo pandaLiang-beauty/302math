@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>数学 · 上传草稿纸</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px 16px;background:#e7e4dd;color:#1c1a17;font:15px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+main{max-width:520px;margin:auto;padding:22px;background:#faf8f4;border:1px solid #ddd7cc;border-radius:10px}
+h1{margin:0;font-size:21px}p{margin:8px 0 18px;color:#786f63;font-size:13px}.actions{display:flex;gap:10px}
+button{font:inherit;border:1px solid #b04a2f;border-radius:6px;background:transparent;color:#b04a2f;padding:11px 14px;cursor:pointer}
+.actions button{flex:1}#upload{display:block;width:100%;margin-top:16px;background:#b04a2f;color:white}
+button:disabled{opacity:.5;cursor:default}input[hidden],[hidden]{display:none!important}
+#preview{width:100%;max-height:55vh;object-fit:contain;margin-top:16px;background:white;border:1px solid #ddd7cc;border-radius:5px}
+#message{margin-top:12px;font-size:14px;color:#2f7d47}#message.error{color:#c23b3b}
+:focus-visible{outline:2px solid #b04a2f;outline-offset:3px}small{display:block;margin-top:12px;color:#786f63}
+</style>
+</head>
+<body>
+<main>
+<h1>上传草稿纸</h1>
+<p>__QUESTION_LABEL__</p>
+<div class="actions">
+<button id="camera-button" type="button">拍照</button>
+<button id="choose-button" type="button">从相册选择</button>
+</div>
+<input id="camera" type="file" accept="image/jpeg,image/png,image/webp,image/gif" capture="environment" hidden>
+<input id="choose" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+<small>JPG、PNG、WebP、GIF · 单张 9 MB</small>
+<img id="preview" alt="待上传的草稿纸" hidden>
+<button id="upload" type="button" disabled>上传</button>
+<div id="message" role="status" aria-live="polite"></div>
+</main>
+<script>
+'use strict';
+const camera = document.getElementById('camera'), choose = document.getElementById('choose');
+const cameraButton = document.getElementById('camera-button'), chooseButton = document.getElementById('choose-button');
+const preview = document.getElementById('preview'), upload = document.getElementById('upload'), message = document.getElementById('message');
+let pending = null, previewURL = '', busy = false, selection = 0;
+const clientId = () => globalThis.crypto?.randomUUID?.() || 'draft-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+function say(text, error = false) { message.textContent = text; message.classList.toggle('error', error); message.setAttribute('role', error ? 'alert' : 'status'); }
+function controls(disabled) { cameraButton.disabled = chooseButton.disabled = camera.disabled = choose.disabled = disabled; }
+cameraButton.onclick = () => camera.click();
+chooseButton.onclick = () => choose.click();
+async function select(event) {
+  const file = event.target.files?.[0]; event.target.value = '';
+  if (!file || busy) return;
+  const current = ++selection;
+  pending = null; upload.disabled = true; preview.hidden = true; say('');
+  if (previewURL) URL.revokeObjectURL(previewURL);
+  if (file.size > 9000000) { say('单张草稿图片最多 9 MB', true); return; }
+  if (!file.size) { say('图片为空，请重新选择', true); return; }
+  try {
+    const data = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(new Error('图片读取失败，请重新选择'));
+      reader.readAsDataURL(file);
+    });
+    if (selection !== current) return;
+    pending = { image_base64: data, client_id: clientId() };
+    previewURL = URL.createObjectURL(file); preview.src = previewURL; preview.hidden = false;
+    upload.disabled = false;
+  } catch (error) { if (selection === current) say(error.message, true); }
+}
+camera.onchange = choose.onchange = select;
+upload.onclick = async () => {
+  if (!pending || busy) return;
+  busy = true; controls(true); upload.disabled = true; upload.textContent = '上传中…'; say('');
+  try {
+    const response = await fetch(location.pathname, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(pending) });
+    let result;
+    try { result = await response.json(); } catch { /* The public proxy may return an HTML error. */ }
+    if (!response.ok || !result?.ok) throw new Error(typeof result?.detail === 'string' ? result.detail : '上传失败，请重试');
+    pending = null; upload.textContent = '已上传'; say('已上传，电脑端会自动显示。');
+  } catch (error) {
+    say(error.message, true); controls(false); upload.disabled = false; upload.textContent = '重试上传';
+  } finally { busy = false; }
+};
+window.addEventListener('beforeunload', event => { if (busy) { event.preventDefault(); event.returnValue = ''; } });
+</script>
+</body>
+</html>

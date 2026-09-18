@@ -29,6 +29,7 @@ const fmt = (s) => (s || '').replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
 function setNav(v) { document.querySelectorAll('nav a').forEach(a => a.classList.toggle('active', a.dataset.nav === v)); }
 let disposeView = () => {};
 async function route() {
+  closeQuestionDrafts();
   disposeView();
   disposeView = () => {};
   const current = flow.parseRoute(location.hash);
@@ -147,7 +148,9 @@ function problemCard(p, opts = {}) {
     zoom.appendChild(img);
     zoom.appendChild(textEl('span', 'image-zoom-hint', '点击题图放大 ↗'));
   });
-  attachQuestionNotes(q, p, head);
+  const tools = el('div', 'question-tools'); head.appendChild(tools);
+  attachQuestionDrafts(q, p, tools);
+  attachQuestionNotes(q, p, tools);
   return q;
 }
 

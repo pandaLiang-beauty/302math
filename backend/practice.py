@@ -116,6 +116,7 @@ def get_practice(conn, *, question_id=None, chapter='', topic=''):
                q.stem_html,q.options_json,q.plain,
                (q.solution_html<>'' OR q.answer_html<>'') has_sol,
                (SELECT COUNT(*) FROM notes n WHERE n.question_id=q.id) note_count,
+               (SELECT COUNT(*) FROM draft_images d WHERE d.question_id=q.id) draft_count,
                (SELECT result FROM attempts a WHERE a.question_id=q.id ORDER BY a.id DESC LIMIT 1) last
         FROM questions q WHERE q.paper='lilin880' AND q.chapter=?
     """

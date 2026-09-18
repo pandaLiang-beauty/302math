@@ -9,7 +9,8 @@
     "@mdit/plugin-tex": "1.1.1",
     "katex": "0.16.47",
     "markdown-it": "15.0.2",
-    "markdown-it-task-lists": "2.1.1"
+    "markdown-it-task-lists": "2.1.1",
+    "qrcode": "1.5.4"
   },
   "devDependencies": {
     "esbuild": "0.25.9"

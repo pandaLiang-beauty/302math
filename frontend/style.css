@@ -235,3 +235,22 @@ ol.route li::marker{color:var(--accent);font-weight:600}
 .rec .g{flex:1}
 .rec .g .t{font-size:14px;font-weight:600}
 .rec .g .s,.reason-summary{font-size:12px;color:var(--sub)}
+
+/* Keep the question and its upload controls usable on phones and tablets. */
+@media(max-width:900px){
+  header{height:auto;min-height:58px;flex-wrap:wrap;gap:8px;padding:10px 16px}
+  nav{flex:1 1 100%;min-width:0;overflow-x:auto}
+  nav a{flex-shrink:0;white-space:nowrap;padding:6px 10px}
+  .layout,.layout.sidebar-collapsed{grid-template-columns:minmax(0,1fr);width:calc(100% - 24px);gap:16px;margin:16px auto 28px}
+  #tree{position:static;max-height:none}
+  .paper-sheet,.content-sheet{padding:22px 20px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  .paper-heading h1{font-size:22px}
+  .paper-kicker{font-size:13px}
+  .choices,.topic-list{grid-template-columns:minmax(0,1fr)}
+  .paper-start{flex-direction:column;align-items:flex-start}
+  .note-panel{padding:12px}
+  .note-panel-heading,.note-editor-toolbar{flex-wrap:wrap;gap:8px}
+}
