@@ -96,7 +96,7 @@ async function viewPractice({ questionId, chapter, topic, focusId }) {
     m.appendChild(section);
   });
   if (!data.problems.length) {
-    m.appendChild(textEl('div', 'empty', data.mode==='related'?'暂时没有经过核对的同法补练题。可以回看原题解析，或自主选择章节习题。':'这个知识点暂未收录习题。'));
+    m.appendChild(textEl('div', 'empty', data.mode==='related'?'这道题暂未找到足够贴近的 880 练习。可以返回原题，或自主选择章节习题。':'这个知识点暂未收录习题。'));
   }
   if (origin) m.appendChild(studyLink(backLabel + '，继续套卷 →', backHash, 'btn primary practice-return'));
   setStudySidebar({ kind: 'practice', data });

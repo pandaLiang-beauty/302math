@@ -1,0 +1,12 @@
+{
+  "algebra-Q186": {
+    "answer": "(I) 存在满足条件的矩阵 B。\n\n(II) 所有矩阵为\n$$\nB=\\begin{pmatrix}\nk_1&k_2+1&k_3+1\\\\\n1&1&2\\\\\nk_1&k_2&k_3\\\\\n-1&-1&-1\n\\end{pmatrix},\\qquad k_1,k_2,k_3\\in\\mathbb R.\n$$",
+    "content_hash": "f6bed45d897b90170476c33014854b28442ee6b01c2ffd616ddd5fb63de92b17",
+    "note": "",
+    "source_pages": [
+      282,
+      283
+    ],
+    "checkable": true
+  }
+}

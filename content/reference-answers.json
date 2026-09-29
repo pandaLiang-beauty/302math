@@ -1,0 +1,4740 @@
+{
+  "calculus-Q001": {
+    "answer": "C",
+    "content_hash": "8e937adc85b938d8053d770889b175ccabd7d1ddb01442da33c656d489fd8c3a",
+    "note": "",
+    "source_pages": [
+      3
+    ],
+    "checkable": true
+  },
+  "calculus-Q002": {
+    "answer": "D",
+    "content_hash": "bbd0d1f516198d7a3ea6d4e76cf649e3fd1b273792e0c4cb83b28d5ab3164b57",
+    "note": "",
+    "source_pages": [
+      3
+    ],
+    "checkable": true
+  },
+  "calculus-Q003": {
+    "answer": "B",
+    "content_hash": "9437dc1592288fc98f905e3671b74a4810ea8099e3290c83720cd13682f91b93",
+    "note": "",
+    "source_pages": [
+      3
+    ],
+    "checkable": true
+  },
+  "calculus-Q004": {
+    "answer": "D",
+    "content_hash": "a9a121dce9b7f8a107dcf67b9a00bf52a9cac8d23dc3093ad1a33c691ace6906",
+    "note": "",
+    "source_pages": [
+      3
+    ],
+    "checkable": true
+  },
+  "calculus-Q005": {
+    "answer": "D",
+    "content_hash": "e80e93bb6d16a458b8a307a95b357294fa128e4acf3d3a2e18087049f8ce2020",
+    "note": "",
+    "source_pages": [
+      4
+    ],
+    "checkable": true
+  },
+  "calculus-Q006": {
+    "answer": "C",
+    "content_hash": "0978c83c50a84bd358c8bf59618899e4aca37067f57b9dfb8debad73789f9c37",
+    "note": "",
+    "source_pages": [
+      4
+    ],
+    "checkable": true
+  },
+  "calculus-Q007": {
+    "answer": "B",
+    "content_hash": "accea248009e345c0569255522c68f8f5c29ea7bd4e593161692914b7a9d21b5",
+    "note": "",
+    "source_pages": [
+      4
+    ],
+    "checkable": true
+  },
+  "calculus-Q008": {
+    "answer": "D",
+    "content_hash": "0e001163ea1fc58a720a1a7e25ef4a74e831b2c1d78090842a4a36be1fede84b",
+    "note": "",
+    "source_pages": [
+      4
+    ],
+    "checkable": true
+  },
+  "calculus-Q009": {
+    "answer": "A",
+    "content_hash": "a2083e272dac8ef4e6a052d03a62bca2a8efab632ec3d9a3143d1904ae7817fa",
+    "note": "",
+    "source_pages": [
+      4,
+      5
+    ],
+    "checkable": true
+  },
+  "calculus-Q010": {
+    "answer": "C",
+    "content_hash": "4ffb78d74e906b3483361c4d05b701c3ef59929c5484f9d381de6c0382fd5d7d",
+    "note": "",
+    "source_pages": [
+      5
+    ],
+    "checkable": true
+  },
+  "calculus-Q011": {
+    "answer": "C",
+    "content_hash": "51082f0f3fed15ed7897b5e38d43cbe4556eff03f94af7ed13f0e17a7f36bcae",
+    "note": "",
+    "source_pages": [
+      5
+    ],
+    "checkable": true
+  },
+  "calculus-Q012": {
+    "answer": "A",
+    "content_hash": "eec279c00b3545c017d717acc11be194f754c0595bdfd349af2a9588f2940cd4",
+    "note": "",
+    "source_pages": [
+      5
+    ],
+    "checkable": true
+  },
+  "calculus-Q013": {
+    "answer": "C",
+    "content_hash": "c66719b29cac832d35c6a503a134f6a0acaf464d7acd2bee383cc5fc3ba0ff18",
+    "note": "",
+    "source_pages": [
+      5,
+      6
+    ],
+    "checkable": true
+  },
+  "calculus-Q014": {
+    "answer": "1",
+    "content_hash": "b9416671f28d9b837d89460eb63b659ea44e4310e3dfa74b8322e45b1e8d339a",
+    "note": "",
+    "source_pages": [
+      6
+    ],
+    "checkable": true
+  },
+  "calculus-Q015": {
+    "answer": "-\\frac{3}{2}",
+    "content_hash": "45fb12b70e0aeed7d4879c64dbdf754aadc755d3331439ace890cfb236803e30",
+    "note": "",
+    "source_pages": [
+      6
+    ],
+    "checkable": true
+  },
+  "calculus-Q016": {
+    "answer": "-2",
+    "content_hash": "b0554ddffb617065c1c2606e92c656cbd138c49ba3bcf82592072d649055701a",
+    "note": "",
+    "source_pages": [
+      6
+    ],
+    "checkable": true
+  },
+  "calculus-Q017": {
+    "answer": "P\\le2",
+    "content_hash": "277f4b9fbb3812e572482448a0ab7384dea726fb848dbe43d7adca4e4fb73c17",
+    "note": "",
+    "source_pages": [
+      6
+    ],
+    "checkable": true
+  },
+  "calculus-Q018": {
+    "answer": "0",
+    "content_hash": "ab56a253a64521e9f20bad87e5d73dfa3c3a47cde8679407dfd7cbeafd9912cf",
+    "note": "",
+    "source_pages": [
+      6
+    ],
+    "checkable": true
+  },
+  "calculus-Q019": {
+    "answer": "1/12",
+    "content_hash": "f9e12ad3fd37c92dfe64d504498e53ce52446df76bbd22d57184f480e4956d33",
+    "note": "",
+    "source_pages": [
+      6,
+      7
+    ],
+    "checkable": true
+  },
+  "calculus-Q020": {
+    "answer": "f(x)=c(a/x-bx)/(a²-b²)，x≠0；是奇函数",
+    "content_hash": "8b784f4aba3950edfc4a9eb0ee0a92a72296a9b04f68492fa24d828fe02a319f",
+    "note": "",
+    "source_pages": [
+      7
+    ],
+    "checkable": true
+  },
+  "calculus-Q021": {
+    "answer": "(I)1；(II)(abc)^(1/3)；(III)-1；(IV)-3e³/2；(V)1/3；(VI)1/6；(VII)e^(-2)；末问1",
+    "content_hash": "4e3e5e0c25cf2809e79c2fdb06934f298a18e682b7a7e7cce3eca7e933b290c6",
+    "note": "题干把第八小问也标为“(VII)”；原书对应解析将最后一问标为“(VIII)”。",
+    "source_pages": [
+      7,
+      8
+    ],
+    "checkable": false
+  },
+  "calculus-Q022": {
+    "answer": "(I)1/2；(II)√2/2；(III)1/2；(IV)1；(V)√3",
+    "content_hash": "3e49a3dc367b8625079cd74e32b170698640f609c4ec16b0235da3e812831e75",
+    "note": "",
+    "source_pages": [
+      8,
+      9
+    ],
+    "checkable": true
+  },
+  "calculus-Q023": {
+    "answer": "π/4、5π/4为无穷间断点；3π/4、7π/4为可去间断点",
+    "content_hash": "be93bc3a55f3ebe4694709cb5f4d6701156cacf4394c136c06108bd3ff110219",
+    "note": "",
+    "source_pages": [
+      9
+    ],
+    "checkable": true
+  },
+  "calculus-Q024": {
+    "answer": "x≠0时，f(x)在0<|x|<1为-1，在|x|=1为0，在|x|>1为x²；在定义域内除x=±1外连续",
+    "content_hash": "2900536e7cddb0c0d16afad3b1d24f2fd8be4bbdaba6b415f3d8398c41f47e0b",
+    "note": "",
+    "source_pages": [
+      9
+    ],
+    "checkable": true
+  },
+  "calculus-Q025": {
+    "answer": "A",
+    "content_hash": "19e82c77c3246586dce148d568dd1c171197cf371fd7849efef5e7792f89cc1c",
+    "note": "",
+    "source_pages": [
+      9
+    ],
+    "checkable": true
+  },
+  "calculus-Q027": {
+    "answer": "D",
+    "content_hash": "011f17d8f82e05b81721d4c48232f3d58e4f1fcd4da1dceaba515e805c5d766e",
+    "note": "",
+    "source_pages": [
+      10
+    ],
+    "checkable": true
+  },
+  "calculus-Q028": {
+    "answer": "C",
+    "content_hash": "74a6d4d1add0e2a0b733dfb39dfc0cf2d739968d139dc94f941b1cd7ac30de43",
+    "note": "",
+    "source_pages": [
+      10
+    ],
+    "checkable": true
+  },
+  "calculus-Q029": {
+    "answer": "D",
+    "content_hash": "86cad4118b12f74f23e5174de148a3983340f22ffc03d157e312db762bf0e010",
+    "note": "",
+    "source_pages": [
+      10,
+      11
+    ],
+    "checkable": true
+  },
+  "calculus-Q030": {
+    "answer": "B",
+    "content_hash": "475d3c890b78ea9e139a4869a2de42f52990b566a0c83ad619a6a5f46855514c",
+    "note": "",
+    "source_pages": [
+      11
+    ],
+    "checkable": true
+  },
+  "calculus-Q031": {
+    "answer": "D",
+    "content_hash": "6b4553b3714386bbb5eff2bdbbccf2bc347e42dc20eb6ee586d1d958fd7364d6",
+    "note": "",
+    "source_pages": [
+      11
+    ],
+    "checkable": true
+  },
+  "calculus-Q032": {
+    "answer": "C",
+    "content_hash": "ee9127481a4a99ba68456564b505ea179de947ea5d82838c1c902d1167dcf3ce",
+    "note": "",
+    "source_pages": [
+      11
+    ],
+    "checkable": true
+  },
+  "calculus-Q033": {
+    "answer": "D",
+    "content_hash": "19bdfbac60bc8902b9aef97e411751ed6a922c810bf16f756f92498320a8b348",
+    "note": "",
+    "source_pages": [
+      11
+    ],
+    "checkable": true
+  },
+  "calculus-Q034": {
+    "answer": "D",
+    "content_hash": "6769fd87f643debcbafe46148e641540f3cc6c43f3f49431437fcc328b81e644",
+    "note": "",
+    "source_pages": [
+      12
+    ],
+    "checkable": true
+  },
+  "calculus-Q035": {
+    "answer": "B",
+    "content_hash": "ac642fe124f23a49d1e3bf6a47d1427da3d830fc60ca03b60fd532740c8516bd",
+    "note": "",
+    "source_pages": [
+      12
+    ],
+    "checkable": true
+  },
+  "calculus-Q036": {
+    "answer": "A",
+    "content_hash": "2d7ee1436d506277a3ab59326af44b5fe29e5e43df6ff7e31af393cf4a5ef4b8",
+    "note": "",
+    "source_pages": [
+      12
+    ],
+    "checkable": true
+  },
+  "calculus-Q037": {
+    "answer": "C",
+    "content_hash": "fbbe966c26324b1ea05a5013a769bc08922e9b853ff4b1ca3e08ffcee901d9f3",
+    "note": "",
+    "source_pages": [
+      12
+    ],
+    "checkable": true
+  },
+  "calculus-Q038": {
+    "answer": "B",
+    "content_hash": "770c6f042765614a422da52f38768ecef77d23855dcd1c4c06b7abe9acf8f8f6",
+    "note": "",
+    "source_pages": [
+      12,
+      13
+    ],
+    "checkable": true
+  },
+  "calculus-Q039": {
+    "answer": "B",
+    "content_hash": "f41e8bc165018d01ee804ef943c52ab3f174ba972c796cf8e4b7f2c4b428701f",
+    "note": "",
+    "source_pages": [
+      13
+    ],
+    "checkable": true
+  },
+  "calculus-Q040": {
+    "answer": "D",
+    "content_hash": "4d111a3d606e71b0e0c483738b046dc5f0730ff996afb08bb3bbf62f71e31a1b",
+    "note": "",
+    "source_pages": [
+      13
+    ],
+    "checkable": true
+  },
+  "calculus-Q041": {
+    "answer": "D",
+    "content_hash": "aeb68e6c0708b48c94bb179fac03bd3540e2b52b4843766c62693ae02a017be3",
+    "note": "",
+    "source_pages": [
+      13,
+      14
+    ],
+    "checkable": true
+  },
+  "calculus-Q042": {
+    "answer": "C",
+    "content_hash": "ae1a5b469a619a9978a15fa0dc6eeafa88bcf0cbe62f155a8178c4a9cdbf1a33",
+    "note": "",
+    "source_pages": [
+      14
+    ],
+    "checkable": true
+  },
+  "calculus-Q043": {
+    "answer": "A",
+    "content_hash": "1423430dce56b7f3dbe73342b55c5e089b8490ab0417d994ec23fe8054259ed4",
+    "note": "",
+    "source_pages": [
+      14
+    ],
+    "checkable": true
+  },
+  "calculus-Q044": {
+    "answer": "5",
+    "content_hash": "eefa46ff49754c72cec7b097fbd6b4354fb3c0c656aa1c0f84cb3a1f2454e2ba",
+    "note": "",
+    "source_pages": [
+      15
+    ],
+    "checkable": true
+  },
+  "calculus-Q045": {
+    "answer": "-12",
+    "content_hash": "df80ded07d4aa4fb606995562f63c38f766fa46b5c2ade326e82051c8680f905",
+    "note": "",
+    "source_pages": [
+      15
+    ],
+    "checkable": true
+  },
+  "calculus-Q046": {
+    "answer": "6",
+    "content_hash": "73fdd4102cfafc6f59daa9ddba653cdc43599168ac57d167abdfdb3fd4ff358f",
+    "note": "",
+    "source_pages": [
+      15
+    ],
+    "checkable": true
+  },
+  "calculus-Q047": {
+    "answer": "Ae^b",
+    "content_hash": "5ac1403b3616a59f06f373031c6ff722408554eb9f057779cccf63b68c1edb30",
+    "note": "",
+    "source_pages": [
+      15
+    ],
+    "checkable": true
+  },
+  "calculus-Q048": {
+    "answer": "(1+e^{-1})^{3/2}-1",
+    "content_hash": "eefac53f3a966c8668e85ba15640cf093f541e7fe13f53f70e86961adfd6ff7e",
+    "note": "",
+    "source_pages": [
+      16
+    ],
+    "checkable": true
+  },
+  "calculus-Q049": {
+    "answer": "\\frac{1}{1-2k}",
+    "content_hash": "d757c50ddb91952c168b6d69bb15a00b2f158db1e8360dc19f9718397a1f862b",
+    "note": "",
+    "source_pages": [
+      16
+    ],
+    "checkable": true
+  },
+  "calculus-Q050": {
+    "answer": "\\frac{1}{a_1}",
+    "content_hash": "a981930d3d6e388b0da69bf3df77541a5a096aae9fa8a16dea6e4dee53212f78",
+    "note": "",
+    "source_pages": [
+      16
+    ],
+    "checkable": true
+  },
+  "calculus-Q051": {
+    "answer": "a=-1，b=0",
+    "content_hash": "fd4f3816b472037f679649c28c2cfdfe7174e6ae4b83936e5cc6bc3b514a1ed1",
+    "note": "",
+    "source_pages": [
+      16,
+      17
+    ],
+    "checkable": true
+  },
+  "calculus-Q052": {
+    "answer": "a=-2，b=2",
+    "content_hash": "4475dd3dcd18ef15d260234cd38b0cb3f3f406dd00df5941fad884d9f1b471f3",
+    "note": "",
+    "source_pages": [
+      17
+    ],
+    "checkable": true
+  },
+  "calculus-Q053": {
+    "answer": "\\sqrt{2}",
+    "content_hash": "7b5f765ff19731921e6277ff298a6b78d4f8106aa7a5097efb4096b97faab98c",
+    "note": "",
+    "source_pages": [
+      17
+    ],
+    "checkable": true
+  },
+  "calculus-Q054": {
+    "answer": "0",
+    "content_hash": "b5d5b9653837cfcbedc265a0793f63803823e48f7a617724bfccc2c70c633869",
+    "note": "",
+    "source_pages": [
+      17
+    ],
+    "checkable": true
+  },
+  "calculus-Q055": {
+    "answer": "1",
+    "content_hash": "6d4d4c9884cf4691e067e9fd3205e7bd4d688b21c91889a63e800c9fb9692cda",
+    "note": "",
+    "source_pages": [
+      17,
+      18
+    ],
+    "checkable": true
+  },
+  "calculus-Q056": {
+    "answer": "\\frac{f''(1)}{2[f'(1)]^2}",
+    "content_hash": "ea7c7e439e3515f250fe6d181d4445ebdef210739f7a5296a00267ff19d49954",
+    "note": "",
+    "source_pages": [
+      18
+    ],
+    "checkable": true
+  },
+  "calculus-Q057": {
+    "answer": "0",
+    "content_hash": "149a2434c0298fce2f346e7e7c93ecc662fd2e3256412761a5f8fec9ae14cef5",
+    "note": "",
+    "source_pages": [
+      18
+    ],
+    "checkable": true
+  },
+  "calculus-Q058": {
+    "answer": "2",
+    "content_hash": "548b83a0c28a7a6dc0e37b6fb36a64f35b63e96201585555ce2eb2ccafcbea44",
+    "note": "",
+    "source_pages": [
+      18
+    ],
+    "checkable": true
+  },
+  "calculus-Q059": {
+    "answer": "(I) 3；(II) \\frac53",
+    "content_hash": "d44815f0852667a7517c322f3a28f4015c451288a899e3021c5eeb1b7ba8ecc3",
+    "note": "",
+    "source_pages": [
+      18,
+      19
+    ],
+    "checkable": true
+  },
+  "calculus-Q060": {
+    "answer": "(I)、(II)均存在满足条件的点",
+    "content_hash": "3d2edc044783a210fb654376e98d16ffe6f57bf0becd43b303c7473bad5ad1ed",
+    "note": "第(II)问题干末尾多出“.)”，属于标点排版错误，不影响题意。",
+    "source_pages": [
+      19
+    ],
+    "checkable": false
+  },
+  "calculus-Q061": {
+    "answer": "2/27",
+    "content_hash": "dec6fbf85f115032987ea094bb290284a6055a9304a7583f041bbba0556d59d6",
+    "note": "",
+    "source_pages": [
+      20
+    ],
+    "checkable": true
+  },
+  "calculus-Q062": {
+    "answer": "-1/2",
+    "content_hash": "0855a5b6a26a29a9995b6f7ac0cc41b450687d67338632c407d1f68ee4eee892",
+    "note": "",
+    "source_pages": [
+      20
+    ],
+    "checkable": true
+  },
+  "calculus-Q063": {
+    "answer": "-2",
+    "content_hash": "b3a2401d08b77893d77a19bfbe55106430fd939baf35b03fce0a171dfc5cc5b2",
+    "note": "",
+    "source_pages": [
+      20,
+      21
+    ],
+    "checkable": true
+  },
+  "calculus-Q064": {
+    "answer": "e^{e+1}/8",
+    "content_hash": "5b5d7f5de4e42cb12408b9275245e71926c9c40cd9b0a023c42cad9d0908b4f7",
+    "note": "",
+    "source_pages": [
+      21
+    ],
+    "checkable": true
+  },
+  "calculus-Q065": {
+    "answer": "1",
+    "content_hash": "64ba6f137aecf68fdb2bbdf72717814532416b5e2ea14206c2871506b0e8011b",
+    "note": "",
+    "source_pages": [
+      21,
+      22
+    ],
+    "checkable": true
+  },
+  "calculus-Q066": {
+    "answer": "a=1，b=0，c=-1/3",
+    "content_hash": "9a96f6a8449fd190f195fec206ed237e8508a9552a6f58ec6c916cb4db95b171",
+    "note": "",
+    "source_pages": [
+      22
+    ],
+    "checkable": true
+  },
+  "calculus-Q067": {
+    "answer": "1",
+    "content_hash": "53fca58ed8e0a637e518be2f27be7f0ff50d5ae3131ab6affb46eb4d3efd5e63",
+    "note": "",
+    "source_pages": [
+      22
+    ],
+    "checkable": true
+  },
+  "calculus-Q069": {
+    "answer": "$0$",
+    "content_hash": "bb5cf29aa45d359d2ea75f951e6cfe4733388220fc12f7c0e6867f641b8d6c90",
+    "note": "",
+    "source_pages": [
+      23
+    ],
+    "checkable": true
+  },
+  "calculus-Q070": {
+    "answer": "(I) $\\dfrac{1}{1-x}$；(II) $\\dfrac{\\sin x}{x}$；(III) $\\dfrac{1}{n!}$",
+    "content_hash": "0412f5f08bc330cf0125f138c264a74aa4229a1e5e6fc43c74f3578d815c0497",
+    "note": "",
+    "source_pages": [
+      23,
+      24
+    ],
+    "checkable": true
+  },
+  "calculus-Q072": {
+    "answer": "2",
+    "content_hash": "ecf81b0bcfb141519575a0bc014e5b17213a833a9d0dfd00a89650542b46d3de",
+    "note": "",
+    "source_pages": [
+      24,
+      25
+    ],
+    "checkable": true
+  },
+  "calculus-Q073": {
+    "answer": "$0\\le b_n\\le a_n$；$\\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}b_n=0$",
+    "content_hash": "17965b35967b339c1f309688971411c3ace3fb4741529e92390404f58abb92c6",
+    "note": "",
+    "source_pages": [
+      25
+    ],
+    "checkable": true
+  },
+  "calculus-Q074": {
+    "answer": "(I) 0；(II) 题面允许 x_0=0 时无定义；若 x_0\\ne0 且第二问表达式最终有定义，则为 \\(\\dfrac e2\\)",
+    "content_hash": "66dbd6e82123a81dc70e96aa6ee5229c370979f424235dbdb542e79e1fbd62ec",
+    "note": "题面允许 $x_0=0$，此时第二问原式无定义；题面也未说明底数非正时实数幂的定义约定。对 $x_0\\ne0$ 且第二问表达式最终有定义的情形，第二问极限为 $e/2$。",
+    "source_pages": [
+      25,
+      26
+    ],
+    "checkable": false
+  },
+  "calculus-Q075": {
+    "answer": "(I) \\(f(k+1)\\le\\int_k^{k+1}f(x)\\,dx\\le f(k)\\)；(II) 极限为 \\(1\\)",
+    "content_hash": "b630708082059e51b184196c057686f563be8ae7e51de6a9b6266d1d0582e5fa",
+    "note": "",
+    "source_pages": [
+      26,
+      27
+    ],
+    "checkable": true
+  },
+  "calculus-Q076": {
+    "answer": "(I) 在 $(0,1)$ 内有唯一实根 $x_n$；(II) $1$",
+    "content_hash": "3cd32e91be08696b9997f916b4a92fe375d88b941272169c3f5f62dc029cb017",
+    "note": "",
+    "source_pages": [
+      27,
+      28
+    ],
+    "checkable": true
+  },
+  "calculus-Q077": {
+    "answer": "(I) 成立；(II) \\(e^{1/2}\\)",
+    "content_hash": "e7411b95c6b7e61a2cf20662c33b74d2c1e5c8cdebdfd0730fdf3a8400ebdb19",
+    "note": "",
+    "source_pages": [
+      28
+    ],
+    "checkable": true
+  },
+  "calculus-Q078": {
+    "answer": "A",
+    "content_hash": "ef9880eaf23e56166fc2ea8e44d560dbab6b3720e15b50e7832ef06d165857ac",
+    "note": "",
+    "source_pages": [
+      29
+    ],
+    "checkable": true
+  },
+  "calculus-Q079": {
+    "answer": "A",
+    "content_hash": "5d0e9ed9a870fd47732dfdee1695dafdc209a08c56bd7c50f0f38459e1086a44",
+    "note": "原书解析的中间步骤含有以$a\\Delta x$、$b\\Delta x$为分母的差商，未单独处理题设允许的$a=0$或$b=0$；结论仍正确。",
+    "source_pages": [
+      29
+    ],
+    "checkable": false
+  },
+  "calculus-Q080": {
+    "answer": "B",
+    "content_hash": "da90bc1eb49d30d9b9be0da974f36889a4b25a50f64c8db9e557f202878be0e7",
+    "note": "",
+    "source_pages": [
+      29
+    ],
+    "checkable": true
+  },
+  "calculus-Q081": {
+    "answer": "A",
+    "content_hash": "712431edc27771d7ec2aebaff59ff270cc50826f43cc7802705ad26767b25131",
+    "note": "",
+    "source_pages": [
+      29,
+      30
+    ],
+    "checkable": true
+  },
+  "calculus-Q082": {
+    "answer": "B",
+    "content_hash": "d485578333b914fe2e833bc7a7bc2036956306710173cbed75f439e926eb6799",
+    "note": "",
+    "source_pages": [
+      30
+    ],
+    "checkable": true
+  },
+  "calculus-Q083": {
+    "answer": "D",
+    "content_hash": "dc59af55a59109aa1f547780264c778dbfa5001decf9e303528eae492205f5e4",
+    "note": "",
+    "source_pages": [
+      30
+    ],
+    "checkable": true
+  },
+  "calculus-Q084": {
+    "answer": "B",
+    "content_hash": "5cda079b9503bc87970177f60ceee3ffacada0bee2b33c7d34e4b9607ce3feaf",
+    "note": "",
+    "source_pages": [
+      30
+    ],
+    "checkable": true
+  },
+  "calculus-Q085": {
+    "answer": "C",
+    "content_hash": "09f808cd8f4c8dd24ff0dbbda1da86eb68e5fffb303f84bdbef21e146d52edfc",
+    "note": "",
+    "source_pages": [
+      30
+    ],
+    "checkable": true
+  },
+  "calculus-Q086": {
+    "answer": "C",
+    "content_hash": "1fa6294d26385f0788ad030610f4246ad2e58423fb924cdaf1993f503aa944b4",
+    "note": "",
+    "source_pages": [
+      30
+    ],
+    "checkable": true
+  },
+  "calculus-Q087": {
+    "answer": "C",
+    "content_hash": "3b0b7f005a2ab3c33f04cafcbca02baa584ff96bf4ee7712d8cdd3420d9b1e02",
+    "note": "",
+    "source_pages": [
+      30,
+      31
+    ],
+    "checkable": true
+  },
+  "calculus-Q088": {
+    "answer": "C",
+    "content_hash": "f9ecbc99ce7f3fad3799afec9524a5c695da9e727178446832f9f3aa873e688f",
+    "note": "",
+    "source_pages": [
+      31
+    ],
+    "checkable": true
+  },
+  "calculus-Q089": {
+    "answer": "D",
+    "content_hash": "4a51bffbd173f705e5255cb0a53477bf31e319d044be329feea72bf18f33368e",
+    "note": "",
+    "source_pages": [
+      31
+    ],
+    "checkable": true
+  },
+  "calculus-Q090": {
+    "answer": "C",
+    "content_hash": "aa2335b69ea9adbd48153a76146823fdd0fb55cdf3f4ecd772f276e43ec42228",
+    "note": "",
+    "source_pages": [
+      31
+    ],
+    "checkable": true
+  },
+  "calculus-Q091": {
+    "answer": "D",
+    "content_hash": "952951244e25bd5551019840570810caeafc40dfffec4576aa4b910d5f3b778f",
+    "note": "原书对A项的推导实质上只得到右导数，随后排除A；对B项仅说明可能发散。结论D正确，但原书论证略简略。",
+    "source_pages": [
+      31,
+      32
+    ],
+    "checkable": false
+  },
+  "calculus-Q092": {
+    "answer": "A",
+    "content_hash": "566367965ccbe39639841ba122adc5d051e1b088a7daf5ce2a5969a9756626bd",
+    "note": "",
+    "source_pages": [
+      32
+    ],
+    "checkable": true
+  },
+  "calculus-Q093": {
+    "answer": "C",
+    "content_hash": "4f3645ebb571379746597861aaf9b3aff7c05d3b70cec386844233eb8077a475",
+    "note": "",
+    "source_pages": [
+      32
+    ],
+    "checkable": true
+  },
+  "calculus-Q094": {
+    "answer": "C",
+    "content_hash": "cf91006e8e9b4c8e32526de88b81a3344222c5abc4c5c64a301a37b7be664475",
+    "note": "",
+    "source_pages": [
+      32
+    ],
+    "checkable": true
+  },
+  "calculus-Q095": {
+    "answer": "B",
+    "content_hash": "9e8f005ca12e7ebc789f2aebf958f561eef656a1d6550d5b111cb8f97c4ebce2",
+    "note": "",
+    "source_pages": [
+      32
+    ],
+    "checkable": true
+  },
+  "calculus-Q096": {
+    "answer": "A",
+    "content_hash": "ee5cd27ef3b1d73c9e6ddeeb1453b45bc77998ee1acda2373adb846df1b175fe",
+    "note": "",
+    "source_pages": [
+      33
+    ],
+    "checkable": true
+  },
+  "calculus-Q097": {
+    "answer": "D",
+    "content_hash": "3859d0ab3883540e39d40ecaa0dc81207c23faff9f55663dc9d7e0ce9ad5e03f",
+    "note": "",
+    "source_pages": [
+      33
+    ],
+    "checkable": true
+  },
+  "calculus-Q098": {
+    "answer": "B",
+    "content_hash": "3c2b6a45abf397684d5698e78f612664d075e9d5e95cb24c0a66c64ef45e6f56",
+    "note": "",
+    "source_pages": [
+      33
+    ],
+    "checkable": true
+  },
+  "calculus-Q099": {
+    "answer": "D",
+    "content_hash": "6cffc2a0f83ee6327d0e4726fe1e903c88ccccf0ab4752b6fc3e7361cef4d787",
+    "note": "",
+    "source_pages": [
+      33,
+      34
+    ],
+    "checkable": true
+  },
+  "calculus-Q100": {
+    "answer": "D",
+    "content_hash": "3136d0eac2c747c5649520ff26ae5e79990b612806faac668b2c55820bfc4667",
+    "note": "",
+    "source_pages": [
+      34
+    ],
+    "checkable": true
+  },
+  "calculus-Q101": {
+    "answer": "C",
+    "content_hash": "6a4ba551465f2714db706c6b11988397a46e4a308c5c44abda1853ea068aa7a1",
+    "note": "",
+    "source_pages": [
+      34,
+      35
+    ],
+    "checkable": true
+  },
+  "calculus-Q102": {
+    "answer": "-1, \\(\\dfrac{\\pi}{2}\\)",
+    "content_hash": "44bb4ee5791ece265951ab0ed2a2aedfbd9f79adeaa0bce0c12d1c785b464119",
+    "note": "",
+    "source_pages": [
+      35
+    ],
+    "checkable": true
+  },
+  "calculus-Q103": {
+    "answer": "1",
+    "content_hash": "a5b882327a6facd345e00b27d25c762362fb074c3dbb044731df6ab3219679a6",
+    "note": "",
+    "source_pages": [
+      35
+    ],
+    "checkable": true
+  },
+  "calculus-Q104": {
+    "answer": "1",
+    "content_hash": "bea1ae6cf9bd47d59b4d6923a522ce10339275d50ada69023f555b55d296a065",
+    "note": "",
+    "source_pages": [
+      35
+    ],
+    "checkable": true
+  },
+  "calculus-Q105": {
+    "answer": "3",
+    "content_hash": "7d6ee38a4ebb4d95d2f4cc27e47150a501f9b707ccaa0b74163230a6bb43a46c",
+    "note": "",
+    "source_pages": [
+      35,
+      36
+    ],
+    "checkable": true
+  },
+  "calculus-Q106": {
+    "answer": "\\(f(x)=-1+2x+o(x)\\)",
+    "content_hash": "354dcab89953b37402eb75c80bed7a7c56f8c860f35a178295725ce13b8c3af5",
+    "note": "",
+    "source_pages": [
+      36
+    ],
+    "checkable": true
+  },
+  "calculus-Q107": {
+    "answer": "2",
+    "content_hash": "e29b80aef0603ea84e634135bdb935e2112d1378e105068780209e8b1c954432",
+    "note": "",
+    "source_pages": [
+      36
+    ],
+    "checkable": true
+  },
+  "calculus-Q108": {
+    "answer": "$\\pm\\sqrt{2}$",
+    "content_hash": "e5e2cb1232fb8ebbbf5b3848b276e0ff0ef34a7336b95a7a63341d8495641809",
+    "note": "",
+    "source_pages": [
+      36
+    ],
+    "checkable": true
+  },
+  "calculus-Q109": {
+    "answer": "$a=\\frac{2}{3},\\ b=3$",
+    "content_hash": "342c08492c60c04da0f897c9312f3d483a79c6f4fb94e1d2d4107144acd4eaf8",
+    "note": "",
+    "source_pages": [
+      36
+    ],
+    "checkable": true
+  },
+  "calculus-Q110": {
+    "answer": "$n=3$",
+    "content_hash": "cfa76e24f358a33c8ef30da84463fce1e5e09686e26162b1b3b1a220ec45314c",
+    "note": "",
+    "source_pages": [
+      36,
+      37
+    ],
+    "checkable": true
+  },
+  "calculus-Q111": {
+    "answer": "$\\left(-\\frac{\\sqrt2}{2},\\frac{\\sqrt2}{2}\\right)$",
+    "content_hash": "85612d91cec5e126714be3b65e2025f6a8ddc09809ef61859f3b6e7590e59f9a",
+    "note": "",
+    "source_pages": [
+      37
+    ],
+    "checkable": true
+  },
+  "calculus-Q112": {
+    "answer": "$e$",
+    "content_hash": "3354fefb4fa47e27155db0d40f1f5157204fbd3924239e7fc41e8ba6e8604bca",
+    "note": "",
+    "source_pages": [
+      37
+    ],
+    "checkable": true
+  },
+  "calculus-Q113": {
+    "answer": "$\\frac{1}{1+e^2}$",
+    "content_hash": "e40620069365590386f16065a4a2161310870500f84fcf246617df0825d4a07d",
+    "note": "",
+    "source_pages": [
+      37
+    ],
+    "checkable": true
+  },
+  "calculus-Q114": {
+    "answer": "$\\frac12$",
+    "content_hash": "df075ca4ccb250f83efd476df56454ca3374b4e78c9e01b7af2649b73fbf1d22",
+    "note": "",
+    "source_pages": [
+      37
+    ],
+    "checkable": true
+  },
+  "calculus-Q115": {
+    "answer": "$-99!$",
+    "content_hash": "d33ff2dfbe0e77e2afc7da233a3e99a9d0b0f0c77e6bada8553b074a473e166d",
+    "note": "",
+    "source_pages": [
+      37,
+      38
+    ],
+    "checkable": true
+  },
+  "calculus-Q116": {
+    "answer": "$\\displaystyle f'(x)=\\frac{1}{3x}\\quad(x\\ne0)$",
+    "content_hash": "ab984f87333511e2722354ad08e1a5812f1ccc1c9eb6e55dac3819bd1af7c84b",
+    "note": "",
+    "source_pages": [
+      38
+    ],
+    "checkable": true
+  },
+  "calculus-Q117": {
+    "answer": "-9",
+    "content_hash": "e848dbbaed4652b2adccd96e535a8b79b0a2da487f3f0591e20e23eab4f2d7d6",
+    "note": "",
+    "source_pages": [
+      38
+    ],
+    "checkable": true
+  },
+  "calculus-Q118": {
+    "answer": "-2",
+    "content_hash": "0281d9388dec62b912667a5959b1ae938b7965bb77c39d88cd170bfbc2f8eab3",
+    "note": "",
+    "source_pages": [
+      38
+    ],
+    "checkable": true
+  },
+  "calculus-Q119": {
+    "answer": "y=2x-\\frac14",
+    "content_hash": "f64d2c662cabfb35d407d9274d645e549bbe2f8afffa3c7b56aa3d76fb323570",
+    "note": "",
+    "source_pages": [
+      38,
+      39
+    ],
+    "checkable": true
+  },
+  "calculus-Q120": {
+    "answer": "2",
+    "content_hash": "065858a8365eb3449cbf72876a23acfa6a960db5970d00ccc8f92f26bff92af1",
+    "note": "",
+    "source_pages": [
+      39
+    ],
+    "checkable": true
+  },
+  "calculus-Q121": {
+    "answer": "\\frac{2}{3a}",
+    "content_hash": "5a09538f23cc743b780fe8f07acb32402efb1c4cc47256c4d10f345e839d9cc2",
+    "note": "",
+    "source_pages": [
+      39
+    ],
+    "checkable": true
+  },
+  "calculus-Q122": {
+    "answer": "\\frac14",
+    "content_hash": "e9fc6d671f87c1780a94aa87d4790e270dbe6a6962ee63431a5c2c6685c6946c",
+    "note": "",
+    "source_pages": [
+      39
+    ],
+    "checkable": true
+  },
+  "calculus-Q123": {
+    "answer": "x^2+\\left(y+\\frac12\\right)^2=\\frac94",
+    "content_hash": "29ceba9736f455e75f06be1e2f34cddae0b3fe7922756f9286817865cbb7442f",
+    "note": "",
+    "source_pages": [
+      39,
+      40
+    ],
+    "checkable": true
+  },
+  "calculus-Q124": {
+    "answer": "2",
+    "content_hash": "e46b8b22db1229cd3e20ff1fa43e661948b2c92254c9f721ff76761014d7112a",
+    "note": "",
+    "source_pages": [
+      40
+    ],
+    "checkable": true
+  },
+  "calculus-Q125": {
+    "answer": "不存在满足条件的函数",
+    "content_hash": "b9ba119a4225b11d8cf98021212f072b0e16260d82a4b7b2b82b6bf540ae27f6",
+    "note": "按给定题干，全部条件相互矛盾，填空无函数解。",
+    "source_pages": [
+      40
+    ],
+    "checkable": false
+  },
+  "calculus-Q126": {
+    "answer": "-\\frac{3}{2}",
+    "content_hash": "4e8587502b274587d691fd6cb22972ddf78b6a9c55a90bce780e81c19fd8e38b",
+    "note": "",
+    "source_pages": [
+      40
+    ],
+    "checkable": true
+  },
+  "calculus-Q127": {
+    "answer": "x+y+\\frac13=0",
+    "content_hash": "ded72d014759620b4f65238c3278c8d5285863b45c077b45e6f531084ec35aa9",
+    "note": "",
+    "source_pages": [
+      40,
+      41
+    ],
+    "checkable": true
+  },
+  "calculus-Q128": {
+    "answer": "1",
+    "content_hash": "41003da2a0d5a3ec377706d99f9339e584718f99e913e8536dfe047cd1d7dff8",
+    "note": "",
+    "source_pages": [
+      41
+    ],
+    "checkable": true
+  },
+  "calculus-Q129": {
+    "answer": "(I) $-\\frac49\\operatorname{sgn}(x)|x|^{-13/9}$，$x\\ne0$；(II) $a^a x^{a^a-1}+a^{x^a}(\\ln a)ax^{a-1}+a^{a^x}(\\ln a)^2a^x$；(III) $2^{|\\sin x|}\\ln2\\cos x\\operatorname{sgn}(\\sin x)$，$\\sin x\\ne0$，在$x=k\\pi$处不可导；(IV) $\\sec x$",
+    "content_hash": "223f8a739cf94b0f46e517f18b6066737b4e7b83ee9938338889f90a9367a6c8",
+    "note": "",
+    "source_pages": [
+      41
+    ],
+    "checkable": true
+  },
+  "calculus-Q130": {
+    "answer": "(I)\\ (1+x^2)^{\\sin x}\\left[\\cos x\\ln(1+x^2)+\\frac{2x\\sin x}{1+x^2}\\right]；(II)\\ -\\frac{1}{2\\sqrt{x^2+1}}",
+    "content_hash": "dc63bf981c6a347a302bb716bc0eb387fc3cfdc7774ce4d6b1953046ce9234ea",
+    "note": "原书第42页第2题(II)的中间步骤将$\\sqrt{x^2+1}$的导数写成$\\frac{2x}{\\sqrt{x^2+1}}$，此处有误；原书最终答案$-\\frac{1}{2\\sqrt{x^2+1}}$正确。",
+    "source_pages": [
+      41,
+      42
+    ],
+    "checkable": false
+  },
+  "calculus-Q131": {
+    "answer": "(I)\\ dy=-\\frac{\\varphi'(\\arctan(1/x))}{1+x^2}\\,dx；(II)\\ dy=\\frac{y\\cos x-e^{x+y}}{e^{x+y}-\\sin x}\\,dx；(III)\\ dy=\\frac52x\\,dx",
+    "content_hash": "22338470425b392790dfa148800ddf5419d5bbe17414268168563d509f1aa15e",
+    "note": "第3题(II)并非在原方程的所有解点都能写成单值可微的$y=y(x)$：当$e^{x+y}-\\sin x=0$时，隐函数求导公式的分母为零。题干未限定所求微分所在的解点，答案中的公式须附该非零条件。",
+    "source_pages": [
+      42
+    ],
+    "checkable": false
+  },
+  "calculus-Q132": {
+    "answer": "$\\displaystyle \\frac{d^2y}{dx^2}=\\frac{2(x^2+y^2)}{(x-y)^3}$",
+    "content_hash": "92dda540edb1d81a32a464af2a4d9e4dca22cbcb7bd718789cb571d3d1b53e77",
+    "note": "原题中的$\\arctan(y/x)$要求$x\\ne0$；所得公式还要求$x-y\\ne0$，原书未特别说明这些求导条件。",
+    "source_pages": [
+      42
+    ],
+    "checkable": false
+  },
+  "calculus-Q133": {
+    "answer": "$\\displaystyle \\frac{dy}{dx}=\\frac{\\sin t}{1-\\cos t},\\quad \\frac{d^2y}{dx^2}=-\\frac{1}{(1-\\cos t)^2}$",
+    "content_hash": "541d3ad38e784289c7b9e30800240911f667b796409c33c872b49e382f776762",
+    "note": "当$t=2k\\pi$时，$dx/dt=dy/dt=0$，上述参数求导公式无定义；原题未限定$t$为正则参数点。",
+    "source_pages": [
+      42
+    ],
+    "checkable": false
+  },
+  "calculus-Q134": {
+    "answer": "$\\displaystyle x+y=1$",
+    "content_hash": "8c89f498e19a2e67547433b50eccdde5662bf5879b94838d5bf0e980d3d5c8c1",
+    "note": "",
+    "source_pages": [
+      42
+    ],
+    "checkable": true
+  },
+  "calculus-Q135": {
+    "answer": "$\\displaystyle f(x)=\\ln x$",
+    "content_hash": "15b459533f61fdfbeff8228b7ec900311193cf15206a5e93c1984f3396146166",
+    "note": "",
+    "source_pages": [
+      43
+    ],
+    "checkable": true
+  },
+  "calculus-Q136": {
+    "answer": "$\\displaystyle f^{(n)}(0)=0$",
+    "content_hash": "57b1133169ada15b686577cc698731bc65f9038fc0c7377666721bb4b7729f6e",
+    "note": "",
+    "source_pages": [
+      43
+    ],
+    "checkable": true
+  },
+  "calculus-Q137": {
+    "answer": "$\\displaystyle \\frac{1}{4\\pi}\\ \\mathrm{cm/s}$",
+    "content_hash": "9b694239b594321df3eabb2946bc8222b8138d4b36b6659441cb1e3bbec92631",
+    "note": "",
+    "source_pages": [
+      43
+    ],
+    "checkable": true
+  },
+  "calculus-Q138": {
+    "answer": "82 cm/s",
+    "content_hash": "62bbd3b467ac753400451a9e4c4c5713fba94274fc42c0e82c1ee8d42f496e64",
+    "note": "",
+    "source_pages": [
+      43,
+      44
+    ],
+    "checkable": true
+  },
+  "calculus-Q139": {
+    "answer": "1",
+    "content_hash": "9761c4826c1de9aef5a744818070db21d4add3998da3ff5395a7b24707c79193",
+    "note": "",
+    "source_pages": [
+      43,
+      44
+    ],
+    "checkable": true
+  },
+  "calculus-Q140": {
+    "answer": "3",
+    "content_hash": "13aae98e65c52977835354b23805e8e9693caab63222ebc27a459c06208eddd4",
+    "note": "",
+    "source_pages": [
+      44
+    ],
+    "checkable": true
+  },
+  "calculus-Q141": {
+    "answer": "\\xi=\\frac12或\\xi=-\\frac12",
+    "content_hash": "93663bad86f7ad33eeea24b8ca26a76c023b21b0c96664aaa019caa7feb59aa9",
+    "note": "",
+    "source_pages": [
+      44,
+      45
+    ],
+    "checkable": true
+  },
+  "calculus-Q142": {
+    "answer": "(I)存在\\xi\\in(a,b)；(II)存在\\eta\\in(a,b)",
+    "content_hash": "cfa0760473808d88b848abd4522600fae606d9b1bbabe3a4efdd57ed43d0261f",
+    "note": "",
+    "source_pages": [
+      45
+    ],
+    "checkable": true
+  },
+  "calculus-Q143": {
+    "answer": "存在\\xi\\in(0,1)使f'(\\xi)>1",
+    "content_hash": "43d1995d1266366f59e9001a2192f85e2e50f0b479e3d17e3492df3cc0dff24c",
+    "note": "",
+    "source_pages": [
+      45
+    ],
+    "checkable": true
+  },
+  "calculus-Q144": {
+    "answer": "(I)、(II)均成立",
+    "content_hash": "d99cc367324d9c74ed664c97d9309d1ec7ed73947494bb54326947edb9856227",
+    "note": "",
+    "source_pages": [
+      45
+    ],
+    "checkable": true
+  },
+  "calculus-Q145": {
+    "answer": "$|f'(0)|+|f'(1)|\\le1$",
+    "content_hash": "d623c96a519081e9614121e576bbfaf1ec11ca6be9cc2bb839a4a9d2b529b793",
+    "note": "",
+    "source_pages": [
+      45
+    ],
+    "checkable": true
+  },
+  "calculus-Q146": {
+    "answer": "(I)、(II)均成立",
+    "content_hash": "4663250cc3aa32c9d4c51c80e4d00dd766ea028b4b0b844272104528372585a7",
+    "note": "",
+    "source_pages": [
+      45,
+      46
+    ],
+    "checkable": true
+  },
+  "calculus-Q147": {
+    "answer": "当 $0<a<b$ 时结论成立；按所给题干，命题不成立。",
+    "content_hash": "128d72e538e5fa86c5128948c5a1d7fdacffa08f7eeb524ed2dc6f2d8438b9dc",
+    "note": "题干缺少 $a<b$：$a>b$ 时 $(a,b)$ 为空，$a=b$ 时左式无定义。",
+    "source_pages": [
+      46
+    ],
+    "checkable": false
+  },
+  "calculus-Q148": {
+    "answer": "（I）至（IV）均成立。",
+    "content_hash": "8d1162e4761eebbfb3cc6892b8a0fbe10fd7c911f4e5bd14c392779dd9067604",
+    "note": "",
+    "source_pages": [
+      46,
+      47
+    ],
+    "checkable": true
+  },
+  "calculus-Q149": {
+    "answer": "$(1+\\frac1{2x})(1+\\frac1x)^x>e$（$x>0$）",
+    "content_hash": "16227008ad1fdcda2f80e1aee1e2f6e98b2fcc227b537c10c8aa4d3f416f1043",
+    "note": "",
+    "source_pages": [
+      47
+    ],
+    "checkable": true
+  },
+  "calculus-Q150": {
+    "answer": "单调递增区间为$(-\\infty,-1)$、$(0,+\\infty)$，单调递减区间为$(-1,0)$；极大值为$-2e^{\\pi/4}$，极小值为$-e^{\\pi/2}$；斜渐近线为$y=x-2$与$y=e^\\pi(x-2)$，无水平或铅直渐近线。",
+    "content_hash": "ab5b6667c21bb7d3c76d3f1d9c8b4f68a75ff5e791e4e5587efbb2e8b2624843",
+    "note": "",
+    "source_pages": [
+      47
+    ],
+    "checkable": true
+  },
+  "calculus-Q151": {
+    "answer": "单调递增区间为$(-\\infty,0)$、$(1/e,+\\infty)$，单调递减区间为$(0,1/e)$；极大值为$f(0)=2$，极小值为$f(1/e)=e^{-2/e}$。",
+    "content_hash": "16b37f2c9d97d92c88771a5e71dc810deec9118f25497562cd5282f58f63aaca",
+    "note": "",
+    "source_pages": [
+      48
+    ],
+    "checkable": true
+  },
+  "calculus-Q152": {
+    "answer": "递增区间为$(0,e)$，递减区间为$(e,+\\infty)$；在$(0,\\sqrt2e^{\\sqrt2})$上$y''<0$（向上凸），在$(\\sqrt2e^{\\sqrt2},+\\infty)$上$y''>0$（向上凹）；极大值为$1/e$，拐点为$(\\sqrt2e^{\\sqrt2},\\sqrt2e^{-\\sqrt2})$。若计入定义域端点的单侧极值，$x=0$处另有极小值$0$。",
+    "content_hash": "a97edca0bac3a7612d5a0959aafe3aa4982fdad9977035d549dc27374e2ed1fa",
+    "note": "",
+    "source_pages": [
+      48
+    ],
+    "checkable": true
+  },
+  "calculus-Q153": {
+    "answer": "$\\dfrac1{\\ln2}-1\\le f(x)<\\dfrac12$，其中$x\\in[1,+\\infty)$，左端等号仅在$x=1$时成立。",
+    "content_hash": "98d09b2ef0cee962f54443413c27c5c6bfc6329a4cb2e0ae1c4f945c5147a68b",
+    "note": "",
+    "source_pages": [
+      48,
+      49
+    ],
+    "checkable": true
+  },
+  "calculus-Q154": {
+    "answer": "在点$\\left(\\dfrac{\\sqrt2}{2},-\\dfrac12\\ln2\\right)$处曲率半径最小，最小值为$\\dfrac{3\\sqrt3}{2}$。",
+    "content_hash": "e8ea31ffd3793860f600811fcfb56b8bc5fc8cc2eb0597de41a6e58f0950fe72",
+    "note": "",
+    "source_pages": [
+      49
+    ],
+    "checkable": true
+  },
+  "calculus-Q155": {
+    "answer": "方程在$(0,+\\infty)$内恰有两个不同实根，分别位于$(0,e)$和$(e,+\\infty)$。",
+    "content_hash": "72f19abfa0566a38eddca730eeb764b0c0aaf2fde3b50021130d6593f7931914",
+    "note": "",
+    "source_pages": [
+      49
+    ],
+    "checkable": true
+  },
+  "calculus-Q156": {
+    "answer": "A",
+    "content_hash": "111de672e695344ada8308765777ae2379dc22a0377a441d3965841274b433f6",
+    "note": "",
+    "source_pages": [
+      49
+    ],
+    "checkable": true
+  },
+  "calculus-Q157": {
+    "answer": "B",
+    "content_hash": "ddd979d9d8c82b720a0e6519d0296f7e3d621f139afa66d7bfeac79880591b23",
+    "note": "",
+    "source_pages": [
+      49,
+      50
+    ],
+    "checkable": true
+  },
+  "calculus-Q158": {
+    "answer": "D",
+    "content_hash": "40de8039d7bc54b4fba1fc7d381fe5f430be30568e7dac178a60d42d7eaeb0f5",
+    "note": "",
+    "source_pages": [
+      50
+    ],
+    "checkable": true
+  },
+  "calculus-Q159": {
+    "answer": "C",
+    "content_hash": "a3a91ab624f3235e73d896bbff80f4ed33ed3e46927644ade9466dd7f27d7312",
+    "note": "",
+    "source_pages": [
+      50
+    ],
+    "checkable": true
+  },
+  "calculus-Q160": {
+    "answer": "D",
+    "content_hash": "862f9fff3f20261fc25f7c5f3a7881c8254466b5a0d83514fe368cf47a954ee3",
+    "note": "",
+    "source_pages": [
+      50
+    ],
+    "checkable": true
+  },
+  "calculus-Q161": {
+    "answer": "B",
+    "content_hash": "204ea991b4f0b769fa96d04920660fbd703653845a06c9a1411cbe313481a3c4",
+    "note": "",
+    "source_pages": [
+      50,
+      51
+    ],
+    "checkable": true
+  },
+  "calculus-Q162": {
+    "answer": "D",
+    "content_hash": "dc52bbe35cd5ab86a4934df8710e04298fba768d5d0ec709429f06b48567f64a",
+    "note": "",
+    "source_pages": [
+      51
+    ],
+    "checkable": true
+  },
+  "calculus-Q163": {
+    "answer": "D",
+    "content_hash": "3571ab278aa24b6579b6f59140142df85966ee46f998d32d47129152602a24bf",
+    "note": "",
+    "source_pages": [
+      51,
+      52
+    ],
+    "checkable": true
+  },
+  "calculus-Q165": {
+    "answer": "D",
+    "content_hash": "1a7956304b408bd30105f1c87241ac9cbbe95c7825f06519aaede997198083e2",
+    "note": "",
+    "source_pages": [
+      52,
+      53
+    ],
+    "checkable": true
+  },
+  "calculus-Q166": {
+    "answer": "B",
+    "content_hash": "aa2eab20bc2e693072d9156e04aefc5622d52c96b7ea7a105c94912886c49e55",
+    "note": "",
+    "source_pages": [
+      53
+    ],
+    "checkable": true
+  },
+  "calculus-Q167": {
+    "answer": "C",
+    "content_hash": "01717dda7fdc29c05d94ca8273ccff54064abffee3e4bf8724d93dc1a6ff2ddb",
+    "note": "",
+    "source_pages": [
+      54
+    ],
+    "checkable": true
+  },
+  "calculus-Q168": {
+    "answer": "B",
+    "content_hash": "d45ceb39d3f174fa75bd0d7a0b9db18efa3e2e7c5b33fb72cb8394ea81e8ee5f",
+    "note": "",
+    "source_pages": [
+      54
+    ],
+    "checkable": true
+  },
+  "calculus-Q169": {
+    "answer": "B",
+    "content_hash": "e782d65ef17751c7a01de0baecc2fcd532acd31e63c1bb277cb1937f35935b41",
+    "note": "",
+    "source_pages": [
+      54
+    ],
+    "checkable": true
+  },
+  "calculus-Q170": {
+    "answer": "C",
+    "content_hash": "b183d93d79fe762b16bb70154c9caf226f17d071a317cc0525d7da7451fca1f4",
+    "note": "",
+    "source_pages": [
+      54
+    ],
+    "checkable": true
+  },
+  "calculus-Q171": {
+    "answer": "D",
+    "content_hash": "3a1dffff8260aa35097e5fc82a3dffe24af40f6d831955bef7b0bba36e29da01",
+    "note": "",
+    "source_pages": [
+      54,
+      55
+    ],
+    "checkable": true
+  },
+  "calculus-Q172": {
+    "answer": "D",
+    "content_hash": "14ea14dbbdb0c7939939d4011e2ba52a7e6ef085f12a68e4f4c4f0ab13a6677c",
+    "note": "",
+    "source_pages": [
+      55
+    ],
+    "checkable": true
+  },
+  "calculus-Q173": {
+    "answer": "D",
+    "content_hash": "328b36687d23292798761f245ce9bd67fe2e8a1a50fb601e3aeb2760c7dcda37",
+    "note": "",
+    "source_pages": [
+      55
+    ],
+    "checkable": true
+  },
+  "calculus-Q174": {
+    "answer": "C",
+    "content_hash": "739f8d658ce2e12dbb29c077ab04ad04c34c444a683ada204db98c8fd4092b6c",
+    "note": "",
+    "source_pages": [
+      55
+    ],
+    "checkable": true
+  },
+  "calculus-Q175": {
+    "answer": "A",
+    "content_hash": "2ef277832580b85eb5db7cfd95a22bd515bff0935f448704091351159c6d5e71",
+    "note": "",
+    "source_pages": [
+      55,
+      56
+    ],
+    "checkable": true
+  },
+  "calculus-Q176": {
+    "answer": "B",
+    "content_hash": "5b452dcbbedddc5696ac3bb21d20ed1fc24d498c9fe9424cb48f60ec3eab3aaa",
+    "note": "",
+    "source_pages": [
+      56
+    ],
+    "checkable": true
+  },
+  "calculus-Q177": {
+    "answer": "D",
+    "content_hash": "cb557fff7876f084eb4c2fe5c7a85e71b2ea00ef4e5f426e95fcf01a7d379b57",
+    "note": "",
+    "source_pages": [
+      56
+    ],
+    "checkable": true
+  },
+  "calculus-Q178": {
+    "answer": "C",
+    "content_hash": "6c8be55d04ab1e13d0ebbf8d6f2170b234e822cec09b6a4d760631e8b2e51e66",
+    "note": "",
+    "source_pages": [
+      56
+    ],
+    "checkable": true
+  },
+  "calculus-Q179": {
+    "answer": "C",
+    "content_hash": "51176dc361b5ab7b8969b23d3577c630a0270f0041d81e8e5c6664255ce3c06a",
+    "note": "",
+    "source_pages": [
+      56,
+      57
+    ],
+    "checkable": true
+  },
+  "calculus-Q180": {
+    "answer": "D",
+    "content_hash": "7b3d424af1dcc93ec7bf119c865bf93cc3db1b383956eb2018f3be8001465209",
+    "note": "",
+    "source_pages": [
+      57
+    ],
+    "checkable": true
+  },
+  "calculus-Q181": {
+    "answer": "C",
+    "content_hash": "5c58bbee8f54b3acd37bce11f116b29030c06dd7e2c868184bb369ede571116e",
+    "note": "",
+    "source_pages": [
+      57
+    ],
+    "checkable": true
+  },
+  "calculus-Q182": {
+    "answer": "A",
+    "content_hash": "7dacd71222650aa5938ea0ad30a1dc32b8d6bbca9291c4330f3efef977657d60",
+    "note": "",
+    "source_pages": [
+      58
+    ],
+    "checkable": true
+  },
+  "calculus-Q183": {
+    "answer": "D",
+    "content_hash": "464070711e8534b2bf7f9735db0895fd534421e31f6a63d44295e7bad03c77f8",
+    "note": "",
+    "source_pages": [
+      58
+    ],
+    "checkable": true
+  },
+  "calculus-Q184": {
+    "answer": "A",
+    "content_hash": "a9663875a3f4aaeff86161852987e793dc8dabce2da527aad7411bbc4491a4a4",
+    "note": "",
+    "source_pages": [
+      58
+    ],
+    "checkable": true
+  },
+  "calculus-Q185": {
+    "answer": "B",
+    "content_hash": "c4931c92af05a1d1e06e83dfe96f5a5c2607714bd6abc99ced6343095f0337fe",
+    "note": "",
+    "source_pages": [
+      58,
+      59
+    ],
+    "checkable": true
+  },
+  "calculus-Q186": {
+    "answer": "-\\frac{99!\\pi}{2}",
+    "content_hash": "f8da0a5a708a36d8910f8355bbe1507df402e89df565f8df3cdc51c6d60abfd1",
+    "note": "",
+    "source_pages": [
+      59
+    ],
+    "checkable": true
+  },
+  "calculus-Q187": {
+    "answer": "64",
+    "content_hash": "b2bfd4a874e42b69190cc009e949087d168eb65220087f7d7233bb87c1e89250",
+    "note": "",
+    "source_pages": [
+      59
+    ],
+    "checkable": true
+  },
+  "calculus-Q188": {
+    "answer": "1",
+    "content_hash": "ac07fd59e14b6bc0c80ac44950dfe57ce9e08fb3016709bd0a43709c7eed505f",
+    "note": "",
+    "source_pages": [
+      59
+    ],
+    "checkable": true
+  },
+  "calculus-Q189": {
+    "answer": "2",
+    "content_hash": "0b2d4fde81b80030bac32b08cb2846defc4b891bac758c9d5c5e10361bd1f220",
+    "note": "",
+    "source_pages": [
+      59,
+      60
+    ],
+    "checkable": true
+  },
+  "calculus-Q190": {
+    "answer": "\\frac{1}{2}",
+    "content_hash": "e2ca7cc41bc2d929e7751ec9878351c82513d4f35f45db6b30e4178a4da88a31",
+    "note": "",
+    "source_pages": [
+      60
+    ],
+    "checkable": true
+  },
+  "calculus-Q191": {
+    "answer": "4，3",
+    "content_hash": "e1ba6b6a40a76f0ab4561e0bfccaf7c6c3f5cc9b9297984d2ab484fa6bb28729",
+    "note": "",
+    "source_pages": [
+      60
+    ],
+    "checkable": true
+  },
+  "calculus-Q192": {
+    "answer": "9",
+    "content_hash": "f8fd4bfbb606748d223611417078dfce0e0b3fcc00cd70f9454ef5fb607f79d5",
+    "note": "",
+    "source_pages": [
+      60
+    ],
+    "checkable": true
+  },
+  "calculus-Q193": {
+    "answer": "\\dfrac{n!(-1)^{n-2}}{(n-1)2^{n-1}}",
+    "content_hash": "294378a217a4fd575957b312d31fa8c9bb3f68274ad12258aeff1977aec4908c",
+    "note": "",
+    "source_pages": [
+      60,
+      61
+    ],
+    "checkable": true
+  },
+  "calculus-Q194": {
+    "answer": "(-2)^n n!",
+    "content_hash": "fb9faeedbed86d18a1e04ce72aba1d0974b360665ebde0dff91b4ea169caca74",
+    "note": "",
+    "source_pages": [
+      61
+    ],
+    "checkable": true
+  },
+  "calculus-Q195": {
+    "answer": "-4\\sqrt{3}",
+    "content_hash": "91cf6f4b7fe3ea85b6e7054621f6d461f137acffbdb530913fd2b61809a7275d",
+    "note": "",
+    "source_pages": [
+      61
+    ],
+    "checkable": true
+  },
+  "calculus-Q196": {
+    "answer": "1",
+    "content_hash": "77b17b5124b39de8b4e69462354c2199e40cdd93098b2281ac18a9e8670d587f",
+    "note": "",
+    "source_pages": [
+      61
+    ],
+    "checkable": true
+  },
+  "calculus-Q197": {
+    "answer": "x^2+\\left(y-\\frac12\\right)^2=\\frac14",
+    "content_hash": "139d642e38de098838bf4e9339d24a5662e06c2d53325d5b1df816e468673c81",
+    "note": "",
+    "source_pages": [
+      61,
+      62
+    ],
+    "checkable": true
+  },
+  "calculus-Q198": {
+    "answer": "c=0，b=1，且a\\ne-\\frac12",
+    "content_hash": "54b10f8dad56670c0cdea0115a2806d02ee420d1bf3b44d50711fa72cf3e043c",
+    "note": "",
+    "source_pages": [
+      62
+    ],
+    "checkable": true
+  },
+  "calculus-Q199": {
+    "answer": "y=2x-12",
+    "content_hash": "57063f473e1f695d7ab64bb3e2c63ec9b3c18103310f742ae2ae5bd7b67361f1",
+    "note": "",
+    "source_pages": [
+      62
+    ],
+    "checkable": true
+  },
+  "calculus-Q200": {
+    "answer": "M(n)=\\left(\\frac{n}{n+1}\\right)^{n+1}，极限为e^{-1}",
+    "content_hash": "b30b6df18dd3fe030df05f71a2ae33ea59ca2a462c13db0c3fc1635550be915d",
+    "note": "",
+    "source_pages": [
+      62,
+      63
+    ],
+    "checkable": true
+  },
+  "calculus-Q201": {
+    "answer": "(I) p>0；(II) p>1；(III) p>2",
+    "content_hash": "d97089144dca5796ffe3e1d3989efe03d876d575adae4549716d0319dda9a37a",
+    "note": "",
+    "source_pages": [
+      63
+    ],
+    "checkable": true
+  },
+  "calculus-Q202": {
+    "answer": "0.64 cm/min",
+    "content_hash": "d67735d20543b28bf7fb3d97a1a3a1b5f2cab41725a99e0d30c85c6db4ae76aa",
+    "note": "",
+    "source_pages": [
+      63,
+      64
+    ],
+    "checkable": true
+  },
+  "calculus-Q203": {
+    "answer": "(I)至少存在一个\\xi\\in(0,1)使f(\\xi)=0；(II)至少存在一个\\eta\\in(0,1)使f''(\\eta)=f(\\eta)",
+    "content_hash": "96bbddcb4695239513fb98faa4007f5c328ec1e9fe6bf3f2ef18f2607bb9e597",
+    "note": "",
+    "source_pages": [
+      64
+    ],
+    "checkable": true
+  },
+  "calculus-Q204": {
+    "answer": "存在满足题设等式的点 ξ∈(a,b)",
+    "content_hash": "0c04b8f2160aac8d67653f3146c3765de3a1ef0e482b89ebe263cc43db944c25",
+    "note": "",
+    "source_pages": [
+      64
+    ],
+    "checkable": true
+  },
+  "calculus-Q205": {
+    "answer": "a=-e/2，b=11e/24",
+    "content_hash": "51971ef9acc123bc6e3bbace9643e3719a437b326091f66b26c36c1caf330639",
+    "note": "",
+    "source_pages": [
+      64,
+      65
+    ],
+    "checkable": true
+  },
+  "calculus-Q206": {
+    "answer": "(I)存在 ξ∈(a,b) 使 f′(ξ)=0；(II)对所述每个 μ，存在 ξ∈(a,b) 使 f′(ξ)=μ",
+    "content_hash": "2ecc7ee327bcafb2ed5d0b26e7006892b1108b1d1eda5e3a54a562fc8bfba883",
+    "note": "",
+    "source_pages": [
+      65
+    ],
+    "checkable": true
+  },
+  "calculus-Q207": {
+    "answer": "存在 ξ,η∈(a,b)，使 f(ξ)=0 且 f″(η)=0",
+    "content_hash": "08e2b38f5b3217dad1f753d05b96865fea8afe4f128666f4003170203fc8a7f7",
+    "note": "",
+    "source_pages": [
+      65
+    ],
+    "checkable": true
+  },
+  "calculus-Q208": {
+    "answer": "(I) f(x)=f(c)+f′(c)(x−c)+f″(θ)(x−c)²/2，θ介于c与x之间；(II) |f′(c)|≤2a+b/2",
+    "content_hash": "75a024a9e040a43b91f0ef82fd184a26e7177db56f2629429b7b12b0ebc30562",
+    "note": "",
+    "source_pages": [
+      65,
+      66
+    ],
+    "checkable": true
+  },
+  "calculus-Q209": {
+    "answer": "(I) f(x)=π/2（x>0）；(II) 等式对所有 x≥1 成立",
+    "content_hash": "c62b8693d71bc84739bac4847bbc1b427099384b119898990932195a7a739741",
+    "note": "",
+    "source_pages": [
+      66
+    ],
+    "checkable": true
+  },
+  "calculus-Q210": {
+    "answer": "任一极值点均为极小值点",
+    "content_hash": "c3df2b32c80974ac5e767fdc9ba0b3c2d01b73dde829da2e7dc7666bf893224f",
+    "note": "",
+    "source_pages": [
+      66
+    ],
+    "checkable": true
+  },
+  "calculus-Q211": {
+    "answer": "纵坐标最大点$(1,2)$；纵坐标最小点$(-1,-2)$",
+    "content_hash": "8b9584461a02323d824d07de8969bcfd2d3268277c0b01c406c30c0f9a1f8165",
+    "note": "",
+    "source_pages": [
+      66
+    ],
+    "checkable": true
+  },
+  "calculus-Q212": {
+    "answer": "$f^{(n)}(0)=0$（$n$为偶数）；$f^{(n)}(0)=(-1)^k(2k)!$（$n=2k+1$，$k=0,1,2,\\ldots$）",
+    "content_hash": "50cba36b31319d832862dad1428309becf12dd046df3be40b8e19a49c98911d3",
+    "note": "",
+    "source_pages": [
+      66,
+      67
+    ],
+    "checkable": true
+  },
+  "calculus-Q213": {
+    "answer": "(I) $a_1+2a_2+\\cdots+na_n$；(II) $|a_1+2a_2+\\cdots+na_n|\\le1$",
+    "content_hash": "0e849e0e0b85718cb082759d371e366a2360a3eb3fe2ab3e458dbd5bf0769d92",
+    "note": "",
+    "source_pages": [
+      67
+    ],
+    "checkable": true
+  },
+  "calculus-Q214": {
+    "answer": "两曲线在每个交点处相切",
+    "content_hash": "24941353a932a33ac6f9667deca09f77dbca9d1ba0cba709aec46f451258435a",
+    "note": "",
+    "source_pages": [
+      67
+    ],
+    "checkable": true
+  },
+  "calculus-Q215": {
+    "answer": "$9$",
+    "content_hash": "3393e490137db409130ad506da2fa89c5debd1b5b1327f87dacf411425055662",
+    "note": "",
+    "source_pages": [
+      67,
+      68
+    ],
+    "checkable": true
+  },
+  "calculus-Q216": {
+    "answer": "2",
+    "content_hash": "9c28773a870f5262ca5df141e9912a235d54ba8dfc6e28f1552e53373d72be44",
+    "note": "",
+    "source_pages": [
+      68
+    ],
+    "checkable": true
+  },
+  "calculus-Q217": {
+    "answer": "证明成立",
+    "content_hash": "657348db81f25f5e1202050abc31b5c19de1777ff3e69c3b654d67b8118c4dd7",
+    "note": "",
+    "source_pages": [
+      68,
+      69
+    ],
+    "checkable": true
+  },
+  "calculus-Q218": {
+    "answer": "证明成立",
+    "content_hash": "afb7335c219fc720a2362b657853e9c4083b03c660c311de4a5d07f5a21c8c21",
+    "note": "",
+    "source_pages": [
+      69
+    ],
+    "checkable": true
+  },
+  "calculus-Q219": {
+    "answer": "(I)证明成立；(II)证明成立",
+    "content_hash": "c4b51fce5f757a48b8f1dc312d80fd8f33f2ae4470c01786aad6c06c2debc5b1",
+    "note": "",
+    "source_pages": [
+      69,
+      70
+    ],
+    "checkable": true
+  },
+  "calculus-Q220": {
+    "answer": "\\(\\frac{1}{2}\\)",
+    "content_hash": "ff6591f28a4e30aa0f948816352bd4a536840e5dcb64d836cafb02c6502dfddc",
+    "note": "",
+    "source_pages": [
+      70
+    ],
+    "checkable": true
+  },
+  "calculus-Q221": {
+    "answer": "(I) $\\displaystyle \\max_{a\\le x\\le b}|f(x)|\\le\\frac18M(b-a)^2$；(II) $\\displaystyle \\max_{a\\le x\\le b}|f'(x)|\\le\\frac12M(b-a)$。",
+    "content_hash": "99ffe3cdbe9e9f2f4f357dcaa1f7e945e46dedecd72de3e839795cbc34a4a688",
+    "note": "",
+    "source_pages": [
+      70,
+      71
+    ],
+    "checkable": true
+  },
+  "calculus-Q222": {
+    "answer": "(I) 存在 \\(0<x_1<x_2<1\\) 使 \\(f(x_1)+f(x_2)=2A\\)；(II) 存在不同的 \\(\\xi,\\eta\\in(0,1)\\) 使 \\(\\displaystyle\\left|\\frac1{f(\\xi)}+\\frac1{f(\\eta)}\\right|\\ge\\frac2M\\)",
+    "content_hash": "f702d88e63f8e35d378489b1c063df1674a9ca8e6713cab1e003687a2b6ff5ab",
+    "note": "原书第二问将“由(I)知 \\(F(0)<1/2<F(1)\\)”作为依据，表述不严谨；该结论实际直接由定义得到：\\(F(0)=0\\)、\\(F(1)=1\\)。不影响后续证明。",
+    "source_pages": [
+      71,
+      72
+    ],
+    "checkable": false
+  },
+  "calculus-Q223": {
+    "answer": "C",
+    "content_hash": "63cd013ab58c5ef4a17209275ff4ede403feecb1ae7482d8de12ab427820a090",
+    "note": "",
+    "source_pages": [
+      73
+    ],
+    "checkable": true
+  },
+  "calculus-Q224": {
+    "answer": "A",
+    "content_hash": "4c9475baca4a5101eaa08490c64ccd599a322b79a7c460a2dc17614cdb4be66e",
+    "note": "",
+    "source_pages": [
+      73
+    ],
+    "checkable": true
+  },
+  "calculus-Q225": {
+    "answer": "C",
+    "content_hash": "0c16687a7b0e89d1c677e32af31aea0113b83998e77e748392b3107f29baa61a",
+    "note": "",
+    "source_pages": [
+      73
+    ],
+    "checkable": true
+  },
+  "calculus-Q226": {
+    "answer": "D",
+    "content_hash": "66221a6c5dcb9cd07fbb22412ea5bd05f0e2ac3a538a004e7a65b0c119fa41c0",
+    "note": "",
+    "source_pages": [
+      73
+    ],
+    "checkable": true
+  },
+  "calculus-Q227": {
+    "answer": "C",
+    "content_hash": "267a9d8610fc64f101238fe7454c21d210cacf0a4e1811d6d942e0927a824c02",
+    "note": "",
+    "source_pages": [
+      73,
+      74
+    ],
+    "checkable": true
+  },
+  "calculus-Q228": {
+    "answer": "D",
+    "content_hash": "d580031ca48f0b5bc71abf877dededd2f502f451daa87201c4b64a83346b82b5",
+    "note": "",
+    "source_pages": [
+      74
+    ],
+    "checkable": true
+  },
+  "calculus-Q229": {
+    "answer": "C",
+    "content_hash": "fae6e1323a516c54deb84d9258e6f2d91580a4fd6b861db9c84e083771a1761f",
+    "note": "",
+    "source_pages": [
+      74
+    ],
+    "checkable": true
+  },
+  "calculus-Q237": {
+    "answer": "C",
+    "content_hash": "234406386bf1ffbdceb247e7bdc4fc390a91e7beb9d2fab1850accf967f8755e",
+    "note": "",
+    "source_pages": [
+      76,
+      77
+    ],
+    "checkable": true
+  },
+  "calculus-Q238": {
+    "answer": "A",
+    "content_hash": "966a3de0050212b4ca025913b49dad884571cb914651f519cfabbdeb8fdbbb59",
+    "note": "",
+    "source_pages": [
+      77
+    ],
+    "checkable": true
+  },
+  "calculus-Q239": {
+    "answer": "B",
+    "content_hash": "3f25c77a7358d9d62b7a3211dbaabb8dec78a53f4fe4fad77016f33cd0d58a11",
+    "note": "",
+    "source_pages": [
+      77,
+      78
+    ],
+    "checkable": true
+  },
+  "calculus-Q240": {
+    "answer": "C",
+    "content_hash": "8114e1055aef6e00dc38868f753799e425908c5d0539faf7f6bc442ad213dbc3",
+    "note": "",
+    "source_pages": [
+      78
+    ],
+    "checkable": true
+  },
+  "calculus-Q241": {
+    "answer": "\\frac{1}{\\sin x\\cos x}\\quad\\left(\\frac{\\pi}{4}<x<\\frac{\\pi}{2}\\right)",
+    "content_hash": "279ee7d6673243b2fd5dd48b79ec727968eedc79eeb5e2aaaefb2dc5fe3e8b88",
+    "note": "题设只在$\\frac\\pi4<x<\\frac\\pi2$给出乘积关系与正性，因此不能据此确定区间外的$f(x)$。",
+    "source_pages": [
+      78
+    ],
+    "checkable": false
+  },
+  "calculus-Q242": {
+    "answer": "\\frac52",
+    "content_hash": "1d285b7456fdeb780269a430d6b492460f6704b00698509c2672073107de45f3",
+    "note": "",
+    "source_pages": [
+      78
+    ],
+    "checkable": true
+  },
+  "calculus-Q243": {
+    "answer": "\\sin x^2",
+    "content_hash": "1eb3b384d1b58acd6afbe06f9125a278cece0f7970dae9d74a41543eb38624fd",
+    "note": "",
+    "source_pages": [
+      78,
+      79
+    ],
+    "checkable": true
+  },
+  "calculus-Q252": {
+    "answer": "1",
+    "content_hash": "94ff0daa8277220f95e09fffdff6a12a56fe7a89f9ed9aceaa6ed81dab7e9d48",
+    "note": "",
+    "source_pages": [
+      81
+    ],
+    "checkable": true
+  },
+  "calculus-Q264": {
+    "answer": "(I) $\\displaystyle \\frac{1}{2\\ln(3/2)}\\ln\\left|\\frac{3^x-2^x}{3^x+2^x}\\right|+C$；(II) $\\displaystyle -\\frac1x+\\frac14\\ln\\left|\\frac{1+x}{1-x}\\right|-\\frac12\\arctan x+C$；(III) $\\displaystyle -\\frac1{3x^3}+\\frac1x-\\arctan\\frac1x+C$；(IV) $\\displaystyle -\\frac{\\arctan x}{x}-\\frac12(\\arctan x)^2+\\frac12\\ln\\frac{x^2}{1+x^2}+C$；(V) $\\displaystyle \\left(1-\\frac1x\\right)\\ln(1-x)+C$。",
+    "content_hash": "d68888eee716eeacec94602e8a5f71e8d1ad684559ae97e146e5a601a3752617",
+    "note": "",
+    "source_pages": [
+      83,
+      84
+    ],
+    "checkable": true
+  },
+  "calculus-Q265": {
+    "answer": "(I) $2\\ln\\dfrac{\\sqrt{x}}{1+\\sqrt{x}}+C$；(II) $2x\\sqrt{e^x-1}-4\\sqrt{e^x-1}+4\\arctan\\sqrt{e^x-1}+C$；(III) $\\dfrac13(1+x^2)^{3/2}-\\sqrt{1+x^2}+C$；(IV) $\\arctan\\dfrac{x}{\\sqrt{1+x^2}}+C$；(V) $\\bigl(\\arctan\\sqrt{x-1}\\bigr)^2+C$；(VI) $\\dfrac{x^2}{2}{}_2F_1\\!\\left(\\dfrac12,\\dfrac43;\\dfrac73;x^{3/2}\\right)+C$（在$0<x<1$上）。",
+    "content_hash": "2fe9e8cdaf35aced77d857d4dce96158d276cc1f88790f4bf6551338d43f12bc",
+    "note": "初稿声称原书(VI)的题面与本题不同，但给定材料未提供原书页面或原题，无法核实该外部差异；以上严格按实际给定题干求解。",
+    "source_pages": [
+      84,
+      85,
+      86
+    ],
+    "checkable": false
+  },
+  "calculus-Q279": {
+    "answer": "在上述通常几何约定下，$S=\\dfrac a2(a^2+1)$，$S_1=\\dfrac a3\\left(a^2+\\dfrac32\\right)$，故$\\dfrac{S}{S_1}=\\dfrac{3(a^2+1)}{2a^2+3}<\\dfrac32$。",
+    "content_hash": "490e81c095858f5bfd5dbcf79b0865011e87316f278ddf453a3729cd90072e03",
+    "note": "做题本及上传文字没有明确标出 B、C。下文采用通常的曲边梯形约定：C 为曲线与 y 轴交点，B 为曲线上横坐标为 a 的点。",
+    "source_pages": [
+      93
+    ],
+    "checkable": false
+  },
+  "calculus-Q302": {
+    "answer": "C",
+    "content_hash": "1071cf425340078e077387e483b966bf617621c2d8404e802b898daf080af6a5",
+    "note": "",
+    "source_pages": [
+      100,
+      101
+    ],
+    "checkable": false
+  },
+  "calculus-Q308": {
+    "answer": "若$x,x_0\\in(a,b)$，则答案为$f(x)-f(x_0)$；按题面允许端点时，需补充$f$在$[a,b]$外的延拓或改为相应单侧极限。",
+    "content_hash": "a1b1cf845e522e21804d358142f1f23484d186c7b15b56a4f35b3954bd429c22",
+    "note": "题面允许$x,x_0\\in[a,b]$，但只说明$f$在$[a,b]$上连续。若$x$或$x_0$为端点，$t+\\Delta x$在双侧趋近时可能超出$[a,b]$，因此需补充延拓或端点单侧条件。",
+    "source_pages": [
+      103
+    ],
+    "checkable": false
+  },
+  "calculus-Q317": {
+    "answer": "4",
+    "content_hash": "49f3b3245c4c693d84a925da7a88ac596853a54859bd631c32f3798306d8a474",
+    "note": "做题本 PDF 第 121 页及上传文本的积分上限是 x；参考答案 PDF 第 105—106 页对应题的上限是 x²，故答案不同。下文按当前题面作答，并说明另一版本。",
+    "source_pages": [
+      105,
+      106
+    ],
+    "checkable": false
+  },
+  "calculus-Q329": {
+    "answer": "(I) $\\dfrac{1-\\sqrt2}{6}$；(II) $\\dfrac{e^{-1}-1}{4}$。",
+    "content_hash": "a5542665291ab96016c93d43fdba58abf9f646f3bf9db1df569f1182ec04346b",
+    "note": "",
+    "source_pages": [
+      109
+    ],
+    "checkable": false
+  },
+  "calculus-Q330": {
+    "answer": "$\\displaystyle -2\\sqrt{1-x}\\arcsin\\sqrt{x}+2\\sqrt{x}+C$",
+    "content_hash": "fd3fd620a35af6b0c9dbc6fb39a9b5d1a59cb119ed4eec6d63160875b1ed1292",
+    "note": "题干未显式给出定义式参数的取值分支；按通常题意取$0\\le u\\le\\pi/2$即可得到上述唯一表达式。若坚持参数遍历全实数，则关系不构成单值函数。",
+    "source_pages": [
+      109
+    ],
+    "checkable": false
+  },
+  "calculus-Q348": {
+    "answer": "（I）$\\displaystyle\\int_0^a f(x)\\,dx$；（II）$1$",
+    "content_hash": "4a6b7eff06059f1e9b3a2c24e20c0ed205ad478962996f598a17856b8bc108cc",
+    "note": "题设条件允许$g(x)\\equiv-1$，此时$g(x)g(-x)=1$但分母$1+g(x)$恒为零，原积分无定义。原版解析默认相关分母不为零；若按题面严格理解，应补充积分有定义的条件。",
+    "source_pages": [
+      114,
+      115
+    ],
+    "checkable": false
+  },
+  "calculus-Q354": {
+    "answer": "在补充 n≥0 时，最大值为 f(1)，且 $f(1)\\le\\dfrac{1}{(2n+2)(2n+3)}$；按题面未限定 n 时不能作无条件结论。",
+    "content_hash": "4635fb866998f3e144d4b7dcc414e7bf730bfd1bbc6bef5adef8dd77d5354957",
+    "note": "题干未说明 n 的取值范围。上述结论需补充 n≥0（通常 n 为非负整数）；若允许负值，函数积分可能在 0 附近发散。",
+    "source_pages": [
+      116
+    ],
+    "checkable": false
+  },
+  "calculus-Q405": {
+    "answer": "$\\displaystyle \\frac{dy}{dx}=\\frac{f_xF_t-f_tF_x}{F_t+f_tF_y}$",
+    "content_hash": "05155d47895984ec68e18f51f835e3f67f4da3e424669fed6b6e7b2392667208",
+    "note": "题干只说明偏导数连续，未显式给出联立方程能局部确定可微的$y(x),t(x)$及分母非零条件；上述公式是这些非退化条件下的结果。",
+    "source_pages": [
+      137
+    ],
+    "checkable": false
+  },
+  "calculus-Q406": {
+    "answer": "$\\displaystyle \\frac{dy}{dx}=\\frac{G_tf_x-G_xf_t}{G_t+G_yf_t}$",
+    "content_hash": "db5171f1becb8cd852b42d436541d4538a4bb7cfc53f7c98f390ef9cacd38bdc",
+    "note": "题干未明确联立关系在所讨论点局部确定可微的$y(x)$，也未给出$G_t+G_yf_t\\ne0$等非退化条件；商式需在这些条件下使用。",
+    "source_pages": [
+      137
+    ],
+    "checkable": false
+  },
+  "calculus-Q417": {
+    "answer": "$\\displaystyle \\frac{dy}{dx}=\\frac{15-10x+4z}{2(5y+3z)},\\quad\\frac{dz}{dx}=\\frac{9-6x-4y}{2(5y+3z)}$",
+    "content_hash": "49b135b0e49a706581883385079a0b13aa89ac894da02917dd22c0a598d91a5a",
+    "note": "",
+    "source_pages": [
+      139,
+      140
+    ],
+    "checkable": true
+  },
+  "calculus-Q422": {
+    "answer": "最大值为 $16$，在 $(4,0)$ 处取得。",
+    "content_hash": "52caf78ca295bf4147f9fcc58db452375bbeb4baf0d5253b95257b16e8cbfe9a",
+    "note": "",
+    "source_pages": [
+      141,
+      142
+    ],
+    "checkable": true
+  },
+  "calculus-Q426": {
+    "answer": "由题设只能推出 $u=0$ 或 $e^{-ux}=1/y^2$；在补充 $u\\ne0$、$x\\ne0$、$y\\ne0$ 的通常分支下，$u(x,y)=\\dfrac{\\ln y^2}{x}$。",
+    "content_hash": "99f2e9628eae54cfb16337d3105f2048191030124da57a3fa123563eb0346f30",
+    "note": "题干未说明定义域，也未说明 u 是否处处非零。直接约去 u 会遗漏 u=0 分支；显式公式还要求 x≠0、y≠0。",
+    "source_pages": [
+      143
+    ],
+    "checkable": false
+  },
+  "calculus-Q441": {
+    "answer": "按题面缺少定义域条件，命题不成立；在整个半平面 $y>0$ 或 $y<0$（或满足相应连通性条件）的定义域上，充要条件成立。",
+    "content_hash": "184b4b43d6bf869d0b7ce78ed7d4f88f047703db0f64b71b97cc975392b83a47",
+    "note": "题干未限定定义域。需要假设定义域位于单个半平面且固定 $x/y$ 的线段连通，或作等价的连通性约定；否则两个半平面可对应不同的单变量函数。",
+    "source_pages": [
+      147,
+      148
+    ],
+    "checkable": false
+  },
+  "calculus-Q445": {
+    "answer": "按通常非严格极大值定义，条件为 $b=2a$ 且 $a\\ge0$；若要求严格极大值，则为 $b=2a$ 且 $a>0$。",
+    "content_hash": "71f84dd52ccf74f90407d3c804a7455098e25bce19b7aa05818f5f1e818f7883",
+    "note": "题干未明确“极大值”是否要求严格。按通常的非严格局部极大值定义，a=0、b=0 应计入；若教材明确采用严格极大值定义，则排除该情形。",
+    "source_pages": [
+      149,
+      150
+    ],
+    "checkable": false
+  },
+  "calculus-Q448": {
+    "answer": "按题干的正号指数，函数无极值点；也没有全局最大值或最小值。",
+    "content_hash": "130d1d05ea4fa4d9213b98c5f806e025b5dd1948592e30c55ed2f24338796b98",
+    "note": "",
+    "source_pages": [
+      150,
+      151
+    ],
+    "checkable": false
+  },
+  "calculus-Q449": {
+    "answer": "不存在最小值，函数无下界",
+    "content_hash": "f9d55825b05fd80a87d8e476d600f84472ef84e7e76daaafe8e11756c38ef3b1",
+    "note": "原书解析将正数驻点值 $3\\sqrt[3]{4}$ 作为最小值，但题干未规定 $x,y,z>0$。在现有条件下取 $x=-t,y=-1/t,z=1$ 可使 $u\\to-\\infty$，所以不存在最小值。",
+    "source_pages": [
+      151
+    ],
+    "checkable": false
+  },
+  "calculus-Q472": {
+    "answer": "$\\dfrac{4(\\pi+2)}{\\pi^3}$",
+    "content_hash": "d7a6f2c3a8cbeb5d7dd8c6c0251e5e63b6291589264353c5972f7cf9ae58a8a4",
+    "note": "",
+    "source_pages": [
+      161
+    ],
+    "checkable": true
+  },
+  "calculus-Q489": {
+    "answer": "\\(\\frac{11}{36}-\\frac{\\pi}{24}\\)",
+    "content_hash": "b233fe3c2d62624ace0d934062ab1e873610dc1a03eac963d7b4dc8570c32c70",
+    "note": "扫描页161中标为第（5）题的题目条件是$x^2+y^2\\le x$，与输入题干$x^2+y^2\\le\\sqrt2x,0\\le y\\le x$不一致，未找到本题原版解析。以上为根据输入题干独立推导的补充讲解。",
+    "source_pages": [
+      161
+    ],
+    "checkable": false
+  },
+  "calculus-Q492": {
+    "answer": "\\frac{1}{2}\\left[\\ln\\frac{5}{2}-1+\\arctan 2-\\frac{\\pi}{4}\\right]",
+    "content_hash": "a7fe93e68575077e83efaddda572dc82eeea6dc9eb56450ac4cfa30a9f2c01ce",
+    "note": "扫描页第163页的第（8）题区域为另一道题（其解析采用 $\\frac{3\\pi}{4}\\le\\theta\\le\\pi,\\ 0\\le r\\le2\\sin\\theta$），与所提供题干 $1\\le x^2+y^2\\le2x,\\ y\\ge0$ 不匹配。因此上述结果为依据题干独立推导，并非原书对应解析。",
+    "source_pages": [
+      163
+    ],
+    "checkable": false
+  },
+  "calculus-Q493": {
+    "answer": "10",
+    "content_hash": "bf58315cdc0ddbe062081fbd3a118403cde9f4e79a6c1b78804c99fa9d82cba8",
+    "note": "",
+    "source_pages": [
+      169
+    ],
+    "checkable": true
+  },
+  "calculus-Q496": {
+    "answer": "\\(\\dfrac{\\pi+6-3\\sqrt{3}}{54}\\)",
+    "content_hash": "58e8897301d76ee315bf6c84803ac44078d080e031bb2e20606c1d20e587f14f",
+    "note": "",
+    "source_pages": [
+      170
+    ],
+    "checkable": true
+  },
+  "calculus-Q510": {
+    "answer": "\\frac{4}{3}\\left[(\\pi^2-1)e^{\\pi^2}+1\\right]",
+    "content_hash": "f395d216c61c32b724f017eef55a162952597bc06a454af3f317abcc1da18cad",
+    "note": "",
+    "source_pages": [
+      175
+    ],
+    "checkable": true
+  },
+  "calculus-Q523": {
+    "answer": "\\frac{1}{18}",
+    "content_hash": "536a245c9ef5345f0a72e82b5c7f893140fb751a99392f13ee82dbfdc20ab421",
+    "note": "题面记号$\\sin(xy)^2$存在排版歧义，既可能被读作$\\sin((xy)^2)$，也可能是$\\sin^2(xy)$的非标准写法；两种解释在本题中给出相同极限$1/18$。",
+    "source_pages": [
+      181
+    ],
+    "checkable": false
+  },
+  "calculus-Q262": {
+    "answer": "$0$",
+    "content_hash": "f676528b852207d1a2aeea843c55ee064b9cde72c7514fcebdc20dbd75daac92",
+    "note": "",
+    "source_pages": [
+      83
+    ],
+    "checkable": true
+  },
+  "calculus-Q365": {
+    "answer": "$V=\\dfrac{\\pi}{5(1-e^{-2\\pi})}$",
+    "content_hash": "0bc5e2aa120b4d73f2c13bf098af121e3a5ab35c50fb933f1bf6399215d7aa42",
+    "note": "",
+    "source_pages": [
+      121
+    ],
+    "checkable": true
+  },
+  "calculus-Q258": {
+    "answer": "\\frac32",
+    "content_hash": "01d2d2ad8a67c033cdf26c71440f85797652b667c816c8237302c59f19275481",
+    "note": "",
+    "source_pages": [
+      82
+    ],
+    "checkable": true
+  },
+  "calculus-Q484": {
+    "answer": "1",
+    "content_hash": "c735521527dcdb3b2409ed2fb933395bc33a89b21ba7064e10d9281d190ece11",
+    "note": "",
+    "source_pages": [
+      165
+    ],
+    "checkable": true
+  },
+  "calculus-Q408": {
+    "answer": "f_{uu}(1,1)+f_u(1,1)-f_v(1,1)",
+    "content_hash": "9982e26dfc3ce637643bd77854c5fe5df117a990d313cb4650f076966d311d50",
+    "note": "",
+    "source_pages": [
+      137
+    ],
+    "checkable": true
+  },
+  "calculus-Q304": {
+    "answer": "A",
+    "content_hash": "8d62516c4fd69079a918ad0a50958ab6499baa9a71c1daf4fbf8dc6ef8065e65",
+    "note": "",
+    "source_pages": [
+      101,
+      102
+    ],
+    "checkable": true
+  },
+  "calculus-Q259": {
+    "answer": "$\\frac{3}{2}\\pi^2+4\\pi$",
+    "content_hash": "82a81c54eb69a263071d65e7e3ab4509d170b7b8a6f4c6489ee065ad3dd68611",
+    "note": "",
+    "source_pages": [
+      82
+    ],
+    "checkable": true
+  },
+  "calculus-Q528": {
+    "answer": "\\(\\frac{\\pi}{3}\\)",
+    "content_hash": "1522125bd73fc904ceab9bdb07e9de4b8fcdc141f15e820113952a7a3cc8356c",
+    "note": "",
+    "source_pages": [
+      184
+    ],
+    "checkable": true
+  },
+  "calculus-Q386": {
+    "answer": "对任意 $x\\in(a,b)$，有 $0<f(x)<\\dfrac{2}{b-a}\\int_a^b f(u)\\,du$。",
+    "content_hash": "3203bab761c09ee06f35b6056da31048a0429f1f2e3566c35614b63a5206946b",
+    "note": "",
+    "source_pages": [
+      129,
+      130
+    ],
+    "checkable": true
+  },
+  "calculus-Q425": {
+    "answer": "$(a,b)=\\left(-1,-\\dfrac13\\right)$或$\\left(-\\dfrac13,-1\\right)$。",
+    "content_hash": "4932e18fe760feaf5f0ec2a6c25282fe7275818f6f9f0c4d28695740a775f58f",
+    "note": "",
+    "source_pages": [
+      143
+    ],
+    "checkable": true
+  },
+  "calculus-Q339": {
+    "answer": "$1$",
+    "content_hash": "26d13ab94932e35c026698966f6e1743634b15a5abc76618d1e051ecc0500312",
+    "note": "",
+    "source_pages": [
+      112
+    ],
+    "checkable": true
+  },
+  "calculus-Q466": {
+    "answer": "C",
+    "content_hash": "ee9e0b1d30c90515ce077235f1c72af2009966037d3ea1381ac15697b0c789c4",
+    "note": "",
+    "source_pages": [
+      160
+    ],
+    "checkable": true
+  },
+  "calculus-Q350": {
+    "answer": "\\frac{1}{2(n+1)}<a_n<\\frac{1}{2(n-1)}",
+    "content_hash": "14204e4e3e4fda812f863480285dbefbd8aac6f2b5694978d71e8a5bfaf298a4",
+    "note": "",
+    "source_pages": [
+      115
+    ],
+    "checkable": true
+  },
+  "calculus-Q459": {
+    "answer": "最小值为\\(1\\)，在\\((x,y)=(1,1)\\)处取得。",
+    "content_hash": "4a2e8d0dffec74992161d4561ac7d56add8441cedefe7607d95177b9da4c1db1",
+    "note": "",
+    "source_pages": [
+      156
+    ],
+    "checkable": true
+  },
+  "calculus-Q310": {
+    "answer": "\\frac{1}{2}",
+    "content_hash": "0e3672d291c168ce676f8b58d84c43b3f734303385adabdd6db592b93f34e326",
+    "note": "",
+    "source_pages": [
+      103,
+      104
+    ],
+    "checkable": true
+  },
+  "calculus-Q474": {
+    "answer": "e^{-1}",
+    "content_hash": "f82f4ad1a5aa4b7e52dd35728212507b06d79e6903cb995a1986143fc4249be0",
+    "note": "",
+    "source_pages": [
+      162
+    ],
+    "checkable": true
+  },
+  "calculus-Q232": {
+    "answer": "A",
+    "content_hash": "1cdb76745bd300ec1347861f184ab4dab0e06c4738fe8adbaeacded8569bdad3",
+    "note": "",
+    "source_pages": [
+      75
+    ],
+    "checkable": true
+  },
+  "calculus-Q270": {
+    "answer": "(I) $10-\\frac{8\\sqrt2}{3}$；(II) $\\begin{cases}\\frac{(1+x)^2}{2},&-1\\le x<0,\\\\1-\\frac{(1-x)^2}{2},&x\\ge0;\\end{cases}$；(III) $2e^y-(y+2)e^{-1}-ye$；(IV) $4(\\sqrt2-1)$",
+    "content_hash": "72352689963976ffd9d742a67ace4f4e994e8610bdd32278a35df49dc08720dc",
+    "note": "",
+    "source_pages": [
+      89,
+      90
+    ],
+    "checkable": true
+  },
+  "calculus-Q398": {
+    "answer": "D",
+    "content_hash": "2cda1d58a9f106fab432a1440ac245b17d647a249694af4baaf88c4f9c8c1e3c",
+    "note": "",
+    "source_pages": [
+      136
+    ],
+    "checkable": true
+  },
+  "calculus-Q511": {
+    "answer": "\\int_0^a dr\\int_{\\frac12\\arcsin\\frac{r^2}{a^2}}^{\\frac\\pi2-\\frac12\\arcsin\\frac{r^2}{a^2}}f(r\\cos\\theta,r\\sin\\theta)r\\,d\\theta",
+    "content_hash": "5d916d0073b79a16364e26bb0d3bcad4b6f901351ee97df78dd08df84d7a10c0",
+    "note": "",
+    "source_pages": [
+      175
+    ],
+    "checkable": true
+  },
+  "calculus-Q356": {
+    "answer": "两侧严格不等式均成立",
+    "content_hash": "ffd3371b15252b8ec098dc833b8e62e79c457d5c2de95b0ba60cfea738b827b0",
+    "note": "",
+    "source_pages": [
+      117,
+      118
+    ],
+    "checkable": true
+  },
+  "calculus-Q469": {
+    "answer": "C",
+    "content_hash": "ced488a4509e966293bf268523df888c40b14cb38c9bdafcb4883e295913ea16",
+    "note": "",
+    "source_pages": [
+      161
+    ],
+    "checkable": true
+  },
+  "calculus-Q380": {
+    "answer": "$\\frac{5\\pi}{4}$",
+    "content_hash": "af99e763bb42192341f56932a21b00234867c49ab2177fc875a684658cde02e8",
+    "note": "",
+    "source_pages": [
+      127
+    ],
+    "checkable": true
+  },
+  "calculus-Q341": {
+    "answer": "$\\dfrac14$",
+    "content_hash": "741b6c854bad9c8847ffe1232f38be142ac60752a0ea2eef5505a1c095a767c5",
+    "note": "",
+    "source_pages": [
+      112,
+      113
+    ],
+    "checkable": true
+  },
+  "calculus-Q256": {
+    "answer": "\\frac{3\\pi a}{2}",
+    "content_hash": "9292f53e6edae137c65a2caedc5072683c97874903ee4c02557c264e01b24c9d",
+    "note": "",
+    "source_pages": [
+      82
+    ],
+    "checkable": true
+  },
+  "calculus-Q327": {
+    "answer": "y=-x+1",
+    "content_hash": "2b0dae1c82e1820a4d40484db0e61fa192461db1c866c04df03240f8edd1dd13",
+    "note": "",
+    "source_pages": [
+      108
+    ],
+    "checkable": true
+  },
+  "calculus-Q364": {
+    "answer": "$V=\\dfrac{\\pi^2}{2}-\\dfrac{2\\pi}{3}$",
+    "content_hash": "a78cde16860aa83e5e291825940e510996d5706c3c4834ff8a7d5501a9a66e9e",
+    "note": "",
+    "source_pages": [
+      120,
+      121
+    ],
+    "checkable": true
+  },
+  "calculus-Q415": {
+    "answer": "[-1,1]",
+    "content_hash": "b166f72233b56cfd3cf5ba64450cbe945c1a07fe50ec4c8811d10fa27fc3dbcb",
+    "note": "",
+    "source_pages": [
+      139
+    ],
+    "checkable": true
+  },
+  "calculus-Q414": {
+    "answer": "2",
+    "content_hash": "60fc9a08dc1844ccda2db876755e116230f3f6e9e72bb6bc1aa11c3158bc069b",
+    "note": "",
+    "source_pages": [
+      139
+    ],
+    "checkable": true
+  },
+  "calculus-Q461": {
+    "answer": "(I) \\(\\frac{\\partial^2w}{\\partial u^2}=\\frac12\\)；(II) \\(z(x,y)=-\\frac12(x-y)^2-(x^2-y^2)e^{-(x-y)}\\)。",
+    "content_hash": "6685bedf08007d8a163d3e68ef16548a0d910d4715dc154cc93e6d62fa198d58",
+    "note": "",
+    "source_pages": [
+      156,
+      157,
+      158
+    ],
+    "checkable": true
+  },
+  "calculus-Q456": {
+    "answer": "$f$在$(0,0)$处可微；$f_x$、$f_y$在$(0,0)$处均不连续。",
+    "content_hash": "f75d66874631e092682cf4d469c33231103874dc314b279bbb9a50fc199d9014",
+    "note": "",
+    "source_pages": [
+      154,
+      155
+    ],
+    "checkable": true
+  },
+  "calculus-Q230": {
+    "answer": "B",
+    "content_hash": "016b7b6528687b2d01962c5736e157f82d229106c566d59e9e501256641d879b",
+    "note": "",
+    "source_pages": [
+      74
+    ],
+    "checkable": true
+  },
+  "calculus-Q313": {
+    "answer": "2+\\frac{1}{2}\\ln3",
+    "content_hash": "b25607e828e98763295390add8fb7fe495a473d60ceeb7ff1ec05dd8db57821c",
+    "note": "",
+    "source_pages": [
+      104
+    ],
+    "checkable": true
+  },
+  "calculus-Q278": {
+    "answer": "最大值为$\\ln3$，最小值为$\\ln\\frac34$",
+    "content_hash": "1c37510bbdfa35256bd701254780b55ea3b5228e186f8c125dc9f71a49786669",
+    "note": "",
+    "source_pages": [
+      93
+    ],
+    "checkable": true
+  },
+  "calculus-Q490": {
+    "answer": "$\\dfrac{41\\pi}{2}$",
+    "content_hash": "02b6ac4453a8181201c8c082f5c7b5599877799619d4032451cf51b54960d4be",
+    "note": "",
+    "source_pages": [
+      167,
+      168
+    ],
+    "checkable": true
+  },
+  "calculus-Q429": {
+    "answer": "B",
+    "content_hash": "ca1d513852321a82dadcb415a4ecf7e37a4febd15d826841cac0fb903a1e3bc5",
+    "note": "",
+    "source_pages": [
+      144
+    ],
+    "checkable": true
+  },
+  "calculus-Q481": {
+    "answer": "\\frac{13\\pi}{144}",
+    "content_hash": "a09089210bb0e3ef5ce4941ccf16335e5100a8ac47400c93b5af2804cf213a54",
+    "note": "",
+    "source_pages": [
+      164
+    ],
+    "checkable": true
+  },
+  "calculus-Q454": {
+    "answer": "(I) $f_x(0,0)=f_y(0,0)=0$；(II) 在$(0,0)$处可微，$df|_{(0,0)}=0$。",
+    "content_hash": "b21a04ea46004b8c185ca282143716f23d192d3a5bcb19787bfad062cd375be3",
+    "note": "",
+    "source_pages": [
+      154
+    ],
+    "checkable": true
+  },
+  "calculus-Q328": {
+    "answer": "\\pi",
+    "content_hash": "da72706d09ef4ce4353f84659e83f7458778df5bdb7da2f2d47775825ee3f30b",
+    "note": "",
+    "source_pages": [
+      108,
+      109
+    ],
+    "checkable": true
+  },
+  "calculus-Q470": {
+    "answer": "C",
+    "content_hash": "f23c0a8a3517a32b8f33dee144533958af576c1a57f1b44b33d9db82d9c6d63e",
+    "note": "",
+    "source_pages": [
+      161
+    ],
+    "checkable": true
+  },
+  "calculus-Q465": {
+    "answer": "B",
+    "content_hash": "a0680aab479ae0a1ff8b4f67a97ec7f160cead98e5f37d348cbd1f1a4b7dc048",
+    "note": "",
+    "source_pages": [
+      160
+    ],
+    "checkable": true
+  },
+  "calculus-Q495": {
+    "answer": "\\frac{4\\pi}{3}+4\\ln(2+\\sqrt{3})",
+    "content_hash": "e071eb4edba310a7887df94508ab30577557e05f43d10b5213ffaccab1554856",
+    "note": "",
+    "source_pages": [
+      170
+    ],
+    "checkable": true
+  },
+  "algebra-Q209": {
+    "answer": "（I）$|3E-A|=2^r3^{n-r}$；（II）$|3E-A|=2^r3^{n-r}$。",
+    "content_hash": "6b0d39f571823938eb2f7e3832b5b6af397edf10e25dc17cc29c988d6b83f06d",
+    "note": "题干中的“计算了”应为“计算”，属于文字表述问题，不影响数学条件和结论。",
+    "source_pages": [
+      293,
+      294
+    ],
+    "checkable": false
+  },
+  "calculus-Q444": {
+    "answer": "a=b=3",
+    "content_hash": "991ea32a041c27557f85d0a795ba0171f607509a8b3f64778f15165b2c87ad19",
+    "note": "",
+    "source_pages": [
+      149
+    ],
+    "checkable": true
+  },
+  "calculus-Q505": {
+    "answer": "C",
+    "content_hash": "f812a62405e72059e5de8dfc4e1387f47eb7ca157372dbc4e2f0614b057fd917",
+    "note": "",
+    "source_pages": [
+      173,
+      174
+    ],
+    "checkable": true
+  },
+  "calculus-Q446": {
+    "answer": "2",
+    "content_hash": "083f86c1fb725e57340e4d4a5f34fbb06e3cd710e206d5c493037f023d9ef4ae",
+    "note": "",
+    "source_pages": [
+      150
+    ],
+    "checkable": true
+  },
+  "calculus-Q482": {
+    "answer": "$4-\\dfrac{\\pi}{2}$",
+    "content_hash": "8fa7b7f9d5458a7a857a269436cb21bf0ba35a538fd0f838600c94a0489d2c86",
+    "note": "",
+    "source_pages": [
+      164
+    ],
+    "checkable": true
+  },
+  "calculus-Q321": {
+    "answer": "\\frac16-\\frac14\\ln 3",
+    "content_hash": "93246414531d0dc29721cbf8c6f091c10ac6e7d730f35033f8fa94b5ff47ee26",
+    "note": "",
+    "source_pages": [
+      106
+    ],
+    "checkable": true
+  },
+  "calculus-Q285": {
+    "answer": "C",
+    "content_hash": "7fd5590ac16fbccf3303e4a889aeda61aa8192f77dca7aaa0d1704f5053fc540",
+    "note": "",
+    "source_pages": [
+      95
+    ],
+    "checkable": true
+  },
+  "calculus-Q388": {
+    "answer": "(I) $|f'(x)|\\le M/2$；(II) $\\left|\\int_0^1 f(x)\\,dx\\right|\\le1+M/8$",
+    "content_hash": "8446e989ad9e1724ce2c8c2340ea0cc63038a108b7268e4dcaeb49036fe79360",
+    "note": "",
+    "source_pages": [
+      131,
+      132
+    ],
+    "checkable": true
+  },
+  "calculus-Q303": {
+    "answer": "B",
+    "content_hash": "fe6cde0195d6442d2e7de59cd244fe1b8d4fc57720615e07b74b5783f30e6039",
+    "note": "",
+    "source_pages": [
+      101
+    ],
+    "checkable": true
+  },
+  "algebra-Q061": {
+    "answer": "$A^n=9^{n-1}A=9^{n-1}\\begin{pmatrix}2&-1&3\\\\-2&1&-3\\\\4&-2&6\\end{pmatrix}$",
+    "content_hash": "dfcf4cbb714375762c0f19d958e5f584ca0b322cac101ab3df764a9e3cbf8bf0",
+    "note": "题干未明确说明$n$的取值范围；原书解析按$n\\ge1$处理。若允许$n=0$，则还应有$A^0=E$。",
+    "source_pages": [
+      238,
+      239
+    ],
+    "checkable": false
+  },
+  "calculus-Q307": {
+    "answer": "$2\\ln 2-\\frac34$",
+    "content_hash": "c467b39699e46dc961c4a907b1469c702e8bd53a5ac887911c8c0efc0390480f",
+    "note": "",
+    "source_pages": [
+      102,
+      103
+    ],
+    "checkable": true
+  },
+  "calculus-Q300": {
+    "answer": "B",
+    "content_hash": "86bffeabdf17a0315c66cd02ac6574d544732e5ff3a0093bf65be1fee65a7025",
+    "note": "",
+    "source_pages": [
+      100
+    ],
+    "checkable": true
+  },
+  "calculus-Q424": {
+    "answer": "$a=1$",
+    "content_hash": "695eed5f0612e95af127ebff356371cc856c14c1ba5efae58fc6c07cc317b742",
+    "note": "",
+    "source_pages": [
+      142
+    ],
+    "checkable": true
+  },
+  "calculus-Q249": {
+    "answer": "-1/8",
+    "content_hash": "8658ffc8aa43f0997dc0e668404be3cf1ee8c3d811b327f3dffdd7f89b709fdb",
+    "note": "",
+    "source_pages": [
+      80
+    ],
+    "checkable": true
+  },
+  "calculus-Q404": {
+    "answer": "\\frac{1}{2e}dx-\\frac12dy",
+    "content_hash": "d3f8f4ef98ad735642ad44b8ad68c16246bc11ccf17e317286816d3b1d492ac8",
+    "note": "",
+    "source_pages": [
+      136,
+      137
+    ],
+    "checkable": true
+  },
+  "calculus-Q427": {
+    "answer": "$f(u)=C_1e^u+C_2e^{-u}$",
+    "content_hash": "2615d0f4177ecd1b2f90cb65ec699a4571473fad5d41fb061e3c6018370ee99a",
+    "note": "",
+    "source_pages": [
+      143
+    ],
+    "checkable": true
+  },
+  "calculus-Q503": {
+    "answer": "D",
+    "content_hash": "4340ea2f3f7c6fad421541a3749c4c944f44b68bc0824d7a335dd733561051e7",
+    "note": "",
+    "source_pages": [
+      173
+    ],
+    "checkable": true
+  },
+  "calculus-Q498": {
+    "answer": "(I) 0；(II) \\frac{1}{6}",
+    "content_hash": "6e6561c895be0a4d8356060eae13846d066a39a1240cff7bcef134ad497254f6",
+    "note": "",
+    "source_pages": [
+      171
+    ],
+    "checkable": true
+  },
+  "calculus-Q266": {
+    "answer": "(I) $\\frac13\\tan^3x+2\\tan x-\\cot x+C$；(II) $\\tan x-\\sec x+C$；(III) $\\frac{x}{2}-\\frac12\\ln|\\sin x+\\cos x|+C$；(IV) $x-\\ln|\\sin x+2\\cos x|+C$；(V) $\\frac14\\ln\\left|\\tan\\frac{x}{2}\\right|+\\frac18\\tan^2\\frac{x}{2}+C$；(VI) $a=0$时$\\frac1{b^2}\\tan x+C$，$b=0$时$-\\frac1{a^2}\\cot x+C$，$ab\\ne0$时$\\frac1{ab}\\arctan\\left(\\frac ab\\tan x\\right)+C$。",
+    "content_hash": "905a53643c0a951059bad22f88f284f24274c7d8c4450a088624469b7f80cc09",
+    "note": "",
+    "source_pages": [
+      86,
+      87
+    ],
+    "checkable": true
+  },
+  "calculus-Q353": {
+    "answer": "（I）I_{n+1}=\\frac{(2n-1)I_n+x/(x^2+a^2)^n}{2na^2}\\ (n\\ge1)，I_1=\\frac1a\\arctan\\frac xa+C；（II）\\frac{x-2}{2(x^2+2x+2)}+\\frac12\\arctan(x+1)+C",
+    "content_hash": "2960fed7037312c694ac14cef2c5d69d3077ce3bd741ab97fb80bb7794d26652",
+    "note": "",
+    "source_pages": [
+      116
+    ],
+    "checkable": true
+  },
+  "calculus-Q410": {
+    "answer": "4",
+    "content_hash": "8ed5c9e8cc601db6584378df470f0f53e7969f4884319716df29fe823e416298",
+    "note": "",
+    "source_pages": [
+      138
+    ],
+    "checkable": true
+  },
+  "calculus-Q467": {
+    "answer": "C",
+    "content_hash": "aa2fd95ad55e5a7b91eb475dd76a72fec7324da9a23a9f4f3ba084674d4b5e7e",
+    "note": "",
+    "source_pages": [
+      160
+    ],
+    "checkable": true
+  },
+  "calculus-Q502": {
+    "answer": "A",
+    "content_hash": "64bbf9b7e8656b5b4caa6cf6307130d08d796c4900d380e45454279917f70dfe",
+    "note": "",
+    "source_pages": [
+      173
+    ],
+    "checkable": true
+  },
+  "calculus-Q500": {
+    "answer": "B",
+    "content_hash": "12cee70bafc3dfa26d5be13df946f8882da11db9fa7da8df4d37aeb73c9f0568",
+    "note": "",
+    "source_pages": [
+      172
+    ],
+    "checkable": true
+  },
+  "calculus-Q506": {
+    "answer": "C",
+    "content_hash": "45562a05e69f3701fa1e5260380b2ca5f2e5a4259f8aed83111f40a7a27907eb",
+    "note": "",
+    "source_pages": [
+      174
+    ],
+    "checkable": true
+  },
+  "calculus-Q291": {
+    "answer": "C",
+    "content_hash": "5995dff2557d13abee1ee82003fce22844712d67bc0c8648670e0ea4f82b9bde",
+    "note": "",
+    "source_pages": [
+      97
+    ],
+    "checkable": true
+  },
+  "calculus-Q401": {
+    "answer": "e^{-\\frac12}",
+    "content_hash": "3208267d7a6ee42b8ba856ec55e543860901ffeb6a5d76c8bd2d6e5e0e78778e",
+    "note": "",
+    "source_pages": [
+      136
+    ],
+    "checkable": true
+  },
+  "calculus-Q452": {
+    "answer": "最大值为$\\frac73$，在$(2,5)$处取得。",
+    "content_hash": "cd16ce8d16044b3550233e22f7919801a90860d9d464900987ed1128d711179b",
+    "note": "",
+    "source_pages": [
+      152,
+      153
+    ],
+    "checkable": true
+  },
+  "calculus-Q336": {
+    "answer": "$$6$$",
+    "content_hash": "0dd2f1bc6112e11ffee8f4cd20cb6bbc73f673cf8560fcd6db7dc9ab6fa3114e",
+    "note": "",
+    "source_pages": [
+      111
+    ],
+    "checkable": true
+  },
+  "calculus-Q369": {
+    "answer": "2π(2ln2−7/6)",
+    "content_hash": "3bfa36304bda749b8e6242961d6b5c3e9ef70815c38766da652d79844f5c24ad",
+    "note": "",
+    "source_pages": [
+      122
+    ],
+    "checkable": true
+  },
+  "calculus-Q385": {
+    "answer": "(I) $V(y)=8\\arcsin y+8y\\sqrt{1-y^2}+4\\pi\\ \\mathrm{m}^3$；(II) 液面下降速率为$0.01\\ \\mathrm{m/min}$；(III) $W=8\\pi\\rho g\\ \\mathrm J$",
+    "content_hash": "de13430fcb0621385ecf990f82c6f6f160b41a61f9930d03eab746f728e1320d",
+    "note": "",
+    "source_pages": [
+      129
+    ],
+    "checkable": true
+  },
+  "calculus-Q287": {
+    "answer": "A",
+    "content_hash": "87fc3e156eb9d369b83ac1f25d1f520403af04aa30ae1daf46b3d6e7d68d822a",
+    "note": "",
+    "source_pages": [
+      96
+    ],
+    "checkable": true
+  },
+  "calculus-Q437": {
+    "answer": "$\\frac{1}{2}x^2y+\\frac{1}{2}xy^2+x+y^2$",
+    "content_hash": "06c86d256efc84f74d21945f1752cb3b1b4c1c253bbc635f3f12e3b03ca1b61d",
+    "note": "",
+    "source_pages": [
+      146
+    ],
+    "checkable": true
+  },
+  "calculus-Q400": {
+    "answer": "0",
+    "content_hash": "386a5d752ed13e404206635b2b5b71a370e2f1241faaacd33c980015f1e750f1",
+    "note": "",
+    "source_pages": [
+      136
+    ],
+    "checkable": true
+  },
+  "calculus-Q419": {
+    "answer": "在(2n\\pi,0)处取得极大值2（n\\in\\mathbb Z）；无极小值",
+    "content_hash": "60ca98c0574549e052176ab51eea45c41cd8687534c41a628a103fbd1872037a",
+    "note": "",
+    "source_pages": [
+      140
+    ],
+    "checkable": true
+  },
+  "calculus-Q526": {
+    "answer": "\\(\\frac{2\\ln2-1}{8}\\)",
+    "content_hash": "2f2c655812662afeb4f9017b6e0a970db733a775c5edcceb3e1350ab77662e1f",
+    "note": "",
+    "source_pages": [
+      183
+    ],
+    "checkable": true
+  },
+  "calculus-Q420": {
+    "answer": "$\\dfrac{\\sqrt{2}}{2}$",
+    "content_hash": "28614dc24302a3789fce8efcb93cc62d0feeda2b626719a4a2c92950321d5b25",
+    "note": "",
+    "source_pages": [
+      140,
+      141
+    ],
+    "checkable": true
+  },
+  "calculus-Q527": {
+    "answer": "$\\frac12$",
+    "content_hash": "a93c10bd62e8dbac65753116d777a5819141bae3c2e7d1f26e1e40c17fec4391",
+    "note": "",
+    "source_pages": [
+      183
+    ],
+    "checkable": true
+  },
+  "calculus-Q312": {
+    "answer": "8",
+    "content_hash": "7b8bae5638b7ffa92489c6b09ee4e3ecccb03d3fc765032c7f70b0376e3f5cfe",
+    "note": "",
+    "source_pages": [
+      104
+    ],
+    "checkable": true
+  },
+  "calculus-Q324": {
+    "answer": "\\pi-2\\ln2",
+    "content_hash": "54c332b4e323325329dd6ba949e0d15ab578c422fc5f231f176950e50bd0e990",
+    "note": "",
+    "source_pages": [
+      107
+    ],
+    "checkable": true
+  },
+  "calculus-Q370": {
+    "answer": "0",
+    "content_hash": "7b90daceb065a3bb9ab5219f5d91d4fd9c29ede35fe1b0e8c1043d5d8da86b95",
+    "note": "",
+    "source_pages": [
+      122,
+      123
+    ],
+    "checkable": true
+  },
+  "calculus-Q382": {
+    "answer": "(I) 大小为$\\frac{2Gm}{a\\sqrt{4a^2+l^2}}$，方向沿$y$轴负向；(II) $W=\\frac{2Gm}{l}\\ln\\frac{\\sqrt{4a^2+l^2}+l}{2a}$",
+    "content_hash": "61efa0a9891a2b865392d88682788b5624ad66333836ddbe857a1e26093ac392",
+    "note": "",
+    "source_pages": [
+      127,
+      128
+    ],
+    "checkable": true
+  },
+  "calculus-Q450": {
+    "answer": "上支函数 $z_+(x,y)=-y+\\sqrt{(x-3y)^2+2y^2+18}$ 在 $(9,3)$ 处取得局部（也是全局）极小值 $3$；下支函数 $z_-(x,y)=-y-\\sqrt{(x-3y)^2+2y^2+18}$ 在 $(-9,-3)$ 处取得局部（也是全局）极大值 $-3$。",
+    "content_hash": "913af1f9c18c9096ee7b5841c29e0f64adb9bcf21e85098ec9b33c7005058a9f",
+    "note": "题干未指定取方程的哪一支；该方程实际确定两个全局光滑分支，因此应分别给出上支和下支的极值。",
+    "source_pages": [
+      151,
+      152
+    ],
+    "checkable": false
+  },
+  "calculus-Q293": {
+    "answer": "C",
+    "content_hash": "87eeaf41a3471c1aad21b311723f8f58b1e8b707494c64a27087c43b4a97adf5",
+    "note": "",
+    "source_pages": [
+      98
+    ],
+    "checkable": true
+  },
+  "calculus-Q413": {
+    "answer": "dx+dy",
+    "content_hash": "91b350260cb6602d6587a5429ac7949fe157f8d2b58994d2e46353675ca637e4",
+    "note": "",
+    "source_pages": [
+      138,
+      139
+    ],
+    "checkable": true
+  },
+  "calculus-Q378": {
+    "answer": "(I) $S(\\alpha)=\\frac{1}{\\alpha(\\ln2)^\\alpha}$；(II) 最小值为 $-e\\ln(\\ln2)$，在 $\\alpha=-1/\\ln(\\ln2)$ 时取得",
+    "content_hash": "ff6fdc568b115e1f1e937a55cac51f250e1de0219899d4a20cafcc81d995c869",
+    "note": "",
+    "source_pages": [
+      126
+    ],
+    "checkable": true
+  },
+  "calculus-Q338": {
+    "answer": "$f(x)=2x-x\\ln x$（$x\\ge1$）；在$x=e$处取得最大值$e$，无最小值。",
+    "content_hash": "0dc1c1bfe1fa2f8b9f7c60d7e9a2615f5556a5cbea27f6c992dae03a45a30fa2",
+    "note": "",
+    "source_pages": [
+      111,
+      112
+    ],
+    "checkable": true
+  },
+  "calculus-Q282": {
+    "answer": "(I) $A=\\frac{3\\pi a^2}{8}$；(II) $L=6a$；(III) $V=\\frac{32\\pi a^3}{105}$，$S=\\frac{12\\pi a^2}{5}$",
+    "content_hash": "9d4878991691caa0b7ba1a92ecb9fbafb2556bae5e849f99a7f505adf59a6992",
+    "note": "",
+    "source_pages": [
+      94
+    ],
+    "checkable": true
+  },
+  "calculus-Q315": {
+    "answer": "\\(\\frac{(\\ln x)^2}{2}\\)",
+    "content_hash": "e8d5ea0f07f341af9565358e1ad11dda1492e39bf3d587423fd5522c9bcf4d8b",
+    "note": "",
+    "source_pages": [
+      105
+    ],
+    "checkable": true
+  },
+  "calculus-Q309": {
+    "answer": "\\frac{x}{\\sin x}",
+    "content_hash": "eb5d13ac6139b65ab0307669400d14aae7979cd7fc880ed33aa8713cc9bb8f8b",
+    "note": "",
+    "source_pages": [
+      103
+    ],
+    "checkable": true
+  },
+  "calculus-Q412": {
+    "answer": "-\\frac{ze^{-(x^2+y^2)}}{(1+z)^3}",
+    "content_hash": "62f43290d5353c00cbd324d93e1086106be09d169252b3d1fc92f5d4365564ed",
+    "note": "",
+    "source_pages": [
+      138
+    ],
+    "checkable": true
+  },
+  "calculus-Q248": {
+    "answer": "5/e",
+    "content_hash": "78ce3423cebd45c3e1d09cd9bd1e664b189161a9b686312acc37451f78197a9d",
+    "note": "",
+    "source_pages": [
+      80
+    ],
+    "checkable": true
+  },
+  "calculus-Q477": {
+    "answer": "\\frac{\\pi}{4}\\ln 2",
+    "content_hash": "28e12574f59485c4c61a1e0b73fa32e4977a57a793ad5d7f1fd62a244582cb83",
+    "note": "",
+    "source_pages": [
+      163
+    ],
+    "checkable": true
+  },
+  "calculus-Q508": {
+    "answer": "\\frac{1}{4}",
+    "content_hash": "8fc0d90c8e9205e2e7edc06ce345bc719a53c79e7cbca0f451ebca8abb91acda",
+    "note": "",
+    "source_pages": [
+      174,
+      175
+    ],
+    "checkable": true
+  },
+  "calculus-Q384": {
+    "answer": "$V(t)=2\\pi[(t-1)e^t+1]$",
+    "content_hash": "3f6c30b6fdc367b258a8a101d163b0662c8020bb2425ef70b64258aac35ce444",
+    "note": "",
+    "source_pages": [
+      129
+    ],
+    "checkable": true
+  },
+  "calculus-Q257": {
+    "answer": "4",
+    "content_hash": "4570b7d3d4209babe39ebf7a7c529a923ad9273dfb5d66541ea825739b4f920f",
+    "note": "",
+    "source_pages": [
+      82
+    ],
+    "checkable": true
+  },
+  "calculus-Q296": {
+    "answer": "D",
+    "content_hash": "72debb6d5512097941cbbe38fa83a9bf4ff5373661d7cfd668d91dc33f956a98",
+    "note": "",
+    "source_pages": [
+      99
+    ],
+    "checkable": true
+  },
+  "calculus-Q272": {
+    "answer": "(I) $\\frac{\\pi}{4e^2}$；(II) $\\frac\\pi2+\\ln(2+\\sqrt3)$",
+    "content_hash": "8fd52ffb9f755d9a7f891a8470bfdef8dbf2748624ac6bdf0f798f733fad9281",
+    "note": "",
+    "source_pages": [
+      91
+    ],
+    "checkable": true
+  },
+  "calculus-Q421": {
+    "answer": "$\\dfrac{4\\sqrt{2}-1}{\\sqrt{5}}$",
+    "content_hash": "a0560cbdb093bcc7f6d836b29a639234ed3752bb12f2eb92f4d1ea0ecd6a742b",
+    "note": "",
+    "source_pages": [
+      141
+    ],
+    "checkable": true
+  },
+  "calculus-Q254": {
+    "answer": "\\frac{e^{a^2}-1}{2}",
+    "content_hash": "694aac7be8ea47bfcd676a505f478f80c47d6007d591f65e9675f6480f867d9f",
+    "note": "",
+    "source_pages": [
+      81
+    ],
+    "checkable": true
+  },
+  "calculus-Q283": {
+    "answer": "V=\\frac{4\\sqrt{3}}{15}",
+    "content_hash": "952ce1298ad08e47584901304fa26183accb9758f081165efdae2f9e25c2e6c9",
+    "note": "",
+    "source_pages": [
+      95
+    ],
+    "checkable": true
+  },
+  "calculus-Q276": {
+    "answer": "证明成立：$\\int_0^a f(x)\\,dx>af(\\frac a2)$",
+    "content_hash": "a44cfee3c67038ce9b126e279debf0c12435a789689e0e36471dd63b341838e3",
+    "note": "",
+    "source_pages": [
+      92,
+      93
+    ],
+    "checkable": true
+  },
+  "calculus-Q440": {
+    "answer": "-\\frac{13}{8}",
+    "content_hash": "837d981debba0f9b41a0a5427b63fe3fc674dafcec8cf04df48dcda999a25f1c",
+    "note": "",
+    "source_pages": [
+      147
+    ],
+    "checkable": true
+  },
+  "calculus-Q351": {
+    "answer": "（I）a_n=\\frac{n-1}{n}a_{n-2}\\ (n\\ge3)；（II）1",
+    "content_hash": "a99aaa2699350a592761c56b89cfc26e9093e06c775f9894f753c49230b0a0d0",
+    "note": "",
+    "source_pages": [
+      115
+    ],
+    "checkable": true
+  },
+  "calculus-Q387": {
+    "answer": "(I) $\\int_a^b f(x)\\,dx=\\dfrac{b-a}{2}[f(a)+f(b)]+\\dfrac12\\int_a^b(x-a)(x-b)f''(x)\\,dx$；(II) 误差不超过$\\dfrac{(b-a)^3}{12}M$",
+    "content_hash": "06a14c97db25cc3ce38b32c17fc44d6f8cdec263432ddd78f8d56f8e4ae86c4b",
+    "note": "",
+    "source_pages": [
+      130
+    ],
+    "checkable": true
+  },
+  "calculus-Q411": {
+    "answer": "\\frac13x^3+x^2y-xy^2-\\frac13y^3+C",
+    "content_hash": "a174153317ac2826f025c5a89353d8572d62f9409602e32be8b34593fbb9cc20",
+    "note": "",
+    "source_pages": [
+      138
+    ],
+    "checkable": true
+  },
+  "calculus-Q235": {
+    "answer": "A",
+    "content_hash": "9abff1a9cea445c5efed6e9f174f5659db48e3f691a3b26f1cc6db70fbf8baae",
+    "note": "",
+    "source_pages": [
+      75,
+      76
+    ],
+    "checkable": true
+  },
+  "calculus-Q403": {
+    "answer": "47",
+    "content_hash": "ab277bc78dca4e89cf2a4f95718e1d6cd30a583fd1ad88576a2e37ab3a7ade43",
+    "note": "",
+    "source_pages": [
+      136
+    ],
+    "checkable": true
+  },
+  "calculus-Q326": {
+    "answer": "\\frac{3}{2}-\\frac{1}{\\ln 2}",
+    "content_hash": "b84235585af544e4111d09687514a4993e11c05d643f24db098b35d9646461c0",
+    "note": "",
+    "source_pages": [
+      107,
+      108
+    ],
+    "checkable": true
+  },
+  "calculus-Q443": {
+    "answer": "9",
+    "content_hash": "7a6e5400450b9fd070582da903ae557809766c61d9431654b664aaea7f07d1b9",
+    "note": "",
+    "source_pages": [
+      148,
+      149
+    ],
+    "checkable": true
+  },
+  "calculus-Q320": {
+    "answer": "e^{-1}-e",
+    "content_hash": "d2542ef771e82005727da031adf53749ebb72ad4bbcf9b8cee1fe7f2b1725478",
+    "note": "",
+    "source_pages": [
+      106
+    ],
+    "checkable": true
+  },
+  "calculus-Q399": {
+    "answer": "\\frac{2}{3}\\ln 2",
+    "content_hash": "e3b6063f78c68f7a782339f802c88448cb9f1df77f551fbb370c533b6dccd74f",
+    "note": "",
+    "source_pages": [
+      136
+    ],
+    "checkable": true
+  },
+  "calculus-Q335": {
+    "answer": "-\\frac13",
+    "content_hash": "5fd86677226ae2fbd0f1bc91a9c71aa300204f6ac3a8b5a69cf2f2dd7e51b4a5",
+    "note": "",
+    "source_pages": [
+      110
+    ],
+    "checkable": true
+  },
+  "calculus-Q236": {
+    "answer": "C",
+    "content_hash": "f955597a78bdb887674b618213010310d95ef6c9812ea5528607bd6209628a20",
+    "note": "",
+    "source_pages": [
+      76
+    ],
+    "checkable": true
+  },
+  "calculus-Q322": {
+    "answer": "\\frac{\\pi}{2}",
+    "content_hash": "63f44ad7d682b70f466aeb5d8ee853b9081be1eb380d8c28baf0ce2687bde3dc",
+    "note": "",
+    "source_pages": [
+      106,
+      107
+    ],
+    "checkable": true
+  },
+  "calculus-Q374": {
+    "answer": "2",
+    "content_hash": "f236f40ff2c9c9b0d5ac2730b1ccafbe46a35763ff7fdc09564cd68696fe043d",
+    "note": "",
+    "source_pages": [
+      124
+    ],
+    "checkable": true
+  },
+  "calculus-Q462": {
+    "answer": "(I) \\(\\frac{\\partial^2f}{\\partial u\\partial v}=3a\\)；(II) \\((0,0)\\)不是极值点，\\((a,a)\\)为极值点：当\\(a>0\\)时为极大值\\(a^3\\)，当\\(a<0\\)时为极小值\\(a^3\\)。",
+    "content_hash": "3537b5fbc16e773120347bad93b9b40a293c50325e0cf37b05ad1fac1d5e8125",
+    "note": "",
+    "source_pages": [
+      156,
+      157,
+      158
+    ],
+    "checkable": true
+  },
+  "calculus-Q274": {
+    "answer": "$I=3$",
+    "content_hash": "3ac1f9d162ba857ecb5132138a5290fdb5e2987f2863f11718e8a4f4a5950b75",
+    "note": "",
+    "source_pages": [
+      92
+    ],
+    "checkable": true
+  },
+  "calculus-Q416": {
+    "answer": "f_x+\\frac{y^2}{1-xy}f_y+\\frac{z}{xz-x}f_z",
+    "content_hash": "d27bc3eb4097ec31d898027a6b3d236d70e782ddb953078f5284e8b2be2b0137",
+    "note": "",
+    "source_pages": [
+      139
+    ],
+    "checkable": true
+  },
+  "calculus-Q431": {
+    "answer": "D",
+    "content_hash": "ae6a2c6fd1f5b725f01b8153f7b719762f8490b427aa6e9044dd914f796a1660",
+    "note": "",
+    "source_pages": [
+      144
+    ],
+    "checkable": true
+  },
+  "calculus-Q509": {
+    "answer": "\\frac{1}{4}(1-\\cos1)",
+    "content_hash": "3cbb430f02c0f9d32eeab11697b28414972aab1e493a998a33a6ec8fb1e9d9e8",
+    "note": "",
+    "source_pages": [
+      175
+    ],
+    "checkable": true
+  },
+  "calculus-Q288": {
+    "answer": "B",
+    "content_hash": "6a7c630fbf44ea1b560178bd8d51f511943680901c0f64f11f1f96bfc1bc5616",
+    "note": "",
+    "source_pages": [
+      96
+    ],
+    "checkable": true
+  },
+  "calculus-Q234": {
+    "answer": "C",
+    "content_hash": "edab8c6a409497ae0907f9c2962fd3e8f9af99534de22567c8a3691ae1259259",
+    "note": "",
+    "source_pages": [
+      75
+    ],
+    "checkable": true
+  },
+  "calculus-Q316": {
+    "answer": "\\(y=\\arcsin\\frac1x+\\frac\\pi6\\ (x<-1)\\)",
+    "content_hash": "c8bc323932b351f62c0ea387abd08c95c152b29187eb916b66039e764ad57ac0",
+    "note": "",
+    "source_pages": [
+      105
+    ],
+    "checkable": true
+  },
+  "calculus-Q488": {
+    "answer": "\\frac{3\\pi}{8}-1",
+    "content_hash": "41bba140a6226973411c8c086c4b486445e01d4e3b6d405c8e32677165e04de2",
+    "note": "",
+    "source_pages": [
+      167
+    ],
+    "checkable": true
+  },
+  "calculus-Q507": {
+    "answer": "4\\pi",
+    "content_hash": "7a862533d70764fc8fa1fa76276ada076d527767139529e3c9e1c29426408c01",
+    "note": "",
+    "source_pages": [
+      174
+    ],
+    "checkable": true
+  },
+  "calculus-Q325": {
+    "answer": "1",
+    "content_hash": "a592ec5a68a2d041975c37284dcdd470af0aff85e5684a7e02f44a92cd445f10",
+    "note": "",
+    "source_pages": [
+      107
+    ],
+    "checkable": true
+  },
+  "calculus-Q323": {
+    "answer": "0",
+    "content_hash": "e554377caf09dcda76e814fc76df2d666aceb10064373655028757e32add4481",
+    "note": "",
+    "source_pages": [
+      107
+    ],
+    "checkable": true
+  },
+  "calculus-Q394": {
+    "answer": "D",
+    "content_hash": "c85720ebeaf81116834b4c8bff466947969bcd06551eb29f991d7c8b9ecc430c",
+    "note": "",
+    "source_pages": [
+      135
+    ],
+    "checkable": true
+  },
+  "calculus-Q479": {
+    "answer": "2\\ln(1+\\sqrt2)-\\sqrt2",
+    "content_hash": "2e0c3cdffc07f84996cf45d54c3f514bf5d76dd1e67d385d48dc302451e26b6e",
+    "note": "",
+    "source_pages": [
+      163
+    ],
+    "checkable": true
+  },
+  "calculus-Q409": {
+    "answer": "-\\frac12(dx+dy)",
+    "content_hash": "b92eeb607cf9e774ef1b313ae155ad425b4e9310148bf9aaca1f0f4f7c0f6030",
+    "note": "",
+    "source_pages": [
+      137,
+      138
+    ],
+    "checkable": true
+  },
+  "calculus-Q260": {
+    "answer": "$\\frac{4}{15}$",
+    "content_hash": "937a27bdaaf54591cb7a60035944b6d45dccedc62f385948b32014324cac20c8",
+    "note": "",
+    "source_pages": [
+      82
+    ],
+    "checkable": true
+  },
+  "calculus-Q306": {
+    "answer": "C",
+    "content_hash": "90ec32e5b7249a554bc6129e52f854ae064731b1551427384684039e35d3f9a1",
+    "note": "",
+    "source_pages": [
+      102
+    ],
+    "checkable": true
+  },
+  "calculus-Q333": {
+    "answer": "I=x-(1+e^{-x})\\ln(1+e^x)+C",
+    "content_hash": "58e8509ec11f7b51880bbb5ffd0ee269ff695e0dba6d45ea753b5ca36812afaf",
+    "note": "",
+    "source_pages": [
+      110
+    ],
+    "checkable": true
+  },
+  "calculus-Q297": {
+    "answer": "C",
+    "content_hash": "91abc487af958661859388fa2dc5310f957d35a16a9673b88fa2e851a4520e45",
+    "note": "",
+    "source_pages": [
+      99
+    ],
+    "checkable": true
+  },
+  "calculus-Q357": {
+    "answer": "存在不同的ξ₁, ξ₂∈(a,b)，使f(ξ₁)=f(ξ₂)=0",
+    "content_hash": "bd654f6f45d21925eec2a896304a082754c73728ddce4437129f49676fae112b",
+    "note": "",
+    "source_pages": [
+      118
+    ],
+    "checkable": true
+  },
+  "calculus-Q435": {
+    "answer": "B",
+    "content_hash": "b1d2760ea92d1474ea236377c13c57d45d3da90dbd218f8013efdcd1e65d2fb4",
+    "note": "",
+    "source_pages": [
+      145,
+      146
+    ],
+    "checkable": true
+  },
+  "calculus-Q497": {
+    "answer": "2-2\\ln 2",
+    "content_hash": "29ebb65d623c3e74d991c885b2ba4d27f5a82cacabcc97f1240f0f5c04b72865",
+    "note": "",
+    "source_pages": [
+      170,
+      171
+    ],
+    "checkable": true
+  },
+  "calculus-Q366": {
+    "answer": "(I) 绕 $x$ 轴：$V_x=5\\pi^2a^3$；绕 $y$ 轴：$V_y=6\\pi^3a^3$。\\n(II) 绕 $y=2a$：$V=7\\pi^2a^3$。",
+    "content_hash": "d57f0680c33ae28a4df4d34813c5964b709b9d16b090bdc5ca3196f88a276b3b",
+    "note": "",
+    "source_pages": [
+      121
+    ],
+    "checkable": true
+  },
+  "calculus-Q244": {
+    "answer": "xf(x^2)",
+    "content_hash": "48d33c0783539d77535b004b7ae95f5b1a2d9dfea6fcbc70a3f9f7332fe48019",
+    "note": "",
+    "source_pages": [
+      79
+    ],
+    "checkable": true
+  },
+  "calculus-Q245": {
+    "answer": "\\frac14",
+    "content_hash": "9f7d23493be1b3e87e4c2c57ed285166ead3db01ec3ea8c69228f3adeea9011f",
+    "note": "",
+    "source_pages": [
+      79
+    ],
+    "checkable": true
+  },
+  "calculus-Q377": {
+    "answer": "$160\\pi$",
+    "content_hash": "45f653304892a3ffe71575237359d3af57112baed2009e99629fe0152e999ae1",
+    "note": "",
+    "source_pages": [
+      125
+    ],
+    "checkable": true
+  },
+  "calculus-Q439": {
+    "answer": "$-\\sqrt{2}e^{-1/2}$",
+    "content_hash": "6a57fe2dfbf3067485db622008aa5dc5ff659e82774349aa9fd6f130a8ef92ac",
+    "note": "",
+    "source_pages": [
+      146,
+      147
+    ],
+    "checkable": true
+  },
+  "calculus-Q383": {
+    "answer": "(I) 不等式成立；(II) 不等式成立",
+    "content_hash": "c683ea846d8f296704c3b895699dd0c27e828eda2485147990385625e97bf418",
+    "note": "",
+    "source_pages": [
+      128,
+      129
+    ],
+    "checkable": true
+  },
+  "calculus-Q392": {
+    "answer": "B",
+    "content_hash": "6576198b667b5be4072cc3913a41a02e216f56a99ef11bd29b6308e8dedb6e9e",
+    "note": "",
+    "source_pages": [
+      134
+    ],
+    "checkable": true
+  },
+  "calculus-Q373": {
+    "answer": "(4/3)πρgR⁴（ρ为球和水的共同密度）",
+    "content_hash": "dcbf95ad8199c1d2de68f2258cc57b71b517da8d917343c8870bccc5342046ea",
+    "note": "",
+    "source_pages": [
+      124
+    ],
+    "checkable": true
+  },
+  "calculus-Q368": {
+    "answer": "2πa²(2−√2)",
+    "content_hash": "efdfcfa48a5e3dfd5c9da1dc1c76737075e4c32e318a4ec6b29d53ed08aa7a28",
+    "note": "",
+    "source_pages": [
+      122
+    ],
+    "checkable": true
+  },
+  "calculus-Q342": {
+    "answer": "最大值为$-1$（在$x=0$处取得）；无最小值。",
+    "content_hash": "422136ba19785fc3de65e1b8c06001a005a4b6963deb923310d5d2b45ba3fc7b",
+    "note": "",
+    "source_pages": [
+      113
+    ],
+    "checkable": true
+  },
+  "calculus-Q280": {
+    "answer": "$\\sqrt2-1$",
+    "content_hash": "fdff864c2d8f37958df93aeb34c07f91e5a91a861d094e186495079f8d0e1aed",
+    "note": "",
+    "source_pages": [
+      93,
+      94
+    ],
+    "checkable": true
+  },
+  "calculus-Q299": {
+    "answer": "A",
+    "content_hash": "b5caf8a2ba1430408592fb83d45a0106b8c13c14673243c95d5d36edfbdc2ffc",
+    "note": "",
+    "source_pages": [
+      100
+    ],
+    "checkable": true
+  },
+  "calculus-Q428": {
+    "answer": "A",
+    "content_hash": "474da611fd3ba1849dfec6f66b969c952c88df52c8bd025c99a1edeb018c5f94",
+    "note": "",
+    "source_pages": [
+      144
+    ],
+    "checkable": true
+  },
+  "calculus-Q491": {
+    "answer": "1",
+    "content_hash": "8e0ceba7838d1a678a9869be91b972eea8131917ba3e1bbc1778965dc8b4795d",
+    "note": "",
+    "source_pages": [
+      168
+    ],
+    "checkable": true
+  },
+  "calculus-Q277": {
+    "answer": "不等式成立",
+    "content_hash": "3d1c55fe18f56339a685e28d9055eb48429c4b64344da94e956e4408bf03a249",
+    "note": "",
+    "source_pages": [
+      93
+    ],
+    "checkable": true
+  },
+  "calculus-Q390": {
+    "answer": "B",
+    "content_hash": "b13a3d5fb74cdcc9886efaf2164441a2072f092430f520402182422ac5bfc617",
+    "note": "",
+    "source_pages": [
+      134
+    ],
+    "checkable": true
+  },
+  "calculus-Q442": {
+    "answer": "0",
+    "content_hash": "25c201a05dc7c0ab8519bc6920b45ce7a969999f7893d0c2d6fd9867716dc581",
+    "note": "",
+    "source_pages": [
+      148
+    ],
+    "checkable": true
+  },
+  "calculus-Q407": {
+    "answer": "-\\frac{1}{x^{2}}f'\\!\\left(\\frac{y}{x}\\right)-\\frac{y}{x^{3}}f''\\!\\left(\\frac{y}{x}\\right)+e^{x}\\cos y\\,g_{12}(e^{x},\\sin y)",
+    "content_hash": "73ff6b8754dcf9dcac19b7f375f2515784c39b9f1e25122783f39f49bffe9c6b",
+    "note": "",
+    "source_pages": [
+      137
+    ],
+    "checkable": true
+  },
+  "calculus-Q402": {
+    "answer": "dx+(1+2\\ln 2)dy",
+    "content_hash": "4d40310c3921693ee55c0fcd9e80fd1132b7e893013e8dc016eb65dde8d7f039",
+    "note": "",
+    "source_pages": [
+      136
+    ],
+    "checkable": true
+  },
+  "calculus-Q267": {
+    "answer": "(I) $(x+1)\\arctan\\sqrt{x}-\\sqrt{x}+C$；(II) $-\\frac{\\ln x}{x-1}+\\ln|x-1|-\\ln x+C$；(III) $-\\frac{x^2e^x}{x+2}+xe^x-e^x+C$；(IV) $\\frac{x}{2}[\\sin(\\ln x)-\\cos(\\ln x)]+C$；(V) $-\\frac{\\sqrt{1-x^2}}{x}+\\ln\\left|\\frac{\\sqrt{1+x}+\\sqrt{1-x}}{\\sqrt{1+x}-\\sqrt{1-x}}\\right|+C$；(VI) $e^{2x}\\tan x+C$。",
+    "content_hash": "f3620197b952afb0d0e210810723ea8532e8bfe884310c484d6ab0e554241d78",
+    "note": "",
+    "source_pages": [
+      87,
+      88
+    ],
+    "checkable": true
+  },
+  "calculus-Q396": {
+    "answer": "C",
+    "content_hash": "a58a31b5d05efdb6df63976f848b1b90b4864158d39867e32cc317d295d0bdbc",
+    "note": "",
+    "source_pages": [
+      135
+    ],
+    "checkable": true
+  },
+  "calculus-Q480": {
+    "answer": "\\frac{e-1}{2}",
+    "content_hash": "e9c7ba7ed53ab903d3f84841b7ccd070374c6630f147b50b0e5587db85dfe615",
+    "note": "",
+    "source_pages": [
+      163
+    ],
+    "checkable": true
+  },
+  "calculus-Q389": {
+    "answer": "(I) $\\left|\\int_0^1f(x)\\,dx-f(1/2)\\right|\\le1/24$；(II) $\\left|\\int_0^n f(x)\\,dx\\right|\\le n(|f(0)|+1/6)$",
+    "content_hash": "99cbc861fc7b35940a2b01f4d6ce1d0fe369366a2df307fb49b58f3c5d301925",
+    "note": "",
+    "source_pages": [
+      132,
+      133
+    ],
+    "checkable": true
+  },
+  "calculus-Q281": {
+    "answer": "(I) $V_1=\\frac{\\pi^3}{4}-\\pi^2+2\\pi$；(II) $V_2=2\\pi^2$",
+    "content_hash": "3679c5a2056d6baee6d3ebc19ac08fc1fe920ba270af72d02a90249ac4d87fdd",
+    "note": "",
+    "source_pages": [
+      94
+    ],
+    "checkable": true
+  },
+  "calculus-Q367": {
+    "answer": "$S=8\\pi^2$",
+    "content_hash": "d065da9dcbaf5c8830a1404a96b786d35fb07f789fc75eac6df8e662445e61e1",
+    "note": "",
+    "source_pages": [
+      121,
+      122
+    ],
+    "checkable": true
+  },
+  "calculus-Q393": {
+    "answer": "D",
+    "content_hash": "2b9f2f2d11c5c54b5739af58f4cb9732ee04ffe646e192229ddca2b69d81123c",
+    "note": "",
+    "source_pages": [
+      134,
+      135
+    ],
+    "checkable": true
+  },
+  "calculus-Q250": {
+    "answer": "π/6",
+    "content_hash": "3a8910e8dbe2ee3eac533889e5ed93c94d518f15ae62354a79959ef00e7d63a4",
+    "note": "",
+    "source_pages": [
+      80
+    ],
+    "checkable": true
+  },
+  "calculus-Q483": {
+    "answer": "2\\pi",
+    "content_hash": "69f59d58116584e61c2e1ee500711f94e199d739784be642a8a813d731dafeb1",
+    "note": "",
+    "source_pages": [
+      164
+    ],
+    "checkable": true
+  },
+  "calculus-Q294": {
+    "answer": "B",
+    "content_hash": "2ad0a18c78091fe9580907542813082495f67fbf28e8f90662f55d775ee487af",
+    "note": "",
+    "source_pages": [
+      98
+    ],
+    "checkable": true
+  },
+  "calculus-Q319": {
+    "answer": "\\(0\\)",
+    "content_hash": "8b0e2ad96279c322311f4be439a78fff99ca6509ce3c17a17d6c62deb3664df8",
+    "note": "",
+    "source_pages": [
+      106
+    ],
+    "checkable": true
+  },
+  "calculus-Q395": {
+    "answer": "C",
+    "content_hash": "b52046cd8351daa9c4a5cdbf8ce98d1cb8b31a5a54ffdaea9b5a9758a84a0e47",
+    "note": "",
+    "source_pages": [
+      135
+    ],
+    "checkable": true
+  },
+  "calculus-Q352": {
+    "answer": "I_0=\\frac12，I_n=-\\frac n2I_{n-1}\\ (n\\ge1)；I_n=\\frac{(-1)^n n!}{2^{n+1}}",
+    "content_hash": "6c23d3b798fcfd140a6d3a3eb33eb80b94e604a6cb3f6ebbc4b77bb8295224c3",
+    "note": "",
+    "source_pages": [
+      115,
+      116
+    ],
+    "checkable": true
+  },
+  "calculus-Q457": {
+    "answer": "长半轴为$\\sqrt2+1$，短半轴为$\\sqrt2-1$。",
+    "content_hash": "2d7a39b886e4f75bea69f76dd9e82380236e5fc73a69fd0692a617e0223ac36c",
+    "note": "",
+    "source_pages": [
+      155
+    ],
+    "checkable": true
+  },
+  "calculus-Q337": {
+    "answer": "f(x)=\\frac{1+x}{(1-x)^2}\\ (x\\le0)；极小值为-\\frac18（在x=-3处），最大值为1（在x=0处）",
+    "content_hash": "3056d08fb320c99eb70849a067edacb0cfab1e975f2f84d74c14ebe687af2e49",
+    "note": "",
+    "source_pages": [
+      111,
+      112
+    ],
+    "checkable": true
+  },
+  "calculus-Q525": {
+    "answer": "\\(\\frac{e+e^{-1}}{4}-\\frac{1}{2}\\)",
+    "content_hash": "b223628a9b4955358339c1c27aa53db21f7153e0d5328bca7e5d5ff24c8d416f",
+    "note": "",
+    "source_pages": [
+      182
+    ],
+    "checkable": true
+  },
+  "algebra-Q186": {
+    "answer": "(I) 存在满足条件的矩阵 B。\n\n(II) 所有矩阵为\n$$\nB=\\begin{pmatrix}\nk_1&k_2+1&k_3+1\\\\\n1&1&2\\\\\nk_1&k_2&k_3\\\\\n-1&-1&-1\n\\end{pmatrix},\\qquad k_1,k_2,k_3\\in\\mathbb R.\n$$",
+    "content_hash": "f6bed45d897b90170476c33014854b28442ee6b01c2ffd616ddd5fb63de92b17",
+    "note": "",
+    "source_pages": [
+      282,
+      283
+    ],
+    "checkable": true
+  },
+  "calculus-Q397": {
+    "answer": "A",
+    "content_hash": "5592c23ac7fb8d64cae066c6b24390b992e400083fcf46ee124c5981839f2648",
+    "note": "",
+    "source_pages": [
+      135,
+      136
+    ],
+    "checkable": true
+  },
+  "calculus-Q253": {
+    "answer": "\\frac{(\\sqrt{3}+1)\\pi}{12}",
+    "content_hash": "ea0e4aaa851b22cd17d19330351e1196f4575887af2ffbf1f985bf18b1700766",
+    "note": "",
+    "source_pages": [
+      81
+    ],
+    "checkable": true
+  },
+  "calculus-Q273": {
+    "answer": "单调递减区间为 $(-\\infty,\\frac\\pi3)$，单调递增区间为 $(\\frac\\pi3,+\\infty)$；在 $x=\\frac\\pi3$ 处取得极小值 $\\frac\\pi3+1-\\sqrt3$，无最大值。",
+    "content_hash": "f560e661320840330d74652291fb6cd05460e26445c3c6adb8d7d2862d4205e7",
+    "note": "",
+    "source_pages": [
+      91,
+      92
+    ],
+    "checkable": true
+  },
+  "calculus-Q286": {
+    "answer": "C",
+    "content_hash": "742658a9088709f09da324f39b8e72f86e6f34cecc97ad5b933e5432bfd97b29",
+    "note": "",
+    "source_pages": [
+      95,
+      96
+    ],
+    "checkable": true
+  },
+  "calculus-Q434": {
+    "answer": "A",
+    "content_hash": "46a98350dac64ee9ed349a7b087e4c11048ad3fdabdd5644d3a5a9d299aed69e",
+    "note": "",
+    "source_pages": [
+      145
+    ],
+    "checkable": true
+  },
+  "calculus-Q251": {
+    "answer": "2/π",
+    "content_hash": "970704f8807b6e1e8912a59e7ba9ac8b22f32e8557ac21dd7390788b39b8ba59",
+    "note": "",
+    "source_pages": [
+      80,
+      81
+    ],
+    "checkable": true
+  },
+  "calculus-Q359": {
+    "answer": "(I) f(x)=3x(x−1)²；另一个极值为f(1/3)=4/9（极大值）。(II) 所给不等式成立",
+    "content_hash": "97c0901baeb5765857dc9b8a0e61c97ae57fcb9e63693d16573e514d2bb8ee54",
+    "note": "",
+    "source_pages": [
+      119
+    ],
+    "checkable": true
+  },
+  "calculus-Q292": {
+    "answer": "B",
+    "content_hash": "5ba9956033ea0e989bd30813aed37bb0189c5a48e5c3308d33552c6a225e8676",
+    "note": "",
+    "source_pages": [
+      95,
+      96
+    ],
+    "checkable": true
+  },
+  "calculus-Q499": {
+    "answer": "\\frac{5}{6}+\\frac{\\pi}{4}",
+    "content_hash": "4089496ddd84cb20fceb1ebc974a3f5be9941b05e9a603d26e6ed36c2d6015de",
+    "note": "",
+    "source_pages": [
+      172
+    ],
+    "checkable": true
+  },
+  "calculus-Q436": {
+    "answer": "$y^2+xy+1$",
+    "content_hash": "12c9c9edd4d793945b444b89629c7b82d3c44cd1c9e54779acadba5a8cf9a303",
+    "note": "",
+    "source_pages": [
+      146
+    ],
+    "checkable": true
+  },
+  "calculus-Q246": {
+    "answer": "\\frac{\\sqrt2}{2}(x^2+1)",
+    "content_hash": "121dac937bd5901ab135a1f6bcd9c97b8133ccc5bf65236424450d119badc97d",
+    "note": "",
+    "source_pages": [
+      79
+    ],
+    "checkable": true
+  },
+  "calculus-Q360": {
+    "answer": "(I) ∫₀ⁿᵀxf(x)dx=(n²T/2)∫₀ᵀf(x)dx；(II) I=n²π",
+    "content_hash": "e5fbb68d99070cfc0fb0965745f1ca7f763902426701afdb2984feff5b2a147a",
+    "note": "",
+    "source_pages": [
+      119
+    ],
+    "checkable": true
+  },
+  "calculus-Q418": {
+    "answer": "e^{-1}",
+    "content_hash": "5cfc3ba189be41c6c48c88121c9627e7a1f76f5ff5e6236e408f6576802f67ca",
+    "note": "",
+    "source_pages": [
+      140
+    ],
+    "checkable": true
+  },
+  "calculus-Q284": {
+    "answer": "s=\\frac{e^2+1}{4}",
+    "content_hash": "9203cc6e297f411081aab2446b363b7b67eb7ccd59f1d16ff1726bbb401eddaf",
+    "note": "",
+    "source_pages": [
+      95
+    ],
+    "checkable": true
+  },
+  "calculus-Q485": {
+    "answer": "$-\\frac{2}{15};\\quad 1-\\sin 1;\\quad \\frac{\\sqrt{2}-1}{3};\\quad \\frac{\\pi}{4}$",
+    "content_hash": "6faa8c02eab05a960fb3d379d6521f554dad296c3126546a5d19a7ab075d6b64",
+    "note": "",
+    "source_pages": [
+      165,
+      166
+    ],
+    "checkable": true
+  },
+  "calculus-Q476": {
+    "answer": "$\\dfrac{A^2}{2}$",
+    "content_hash": "b2b531842fcc7ff09a011ab381586ad4ef14e73e3e936c0ce74cf73407ec736a",
+    "note": "",
+    "source_pages": [
+      162
+    ],
+    "checkable": true
+  },
+  "calculus-Q494": {
+    "answer": "\\frac{1}{3}+\\frac{\\pi}{8}",
+    "content_hash": "d7dea89e506812224356a94e65d29bbad979fadc523ddb441eb1404b7d17ae84",
+    "note": "",
+    "source_pages": [
+      169,
+      170
+    ],
+    "checkable": true
+  },
+  "calculus-Q433": {
+    "answer": "A",
+    "content_hash": "d4b172635a826f9cd2bc0219a56dbd8076877959c044832666943d57d06a737a",
+    "note": "",
+    "source_pages": [
+      145
+    ],
+    "checkable": true
+  },
+  "calculus-Q478": {
+    "answer": "$\\dfrac{\\pi^{2}}{32}$",
+    "content_hash": "5564f316981bf5c6073d2e670d5f50ad4294182ab2946f47d8ac024f3bd93285",
+    "note": "",
+    "source_pages": [
+      163
+    ],
+    "checkable": true
+  },
+  "calculus-Q255": {
+    "answer": "1",
+    "content_hash": "f746b07618a867325b3850bc4792482d6e1b05f0493d8ba61e2100f519b67b0c",
+    "note": "",
+    "source_pages": [
+      81,
+      82
+    ],
+    "checkable": true
+  },
+  "calculus-Q247": {
+    "answer": "3ln 2-1",
+    "content_hash": "f267bbdbca6171bde4581f77f8bb088713ef9f3e64127827001c5c66fb2125a9",
+    "note": "",
+    "source_pages": [
+      79,
+      80
+    ],
+    "checkable": true
+  },
+  "calculus-Q375": {
+    "answer": "(I) $y=(1-\\sqrt2)x+1+\\frac{\\sqrt2}{2}$；(II) $S=\\frac98-\\frac{3\\pi}{16}+\\frac{3\\sqrt2}{8}$",
+    "content_hash": "084dc500c271530be500b8488907fb748c3e512c69588563c15c3f33bf294674",
+    "note": "",
+    "source_pages": [
+      125
+    ],
+    "checkable": true
+  },
+  "calculus-Q379": {
+    "answer": "(I) 所给严格不等式成立；(II) 极限存在且为 $0$",
+    "content_hash": "8507b293c2bfdfe85bdaf5a12f27a71027115287a18ac0d96f2cc3fb5ba45b08",
+    "note": "",
+    "source_pages": [
+      126
+    ],
+    "checkable": true
+  },
+  "calculus-Q355": {
+    "answer": "\\int_a^b f(x)\\,dx=\\frac12\\int_a^b f''(x)(x-a)^2\\,dx",
+    "content_hash": "a6da25e5de8999f95fd6773e840440731569b3fbc20e4a93b9d7ce7ae1ae4f65",
+    "note": "",
+    "source_pages": [
+      117
+    ],
+    "checkable": true
+  },
+  "calculus-Q447": {
+    "answer": "极大值为$e^{-1/2}$，在$(1,0)$处取得；极小值为$-e^{-1/2}$，在$(-1,0)$处取得。",
+    "content_hash": "3d0a6e46b55f439709e99b8ad723a822d22be87955949b096f55805101895ef5",
+    "note": "",
+    "source_pages": [
+      150
+    ],
+    "checkable": true
+  },
+  "calculus-Q275": {
+    "answer": "$F'(x)=\\frac{1}{x^2}f(x^2\\sin x)(2x\\sin x+x^2\\cos x)-\\frac{2}{x^3}\\int_0^{x^2\\sin x}f(s)\\,ds$（$x\\ne0$）；$F'(0)=f(0)$，且 $F'(x)$ 在 $x=0$ 处连续。",
+    "content_hash": "6df9baa42d8a98f488c5bb10787615c2ed77a819cd5c9a60e2893a60b4262959",
+    "note": "",
+    "source_pages": [
+      92
+    ],
+    "checkable": true
+  },
+  "calculus-Q487": {
+    "answer": "\\frac{e^4-e}{4}",
+    "content_hash": "34d0b1d754cb9d9b2c7a75f55ef9fce70a66c5fa1a5abccdc7d41655be897c8d",
+    "note": "",
+    "source_pages": [
+      166
+    ],
+    "checkable": true
+  },
+  "calculus-Q524": {
+    "answer": "\\(F(t)=f(2t,t)-f(2t,0)-f(0,t)+f(0,0)\\)，极限为\\(0\\)",
+    "content_hash": "184c8808d472df4da598a76067596e40f50e1255a6b98c8475c0c659b01237ac",
+    "note": "",
+    "source_pages": [
+      182
+    ],
+    "checkable": true
+  },
+  "calculus-Q271": {
+    "answer": "(I) $\\frac{\\pi}{8}$；(II) $\\frac{3\\pi}{32}$；(III) $\\pi$；(IV) $\\frac{7\\pi}{16}$",
+    "content_hash": "fb9d41ab18df20c5cbaf63e7d2e7e608db098b4fd419472da8a64b793c25da4c",
+    "note": "",
+    "source_pages": [
+      90,
+      91
+    ],
+    "checkable": true
+  },
+  "calculus-Q261": {
+    "answer": "$\\frac7{12}$",
+    "content_hash": "70b64d6afea8682ad01068576a8d005fe1238b2c6d139209d6734356321cf890",
+    "note": "",
+    "source_pages": [
+      82,
+      83
+    ],
+    "checkable": true
+  },
+  "calculus-Q332": {
+    "answer": "I=\\frac{8e^{-\\sin x}}{1-\\sin x}+C",
+    "content_hash": "f456139ec422dc2fbda40b971f6ac1aebd213128c381901fe45535f4333599ed",
+    "note": "",
+    "source_pages": [
+      110
+    ],
+    "checkable": true
+  },
+  "calculus-Q430": {
+    "answer": "C",
+    "content_hash": "67aff0ce9920c17212d8db5a9f1178437ad151bb7fb4ef7e6e083a0679f58acf",
+    "note": "",
+    "source_pages": [
+      144
+    ],
+    "checkable": true
+  },
+  "calculus-Q362": {
+    "answer": "(I) $a=\\dfrac1e$，$(x_0,y_0)=(e^2,1)$；(II) $V=\\dfrac\\pi2$。",
+    "content_hash": "0f67eff9ac471d47def899c2706491937f064c7ed4904970ecc6ae0036c58f51",
+    "note": "",
+    "source_pages": [
+      120
+    ],
+    "checkable": true
+  },
+  "calculus-Q363": {
+    "answer": "$L=\\dfrac{2\\pi}{3}+\\dfrac{\\sqrt3}{2}$",
+    "content_hash": "7d26c861837ba2ce2371678beb4504178760fda5812f83045e1c073f80109c8b",
+    "note": "",
+    "source_pages": [
+      120
+    ],
+    "checkable": true
+  },
+  "calculus-Q432": {
+    "answer": "C",
+    "content_hash": "e1176a8a3bd7d556bcbb700a9ab291fdbe29875b36890a4825768e73d710d5ec",
+    "note": "",
+    "source_pages": [
+      145
+    ],
+    "checkable": true
+  },
+  "calculus-Q468": {
+    "answer": "C",
+    "content_hash": "89c46e84907e0c966b841333d042149da8db03e1c17f4498ccdc53292691f893",
+    "note": "",
+    "source_pages": [
+      160
+    ],
+    "checkable": true
+  },
+  "calculus-Q298": {
+    "answer": "A",
+    "content_hash": "6e15baa3c133fee1ec5f98744277f9e0568ae37c16fa256ebaa2d33a6b835063",
+    "note": "",
+    "source_pages": [
+      100
+    ],
+    "checkable": true
+  },
+  "calculus-Q305": {
+    "answer": "A",
+    "content_hash": "aeae179b82a3c088f3495d8829018cfec9e4b5dadfe6e63f79556f36e84856db",
+    "note": "",
+    "source_pages": [
+      102
+    ],
+    "checkable": true
+  },
+  "calculus-Q423": {
+    "answer": "最大值为$72$，在$(-2,-2,8)$处取得；最小值为$6$，在$(1,1,2)$处取得。",
+    "content_hash": "8ecdf53d7d9ea22b4d3d93eda56631de665d9dc7bc297a414c569e33bd79f99f",
+    "note": "",
+    "source_pages": [
+      142
+    ],
+    "checkable": true
+  },
+  "calculus-Q391": {
+    "answer": "C",
+    "content_hash": "e46fad73f153fb181c0359eeb2194b05df819364d05831ea7447a0ef5cac23e8",
+    "note": "",
+    "source_pages": [
+      134
+    ],
+    "checkable": true
+  },
+  "calculus-Q269": {
+    "answer": "(I) $\\frac\\pi8$；(II) $0$",
+    "content_hash": "fa73e92bf2fa6a4e0fdd4b8f081ce4d75db89bac713b9422e3e3b21c22dadc42",
+    "note": "",
+    "source_pages": [
+      89
+    ],
+    "checkable": true
+  },
+  "calculus-Q314": {
+    "answer": "\\(\\frac{3\\pi}{4}\\)",
+    "content_hash": "3a02180e681708a56551cdfe6a50a194213dc9918dc6f385d2a85d0c265b52c3",
+    "note": "",
+    "source_pages": [
+      104,
+      105
+    ],
+    "checkable": true
+  },
+  "calculus-Q290": {
+    "answer": "A",
+    "content_hash": "dd8f05f962f93e198d255327df5ac61ecdc6885c5d156b3057cc36eaab67e5af",
+    "note": "",
+    "source_pages": [
+      96,
+      97
+    ],
+    "checkable": true
+  },
+  "calculus-Q475": {
+    "answer": "\\frac{a+b}{2}\\pi",
+    "content_hash": "96d9707a73af6358ceae628dba52f21112430ca2413a7e5e9a1ffdee5209c11f",
+    "note": "",
+    "source_pages": [
+      162
+    ],
+    "checkable": true
+  },
+  "algebra-Q090": {
+    "answer": "$$A^{100}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\50&50&1\\end{pmatrix}.$$",
+    "content_hash": "6eea4adcdff4e6a74fab7aac8a54ea37f71d72e0deb5906e53729da280269d43",
+    "note": "",
+    "source_pages": [
+      247
+    ],
+    "checkable": true
+  },
+  "calculus-Q358": {
+    "answer": "(I) 存在x₀∈(0,1)满足x₀f(x₀)=∫ₓ₀¹f(t)dt；(II) 该x₀唯一",
+    "content_hash": "90333145b79c34abec4c0804e406eb98fef6b6098e7c08ff49eb15f340624203",
+    "note": "",
+    "source_pages": [
+      118
+    ],
+    "checkable": true
+  },
+  "calculus-Q504": {
+    "answer": "C",
+    "content_hash": "e7bf6eab1bf099240f5522092de3636ffc71469bdb7ab6dbc82aa8d22c41ea80",
+    "note": "",
+    "source_pages": [
+      173
+    ],
+    "checkable": true
+  },
+  "algebra-Q049": {
+    "answer": "$\\begin{pmatrix}2^{n-1}&0&2^{n-1}\\\\0&2^n&0\\\\2^{n-1}&0&2^{n-1}\\end{pmatrix}$",
+    "content_hash": "923bcf33d14b297a910e102d32a43bc9d39b6a922d0e92a35d5fac2da5622760",
+    "note": "原题未明确$n$的取值范围；原书解析按正整数$n$处理。若$n=0$，应取$A^0=E$，不能直接使用所给幂次公式。",
+    "source_pages": [
+      236
+    ],
+    "checkable": false
+  },
+  "calculus-Q451": {
+    "answer": "充分条件：$f''(0)>0$ 且 $f(0)>1$",
+    "content_hash": "07bb5af933bf79d4ac07200b23651357338bb53158492dcf353b838ad9462752",
+    "note": "",
+    "source_pages": [
+      152
+    ],
+    "checkable": true
+  },
+  "calculus-Q268": {
+    "answer": "(I) $-\\sqrt2$；(II) $\\pi$；(III) $2-6e^{-2}$；(IV) $4-\\pi$",
+    "content_hash": "dd899ccbab25b0bc379ac92b8906a13551ec9c65dc8d5bd596707c68a5666db3",
+    "note": "",
+    "source_pages": [
+      88,
+      89
+    ],
+    "checkable": true
+  },
+  "calculus-Q340": {
+    "answer": "$f(x)=xe^x+\\dfrac{2-4e^2}{x}$（$x>0$）",
+    "content_hash": "9f344ac063528a4c920e9c13333952a49f7137ab45e72476541d5b0cf4a850d8",
+    "note": "",
+    "source_pages": [
+      112
+    ],
+    "checkable": true
+  },
+  "calculus-Q438": {
+    "answer": "$n!\\left[1+\\frac{(-1)^n}{3^{n+1}}\\right]$",
+    "content_hash": "bd76f4d840445c3a5b48e0df53a947d487cec1eda3ee3de5d9b80d7909f3474f",
+    "note": "",
+    "source_pages": [
+      146
+    ],
+    "checkable": true
+  },
+  "calculus-Q501": {
+    "answer": "C",
+    "content_hash": "d46f9b263137351d8f8394a6926ce4d010053e69f2a0ded47daf651b9eca828b",
+    "note": "",
+    "source_pages": [
+      172
+    ],
+    "checkable": true
+  },
+  "calculus-Q463": {
+    "answer": "D",
+    "content_hash": "cf9150b9eb5dea5f90e2f9305bd52a58943fe4739987f55cc4c6c45d50ae15ac",
+    "note": "",
+    "source_pages": [
+      158,
+      159
+    ],
+    "checkable": true
+  },
+  "calculus-Q486": {
+    "answer": "$\\frac{5}{48}$",
+    "content_hash": "8e0b6d30bb7c78c0536189d23c5a3935adbcf1322a97a0686b6653618dbfb52d",
+    "note": "",
+    "source_pages": [
+      166
+    ],
+    "checkable": true
+  },
+  "calculus-Q311": {
+    "answer": "1",
+    "content_hash": "fa872447bbb554e94f54249792a6a5cd086ef2293173bd53f994ca753362906e",
+    "note": "",
+    "source_pages": [
+      104
+    ],
+    "checkable": true
+  },
+  "calculus-Q453": {
+    "answer": "(I) $f(x,y)=x^2+xy+y^2-3$；(II) 最大距离为$3$。",
+    "content_hash": "96bca44bb190583b2a354e11421f15c4ec28536f56dda1ca24fd7418896b3bf2",
+    "note": "",
+    "source_pages": [
+      153,
+      154
+    ],
+    "checkable": true
+  },
+  "calculus-Q263": {
+    "answer": "路程$4\\,\\mathrm m$；平均速度$1-5e^{-2}\\,\\mathrm{m/s}$",
+    "content_hash": "f408a42d5bf78cae6b83013e58297f2fd0639bbdf8595ac4b7fc29ec63ca5a32",
+    "note": "",
+    "source_pages": [
+      83
+    ],
+    "checkable": true
+  },
+  "calculus-Q318": {
+    "answer": "\\(1\\)",
+    "content_hash": "d6632309de7f37d1287636c946271f34a9d3b03b840d20af972b1a94ce48ae48",
+    "note": "",
+    "source_pages": [
+      106
+    ],
+    "checkable": true
+  },
+  "calculus-Q376": {
+    "answer": "$\\frac{448\\pi}{15}$",
+    "content_hash": "7787711f78f0891274b69968dc4e4e1c83634cf0362f079fdc622869e3ee1687",
+    "note": "",
+    "source_pages": [
+      125
+    ],
+    "checkable": true
+  },
+  "calculus-Q471": {
+    "answer": "\\frac{1}{6}-\\frac{1}{3e}",
+    "content_hash": "5fde97646b2e8339682342eed5e2d167a16c9f7dfc2e0d52376c35a69e9dbf93",
+    "note": "",
+    "source_pages": [
+      161
+    ],
+    "checkable": true
+  },
+  "calculus-Q371": {
+    "answer": "（I）(ln2)/2；（II）π²/8−π/4",
+    "content_hash": "78041c3819cc05d468220329e300688673a33e9bf78a936fe49869ef80478f0e",
+    "note": "",
+    "source_pages": [
+      123
+    ],
+    "checkable": true
+  },
+  "calculus-Q301": {
+    "answer": "B",
+    "content_hash": "c021a7d27e65dc199587be80e0340042bba8255ccd5f57ad1f8ef842eb26cae7",
+    "note": "",
+    "source_pages": [
+      100
+    ],
+    "checkable": true
+  },
+  "calculus-Q334": {
+    "answer": "$$I=\\frac\\pi8-\\frac14\\ln2.$$",
+    "content_hash": "03876221b3eb0a59e7534e18d79a27bc378d281dcb62f8d48774b9d4c725e240",
+    "note": "",
+    "source_pages": [
+      110
+    ],
+    "checkable": true
+  },
+  "calculus-Q295": {
+    "answer": "D",
+    "content_hash": "192b3716853f1e42130d358c5e25062df6720bec9861ac6c2cecda1c7827bed1",
+    "note": "",
+    "source_pages": [
+      99
+    ],
+    "checkable": true
+  },
+  "calculus-Q455": {
+    "answer": "(I) $dg|_{(1,1)}=4\\,dx$；(II) 极限为$4$。",
+    "content_hash": "e4504e22fcbc91803985abec6aea504e6932a29eca5a98a66c3fd4672bf523be",
+    "note": "",
+    "source_pages": [
+      154
+    ],
+    "checkable": true
+  },
+  "calculus-Q289": {
+    "answer": "A",
+    "content_hash": "40fd9e7b752853b4a0923fc50057440b871669b45ec7749728c725b3376fefa8",
+    "note": "",
+    "source_pages": [
+      96
+    ],
+    "checkable": true
+  },
+  "calculus-Q361": {
+    "answer": "f′(0)",
+    "content_hash": "9da3e60f731b5759757a12394e4d34e7d51132055e8a7262d833ec3335b636df",
+    "note": "",
+    "source_pages": [
+      119
+    ],
+    "checkable": true
+  },
+  "calculus-Q473": {
+    "answer": "\\frac{3}{2}",
+    "content_hash": "693501a40688a6446eaed6d7639d0d2f9cc87f33c89934e9ea6bdc229f0babbb",
+    "note": "",
+    "source_pages": [
+      161
+    ],
+    "checkable": true
+  },
+  "calculus-Q460": {
+    "answer": "(I) \\(\\frac{\\partial f(x,x+y)}{\\partial x}=(2x+y)e^{-y}\\)；(II) \\((0,0)\\)不是极值点，\\((-1,1)\\)为极小值点，极小值为\\(-e^{-2}\\)。",
+    "content_hash": "caabc9138baf24cb9ea3112bb3e1de239ddb2097fca65dbc2bb48fea942d7ab6",
+    "note": "",
+    "source_pages": [
+      156,
+      157,
+      158
+    ],
+    "checkable": true
+  },
+  "calculus-Q458": {
+    "answer": "设\\(F_1'=\\frac{\\partial F}{\\partial (y-x)}\\)，\\(F_2'=\\frac{\\partial F}{\\partial (y-z)}\\)，\\(G_1'=\\frac{\\partial G}{\\partial (xy)}\\)，\\(G_2'=\\frac{\\partial G}{\\partial (z/y)}\\)，则\n$$\n\\frac{dx}{dy}=\\frac{\\frac1yF_1'G_2'+xF_2'G_1'+\\left(\\frac1y-\\frac{z}{y^2}\\right)F_2'G_2'}{\\frac1yF_1'G_2'-yF_2'G_1'},\n$$\n$$\n\\frac{dz}{dy}=\\frac{\\frac{z}{y^2}F_1'G_2'-(x+y)F_1'G_1'-yF_2'G_1'}{\\frac1yF_1'G_2'-yF_2'G_1'}.\n$$",
+    "content_hash": "33bc66c2a1d342f468a092aba9368d0d871314a6c6104576b4544f3306ada590",
+    "note": "",
+    "source_pages": [
+      155,
+      156
+    ],
+    "checkable": true
+  },
+  "calculus-Q464": {
+    "answer": "(I)连续；(II)当k≠-1时不可微；(III)当k=-1时可微，且df|_{(0,0)}=0",
+    "content_hash": "a1b6dca0d49ec089fe47a2f49947430b21222c94ab2f72500baea4f5d54176ed",
+    "note": "",
+    "source_pages": [
+      159
+    ],
+    "checkable": true
+  },
+  "calculus-Q381": {
+    "answer": "(I) $V=\\frac{\\pi^2}{4}-\\frac{\\pi}{2}\\ln 2$；(II) $W=\\frac{\\pi\\rho g}{2}(1-\\ln 2)$",
+    "content_hash": "390cf7418ec9df026930d02255af6871a37d77763627a39577b821634322ecd5",
+    "note": "",
+    "source_pages": [
+      127
+    ],
+    "checkable": true
+  },
+  "calculus-Q231": {
+    "answer": "D",
+    "content_hash": "5945d8d890a7309827cd377a4e615da439cc1d27d2bca976440b4f0ba605ac3d",
+    "note": "",
+    "source_pages": [
+      74,
+      75
+    ],
+    "checkable": true
+  },
+  "calculus-Q372": {
+    "answer": "（I）a_n=2n²π²；（II）4/π²",
+    "content_hash": "5774981564d51ff1e5f6a5c197bf04d1c954c09bf6f0c4e56ef5b0acc13ef054",
+    "note": "",
+    "source_pages": [
+      124
+    ],
+    "checkable": true
+  },
+  "calculus-Q331": {
+    "answer": "xe^{\\sin x}-\\frac{e^{\\sin x}}{\\cos x}+C",
+    "content_hash": "6ca99dadc4abd5e0f1499523eafdba08ba99a36424eefdded27ce25b7d593b33",
+    "note": "",
+    "source_pages": [
+      109
+    ],
+    "checkable": true
+  }
+}

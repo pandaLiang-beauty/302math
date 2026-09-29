@@ -36,6 +36,10 @@ def init(conn):
       source_pages TEXT NOT NULL, stem_markdown TEXT NOT NULL, options_markdown TEXT NOT NULL,
       solution_markdown TEXT NOT NULL DEFAULT '', solution_source TEXT NOT NULL DEFAULT '',
       method_json TEXT NOT NULL DEFAULT '[]', content_hash TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS reference_answers(
+      question_id INTEGER PRIMARY KEY REFERENCES questions(id), content_hash TEXT NOT NULL,
+      answer TEXT NOT NULL, note TEXT NOT NULL DEFAULT '', source_pages TEXT NOT NULL DEFAULT '[]',
+      checkable INTEGER NOT NULL DEFAULT 0);
     CREATE TABLE IF NOT EXISTS math_relations(
       source_id INTEGER REFERENCES questions(id), target_id INTEGER REFERENCES questions(id),
       skill TEXT NOT NULL, reason TEXT NOT NULL, stage TEXT NOT NULL DEFAULT '同法练习',

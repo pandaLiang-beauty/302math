@@ -40,9 +40,12 @@ d.commit();d.close();s.close()`,path.join(root,'backend/data/study.db'),database
     await pa.goto(base+'/#/paper/2020');await pa.waitForSelector('.study-answer');
     await expect(card(pa).getByRole('textbox',{name:'演算与思路',exact:true})).toHaveValue('断网保留的推导 $x^2$');
     await expect(card(pa).locator('.study-save')).toHaveText('已保存到服务器');
-    await card(pa).getByRole('button',{name:'核对答案与解析',exact:true}).click();
+    await card(pa).getByRole('button',{name:'核对答案',exact:true}).click();
     await expect(card(pa).locator('.study-solution')).toBeVisible();
-    await expect(card(pa).locator('.study-solution')).not.toContainText('暂不可用');
+    const answerData=await (await fetch(base+'/api/question?id='+qid)).json();
+    if('solution_html' in answerData||'solution_markdown' in answerData)throw Error('Answer endpoint still exposes explanations');
+    await expect(pa.getByRole('button',{name:/解析/})).toHaveCount(0);
+    await expect(card(pa).locator('.study-solution')).not.toContainText('尚未收录');
     await card(pa).getByRole('button',{name:'不会／做错',exact:true}).click();
     await expect(card(pa).locator('.study-save')).toHaveText('已保存到服务器');
     await card(pa).getByRole('button',{name:'再做一次',exact:true}).click();
@@ -53,9 +56,9 @@ d.commit();d.close();s.close()`,path.join(root,'backend/data/study.db'),database
     await expect(pa.locator('.related-reason').first()).toBeVisible();
     await expect(pa.locator('img.p880')).toHaveCount(0);
     await expect(pa.locator('a[href*="books/880-answers"]')).toHaveCount(0);
-    await pa.locator('.q').first().getByRole('button',{name:'核对答案与解析',exact:true}).click();
+    await pa.locator('.q').first().getByRole('button',{name:'核对答案',exact:true}).click();
     await expect(pa.locator('.study-solution').first()).toBeVisible();
-    if((await pa.locator('.study-solution').first().textContent()).includes('暂不可用'))throw Error('Related question is missing its inline solution');
+    if((await pa.locator('.study-solution').first().textContent()).includes('尚未收录'))throw Error('Related question is missing its reference answer');
     await pa.setViewportSize({width:390,height:844});
     await pa.screenshot({path:path.join(tmp,'practice-mobile.png'),fullPage:false});
     const overflow=await pa.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+2);
@@ -64,6 +67,6 @@ d.commit();d.close();s.close()`,path.join(root,'backend/data/study.db'),database
     const pl=await legacy.newPage();await pl.goto(base+'/#/home');await pl.waitForSelector('.priority-papers');
     await expect(pl.locator('.hint')).toContainText('未覆盖服务器');
     if(errors.length)throw Error(errors.join('\n'));
-    console.log(JSON.stringify({passed:['cross-browser restore','version conflict','offline close and recovery','attempt history and redo','inline text and solutions','exam-linked practice','mobile layout','legacy conflict protection'],artifacts:tmp}));
+    console.log(JSON.stringify({passed:['cross-browser restore','version conflict','offline close and recovery','attempt history and redo','inline text and answers','exam-linked practice','mobile layout','legacy conflict protection'],artifacts:tmp}));
   }finally{if(browser)await browser.close();server.kill('SIGTERM');}
 })().catch(e=>{console.error(e);process.exitCode=1});

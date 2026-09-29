@@ -51,6 +51,7 @@ def retry(batch,cfg):
 
 
 if __name__=='__main__':
+    raise SystemExit('已停用解析生成：当前需求仅为题目、参考答案与真题关联。')
     p=argparse.ArgumentParser();p.add_argument('--env',required=True);p.add_argument('--workers',type=int,default=4);args=p.parse_args()
     cfg=dict(l.split('=',1) for l in Path(args.env).read_text().splitlines() if '=' in l and not l.startswith('#'))
     (DATA/'exam-solutions').mkdir(exist_ok=True)

@@ -215,15 +215,21 @@ def question(id: int):
     if not r:
         raise HTTPException(404, '题不存在')
     r['options'] = json.loads(r.pop('options_json') or '[]')
-    content = one('SELECT solution_markdown,solution_source FROM workbook_text WHERE question_id=?', (id,))
-    if content:
-        r.update(content)
+    reference = one('SELECT a.* FROM reference_answers a JOIN workbook_text w ON w.question_id=a.question_id AND w.content_hash=a.content_hash WHERE a.question_id=?', (id,))
+    if reference:
+        r['answer'] = reference['answer']
+        r['answer_html'] = ''
+        r['answer_note'] = reference['note']
+        r['answer_checkable'] = bool(reference['checkable'])
     else:
         content = one('SELECT e.* FROM exam_explanations e WHERE question_id=?', (id,))
         source = one('SELECT stem_html,options_json FROM questions WHERE id=?', (id,))
         if content and content['content_hash'] == study.question_hash(source['stem_html'], source['options_json']):
-            r.update({k:content[k] for k in ('solution_markdown','solution_source')})
             r['answer_checkable'] = bool(content['answer_checkable'])
+            if not r['answer_checkable']:
+                r['answer_note'] = '题面或原参考答案存在疑点，暂不自动判分。'
+    r['answer_html'] = r['answer_html'].replace('见解析', '证明题，结论见题干')
+    r.pop('solution_html', None)
     return r
 
 
@@ -428,37 +434,7 @@ def _reserve_ai_call() -> None:
 
 @app.post('/api/explain')
 def explain(e: Explain):
-    ck = ('T:' + e.name) if e.kind == 'type' else ('Q:%d' % e.question_id)
-    if not e.force:
-        row = one("SELECT content FROM ai_explain WHERE cache_key=?", (ck,))
-        if row:
-            return {'content': row['content'], 'cached': True}
-    if not LLM_KEY:
-        raise HTTPException(400, '未配置大模型 key:请在 backend/.env.local 设置 GRADE_API_KEY 后重启')
-    if e.kind == 'type':
-        if not one("SELECT 1 FROM types WHERE name=?", (e.name,)):
-            raise HTTPException(404, '题型不存在')
-        probs = q("SELECT plain FROM questions WHERE type_name=? AND plain<>'' LIMIT 8", (e.name,))
-        samples = '\n'.join('- ' + p['plain'][:200] for p in probs)
-        prompt = ('你是考研数学(数二)辅导老师。下面是题型「%s」的若干同类题:\n%s\n\n'
-                  '请用中文总结这一类题的【通用解题方法】,分三部分:\n'
-                  '① 识别信号:什么样的题属于这一类;\n'
-                  '② 通用步骤:拿到这类题怎么下手、标准套路(可编号);\n'
-                  '③ 常见坑:容易错在哪。\n要具体、能照着做,不要空话套话。' % (e.name, samples))
-    else:
-        r = one("SELECT plain, solution_html, answer_html FROM questions WHERE id=?", (e.question_id,))
-        if not r:
-            raise HTTPException(404, '题不存在')
-        sol = re.sub('<[^>]+>', '', (r['answer_html'] or '') + ' ' + (r['solution_html'] or '')).strip()
-        prompt = ('你是考研数学(数二)辅导老师。请讲解这道题:\n%s\n\n%s'
-                  '请给出:解题思路(为什么这样想)、关键步骤、最终答案。中文,简洁清楚。'
-                  % (r['plain'], ('可参考的答案/解析:%s\n\n' % sol[:800]) if sol else ''))
-    _reserve_ai_call()
-    content = _llm(prompt)
-    write("INSERT INTO ai_explain(cache_key,content) VALUES(?,?) "
-          "ON CONFLICT(cache_key) DO UPDATE SET content=excluded.content,created_at=CURRENT_TIMESTAMP",
-          (ck, content))
-    return {'content': content, 'cached': False}
+    raise HTTPException(410, '解析生成功能已停用；本站提供题目、参考答案和相关练习。')
 
 
 app.mount('/', StaticFiles(directory=FRONTEND, html=True), name='frontend')

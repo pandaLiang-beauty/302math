@@ -53,7 +53,7 @@ async function openStudy(scope,title,problems,originId=null) {
 }
 function studyControls(card,p) {
   const e=activeStudy?.entries.get(p.id);if(!e)return;
-  let referenceChoice='',referenceTrusted=true;
+  let referenceChoice='',referenceTrusted=true,solutionAvailable=false;
   const root=el('section','study-answer');root.setAttribute('aria-label','本题作答记录');
   const status=textEl('span','study-save','');status.setAttribute('role','status');
   const top=el('div','study-answer-top');top.append(textEl('strong','','我的作答'),status);root.append(top);
@@ -70,22 +70,24 @@ function studyControls(card,p) {
   work.placeholder='已知条件、想到的方法、卡住的步骤……自动保存';work.setAttribute('aria-label','演算与思路');
   work.oninput=()=>workStore.change(e,{work:work.value});thinking.append(work);root.append(thinking);
   const actions=el('div','study-actions');
-  const review=textEl('button','btn','核对答案与解析');review.type='button';
+  const review=textEl('button','btn','核对答案');review.type='button';
   review.onclick=async()=>{
     if(e.value.phase==='work'){workStore.change(e,{phase:'review'});await workStore.flush(e);}
-    if(!solution.childNodes.length){
+    if(!solution.childNodes.length||!solutionAvailable){
       review.disabled=true;
       try{
         const data=await api('/question?id='+p.id);
-        if(data.solution_markdown)solution.innerHTML=MathMarkdown.render(data.solution_markdown);
-        else solution.innerHTML=(data.answer_html?'<p><b>参考答案</b> '+data.answer_html+'</p>':'')+(data.solution_html||'');
-        if(!solution.childNodes.length)solution.append(textEl('p','','本题解析暂不可用，请先保留作答。'));
-        if(data.solution_source)solution.prepend(textEl('p','solution-source',data.solution_source));
+        solutionAvailable=!!(data.answer||data.answer_html);
+        solution.replaceChildren();
+        if(data.answer_html)solution.innerHTML='<p><b>参考答案</b></p>'+data.answer_html;
+        else if(data.answer)solution.innerHTML=MathMarkdown.render('**参考答案**\n\n'+data.answer);
+        else solution.append(textEl('p','','本题参考答案尚未收录，可先保留作答。'));
+        if(data.answer_note)solution.prepend(textEl('p','solution-source',data.answer_note));
         if(p.qtype==='choice'&&/^[ABCD]$/.test(data.answer||'')){
           referenceChoice=data.answer;referenceTrusted=data.answer_checkable!==false;solution.prepend(textEl('p','study-choice-check',''));render();
         }
         renderMath(solution);
-      }catch(err){status.textContent='解析加载失败：'+err.message;return;}
+      }catch(err){status.textContent='答案加载失败：'+err.message;return;}
       finally{review.disabled=false;}
     }
     solution.hidden=!solution.hidden;

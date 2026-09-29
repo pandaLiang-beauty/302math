@@ -77,4 +77,5 @@ def main():
         idle+=1;time.sleep(30)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    raise SystemExit('已停用解析生成：当前需求仅为题目、参考答案与真题关联。')main()

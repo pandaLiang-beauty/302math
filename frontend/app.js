@@ -111,25 +111,25 @@ function problemCard(p, opts = {}) {
   const acts = el('div', 'acts');
   const sol = el('div', 'sol');
   sol.id = 'solution-' + p.id;
-  if (p.has_sol && !activeStudy) {
-    const bSol = textEl('button', 'text-action', '查看解析');
+  if (!activeStudy) {
+    const bSol = textEl('button', 'text-action', '查看答案');
     bSol.type = 'button';
     bSol.setAttribute('aria-controls', sol.id);
     bSol.setAttribute('aria-expanded', 'false');
     bSol.onclick = async () => {
       if (sol.classList.contains('open')) {
-        sol.classList.remove('open'); bSol.textContent = '查看解析';
+        sol.classList.remove('open'); bSol.textContent = '查看答案';
         bSol.setAttribute('aria-expanded', 'false');
         return;
       }
       if (!sol.dataset.loaded) {
         bSol.textContent = '加载中…';
         bSol.disabled = true;
-        try { const f = await api('/question?id=' + p.id); sol.innerHTML = (f.answer_html ? '<p><b>【答案】</b>' + f.answer_html + '</p>' : '') + (f.solution_html || '<i>暂无</i>'); sol.dataset.loaded = '1'; }
+        try { const f = await api('/question?id=' + p.id); sol.innerHTML = f.answer_html || MathMarkdown.render(f.answer || '本题参考答案尚未收录'); sol.dataset.loaded = '1'; }
         catch (e) { sol.textContent = '加载失败：' + e.message; }
         finally { bSol.disabled = false; }
       }
-      sol.classList.add('open'); bSol.textContent = '收起解析';
+      sol.classList.add('open'); bSol.textContent = '收起答案';
       bSol.setAttribute('aria-expanded', 'true');
       renderMath(sol);
     };
@@ -139,13 +139,13 @@ function problemCard(p, opts = {}) {
     acts.appendChild(studyLink('练同法题与变式 →', flow.practiceHash({ questionId: p.id }), 'text-action practice-link'));
   }
   if (p.answer_url && !activeStudy) {
-    const answer = studyLink('查看原版解析 ↗', p.answer_url, 'text-action book-link');
+    const answer = studyLink('查看原版答案 ↗', p.answer_url, 'text-action book-link');
     answer.target = '_blank'; answer.rel = 'noopener';
     answer.title = '打开本章对应难度的答案，按题型与原书题号查阅';
     acts.appendChild(answer);
   }
   if (acts.children.length) q.appendChild(acts);
-  if (p.has_sol) q.appendChild(sol);
+  q.appendChild(sol);
   q.querySelectorAll('img').forEach(img => { img.loading = 'lazy'; });
   q.querySelectorAll('img.p880').forEach(img => {
     const zoom = studyLink('', img.src, 'question-image-zoom');
@@ -171,7 +171,7 @@ async function viewHome() {
   if (!m.isConnected) return;
   m.replaceChildren();
   m.appendChild(textEl('h1', 'title', '2020—2026 · 数二真题套卷'));
-  m.appendChild(textEl('p', 'lead', '以真题为主线：做题、核对解析、补练同法题与变式，再回到原题检验。'));
+  m.appendChild(textEl('p', 'lead', '以真题为主线：做题、核对答案、补练同法题与变式，再回到原题检验。'));
   const focused=flow.focusPapers(papers);
   const continuing=sessions.map(s=>focused.find(p=>s.scope==='exam:'+p.year&&s.started&&s.done<p.total)).find(Boolean);
   const first = continuing||focused.find(p=>!p.study||p.study.done<p.total)||focused[0];
