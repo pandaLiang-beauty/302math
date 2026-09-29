@@ -39,7 +39,9 @@ function renderQuestionPractice() {
   target.replaceChildren();
   if (!question) return;
   target.appendChild(textEl('h3', 'sidebar-section-title', `第 ${question.number} 题 · 880补练`));
-  const topics = question.practice?.topics || [];
+  target.appendChild(studyLink('练同法题与变式 →',flow.practiceHash({questionId:question.id}),'sidebar-practice-link'));
+  target.appendChild(textEl('p','sidebar-caption','先看本题解析，再练相同解法。补练页面保留返回原题的入口。'));
+  const topics = [];
   if (topics.length) {
     topics.forEach(topic => {
       const link = studyLink('', flow.practiceHash({ questionId: question.id, topic: topic.id }), 'sidebar-practice-link');
@@ -48,8 +50,7 @@ function renderQuestionPractice() {
       target.appendChild(link);
     });
   } else {
-    target.appendChild(studyLink('进入对应章节练习 →', question.practice
-      ? flow.practiceHash({ questionId: question.id }) : '#/chapters', 'sidebar-practice-link'));
+    target.appendChild(studyLink('自主选择章节习题 →', '#/chapters', 'sidebar-footer-link'));
   }
 }
 

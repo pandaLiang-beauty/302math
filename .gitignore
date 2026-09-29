@@ -45,3 +45,5 @@ backend/data/raw/
 backend/_mineru_*/
 backend/data/drafts/
 backend/data/audits/
+# Offline authoring working files contain large scan caches; packaged content lives in content/.
+backend/data/authoring/

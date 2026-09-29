@@ -42,7 +42,10 @@ async function viewPractice({ questionId, chapter, topic, focusId }) {
   if (questionId) params.set('question_id', questionId);
   if (chapter) params.set('chapter', chapter);
   if (topic) params.set('topic', topic);
-  const data = await api('/practice?' + params.toString());
+  const data = await api((questionId&&!chapter&&!topic?'/study/related?':'/practice?') + params.toString());
+  if (!m.isConnected) return;
+  await openStudy('practice:'+ (data.origin?.id||'chapter')+':'+(data.mode==='related'?'related':data.topic?.id||data.chapter.id),
+    data.origin?`${data.origin.year} 年第 ${data.origin.number} 题的补练`:'880 · '+data.chapter.name,data.problems,data.origin?.id||null);
   if (!m.isConnected) return;
   m.replaceChildren();
   m.className = 'paper-sheet practice-sheet';
@@ -53,9 +56,9 @@ async function viewPractice({ questionId, chapter, topic, focusId }) {
   const backLabel = origin ? `返回 ${origin.year} 年第 ${origin.number} 题` : '返回章节列表';
   m.appendChild(studyLink('← ' + backLabel, backHash, 'back-link'));
   m.appendChild(textEl('div', 'crumb', `${data.chapter.subject} › ${data.chapter.name}`));
-  m.appendChild(textEl('h1', 'title', data.topic ? data.topic.name : data.chapter.name));
-  m.appendChild(textEl('p', 'lead', `李林880 · ${data.problems.length} 道${data.topic ? '对应习题' : '章节习题'}。按基础、综合、拓展练习，做完可查看原版解析。`));
-  if (origin && !data.topic && !data.suggested_topics.length) {
+  m.appendChild(textEl('h1', 'title', data.mode==='related'?`${origin.year} 年第 ${origin.number} 题 · 同类补练`:data.topic ? data.topic.name : data.chapter.name));
+  m.appendChild(textEl('p', 'lead', data.mode==='related'?`围绕原题的关键解法，先练同法题，再检验变式。共 ${data.problems.length} 道，练完返回原题。`:`李林880 · ${data.problems.length} 道章节习题。答案、演算和复盘分别保存。`));
+  if (origin && data.mode!=='related' && !data.topic && !data.suggested_topics.length) {
     m.appendChild(textEl('div', 'hint', '这道真题暂未细分到知识点，先展示对应章节；你可以在侧栏选择要补练的知识点。'));
   }
   if (origin) {
@@ -67,12 +70,12 @@ async function viewPractice({ questionId, chapter, topic, focusId }) {
     });
     m.appendChild(original);
   }
-  const tiers = ['基础', '综合', '拓展'];
+  const tiers = data.mode==='related'?['同法练习','变式检验']:['基础', '综合', '拓展'];
   tiers.forEach(level => {
-    const list = data.problems.filter(problem => problem.level === level);
+    const list = data.problems.filter(problem => (data.mode==='related'?problem.relation.stage:problem.level) === level);
     if (!list.length) return;
     const section = el('section', 'practice-tier');
-    const heading = textEl('h2', 'tierhead', `${level}练习 · ${list.length}题`);
+    const heading = textEl('h2', 'tierhead', `${level} · ${list.length}题`);
     section.appendChild(heading);
     const box = el('div', 'tierbox');
     const cap = 6;
@@ -93,7 +96,7 @@ async function viewPractice({ questionId, chapter, topic, focusId }) {
     m.appendChild(section);
   });
   if (!data.problems.length) {
-    m.appendChild(textEl('div', 'empty', '这个知识点的880习题暂未就绪，可以从侧栏切换到本章其他知识点。'));
+    m.appendChild(textEl('div', 'empty', data.mode==='related'?'暂时没有经过核对的同法补练题。可以回看原题解析，或自主选择章节习题。':'这个知识点暂未收录习题。'));
   }
   if (origin) m.appendChild(studyLink(backLabel + '，继续套卷 →', backHash, 'btn primary practice-return'));
   setStudySidebar({ kind: 'practice', data });

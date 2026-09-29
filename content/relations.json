@@ -1,0 +1,632 @@
+[
+  {
+    "source_id": 17141,
+    "target_id": 12710,
+    "accepted": true,
+    "skill": "确定复合无穷小及定积分的首项阶数并比较阶数",
+    "reason": "真题四个选项都要先确定积分被积函数和上限的首阶：A、C为3阶，B为5/2阶，D为5阶；练习题中也需分别求出α为3阶、β为2阶、γ为4阶后排序。两题的关键都是保留首个非零阶，而不只是使用相同的无穷小符号。",
+    "stage": "同法练习",
+    "source_hash": "c50083c7d1ca3c3ee2ea6f82673fb3c50e8b2fd9b09d9922572c40fa0d71d994",
+    "target_hash": "011f17d8f82e05b81721d4c48232f3d58e4f1fcd4da1dceaba515e805c5d766e"
+  },
+  {
+    "source_id": 17141,
+    "target_id": 12729,
+    "accepted": true,
+    "skill": "结合被积函数的等价阶与积分上限阶数确定定积分阶数",
+    "reason": "真题D要求利用sqrt((sin t)^3)约为t^(3/2)以及1-cos x约为x^2/2，得到积分为5阶无穷小；练习题则由f(t)/(1-cos t)趋于-1得到f(t)约为-t^2/2，再结合上限sin^2 x约为x^2，得到积分为4阶。两题都直接训练被积函数阶数与上限阶数相乘后再积分的操作。",
+    "stage": "同法练习",
+    "source_hash": "c50083c7d1ca3c3ee2ea6f82673fb3c50e8b2fd9b09d9922572c40fa0d71d994",
+    "target_hash": "73fdd4102cfafc6f59daa9ddba653cdc43599168ac57d167abdfdb3fd4ff358f"
+  },
+  {
+    "source_id": 17141,
+    "target_id": 12744,
+    "accepted": true,
+    "skill": "展开积分号内的复合表达式，确定积分首项并与分母阶数比较",
+    "reason": "真题要求比较A至D中多个变上限积分的首阶；练习题需先将(3+2tan t)^t-3^t展开到首个非零项，得到其约为(2/3)t^2，再积分得到分子为3阶，并与e^(3x^3)-1比较。练习题还要求保留首项系数并计算极限，因此是对真题阶数判断方法的加强变式。",
+    "stage": "变式检验",
+    "source_hash": "c50083c7d1ca3c3ee2ea6f82673fb3c50e8b2fd9b09d9922572c40fa0d71d994",
+    "target_hash": "dec6fbf85f115032987ea094bb290284a6055a9304a7583f041bbba0556d59d6"
+  },
+  {
+    "source_id": 17142,
+    "target_id": 12706,
+    "accepted": true,
+    "skill": "寻找表达式未定义的候选点并通过单侧极限判定间断点类型",
+    "reason": "真题需围绕ln|1+x|、e^x-1、x-2及e^(1/(x-1))产生的候选点逐一考察单侧极限，统计第二类间断点；练习题需考察tan(x-pi/4)的零点和无定义点，并分别判断函数趋于0、无穷或有限值，从而确定各点的间断类型。两题的核心都是候选奇点筛选与单侧极限分类。",
+    "stage": "同法练习",
+    "source_hash": "86526562bee88123be645a1e45e492b35f58508eb5804d8fc2c75ab7fa6a8471",
+    "target_hash": "be93bc3a55f3ebe4694709cb5f4d6701156cacf4394c136c06108bd3ff110219"
+  },
+  {
+    "source_id": 17142,
+    "target_id": 12695,
+    "accepted": true,
+    "skill": "计算间断点左右极限并按极限关系判定间断类型",
+    "reason": "真题以多个候选点的单侧极限为基础统计第二类间断点；练习题集中考察x=0处两项的左右极限，左、右极限均为1，因此判定为可去间断点。虽然题目要求的分类对象不同，但判断所需的核心操作完全相同。",
+    "stage": "同法练习",
+    "source_hash": "86526562bee88123be645a1e45e492b35f58508eb5804d8fc2c75ab7fa6a8471",
+    "target_hash": "eec279c00b3545c017d717acc11be194f754c0595bdfd349af2a9588f2940cd4"
+  },
+  {
+    "source_id": 17142,
+    "target_id": 12696,
+    "accepted": true,
+    "skill": "寻找分母为零的候选点，计算左右极限并按指定类型计数",
+    "reason": "真题要求从ln|1+x|、e^x-1、x-2及指数因子确定候选点，再按单侧极限统计第二类间断点；练习题需先找出积分分母为零及绝对值等导致的候选点，再根据左右极限是否有限且相等统计第一类间断点。练习题改变了函数结构和统计类别，但保留了候选点分析、极限判定和计数这一完整方法。",
+    "stage": "变式检验",
+    "source_hash": "86526562bee88123be645a1e45e492b35f58508eb5804d8fc2c75ab7fa6a8471",
+    "target_hash": "c66719b29cac832d35c6a503a134f6a0acaf464d7acd2bee383cc5fc3ba0ff18"
+  },
+  {
+    "source_id": 17142,
+    "target_id": 12715,
+    "accepted": true,
+    "skill": "分析多个奇点处的单侧极限并识别无穷间断点",
+    "reason": "真题需要在多个由对数、指数和分母产生的候选点处分析单侧极限并统计第二类间断点；练习题则需考察x=0、1、2处，分别处理ln|x|、|x-1|分母和e^(1/((x-1)(x-2)))的发散行为，统计其中左右侧出现无穷发散的点。两题训练的是同一套奇点定位与无穷极限判定方法。",
+    "stage": "变式检验",
+    "source_hash": "86526562bee88123be645a1e45e492b35f58508eb5804d8fc2c75ab7fa6a8471",
+    "target_hash": "ee9127481a4a99ba68456564b505ea179de947ea5d82838c1c902d1167dcf3ce"
+  },
+  {
+    "source_id": 17144,
+    "target_id": 12876,
+    "accepted": true,
+    "skill": "含多项式因子的高阶导数与莱布尼茨公式",
+    "reason": "真题对x^2 ln(1-x)求n阶导数，关键是识别多项式因子x^2并用莱布尼茨公式，使只有有限项保留。补练先由积分方程得到f(x)=ln(x+1)，再对g(x)=x ln(x+2)求n阶导数，关键同样是处理多项式因子x并利用乘积高阶求导的有限截断；积分方程求f属于补练增加的前置步骤。",
+    "stage": "变式检验",
+    "source_hash": "10604330b4f9126dbfd144a6db4e4e680f65055ebf9c1758253a0a507d0288a9",
+    "target_hash": "294378a217a4fd575957b312d31fa8c9bb3f68274ad12258aeff1977aec4908c"
+  },
+  {
+    "source_id": 17145,
+    "target_id": 13075,
+    "accepted": true,
+    "skill": "依据分段定义逐次判断原点处的一阶偏导与混合偏导",
+    "reason": "真题第(2)问判断分段函数在原点处的混合偏导，必须先按定义检查坐标轴上的一阶偏导是否存在，再判断指定求导次序的混合偏导。补练直接分别判断f_xy''(0,0)和f_yx''(0,0)，其中一个混合偏导不存在、另一个存在，训练的是同一组定义计算和求导次序辨析；真题其余关于极限的各小问不属于此配对。",
+    "stage": "变式检验",
+    "source_hash": "fa4e47ae71f489b647e6ad3b79f8b5f16b8ff171413fe91eebd63385a55847cf",
+    "target_hash": "6576198b667b5be4072cc3913a41a02e216f56a99ef11bd29b6308e8dedb6e9e"
+  },
+  {
+    "source_id": 17145,
+    "target_id": 13114,
+    "accepted": true,
+    "skill": "按定义区分二元极限、累次极限、偏导数与连续性",
+    "reason": "真题第(1)、(3)、(4)问分别涉及坐标轴上的偏导、二元极限和累次极限，核心是依据分段定义逐一取极限，不能用其中一种极限性质替代另一种。补练的A、B检验两种累次极限，C检验原点偏导，D检验连续性所对应的二元极限，均训练同一类定义辨析；候选题用振荡项替换了真题中的乘积结构，属于变式。",
+    "stage": "变式检验",
+    "source_hash": "fa4e47ae71f489b647e6ad3b79f8b5f16b8ff171413fe91eebd63385a55847cf",
+    "target_hash": "ae6a2c6fd1f5b725f01b8153f7b719762f8490b427aa6e9044dd914f796a1660"
+  },
+  {
+    "source_id": 17146,
+    "target_id": 12865,
+    "accepted": true,
+    "skill": "用指数积分因子将一阶线性微分不等式转化为单调性",
+    "reason": "真题由f'(x)>f(x)>0构造(e^{-x}f(x))'>0，从而比较不同点的函数值比。补练将其推广为f'(x)-p(x)f(x)>0，构造e^{-∫_0^x p(t)dt}f(x)，再结合f(0)≥0和p(x)>0推出f(a)<f(b)；核心仍是用积分因子处理f'-p(x)f并据此判断单调性。",
+    "stage": "同法练习",
+    "source_hash": "8e30887489270d73eef274b77b990bb5c712aba7c1bbbc8168c05b3d0ab3d658",
+    "target_hash": "7dacd71222650aa5938ea0ad30a1dc32b8d6bbca9291c4330f3efef977657d60"
+  },
+  {
+    "source_id": 17146,
+    "target_id": 12854,
+    "accepted": true,
+    "skill": "识别f'(x)+cf(x)并构造指数积分因子分析渐近性质",
+    "reason": "真题条件f'(x)-f(x)>0可通过(e^{-x}f(x))'处理。补练把同一结构变为f'(x)+2f(x)趋于1，使用(e^{2x}f(x))'=e^{2x}(f'(x)+2f(x))，并结合积分形式判断f(x)趋于1/2、f'(x)趋于0以及e^{2x}f(x)趋于正无穷；系数和结论不同，但核心积分因子方法一致。",
+    "stage": "变式检验",
+    "source_hash": "8e30887489270d73eef274b77b990bb5c712aba7c1bbbc8168c05b3d0ab3d658",
+    "target_hash": "3a1dffff8260aa35097e5fc82a3dffe24af40f6d831955bef7b0bba36e29da01"
+  },
+  {
+    "source_id": 17147,
+    "target_id": 13451,
+    "accepted": true,
+    "skill": "由非零代数余子式确定秩并利用伴随矩阵恒等式选取原矩阵列向量构造零空间基",
+    "reason": "真题中A12≠0说明rank(A)=3，删去第2列后的列向量α1、α3、α4线性无关；又由A* A=|A|I=0，这些列向量属于A*x=0的解空间，因此应选取α1、α3、α4。补题中A11≠0时同理，删去第1列的列向量构成A*x=0的基础解系，并据此写出通解。两题均训练由非零代数余子式确定应删去的列并用伴随矩阵恒等式构造基础解系。",
+    "stage": "同法练习",
+    "source_hash": "c65b62f47b8e9cc1416923a54c0aa2e8a7c7d3d28b6ed6214d17f8e7cd775478",
+    "target_hash": "d9df87650a9dc1b69eb067f74541b37a217841d063f12744e659e091893b0503"
+  },
+  {
+    "source_id": 17148,
+    "target_id": 13490,
+    "accepted": true,
+    "skill": "按相似对角矩阵的特征值顺序排列特征向量并在同一特征子空间内作线性组合",
+    "reason": "真题要求P的第1、3列属于特征值1的特征子空间，第2列属于特征值−1的特征子空间，同时保持列向量线性无关。补题要求第1列属于特征值1的子空间，第2、3列属于特征值2的子空间，并判断在同一特征子空间内作数乘或线性组合后是否仍满足AP=PΛ及可逆性。补题未显式说明对应特征向量线性无关，但P可逆的前提要求所选列最终线性无关，不影响两题对该方法的对应。",
+    "stage": "同法练习",
+    "source_hash": "4f8d11b46d5da7aad0c0117fd1097c0dbc02a615425fe28cea4936349a40a332",
+    "target_hash": "1ce061d1deb7be20263608468dba5d501c5d060ff063af1004c94cbf929d9ff0"
+  },
+  {
+    "source_id": 17149,
+    "target_id": 12816,
+    "accepted": true,
+    "skill": "参数方程的一阶、二阶导数公式",
+    "reason": "真题先对参数t求导，再使用dy/dx=(dy/dt)/(dx/dt)，以及d²y/dx²=[d(dy/dx)/dt]/(dx/dt)，最后在t=1处代值。补题对另一组参数方程完整求出一阶导数和二阶导数，直接练习相同的核心操作。",
+    "stage": "同法练习",
+    "source_hash": "e978a0fb13569ece104e2e25c0e1b5173ac501293baa259af79903e8e568bcbd",
+    "target_hash": "541d3ad38e784289c7b9e30800240911f667b796409c33c872b49e382f776762"
+  },
+  {
+    "source_id": 17149,
+    "target_id": 12835,
+    "accepted": true,
+    "skill": "参数方程二阶导数公式及其符号分析",
+    "reason": "补题中的凹凸区间和拐点小问，需要先用与真题相同的参数方程二阶导数公式求d²y/dx²，再结合参数范围和导数符号判断凹凸性与拐点；单调区间和极值小问主要涉及一阶导数，不属于共同方法。相关小问确实构成对真题二阶导数计算的变式检验。",
+    "stage": "变式检验",
+    "source_hash": "e978a0fb13569ece104e2e25c0e1b5173ac501293baa259af79903e8e568bcbd",
+    "target_hash": "a97edca0bac3a7612d5a0959aafe3aa4982fdad9977035d549dc27374e2ed1fa"
+  },
+  {
+    "source_id": 17150,
+    "target_id": 13149,
+    "accepted": true,
+    "skill": "交换二重积分次序并根据积分区域重新确定分段积分限",
+    "reason": "原题区域由0≤y≤1、√y≤x≤1给出，等价于0≤x≤1、0≤y≤x²；交换次序后需识别曲线y=x²并先对y积分。目标题同样要求将按x分段描述的区域反转：区域反转为0≤y≤2、√(2y)≤x≤√(8−y²)，对应选项C。两题的核心都是依据区域边界交换积分次序，目标题增加了分段边界合并与抛物线、圆弧交界的识别。",
+    "stage": "同法练习",
+    "source_hash": "d7dcdb9f985723075119303ff2b62cd4f19943d544862e806544ffd2e75e0a45",
+    "target_hash": "89c46e84907e0c966b841333d042149da8db03e1c17f4498ccdc53292691f893"
+  },
+  {
+    "source_id": 17150,
+    "target_id": 13152,
+    "accepted": true,
+    "skill": "交换二重积分次序后计算简单的内层积分以降为一重积分",
+    "reason": "原题将区域0≤y≤1、√y≤x≤1反转为0≤x≤1、0≤y≤x²，先对y积分得到x²√(x³+1)的单积分。目标题将区域0≤x≤y≤1反转为0≤y≤1、0≤x≤y，先计算内层∫₀ʸx²dx，从而降为关于y的一重积分。两题都以交换次序后利用多项式内层积分完成降维，区别在于原题内层积分变量为y且区域上界为x²，目标题内层积分变量为x且被积函数为x²。",
+    "stage": "同法练习",
+    "source_hash": "d7dcdb9f985723075119303ff2b62cd4f19943d544862e806544ffd2e75e0a45",
+    "target_hash": "5fde97646b2e8339682342eed5e2d167a16c9f7dfc2e0d52376c35a69e9dbf93"
+  },
+  {
+    "source_id": 17151,
+    "target_id": 13085,
+    "accepted": true,
+    "skill": "对二元复合函数求两个偏导并在指定点组成全微分",
+    "reason": "原题对z=arctan[xy+sin(x+y)]求指定点(0,π)处的全微分，需要分别求x、y偏导并代入该点。目标题同样要求对z=(1+xy)^y求指定点(1,1)处的dz；其额外难点是对变指数幂使用对数求导。两题的共同核心是二元函数指定点的全微分计算，目标题属于复合函数形式的变式。",
+    "stage": "变式检验",
+    "source_hash": "fdf7e6ead00893e29b7cc1404bfbba2e553ef616521cd25800f27f771c8f0a93",
+    "target_hash": "4d40310c3921693ee55c0fcd9e80fd1132b7e893013e8dc016eb65dde8d7f039"
+  },
+  {
+    "source_id": 17152,
+    "target_id": 13057,
+    "accepted": true,
+    "skill": "按水深取水平薄片并用压强乘薄片面积建立静水压力积分",
+    "reason": "原题对斜边与水面相齐的等腰直角三角形薄板，需按水深取水平薄片，利用压强ρgx与该深度处板宽建立压力积分。目标题同样按水平薄片建立压力积分，但要分别处理底边与水面相齐、顶点与水面相齐两种放置，确定各自的宽度函数后求P₂/P₁。两题共同训练的是静水压力的薄片积分建模，目标题增加了不同几何位置下边界函数和压力比的变式处理。",
+    "stage": "变式检验",
+    "source_hash": "6eab9f73858f7cdaa5b37c804dade9008b40340b79702323c5fbc958be3b4360",
+    "target_hash": "f236f40ff2c9c9b0d5ac2730b1ccafbe46a35763ff7fdc09564cd68696fe043d"
+  },
+  {
+    "source_id": 17153,
+    "target_id": 13266,
+    "accepted": true,
+    "skill": "求解二阶常系数齐次方程初值问题并计算解的无穷区间积分",
+    "reason": "真题先由特征根为重根的二阶常系数齐次方程通解，结合两个初值确定解，再计算其在[0,+∞)上的广义积分；练习题改为a>b>0时的两个不同负实根，并改变初值，但仍要求完成同样的“解初值问题后积分”核心操作，属于特征根情形的变式检验。",
+    "stage": "变式检验",
+    "source_hash": "8ef178d6ba3893cd7ffe4e6db6110b2f137bf2d36f6679187f7df26bd29ddead",
+    "target_hash": "4f3a7d5d866fe77c5edab24fea7666fd43be9dbb3cd6cf6793981efed1d3ac11"
+  },
+  {
+    "source_id": 17154,
+    "target_id": 13304,
+    "accepted": true,
+    "skill": "利用行列变换化简并计算含参数的四阶行列式",
+    "reason": "真题中的四阶矩阵为主对角线含参数a、其余非零元为成对相反的固定元素；练习题仅将参数a改记为k，矩阵各元素及排列完全相同，因此可采用完全相同的行列变换和计算步骤。",
+    "stage": "同法练习",
+    "source_hash": "c51987782da2711de9e496981deffbbca57823216d4a7e41448924e0ce3c9d6e",
+    "target_hash": "145609a122e19ad2d53a7a6998cb47d980a567469940019352a235fd2690b327"
+  },
+  {
+    "source_id": 17155,
+    "target_id": 12802,
+    "accepted": true,
+    "skill": "通过无穷远处的线性主项与差值极限求斜渐近线",
+    "reason": "真题需先确定函数在x→+∞时的线性主项，再计算函数减去该主项后的极限以得到斜渐近线截距；练习题先利用给定极限确定线性系数a，再通过有理化计算截距b，仍直接训练斜渐近线的斜率识别和差值极限求截距这一核心方法，属于表达形式不同的变式。",
+    "stage": "变式检验",
+    "source_hash": "f7d75114eca25aa4242b7ff38f3abd7723a002486cb5fe1e68251c4b8b63df44",
+    "target_hash": "f64d2c662cabfb35d407d9274d645e549bbe2f8afffa3c7b56aa3d76fb323570"
+  },
+  {
+    "source_id": 17156,
+    "target_id": 12958,
+    "accepted": true,
+    "skill": "参数积分换元为变量上限积分后求导，并单独处理零点处的导数与连续性",
+    "reason": "真题中将g(x)=∫_0^1 f(xt)dt换元为含x的上限积分，再对x≠0求导，并利用lim_{x→0}f(x)/x=1处理x=0及g′的连续性。目标题同样需先将∫_0^{sin x}f(tx²)dt换元为x^{-2}∫_0^{x²sin x}f(u)du，再对x≠0求导并单独求F′(0)、检验连续性；虽然上限和零点极限条件不同，但训练的是同一具体操作链。",
+    "stage": "变式检验",
+    "source_hash": "28de01d2c437487d5a69ddd49335dc0d4c0a9a24ad73a053e96a8b4988994793",
+    "target_hash": "6df9baa42d8a98f488c5bb10787615c2ed77a819cd5c9a60e2893a60b4262959"
+  },
+  {
+    "source_id": 17157,
+    "target_id": 13102,
+    "accepted": true,
+    "skill": "联立一阶偏导方程求全部驻点并用二阶偏导判别极值类型",
+    "reason": "真题需由f_x=f_y=0求出全部临界点，再计算二阶偏导组成的判别式，区分极值点与非极值点。目标题同样要解出多个驻点并逐点进行二阶判别；其中部分驻点为极大点、部分为非极值点，构成对真题方法的直接变式训练。",
+    "stage": "变式检验",
+    "source_hash": "463e7103e00a25373d6278d877ed412acdadbc5644c60c9194cbed62a04ca65b",
+    "target_hash": "60ca98c0574549e052176ab51eea45c41cd8687534c41a628a103fbd1872037a"
+  },
+  {
+    "source_id": 17157,
+    "target_id": 13130,
+    "accepted": true,
+    "skill": "求解梯度为零的驻点并用Hessian判别二元函数极值类型",
+    "reason": "真题要求先联立一阶偏导方程寻找全部驻点，再利用二阶偏导判别其性质。目标题也需解出两个驻点，并通过二阶偏导判别极大值和极小值，核心识别条件与操作完全对应，仅函数形式不同。",
+    "stage": "变式检验",
+    "source_hash": "463e7103e00a25373d6278d877ed412acdadbc5644c60c9194cbed62a04ca65b",
+    "target_hash": "3d0a6e46b55f439709e99b8ad723a822d22be87955949b096f55805101895ef5"
+  },
+  {
+    "source_id": 17159,
+    "target_id": 13173,
+    "accepted": true,
+    "skill": "用极坐标表示二重积分区域并结合雅可比因子积分",
+    "reason": "原题中被积函数含有sqrt(x^2+y^2)/x，且区域由x=1、x=2、y=x和x轴围成，适合令x=r cosθ、y=r sinθ，得到0≤θ≤π/4及secθ≤r≤2secθ，再结合雅可比因子积分。目标题同样需要将1≤x^2+y^2≤2x、y≥0转换为极坐标条件，得到0≤θ≤π/3及1≤r≤2cosθ，并处理雅可比因子；对应的是完整的极坐标区域识别与积分方法。",
+    "stage": "同法练习",
+    "source_hash": "f81a7a3f96367cdc4e57cfb3f0e118b6e900342bdd4e78b85fbd3852b5a02ebc",
+    "target_hash": "a7fe93e68575077e83efaddda572dc82eeea6dc9eb56450ac4cfa30a9f2c01ce"
+  },
+  {
+    "source_id": 17159,
+    "target_id": 13160,
+    "accepted": true,
+    "skill": "根据直线、圆及不等式边界确定极坐标角度范围和径向上下限",
+    "reason": "原题需要把x=1、x=2、y=x和x轴转换为角度范围0≤θ≤π/4及径向范围secθ≤r≤2secθ。目标题中2x≤x^2+y^2给出r≥2cosθ，0≤y≤x给出0≤θ≤π/4，x≤2给出r≤2secθ，核心同样是依据多个边界确定极坐标的角度和径向上下限；目标题的圆形不等式属于边界形式的变式。",
+    "stage": "变式检验",
+    "source_hash": "f81a7a3f96367cdc4e57cfb3f0e118b6e900342bdd4e78b85fbd3852b5a02ebc",
+    "target_hash": "2e0c3cdffc07f84996cf45d54c3f514bf5d76dd1e67d385d48dc302451e26b6e"
+  },
+  {
+    "source_id": 17160,
+    "target_id": 12825,
+    "accepted": true,
+    "skill": "构造辅助函数并利用罗尔定理或零点定理证明内点存在",
+    "reason": "对应目标题(I)。原题(I)可比较f(x)与(2-x)e^{x^2}，考查构造差函数并利用端点符号变化证明内点等式；目标题(I)同样构造F(x)=f(x)-2(1-x)，由F(0)=-2、F(1)=1使用介值定理。目标题(II)通过构造x^2f(x)或e^{-x^2}f(x)应用罗尔定理，和原题(I)的端点异号方法无直接对应，故不作为对应依据。",
+    "stage": "同法练习",
+    "source_hash": "25e53833427f63c48dddf6a27ac021405f6258754ba1a4b9c93cbf4084155dc6",
+    "target_hash": "cfa0760473808d88b848abd4522600fae606d9b1bbabe3a4efdd57ed43d0261f"
+  },
+  {
+    "source_id": 17160,
+    "target_id": 12827,
+    "accepted": true,
+    "skill": "构造差函数并用端点异号证明区间内存在目标等式",
+    "reason": "对应目标题(I)。原题(I)中f(1)=0且f(2)>0，而(2-x)e^{x^2}在x=1为正、在x=2为0，构造两者之差即可由端点异号得到内点等式。目标题(I)构造F(x)=f(x)-2(1-x)，同样由F(0)<0、F(1)>0使用介值定理。目标题(II)要求两个不同点的导数乘积关系，并非原题的这一存在性方法。",
+    "stage": "同法练习",
+    "source_hash": "25e53833427f63c48dddf6a27ac021405f6258754ba1a4b9c93cbf4084155dc6",
+    "target_hash": "d99cc367324d9c74ed664c97d9309d1ec7ed73947494bb54326947edb9856227"
+  },
+  {
+    "source_id": 17160,
+    "target_id": 12830,
+    "accepted": true,
+    "skill": "构造两个函数并应用柯西中值定理处理差商之比",
+    "reason": "对应原题(II)。原题由f(2)=∫_1^2e^{t^2}dt以及f(1)=ln1=0，应用柯西中值定理于f(x)和ln x，得到f(2)/ln2=f'(η)/(1/η)=ηe^{η^2}。目标题取u(x)=e^x/x、v(x)=1/x，柯西中值定理给出[u(b)-u(a)]/[v(b)-v(a)]=[ae^b-be^a]/(a-b)=u'(ξ)/v'(ξ)=e^ξ(1-ξ)，核心都是把目标式组织为两个函数的差商之比。",
+    "stage": "变式检验",
+    "source_hash": "25e53833427f63c48dddf6a27ac021405f6258754ba1a4b9c93cbf4084155dc6",
+    "target_hash": "128d72e538e5fa86c5128948c5a1d7fdacffa08f7eeb524ed2dc6f2d8438b9dc"
+  },
+  {
+    "source_id": 17161,
+    "target_id": 13293,
+    "accepted": true,
+    "skill": "由切线三角形与曲边面积的关系建立积分方程并求曲线",
+    "reason": "原题需要由点M处切线与x轴的截距计算三角形面积S_1=y^2/(2y')，并将曲线、垂线和x轴围成的面积写成S_2=∫_0^x y(t)dt，再利用S_2/S_1=3/2建立微分积分关系。目标题同样计算三角形PMT面积y^2/(2y')，计算曲边三角形OPM面积∫_0^x y(t)dt，并利用恒定面积比k求解；只是比例方向和参数取值不同。",
+    "stage": "同法练习",
+    "source_hash": "c4df81752d1ccb5d8ec17659340b801e9f3f482ecd5dd9ba701a01a19c745668",
+    "target_hash": "916389e2ab1a4585ccfc5af341f82f06440afa8aaee4073ce9ec7072c1f77182"
+  },
+  {
+    "source_id": 17161,
+    "target_id": 13292,
+    "accepted": true,
+    "skill": "将切线三角形面积与曲边积分的恒等关系转化为微分方程",
+    "reason": "原题通过切线三角形面积y^2/(2y')与曲边面积∫_0^x y(t)dt的固定比例建立积分—微分关系。目标题中S_1同样由切线截距和垂线得到y^2/(2y')，S_2是∫_0^x y(t)dt，并由2S_1-S_2=1建立相应的微分方程；虽然初值和面积关系不同，但核心建模操作一致。",
+    "stage": "变式检验",
+    "source_hash": "c4df81752d1ccb5d8ec17659340b801e9f3f482ecd5dd9ba701a01a19c745668",
+    "target_hash": "80fd55c74cb35d7c0c31115c40b841b550550d5600c4e4a33384dc22d3836c54"
+  },
+  {
+    "source_id": 17162,
+    "target_id": 13558,
+    "accepted": true,
+    "skill": "通过配方法或合同变换化简二次型并构造变换矩阵",
+    "reason": "目标题第(II)问要求用配方法把二次型化为标准形，能够训练将二次型改写为平方项并据此构造可逆合同变换，这对应原题在已知目标二次型g的条件下求P的核心操作。目标题第(I)问的正交对角化以及原题第(I)问中利用合同关系确定参数a，并非完全相同的要求。",
+    "stage": "同法练习",
+    "source_hash": "b645b2ed43748ea636bb1c662a12a62cb650f731fa618361becd0d2ca3ec4411",
+    "target_hash": "3f2b0797f843f07c3fecb9e5b235564854d3110de52eb3e4bdf392dd465f7bc5"
+  },
+  {
+    "source_id": 17162,
+    "target_id": 13565,
+    "accepted": true,
+    "skill": "利用合同不变量确定参数并构造合同或正交变换矩阵",
+    "reason": "原题先由x=Py对应的合同关系确定二次型矩阵中的参数a，再求满足P^TAP=g的可逆矩阵；目标题第(I)问同样由A与B合同利用秩和惯性指数确定a、b，第(II)问进一步在正交合同条件下确定b和Q。两题都直接训练由合同关系识别秩、正负惯性及特征值条件并构造变换。",
+    "stage": "变式检验",
+    "source_hash": "b645b2ed43748ea636bb1c662a12a62cb650f731fa618361becd0d2ca3ec4411",
+    "target_hash": "d96ec793baaa8663e579240dc60f691e9fa42c05f23a548602e1a678073cd61c"
+  },
+  {
+    "source_id": 17162,
+    "target_id": 13596,
+    "accepted": true,
+    "skill": "构造对称矩阵的合同变换矩阵",
+    "reason": "原题第(II)问要求构造可逆P使一个对称矩阵合同变为给定二次型矩阵；目标题第(I)问直接要求构造C使B合同为单位阵，第(II)问在此基础上构造同一变换同时化简A、B。目标题增加了同时合同约束，但其第(I)问和第(II)问均训练了原题求P时所需的合同变换构造。",
+    "stage": "变式检验",
+    "source_hash": "b645b2ed43748ea636bb1c662a12a62cb650f731fa618361becd0d2ca3ec4411",
+    "target_hash": "20d35d5560dbda6e78f2b2f9369f98203eefb9c499db2fba4efb2b900e25432c"
+  },
+  {
+    "source_id": 17162,
+    "target_id": 13607,
+    "accepted": true,
+    "skill": "利用合同关系的秩惯性条件确定参数并构造变换矩阵",
+    "reason": "原题由二次型矩阵与给定g合同确定a，再求实现合同变换的P；目标题第(I)问由A与B合同确定a，第(II)问在正交合同条件下求b和Q。两题的关键识别都是比较合同保持的秩、惯性或正交合同下的特征值，并据此构造变换。目标题第(III)问关于A+A*的内容不是对应重点。",
+    "stage": "变式检验",
+    "source_hash": "b645b2ed43748ea636bb1c662a12a62cb650f731fa618361becd0d2ca3ec4411",
+    "target_hash": "285b4f822000267dbe25a3e0bf7e9cbd848a80e4d58dc211046c6386aa1bdd93"
+  },
+  {
+    "source_id": 17163,
+    "target_id": 13540,
+    "accepted": true,
+    "skill": "以幂向量组为基并由A^2α的递推关系确定相似矩阵",
+    "reason": "两题第(I)问都利用α不是A的特征向量证明α、Aα线性无关并得到P可逆；第(II)问都把A^2α表示为α、Aα的线性组合，从而由AP的列向量关系直接写出P^{-1}AP，再判断所得二阶矩阵是否可对角化。递推系数不同，但核心操作完全相同。",
+    "stage": "同法练习",
+    "source_hash": "02019f9cdd53b4c046aaf9d0d92d83ebb7413c2c184a745ed8e593a5fed56ad2",
+    "target_hash": "f07f8dab027f98660aaad86c9b2c7f3de315d1e8369abd245f95b8de8ee15d31"
+  },
+  {
+    "source_id": 17163,
+    "target_id": 13520,
+    "accepted": true,
+    "skill": "在幂向量基下由递推关系确定相似矩阵并求其行列式",
+    "reason": "原题第(II)问在基(α,Aα)下由A^2α+ Aα-6α=0确定P^{-1}AP；目标题给定可逆幂向量基(α,Aα,A^2α)，由A^3α+2A^2α=3Aα确定B=P^{-1}AP，再通过相似不变量求|A+E|。目标题是同一逐列建立相似矩阵方法在三阶情形中的变式，原题第(I)问的可逆性证明在目标题中已作为条件给出。",
+    "stage": "变式检验",
+    "source_hash": "02019f9cdd53b4c046aaf9d0d92d83ebb7413c2c184a745ed8e593a5fed56ad2",
+    "target_hash": "a552bda1b8cf051b162f2de52c72a7aa0d45c5122d6148a4f54b741009915dc1"
+  },
+  {
+    "source_id": 17164,
+    "target_id": 12710,
+    "accepted": true,
+    "skill": "通过局部等价或展开确定复合表达式的无穷小阶数",
+    "reason": "原题中的e^{t^3}-1等价于t^3，积分上限为x^2，因此积分为x^8的同阶量，属于比x^7高阶的无穷小；目标题要求分别确定tan x-sin x、根式差和带变量上限积分的首项并排序，其中积分项同样需要先确定被积函数局部阶数再结合上限确定整体阶数。",
+    "stage": "同法练习",
+    "source_hash": "f9b196215b5ba432a291b479e502a94eef148424770dea01593eaa6246dc7549",
+    "target_hash": "011f17d8f82e05b81721d4c48232f3d58e4f1fcd4da1dceaba515e805c5d766e"
+  },
+  {
+    "source_id": 17164,
+    "target_id": 12729,
+    "accepted": true,
+    "skill": "结合被积函数的局部等价和变量上限确定定积分的无穷小阶数",
+    "reason": "原题先由e^{t^3}-1的局部等价确定被积函数阶数，再结合上限x^2确定积分为x^8量；目标题由f(t)/(1-cos t)的极限得到f(t)与t^2同阶，再结合上限sin^2x与积分规则确定整体阶数。两题都直接训练被积函数阶数加变量上限阶数的积分判阶方法。",
+    "stage": "变式检验",
+    "source_hash": "f9b196215b5ba432a291b479e502a94eef148424770dea01593eaa6246dc7549",
+    "target_hash": "73fdd4102cfafc6f59daa9ddba653cdc43599168ac57d167abdfdb3fd4ff358f"
+  },
+  {
+    "source_id": 17166,
+    "target_id": 12820,
+    "accepted": true,
+    "skill": "将几何体积公式对时间求导，建立瞬时变化率关系",
+    "reason": "对应原题的体积变化率小问：都先写出几何体积公式，再对时间求导并代入瞬时数据。目标题用球体公式由体积速率反求半径速率，方向与原题相反；它不涉及原题的表面积小问，也不涉及圆柱半径和高同时变化的乘积求导。",
+    "stage": "变式检验",
+    "source_hash": "5d07d79f1aefc5a8f8178780d3d01a1e89f31d0e51db23fa8246922acf4bd580",
+    "target_hash": "9b694239b594321df3eabb2946bc8222b8138d4b36b6659441cb1e3bbec92631"
+  },
+  {
+    "source_id": 17166,
+    "target_id": 12821,
+    "accepted": true,
+    "skill": "建立几何量与运动参数的关系后对时间求导求相关变化率",
+    "reason": "对应原题体积率和表面积率小问中的相关变化率核心：先把所求几何量表示为随时间变化的参数函数，再用链式法则对时间求导。目标题还需利用9y=4x²消去或联系x、y，并对距离S求导；因此不练习原题圆柱体积、表面积的具体公式及双变量乘积求导，而是检验同一相关变化率方法在曲线运动中的应用。",
+    "stage": "变式检验",
+    "source_hash": "5d07d79f1aefc5a8f8178780d3d01a1e89f31d0e51db23fa8246922acf4bd580",
+    "target_hash": "62bbd3b467ac753400451a9e4c4c5713fba94274fc42c0e82c1ee8d42f496e64"
+  },
+  {
+    "source_id": 17166,
+    "target_id": 12885,
+    "accepted": true,
+    "skill": "利用几何体积关系对时间求导并由体积变化率求液面变化率",
+    "reason": "对应原题的体积变化率小问：目标题圆柱筒部分同样需要由圆柱体积公式对时间求导，求液面高度变化率。区别是目标题圆柱半径固定，且必须先用圆锥相似关系和液体体积守恒得到流入圆柱的体积速率；它不覆盖原题表面积小问及半径、高同时变化的情形。",
+    "stage": "变式检验",
+    "source_hash": "5d07d79f1aefc5a8f8178780d3d01a1e89f31d0e51db23fa8246922acf4bd580",
+    "target_hash": "d67735d20543b28bf7fb3d97a1a3a1b5f2cab41725a99e0d30c85c6db4ae76aa"
+  },
+  {
+    "source_id": 17167,
+    "target_id": 12857,
+    "accepted": true,
+    "skill": "求导定位唯一极值，结合端点趋势和极值符号判断方程根的个数",
+    "reason": "原题中对f(x)=ax-b\\ln x求导，在b>0时由唯一极小点x=b/a并结合两端趋于正无穷判断有两个零点，进一步需满足极小值b[1-\\ln(b/a)]<0，即b>ae。目标题对\\ln x-x/e+k求导，在x=e处取得唯一极大值，且两端均趋于负无穷；因最大值为k>0，所以有两个根。两题均以极值和端点趋势判定根的个数，区别在于原题求参数范围，目标题直接判断根数。",
+    "stage": "同法练习",
+    "source_hash": "a1c4043a38bfe864a3a868eabfb0c1e78002f5a781f7a6e9f63c6105dc92e86f",
+    "target_hash": "739f8d658ce2e12dbb29c077ab04ad04c34c444a683ada204db98c8fd4092b6c"
+  },
+  {
+    "source_id": 17167,
+    "target_id": 12841,
+    "accepted": true,
+    "skill": "利用导数方程的根的个数及辅助函数极值确定参数范围",
+    "reason": "原题要求原函数有两个零点，利用原函数唯一极小值及端点趋势确定参数；目标题先求导，将有两个极值点转化为x\\ln x=a有两个正根，再由x\\ln x在x=1/e处的最小值-1/e及端点趋势得到a\\in(-1/e,0)。目标题把原题对函数零点的分析转用于导函数零点，方法相同但对象和参数条件不同。",
+    "stage": "变式检验",
+    "source_hash": "a1c4043a38bfe864a3a868eabfb0c1e78002f5a781f7a6e9f63c6105dc92e86f",
+    "target_hash": "40de8039d7bc54b4fba1fc7d381fe5f430be30568e7dac178a60d42d7eaeb0f5"
+  },
+  {
+    "source_id": 17168,
+    "target_id": 12888,
+    "accepted": true,
+    "skill": "二阶局部展开并匹配多项式系数",
+    "reason": "原题由sec x在x=0处的二阶泰勒展开确定一次项和二次项系数；目标题要求误差为o(x²)，需先展开ln(1+x)/x，再通过指数函数的复合展开匹配常数、一次项和二次项。二者都以二阶局部展开和系数匹配为核心，目标题增加了复合函数展开。",
+    "stage": "同法练习",
+    "source_hash": "b3909683de8cb1363dd2c03d7e17719a3d670344cbeab3bd4e6ce8addd2a979a",
+    "target_hash": "51971ef9acc123bc6e3bbace9643e3719a437b326091f66b26c36c1caf330639"
+  },
+  {
+    "source_id": 17168,
+    "target_id": 12822,
+    "accepted": true,
+    "skill": "利用二阶局部展开提取二次项系数",
+    "reason": "原题通过函数在展开点处的值及导数确定二阶泰勒多项式系数；目标题利用f(0)、f'(0)、f''(0)写出f(x)=x+x²+o(x²)，再从差商中提取二次项系数。相关核心小问都是利用二阶局部展开确定或提取二次项。",
+    "stage": "变式检验",
+    "source_hash": "b3909683de8cb1363dd2c03d7e17719a3d670344cbeab3bd4e6ce8addd2a979a",
+    "target_hash": "9761c4826c1de9aef5a744818070db21d4add3998da3ff5395a7b24707c79193"
+  },
+  {
+    "source_id": 17170,
+    "target_id": 12945,
+    "accepted": true,
+    "skill": "识别黎曼和并转化为定积分",
+    "reason": "原题要求识别采样点与权重是否构成区间[0,1]上的黎曼和；目标题将对数中的分子、分母同除以n，化为(1/n)Σln[(1+2k/n)/(3-2k/n)]，再按采样点k/n和步长1/n转为定积分，训练相同的识别与转化操作。",
+    "stage": "同法练习",
+    "source_hash": "4c4ab1aa61a6d44caef442d85822b7fec3858eaf91611e9bafc463aa09fbf880",
+    "target_hash": "f676528b852207d1a2aeea843c55ee064b9cde72c7514fcebdc20dbd75daac92"
+  },
+  {
+    "source_id": 17170,
+    "target_id": 12990,
+    "accepted": true,
+    "skill": "整理求和项并识别渐近黎曼和",
+    "reason": "原题的关键是核对求和项的采样点和步长；目标题需将k/(2n²+k)写成(1/n)(k/n)/(2+k/n²)，并将ln[((n+k)/n)^(1/n)]写成(1/n)ln(1+k/n)，随后分别识别为带有渐近权函数的黎曼和。它是在原有识别方法上增加代数整理和n依赖误差处理。",
+    "stage": "变式检验",
+    "source_hash": "4c4ab1aa61a6d44caef442d85822b7fec3858eaf91611e9bafc463aa09fbf880",
+    "target_hash": "c467b39699e46dc961c4a907b1469c702e8bd53a5ac887911c8c0efc0390480f"
+  },
+  {
+    "source_id": 17170,
+    "target_id": 13028,
+    "accepted": true,
+    "skill": "控制权重扰动并识别黎曼和",
+    "reason": "原题考查区间划分、采样点和权重是否准确匹配定积分；目标题通项可写为(1/n)·2^(k/n)/(1+1/(nk))，其中附加因子在所有k=1,...,n上趋于1，因此需先控制该权重扰动，再按采样点k/n和步长1/n识别黎曼和。",
+    "stage": "变式检验",
+    "source_hash": "4c4ab1aa61a6d44caef442d85822b7fec3858eaf91611e9bafc463aa09fbf880",
+    "target_hash": "9c595e266612c567720fa1414378c433bdf622ed313158e37bb2196ee85e8f72"
+  },
+  {
+    "source_id": 17171,
+    "target_id": 13547,
+    "accepted": true,
+    "skill": "识别线性因子之间的关系，消去依赖项后化二次型标准形并判断惯性",
+    "reason": "原题中令l1=x1+x2、l2=x2+x3、l3=x3-x1，有l3=l2-l1，从而二次型化为2l1l2，需据此判断秩和正负惯性。目标题中的三个差平方也满足(x1-x2)+(x2-x3)+(x3-x1)=0，需要先消去一个依赖的线性因子，再将秩为2的正半定二次型化为标准形。两题共同训练发现平方线性因子的线性关系并据此降维；区别是原题含负平方项、求惯性指数，目标题为全正平方项、要求标准形系数。",
+    "stage": "变式检验",
+    "source_hash": "69d6059ea2ac56aed899a61acf3264dde4307c296cfca4bafbea404a85d23767",
+    "target_hash": "dd30404a01cd60476a6831bcfd2802560ca99653d194925d9fed44eca279f5c4"
+  },
+  {
+    "source_id": 17171,
+    "target_id": 13567,
+    "accepted": true,
+    "skill": "将含依赖方向的二次型化为两个独立线性因子的乘积，再由乘积判断正负惯性",
+    "reason": "原题利用l3=l2-l1将二次型化为2l1l2，并结合剩余零方向得到正、负惯性指数。目标题可直接写成x2(x1+x3)，取x2和x1+x3为两个独立线性因子，另有一个零方向，再将乘积化为一正一负平方项。因此两题的核心都是通过线性变换把二次型化为双线性乘积后判断惯性；目标题表达更直接。",
+    "stage": "同法练习",
+    "source_hash": "69d6059ea2ac56aed899a61acf3264dde4307c296cfca4bafbea404a85d23767",
+    "target_hash": "3db11fdecc5f71111f8f613f86fbfdc318f59ac249836dc1fa5197a98937ba60"
+  },
+  {
+    "source_id": 17171,
+    "target_id": 13562,
+    "accepted": true,
+    "skill": "识别平方线性因子的线性关系，利用秩亏方向并进一步作二次型对角化",
+    "reason": "目标题第(I)问和第(II)问与原题的相关处在于识别三个线性因子何时存在依赖关系并据此判断零空间和二次型的秩；当a=1时，x1+ax3=(x1+x2)-(x2-x3)，可据此求非零零解并作正交标准形。原题的三个因子也满足x3-x1=(x2+x3)-(x1+x2)，但因含负平方项，f=0还可能来自正负项抵消，不能套用全为平方和时“各项分别为零”的条件。第(III)问是对标准形的规范化延伸。",
+    "stage": "变式检验",
+    "source_hash": "69d6059ea2ac56aed899a61acf3264dde4307c296cfca4bafbea404a85d23767",
+    "target_hash": "d9d73cf5b7234e34bb85bd1dce662bfde1d5a988f4f28031d1a44d90be459ec4"
+  },
+  {
+    "source_id": 17172,
+    "target_id": 13417,
+    "accepted": true,
+    "skill": "把向量组的表示关系转化为齐次方程组解空间的包含或相等关系",
+    "reason": "原题中α1、α2、α3可由β1、β2表示，等价于A=BC，因此Bx=0必推出Ax=0，考查列空间包含与齐次解空间单向包含的对应关系。目标题要求Ax=0与Bx=0同解，需把单向包含提升为双向包含，并用行向量组等价（行空间相等）刻画解空间相等。两题共同训练由向量组空间关系判断齐次方程组解空间关系；区别是原题为列空间包含导致解空间包含，目标题为行空间相等导致解空间相等。",
+    "stage": "变式检验",
+    "source_hash": "51a1d7771d4dec5eb6b4d10b097851b9e9dc22d087fbb6bba7f5863a4def811b",
+    "target_hash": "7c6a88af6d2d5c122b0d13b3277501bfd5110df8b47863f7e4954565659984da"
+  },
+  {
+    "source_id": 17173,
+    "target_id": 13339,
+    "accepted": true,
+    "skill": "辨认左乘重排行、右乘列线性组合及矩阵乘积顺序",
+    "reason": "原题要求选择P、Q使PAQ为对角矩阵，核心是根据左乘和右乘分别进行行变换、列变换。目标题的B由A先左乘P重排行，再右乘Q将第二列与第三列相加，正好得到B=PAQ，直接练习同一乘积顺序和行列变换识别。",
+    "stage": "同法练习",
+    "source_hash": "5bdf1cceed0a40c60627270f1e5e32c42bf50e8461ecda4ebd187ce71cc5fe8a",
+    "target_hash": "5caf4329293e39ea255993ee60261eef965220392e55c07c93181aaa808d2a79"
+  },
+  {
+    "source_id": 17175,
+    "target_id": 12816,
+    "accepted": true,
+    "skill": "参数方程中用dy/dx=(dy/dt)/(dx/dt)，再用d²y/dx²=(d(dy/dx)/dt)/(dx/dt)求二阶导数",
+    "reason": "真题要求在t=0处计算参数方程的二阶导数；练习题要求先求dy/dx，再求d²y/dx²，核心都是按参数t进行两次求导并除以dx/dt。练习题还需注意x'(t)=1-cos t在部分参数点可能为零，而真题在t=0处x'(0)=3，不存在该问题。",
+    "stage": "同法练习",
+    "source_hash": "2b27d78d324a8bf453edb6edd014136544991aaae37cb30533464db776740494",
+    "target_hash": "541d3ad38e784289c7b9e30800240911f667b796409c33c872b49e382f776762"
+  },
+  {
+    "source_id": 17175,
+    "target_id": 12835,
+    "accepted": true,
+    "skill": "参数方程的一阶、二阶导数计算及其符号分析",
+    "reason": "真题的核心是由参数方程计算指定参数点的d²y/dx²；练习题在求凹凸区间和拐点时必须使用同一参数二阶导数公式，求单调区间和极值时还需使用dy/dx。练习题因此将真题的定点计算变为在t≥1上的导数符号分析，属于同一核心操作的综合变式。",
+    "stage": "变式检验",
+    "source_hash": "2b27d78d324a8bf453edb6edd014136544991aaae37cb30533464db776740494",
+    "target_hash": "a97edca0bac3a7612d5a0959aafe3aa4982fdad9977035d549dc27374e2ed1fa"
+  },
+  {
+    "source_id": 17176,
+    "target_id": 13087,
+    "accepted": true,
+    "skill": "由含z(x,y)的隐式方程求z_x并在指定点代入",
+    "reason": "真题要求对(x+1)z+y ln z-arctan(2xy)=1作隐式求导并计算指定点的z_x；练习题同样先由隐式方程确定指定点的z值，再对含z(x,y)的方程求偏导。练习题还要求组成全微分dz，因此比真题多求z_y，但其中的z_x求法与真题直接对应。",
+    "stage": "变式检验",
+    "source_hash": "811d21b8f454a7c12ca637ab27d528181b503562481f07002e373dc8c2adbcbc",
+    "target_hash": "d3f8f4ef98ad735642ad44b8ad68c16246bc11ccf17e317286816d3b1d492ac8"
+  },
+  {
+    "source_id": 17176,
+    "target_id": 13092,
+    "accepted": true,
+    "skill": "隐式方程中对z(x,y)求偏导并在指定点代入",
+    "reason": "真题只需对隐式关系求z_x并代入(0,2)，练习题求全微分dz时也必须分别求z_x和z_y。两题都要先确定指定点对应的z值，再将z视为x、y的函数进行隐式求导；练习题只是把单个偏导扩展为全微分。",
+    "stage": "变式检验",
+    "source_hash": "811d21b8f454a7c12ca637ab27d528181b503562481f07002e373dc8c2adbcbc",
+    "target_hash": "b92eeb607cf9e774ef1b313ae155ad425b4e9310148bf9aaca1f0f4f7c0f6030"
+  },
+  {
+    "source_id": 17177,
+    "target_id": 13155,
+    "accepted": true,
+    "skill": "对含参数上下限的二重积分应用莱布尼茨公式求导",
+    "reason": "真题求f'(π/2)时，需要分别处理外层上限t²和内层上限t随参数变化产生的边界项；补练求f''(1)时，对嵌套积分连续使用同一变上限积分求导法。虽然补练的内层下限为积分变量x且求导阶数更高，但关键仍是识别并处理参数出现在积分边界中的情形。",
+    "stage": "同法练习",
+    "source_hash": "6b7d431ddee978a4ac96c6f76b952af8fc5d0032aca1a48411e16711f034484e",
+    "target_hash": "f82f4ad1a5aa4b7e52dd35728212507b06d79e6903cb995a1986143fc4249be0"
+  },
+  {
+    "source_id": 17178,
+    "target_id": 13251,
+    "accepted": true,
+    "skill": "三阶常系数齐次方程的特征根与实值通解对应",
+    "reason": "真题需由特征方程r³−1=0得到实根1及共轭复根−1/2±(√3/2)i并写出通解；补练则由e^x、cos x、sin x反推出特征根1、i、−i，得到特征多项式(r−1)(r²+1)=r³−r²+r−1，对应选项A。两题分别训练正向和逆向的同一特征根识别方法。",
+    "stage": "变式检验",
+    "source_hash": "b3a5468e7368f6b545aaa1eedd9a9d2ac1012d54a76f414d03fd27da2a8c43d3",
+    "target_hash": "cdb416b8ff7a21a851f41cb4dfd26b903b9103fcdcf13fd014dbc3aee8b1d97a"
+  },
+  {
+    "source_id": 17179,
+    "target_id": 13309,
+    "accepted": true,
+    "skill": "按行列式展开式筛选指定次数的项并计算系数",
+    "reason": "两题都要求求4阶行列式中x³项的系数，核心操作是按排列展开，筛选乘积中恰含3个x因子的项，并结合排列符号与非x元素的系数累加；补练仅改变了含x元素的位置、常数元素和系数。",
+    "stage": "变式检验",
+    "source_hash": "92a0bb19f693aa7bb08d8eba3c5880e47391f83e29ec82b89f58d1e7bb4bc5a6",
+    "target_hash": "f4204166eb96e5a91c8c88bb00a2012883589de223051da4e20d2280a9b973a4"
+  }
+]

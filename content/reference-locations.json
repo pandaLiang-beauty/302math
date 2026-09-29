@@ -1,0 +1,10357 @@
+{
+  "calculus-Q001": {
+    "reference_pages": [
+      3
+    ],
+    "anchor": null
+  },
+  "calculus-Q002": {
+    "reference_pages": [
+      3
+    ],
+    "anchor": {
+      "page": 3,
+      "y": 303.67,
+      "label": "(2)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q003": {
+    "reference_pages": [
+      3
+    ],
+    "anchor": {
+      "page": 3,
+      "y": 504.0,
+      "label": "(3)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q004": {
+    "reference_pages": [
+      3,
+      4
+    ],
+    "anchor": {
+      "page": 3,
+      "y": 645.0,
+      "label": "(4)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q005": {
+    "reference_pages": [
+      4
+    ],
+    "anchor": {
+      "page": 4,
+      "y": 67.67,
+      "label": "(5)D.",
+      "green": 0.873
+    }
+  },
+  "calculus-Q006": {
+    "reference_pages": [
+      4
+    ],
+    "anchor": {
+      "page": 4,
+      "y": 223.67,
+      "label": "(6)C.",
+      "green": 0.893
+    }
+  },
+  "calculus-Q007": {
+    "reference_pages": [
+      4
+    ],
+    "anchor": {
+      "page": 4,
+      "y": 342.33,
+      "label": "(7)B.",
+      "green": 0.883
+    }
+  },
+  "calculus-Q008": {
+    "reference_pages": [
+      4
+    ],
+    "anchor": {
+      "page": 4,
+      "y": 423.67,
+      "label": "(8)D.",
+      "green": 0.866
+    }
+  },
+  "calculus-Q009": {
+    "reference_pages": [
+      4,
+      5
+    ],
+    "anchor": {
+      "page": 4,
+      "y": 594.0,
+      "label": "(9)和A，",
+      "green": 0.868
+    }
+  },
+  "calculus-Q010": {
+    "reference_pages": [
+      5
+    ],
+    "anchor": {
+      "page": 5,
+      "y": 193.0,
+      "label": "(10)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q011": {
+    "reference_pages": [
+      5
+    ],
+    "anchor": {
+      "page": 5,
+      "y": 272.33,
+      "label": "(11)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q012": {
+    "reference_pages": [
+      5
+    ],
+    "anchor": {
+      "page": 5,
+      "y": 417.0,
+      "label": "(12)和A.",
+      "green": 1
+    }
+  },
+  "calculus-Q013": {
+    "reference_pages": [
+      5,
+      6
+    ],
+    "anchor": {
+      "page": 5,
+      "y": 552.33,
+      "label": "(13)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q014": {
+    "reference_pages": [
+      6
+    ],
+    "anchor": {
+      "page": 6,
+      "y": 279.33,
+      "label": "(1)1.",
+      "green": 0.66
+    }
+  },
+  "calculus-Q015": {
+    "reference_pages": [
+      6
+    ],
+    "anchor": {
+      "page": 6,
+      "y": 353.33,
+      "label": "(2)—~.",
+      "green": 0.567
+    }
+  },
+  "calculus-Q016": {
+    "reference_pages": [
+      6
+    ],
+    "anchor": {
+      "page": 6,
+      "y": 400.0,
+      "label": "(3)一2.",
+      "green": 0.883
+    }
+  },
+  "calculus-Q017": {
+    "reference_pages": [
+      6
+    ],
+    "anchor": {
+      "page": 6,
+      "y": 466.33,
+      "label": "(4)P<2,",
+      "green": 0.619
+    }
+  },
+  "calculus-Q018": {
+    "reference_pages": [
+      6
+    ],
+    "anchor": null
+  },
+  "calculus-Q019": {
+    "reference_pages": [
+      6,
+      7
+    ],
+    "anchor": {
+      "page": 6,
+      "y": 652.33,
+      "label": "(6)5.",
+      "green": 0.913
+    }
+  },
+  "calculus-Q020": {
+    "reference_pages": [
+      7
+    ],
+    "anchor": {
+      "page": 7,
+      "y": 272.67,
+      "label": "(1)G3ehf(z).BA",
+      "green": 1
+    }
+  },
+  "calculus-Q021": {
+    "reference_pages": [
+      7,
+      8
+    ],
+    "anchor": {
+      "page": 7,
+      "y": 489.67,
+      "label": "(2)(BCL)lim=-一=lim一二一了一1",
+      "green": 1
+    }
+  },
+  "calculus-Q022": {
+    "reference_pages": [
+      8,
+      9
+    ],
+    "anchor": {
+      "page": 8,
+      "y": 500.33,
+      "label": "(3)9C1)依题意,可得",
+      "green": 0.888
+    }
+  },
+  "calculus-Q023": {
+    "reference_pages": [
+      9
+    ],
+    "anchor": {
+      "page": 9,
+      "y": 326.33,
+      "label": "(4)OBfx)在(0,2r)内的间断点为==SESTTE",
+      "green": 1
+    }
+  },
+  "calculus-Q024": {
+    "reference_pages": [
+      9
+    ],
+    "anchor": {
+      "page": 9,
+      "y": 391.0,
+      "label": "(5)当先求极限得到f(r)的表达式,再讨论fo)bie",
+      "green": 0.996
+    }
+  },
+  "calculus-Q025": {
+    "reference_pages": [
+      9,
+      10
+    ],
+    "anchor": {
+      "page": 9,
+      "y": 583.67,
+      "label": "(1)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q026": {
+    "reference_pages": [
+      10
+    ],
+    "anchor": {
+      "page": 10,
+      "y": 63.67,
+      "label": "(2)A.",
+      "green": 0.864
+    }
+  },
+  "calculus-Q027": {
+    "reference_pages": [
+      10
+    ],
+    "anchor": {
+      "page": 10,
+      "y": 220.67,
+      "label": "(3)D.",
+      "green": 0.853
+    }
+  },
+  "calculus-Q028": {
+    "reference_pages": [
+      10
+    ],
+    "anchor": {
+      "page": 10,
+      "y": 368.0,
+      "label": "(4)C.",
+      "green": 0.9
+    }
+  },
+  "calculus-Q029": {
+    "reference_pages": [
+      10,
+      11
+    ],
+    "anchor": {
+      "page": 10,
+      "y": 597.33,
+      "label": "(5)D.",
+      "green": 0.882
+    }
+  },
+  "calculus-Q030": {
+    "reference_pages": [
+      11
+    ],
+    "anchor": {
+      "page": 11,
+      "y": 148.0,
+      "label": "(6)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q031": {
+    "reference_pages": [
+      11
+    ],
+    "anchor": {
+      "page": 11,
+      "y": 216.0,
+      "label": "(7)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q032": {
+    "reference_pages": [
+      11
+    ],
+    "anchor": {
+      "page": 11,
+      "y": 274.67,
+      "label": "(8)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q033": {
+    "reference_pages": [
+      11,
+      12
+    ],
+    "anchor": {
+      "page": 11,
+      "y": 510.0,
+      "label": "(9)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q034": {
+    "reference_pages": [
+      12
+    ],
+    "anchor": {
+      "page": 12,
+      "y": 64.67,
+      "label": "(10)D.",
+      "green": 0.87
+    }
+  },
+  "calculus-Q035": {
+    "reference_pages": [
+      12
+    ],
+    "anchor": {
+      "page": 12,
+      "y": 148.33,
+      "label": "(11)B.",
+      "green": 0.831
+    }
+  },
+  "calculus-Q036": {
+    "reference_pages": [
+      12
+    ],
+    "anchor": {
+      "page": 12,
+      "y": 236.67,
+      "label": "(12)和A.",
+      "green": 0.851
+    }
+  },
+  "calculus-Q037": {
+    "reference_pages": [
+      12
+    ],
+    "anchor": null
+  },
+  "calculus-Q038": {
+    "reference_pages": [
+      12,
+      13
+    ],
+    "anchor": {
+      "page": 12,
+      "y": 631.33,
+      "label": "(14)B.",
+      "green": 0.864
+    }
+  },
+  "calculus-Q039": {
+    "reference_pages": [
+      13
+    ],
+    "anchor": {
+      "page": 13,
+      "y": 94.67,
+      "label": "(15)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q040": {
+    "reference_pages": [
+      13
+    ],
+    "anchor": {
+      "page": 13,
+      "y": 306.67,
+      "label": "(16)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q041": {
+    "reference_pages": [
+      13,
+      14
+    ],
+    "anchor": {
+      "page": 13,
+      "y": 645.67,
+      "label": "(17)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q042": {
+    "reference_pages": [
+      14
+    ],
+    "anchor": {
+      "page": 14,
+      "y": 147.67,
+      "label": "(18)C,",
+      "green": 0.875
+    }
+  },
+  "calculus-Q043": {
+    "reference_pages": [
+      14,
+      15
+    ],
+    "anchor": {
+      "page": 14,
+      "y": 372.0,
+      "label": "(19)A.",
+      "green": 0.858
+    }
+  },
+  "calculus-Q044": {
+    "reference_pages": [
+      15
+    ],
+    "anchor": {
+      "page": 15,
+      "y": 85.0,
+      "label": "(1)5.",
+      "green": 0.768
+    }
+  },
+  "calculus-Q045": {
+    "reference_pages": [
+      15
+    ],
+    "anchor": {
+      "page": 15,
+      "y": 200.0,
+      "label": "(2)—12.",
+      "green": 1
+    }
+  },
+  "calculus-Q046": {
+    "reference_pages": [
+      15
+    ],
+    "anchor": {
+      "page": 15,
+      "y": 423.67,
+      "label": "(3)6.",
+      "green": 0.751
+    }
+  },
+  "calculus-Q047": {
+    "reference_pages": [
+      15,
+      16
+    ],
+    "anchor": {
+      "page": 15,
+      "y": 561.67,
+      "label": "(4)Ae’.",
+      "green": 1
+    }
+  },
+  "calculus-Q048": {
+    "reference_pages": [
+      16
+    ],
+    "anchor": {
+      "page": 16,
+      "y": 71.0,
+      "label": "(5)+e!)?一",
+      "green": 0.762
+    }
+  },
+  "calculus-Q049": {
+    "reference_pages": [
+      16
+    ],
+    "anchor": null
+  },
+  "calculus-Q050": {
+    "reference_pages": [
+      16
+    ],
+    "anchor": {
+      "page": 16,
+      "y": 328.0,
+      "label": "(7)aq'.",
+      "green": 0.592
+    }
+  },
+  "calculus-Q051": {
+    "reference_pages": [
+      16,
+      17
+    ],
+    "anchor": {
+      "page": 16,
+      "y": 577.33,
+      "label": "(8)—1,0.",
+      "green": 0.927
+    }
+  },
+  "calculus-Q052": {
+    "reference_pages": [
+      16,
+      17
+    ],
+    "anchor": null
+  },
+  "calculus-Q053": {
+    "reference_pages": [
+      17
+    ],
+    "anchor": {
+      "page": 17,
+      "y": 317.67,
+      "label": "(10)V2.",
+      "green": 1
+    }
+  },
+  "calculus-Q054": {
+    "reference_pages": [
+      17
+    ],
+    "anchor": {
+      "page": 17,
+      "y": 505.67,
+      "label": "(11)0.",
+      "green": 0.84
+    }
+  },
+  "calculus-Q055": {
+    "reference_pages": [
+      17,
+      18
+    ],
+    "anchor": {
+      "page": 17,
+      "y": 639.67,
+      "label": "(12)1.",
+      "green": 0.903
+    }
+  },
+  "calculus-Q056": {
+    "reference_pages": [
+      18
+    ],
+    "anchor": {
+      "page": 18,
+      "y": 225.0,
+      "label": "(13)",
+      "green": 0.93
+    }
+  },
+  "calculus-Q057": {
+    "reference_pages": [
+      18
+    ],
+    "anchor": {
+      "page": 18,
+      "y": 396.0,
+      "label": "(1)OB考虑数列{|a,|),有lim-2=|4|一1,由极限保号性,知存在充分大的正整数N,使得",
+      "green": 0.969
+    }
+  },
+  "calculus-Q058": {
+    "reference_pages": [
+      18
+    ],
+    "anchor": {
+      "page": 18,
+      "y": 529.33,
+      "label": "(2)GBvnRREATAw,=22Dhee2iG",
+      "green": 0.942
+    }
+  },
+  "calculus-Q059": {
+    "reference_pages": [
+      18,
+      19,
+      20
+    ],
+    "anchor": {
+      "page": 18,
+      "y": 652.0,
+      "label": "(3)BCL)tae=Gry2)AE=",
+      "green": 0.968
+    }
+  },
+  "calculus-Q060": {
+    "reference_pages": [
+      18,
+      19,
+      20
+    ],
+    "anchor": null
+  },
+  "calculus-Q061": {
+    "reference_pages": [
+      20
+    ],
+    "anchor": {
+      "page": 20,
+      "y": 67.0,
+      "label": "(5)国一1一3°一0),所求极限为L,由治必达法则,有",
+      "green": 0.926
+    }
+  },
+  "calculus-Q062": {
+    "reference_pages": [
+      20
+    ],
+    "anchor": {
+      "page": 20,
+      "y": 186.0,
+      "label": "(6)34xcof}.1—eF~—sit",
+      "green": 0.935
+    }
+  },
+  "calculus-Q063": {
+    "reference_pages": [
+      20,
+      21
+    ],
+    "anchor": {
+      "page": 20,
+      "y": 590.67,
+      "label": "(7)GB由洛必达法则,有",
+      "green": 0.941
+    }
+  },
+  "calculus-Q064": {
+    "reference_pages": [
+      21
+    ],
+    "anchor": {
+      "page": 21,
+      "y": 161.0,
+      "label": "(8)(B==0,0",
+      "green": 1
+    }
+  },
+  "calculus-Q065": {
+    "reference_pages": [
+      21,
+      22
+    ],
+    "anchor": {
+      "page": 21,
+      "y": 476.33,
+      "label": "(9)GB由拉格朗日中值定理,有",
+      "green": 1
+    }
+  },
+  "calculus-Q066": {
+    "reference_pages": [
+      22
+    ],
+    "anchor": {
+      "page": 22,
+      "y": 117.67,
+      "label": "(10)GB依题意,有",
+      "green": 0.932
+    }
+  },
+  "calculus-Q067": {
+    "reference_pages": [
+      22,
+      23
+    ],
+    "anchor": {
+      "page": 22,
+      "y": 224.0,
+      "label": "(11)(BCL)由洛必达法则,有",
+      "green": 0.933
+    }
+  },
+  "calculus-Q068": {
+    "reference_pages": [
+      23
+    ],
+    "anchor": {
+      "page": 23,
+      "y": 65.67,
+      "label": "(12)图C1)显然,z,>0有下界.又snz<zGz之0),故zi=sinzs<zu*即{(z,)单调递减，",
+      "green": 1
+    }
+  },
+  "calculus-Q069": {
+    "reference_pages": [
+      23
+    ],
+    "anchor": {
+      "page": 23,
+      "y": 189.0,
+      "label": "(13)(IHt24,=In(e\"*—1)—Inz,=In“一Lgeinh二生二",
+      "green": 1
+    }
+  },
+  "calculus-Q070": {
+    "reference_pages": [
+      23,
+      24
+    ],
+    "anchor": {
+      "page": 23,
+      "y": 396.0,
+      "label": "(14)(3C1)原极限一lim",
+      "green": 1
+    }
+  },
+  "calculus-Q071": {
+    "reference_pages": [
+      24
+    ],
+    "anchor": {
+      "page": 24,
+      "y": 202.33,
+      "label": "(15)(工)由已知im一一玛'利用极限和无穷小的关系,有",
+      "green": 0.897
+    }
+  },
+  "calculus-Q072": {
+    "reference_pages": [
+      24,
+      25
+    ],
+    "anchor": {
+      "page": 24,
+      "y": 595.33,
+      "label": "(16)(3依题意,{z,)是正项数列,由已知",
+      "green": 0.961
+    }
+  },
+  "calculus-Q073": {
+    "reference_pages": [
+      25
+    ],
+    "anchor": {
+      "page": 25,
+      "y": 240.0,
+      "label": "(17)回(I)在[0,1]上,sinz二0,sinz>0,4k6,=|sin'xdx>0.4",
+      "green": 1
+    }
+  },
+  "calculus-Q074": {
+    "reference_pages": [
+      25,
+      26,
+      27
+    ],
+    "anchor": {
+      "page": 25,
+      "y": 538.0,
+      "label": "(1)BCL)thy€Gapore(-4.4),知",
+      "green": 1
+    }
+  },
+  "calculus-Q075": {
+    "reference_pages": [
+      25,
+      26,
+      27
+    ],
+    "anchor": null
+  },
+  "calculus-Q076": {
+    "reference_pages": [
+      27,
+      28
+    ],
+    "anchor": {
+      "page": 27,
+      "y": 328.67,
+      "label": "(3)@3(1)hf.)=2\"—cosx,F",
+      "green": 1
+    }
+  },
+  "calculus-Q077": {
+    "reference_pages": [
+      28,
+      29
+    ],
+    "anchor": {
+      "page": 28,
+      "y": 78.33,
+      "label": "(4)BL)4fr)=z一mnG+z)一zz之0则",
+      "green": 0.912
+    }
+  },
+  "calculus-Q078": {
+    "reference_pages": [
+      29
+    ],
+    "anchor": {
+      "page": 29,
+      "y": 181.0,
+      "label": "(1)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q079": {
+    "reference_pages": [
+      29
+    ],
+    "anchor": {
+      "page": 29,
+      "y": 365.67,
+      "label": "(2)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q080": {
+    "reference_pages": [
+      29
+    ],
+    "anchor": {
+      "page": 29,
+      "y": 460.0,
+      "label": "(3)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q081": {
+    "reference_pages": [
+      29,
+      30
+    ],
+    "anchor": {
+      "page": 29,
+      "y": 562.0,
+      "label": "(4)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q082": {
+    "reference_pages": [
+      30
+    ],
+    "anchor": {
+      "page": 30,
+      "y": 242.67,
+      "label": "(5)B.",
+      "green": 0.929
+    }
+  },
+  "calculus-Q083": {
+    "reference_pages": [
+      30
+    ],
+    "anchor": {
+      "page": 30,
+      "y": 299.33,
+      "label": "(6)D.",
+      "green": 0.925
+    }
+  },
+  "calculus-Q084": {
+    "reference_pages": [
+      30
+    ],
+    "anchor": {
+      "page": 30,
+      "y": 420.67,
+      "label": "(7)B.",
+      "green": 0.934
+    }
+  },
+  "calculus-Q085": {
+    "reference_pages": [
+      30
+    ],
+    "anchor": {
+      "page": 30,
+      "y": 472.33,
+      "label": "(8)C,",
+      "green": 0.936
+    }
+  },
+  "calculus-Q086": {
+    "reference_pages": [
+      30
+    ],
+    "anchor": {
+      "page": 30,
+      "y": 529.0,
+      "label": "(9)C,",
+      "green": 0.929
+    }
+  },
+  "calculus-Q087": {
+    "reference_pages": [
+      30,
+      31
+    ],
+    "anchor": {
+      "page": 30,
+      "y": 647.33,
+      "label": "(10)C,",
+      "green": 0.962
+    }
+  },
+  "calculus-Q088": {
+    "reference_pages": [
+      31
+    ],
+    "anchor": {
+      "page": 31,
+      "y": 170.33,
+      "label": "(11)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q089": {
+    "reference_pages": [
+      31
+    ],
+    "anchor": {
+      "page": 31,
+      "y": 241.33,
+      "label": "(12)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q090": {
+    "reference_pages": [
+      31
+    ],
+    "anchor": {
+      "page": 31,
+      "y": 374.67,
+      "label": "(13)C",
+      "green": 1
+    }
+  },
+  "calculus-Q091": {
+    "reference_pages": [
+      31,
+      32
+    ],
+    "anchor": {
+      "page": 31,
+      "y": 482.33,
+      "label": "(14)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q092": {
+    "reference_pages": [
+      32
+    ],
+    "anchor": {
+      "page": 32,
+      "y": 219.33,
+      "label": "(15)和A.",
+      "green": 0.827
+    }
+  },
+  "calculus-Q093": {
+    "reference_pages": [
+      32
+    ],
+    "anchor": {
+      "page": 32,
+      "y": 322.0,
+      "label": "(16)C.",
+      "green": 0.864
+    }
+  },
+  "calculus-Q094": {
+    "reference_pages": [
+      32
+    ],
+    "anchor": {
+      "page": 32,
+      "y": 445.67,
+      "label": "(17)C.",
+      "green": 0.907
+    }
+  },
+  "calculus-Q095": {
+    "reference_pages": [
+      32,
+      33
+    ],
+    "anchor": {
+      "page": 32,
+      "y": 553.0,
+      "label": "(18)B，",
+      "green": 0.879
+    }
+  },
+  "calculus-Q096": {
+    "reference_pages": [
+      33
+    ],
+    "anchor": {
+      "page": 33,
+      "y": 61.33,
+      "label": "(19)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q097": {
+    "reference_pages": [
+      33
+    ],
+    "anchor": {
+      "page": 33,
+      "y": 182.0,
+      "label": "(20)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q098": {
+    "reference_pages": [
+      33
+    ],
+    "anchor": null
+  },
+  "calculus-Q099": {
+    "reference_pages": [
+      33,
+      34
+    ],
+    "anchor": {
+      "page": 33,
+      "y": 667.33,
+      "label": "(22)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q100": {
+    "reference_pages": [
+      34
+    ],
+    "anchor": {
+      "page": 34,
+      "y": 227.33,
+      "label": "(23)D.",
+      "green": 0.87
+    }
+  },
+  "calculus-Q101": {
+    "reference_pages": [
+      34,
+      35
+    ],
+    "anchor": {
+      "page": 34,
+      "y": 508.0,
+      "label": "(24)C.",
+      "green": 0.846
+    }
+  },
+  "calculus-Q102": {
+    "reference_pages": [
+      35
+    ],
+    "anchor": {
+      "page": 35,
+      "y": 90.67,
+      "label": "(1)—1.5.",
+      "green": 1
+    }
+  },
+  "calculus-Q103": {
+    "reference_pages": [
+      35
+    ],
+    "anchor": {
+      "page": 35,
+      "y": 279.33,
+      "label": "(2)1.",
+      "green": 0.852
+    }
+  },
+  "calculus-Q104": {
+    "reference_pages": [
+      35
+    ],
+    "anchor": {
+      "page": 35,
+      "y": 370.0,
+      "label": "(3)1.",
+      "green": 0.798
+    }
+  },
+  "calculus-Q105": {
+    "reference_pages": [
+      35,
+      36
+    ],
+    "anchor": {
+      "page": 35,
+      "y": 621.0,
+      "label": "(4)3.",
+      "green": 0.799
+    }
+  },
+  "calculus-Q106": {
+    "reference_pages": [
+      36
+    ],
+    "anchor": {
+      "page": 36,
+      "y": 166.0,
+      "label": "(5)f(a)=-14+2x4十oCz).",
+      "green": 0.936
+    }
+  },
+  "calculus-Q107": {
+    "reference_pages": [
+      36
+    ],
+    "anchor": {
+      "page": 36,
+      "y": 290.33,
+      "label": "(6)2.",
+      "green": 0.703
+    }
+  },
+  "calculus-Q108": {
+    "reference_pages": [
+      36
+    ],
+    "anchor": null
+  },
+  "calculus-Q109": {
+    "reference_pages": [
+      36
+    ],
+    "anchor": null
+  },
+  "calculus-Q110": {
+    "reference_pages": [
+      36,
+      37
+    ],
+    "anchor": {
+      "page": 36,
+      "y": 601.33,
+      "label": "(9)3.",
+      "green": 0.737
+    }
+  },
+  "calculus-Q111": {
+    "reference_pages": [
+      37
+    ],
+    "anchor": {
+      "page": 37,
+      "y": 150.0,
+      "label": "(10)/z,2).",
+      "green": 0.794
+    }
+  },
+  "calculus-Q112": {
+    "reference_pages": [
+      37
+    ],
+    "anchor": {
+      "page": 37,
+      "y": 232.67,
+      "label": "(11)e.",
+      "green": 0.851
+    }
+  },
+  "calculus-Q113": {
+    "reference_pages": [
+      37
+    ],
+    "anchor": {
+      "page": 37,
+      "y": 320.67,
+      "label": "(12)1+e\"",
+      "green": 1
+    }
+  },
+  "calculus-Q114": {
+    "reference_pages": [
+      37
+    ],
+    "anchor": {
+      "page": 37,
+      "y": 484.33,
+      "label": "(13)+.",
+      "green": 1
+    }
+  },
+  "calculus-Q115": {
+    "reference_pages": [
+      37,
+      38
+    ],
+    "anchor": {
+      "page": 37,
+      "y": 636.0,
+      "label": "(14)一991.",
+      "green": 0.954
+    }
+  },
+  "calculus-Q116": {
+    "reference_pages": [
+      38
+    ],
+    "anchor": {
+      "page": 38,
+      "y": 146.67,
+      "label": "(15)区",
+      "green": 0.854
+    }
+  },
+  "calculus-Q117": {
+    "reference_pages": [
+      38
+    ],
+    "anchor": {
+      "page": 38,
+      "y": 192.33,
+      "label": "(16)一9.",
+      "green": 0.728
+    }
+  },
+  "calculus-Q118": {
+    "reference_pages": [
+      38
+    ],
+    "anchor": {
+      "page": 38,
+      "y": 372.33,
+      "label": "(17)—2.",
+      "green": 0.869
+    }
+  },
+  "calculus-Q119": {
+    "reference_pages": [
+      38,
+      39
+    ],
+    "anchor": {
+      "page": 38,
+      "y": 442.67,
+      "label": "(18)y=22-4,",
+      "green": 0.745
+    }
+  },
+  "calculus-Q120": {
+    "reference_pages": [
+      39
+    ],
+    "anchor": {
+      "page": 39,
+      "y": 129.33,
+      "label": "(19)2.",
+      "green": 0.822
+    }
+  },
+  "calculus-Q121": {
+    "reference_pages": [
+      39
+    ],
+    "anchor": {
+      "page": 39,
+      "y": 166.33,
+      "label": "(20)3a°",
+      "green": 1
+    }
+  },
+  "calculus-Q122": {
+    "reference_pages": [
+      39
+    ],
+    "anchor": {
+      "page": 39,
+      "y": 347.0,
+      "label": "(21)+.",
+      "green": 1
+    }
+  },
+  "calculus-Q123": {
+    "reference_pages": [
+      39,
+      40
+    ],
+    "anchor": {
+      "page": 39,
+      "y": 466.33,
+      "label": "(22)2*+(y+>)ari",
+      "green": 0.835
+    }
+  },
+  "calculus-Q124": {
+    "reference_pages": [
+      40
+    ],
+    "anchor": {
+      "page": 40,
+      "y": 131.0,
+      "label": "(23)2.",
+      "green": 0.639
+    }
+  },
+  "calculus-Q125": {
+    "reference_pages": [
+      40
+    ],
+    "anchor": {
+      "page": 40,
+      "y": 303.0,
+      "label": "(24)e\"+1.",
+      "green": 0.697
+    }
+  },
+  "calculus-Q126": {
+    "reference_pages": [
+      40
+    ],
+    "anchor": null
+  },
+  "calculus-Q127": {
+    "reference_pages": [
+      40,
+      41
+    ],
+    "anchor": {
+      "page": 40,
+      "y": 558.0,
+      "label": "(26)2ty+4=0,",
+      "green": 0.763
+    }
+  },
+  "calculus-Q128": {
+    "reference_pages": [
+      41
+    ],
+    "anchor": {
+      "page": 41,
+      "y": 109.67,
+      "label": "(27)1.",
+      "green": 0.869
+    }
+  },
+  "calculus-Q129": {
+    "reference_pages": [
+      41
+    ],
+    "anchor": null
+  },
+  "calculus-Q130": {
+    "reference_pages": [
+      41,
+      42
+    ],
+    "anchor": {
+      "page": 41,
+      "y": 615.0,
+      "label": "(2)HBC1)Bote.AIn|y|=ln(1十z?)sinz.两边同时对xzORS",
+      "green": 1
+    }
+  },
+  "calculus-Q131": {
+    "reference_pages": [
+      42
+    ],
+    "anchor": {
+      "page": 42,
+      "y": 173.0,
+      "label": "(3)(L)dy一9(arctan-)。d(arctan=)=o(arctan7).1a(4)\"2):d(—)",
+      "green": 0.824
+    }
+  },
+  "calculus-Q132": {
+    "reference_pages": [
+      42
+    ],
+    "anchor": {
+      "page": 42,
+      "y": 343.67,
+      "label": "(4)C25AAYMeABIna?+y’)=arctan=FEXT2REG",
+      "green": 0.849
+    }
+  },
+  "calculus-Q133": {
+    "reference_pages": [
+      42
+    ],
+    "anchor": {
+      "page": 42,
+      "y": 474.0,
+      "label": "(5)(B由题设可得",
+      "green": 0.827
+    }
+  },
+  "calculus-Q134": {
+    "reference_pages": [
+      42,
+      43
+    ],
+    "anchor": {
+      "page": 42,
+      "y": 544.0,
+      "label": "(6)BRE,先将极坐标化为参数方和",
+      "green": 0.85
+    }
+  },
+  "calculus-Q135": {
+    "reference_pages": [
+      43
+    ],
+    "anchor": {
+      "page": 43,
+      "y": 64.67,
+      "label": "(7)84x=y=1,8f(zy)=f(z)+f(y)AIF)=0.",
+      "green": 1
+    }
+  },
+  "calculus-Q136": {
+    "reference_pages": [
+      43
+    ],
+    "anchor": {
+      "page": 43,
+      "y": 246.33,
+      "label": "(8)GB依题设,有",
+      "green": 1
+    }
+  },
+  "calculus-Q137": {
+    "reference_pages": [
+      43
+    ],
+    "anchor": {
+      "page": 43,
+      "y": 431.0,
+      "label": "(9)GBWFAAFEALHOI0JE-EL2时刻气球体积为V=V0),半径为>=re).",
+      "green": 1
+    }
+  },
+  "calculus-Q138": {
+    "reference_pages": [
+      43,
+      44
+    ],
+    "anchor": {
+      "page": 43,
+      "y": 582.33,
+      "label": "(10)转由题设知,若设点的坐标为(zy),则时一30",
+      "green": 1
+    }
+  },
+  "calculus-Q139": {
+    "reference_pages": [
+      43,
+      44
+    ],
+    "anchor": null
+  },
+  "calculus-Q140": {
+    "reference_pages": [
+      44
+    ],
+    "anchor": {
+      "page": 44,
+      "y": 283.67,
+      "label": "(12)(13由limOAT222一1,根据极限与无穷小的关系,有",
+      "green": 0.775
+    }
+  },
+  "calculus-Q141": {
+    "reference_pages": [
+      44,
+      45
+    ],
+    "anchor": {
+      "page": 44,
+      "y": 579.33,
+      "label": "(13)加timC2)=limfor)=1=FO,知fxz)在zx一0处连续,故.Fz)在[一1,1]上连续.",
+      "green": 0.877
+    }
+  },
+  "calculus-Q142": {
+    "reference_pages": [
+      45
+    ],
+    "anchor": {
+      "page": 45,
+      "y": 158.33,
+      "label": "(14)§BC1)FF)=2'f(x),WAF@)=FO)=0.HERE,BDEEEEC(a,b),",
+      "green": 1
+    }
+  },
+  "calculus-Q143": {
+    "reference_pages": [
+      45
+    ],
+    "anchor": {
+      "page": 45,
+      "y": 221.33,
+      "label": "(15)(SAPfe)不恒等于z,可知存在zwE(0,1),使得f(r)Axo.",
+      "green": 1
+    }
+  },
+  "calculus-Q144": {
+    "reference_pages": [
+      45
+    ],
+    "anchor": null
+  },
+  "calculus-Q145": {
+    "reference_pages": [
+      45,
+      46
+    ],
+    "anchor": {
+      "page": 45,
+      "y": 465.0,
+      "label": "(17)G3由fe)在(0,1)内取得最小值,知存在一点zwE(0,1),使得fro)为FGz)在(0,1)上的",
+      "green": 1
+    }
+  },
+  "calculus-Q146": {
+    "reference_pages": [
+      45,
+      46
+    ],
+    "anchor": null
+  },
+  "calculus-Q147": {
+    "reference_pages": [
+      45,
+      46
+    ],
+    "anchor": null
+  },
+  "calculus-Q148": {
+    "reference_pages": [
+      46,
+      47
+    ],
+    "anchor": {
+      "page": 46,
+      "y": 254.0,
+      "label": "(20)图C1)只需证二>元,0去z<aMAT.f(x)=一元,则",
+      "green": 0.884
+    }
+  },
+  "calculus-Q149": {
+    "reference_pages": [
+      47
+    ],
+    "anchor": {
+      "page": 47,
+      "y": 146.67,
+      "label": "(21)图所证不等式(1十元)(1十二)>两边同时取对数,得",
+      "green": 1
+    }
+  },
+  "calculus-Q150": {
+    "reference_pages": [
+      47,
+      48
+    ],
+    "anchor": {
+      "page": 47,
+      "y": 347.33,
+      "label": "(22)By’=EAaAy’=0,f82=020=一1.",
+      "green": 1
+    }
+  },
+  "calculus-Q151": {
+    "reference_pages": [
+      48
+    ],
+    "anchor": {
+      "page": 48,
+      "y": 62.67,
+      "label": "(23)(3依题设,有",
+      "green": 0.765
+    }
+  },
+  "calculus-Q152": {
+    "reference_pages": [
+      48
+    ],
+    "anchor": {
+      "page": 48,
+      "y": 267.33,
+      "label": "(24)图依题设,有",
+      "green": 0.849
+    }
+  },
+  "calculus-Q153": {
+    "reference_pages": [
+      48,
+      49
+    ],
+    "anchor": {
+      "page": 48,
+      "y": 557.0,
+      "label": "(25)(18由参数方程求导法,有",
+      "green": 0.831
+    }
+  },
+  "calculus-Q154": {
+    "reference_pages": [
+      49
+    ],
+    "anchor": {
+      "page": 49,
+      "y": 254.0,
+      "label": "(26)(BDawy=Inxety’=1,5\"=MRE",
+      "green": 1
+    }
+  },
+  "calculus-Q155": {
+    "reference_pages": [
+      49
+    ],
+    "anchor": {
+      "page": 49,
+      "y": 398.33,
+      "label": "(27)首先计算出|VI一cos2xdr=[sinadr=2/2,",
+      "green": 1
+    }
+  },
+  "calculus-Q156": {
+    "reference_pages": [
+      49
+    ],
+    "anchor": null
+  },
+  "calculus-Q157": {
+    "reference_pages": [
+      49,
+      50
+    ],
+    "anchor": {
+      "page": 49,
+      "y": 644.0,
+      "label": "(2)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q158": {
+    "reference_pages": [
+      49,
+      50
+    ],
+    "anchor": null
+  },
+  "calculus-Q159": {
+    "reference_pages": [
+      49,
+      50
+    ],
+    "anchor": null
+  },
+  "calculus-Q160": {
+    "reference_pages": [
+      50,
+      51
+    ],
+    "anchor": {
+      "page": 50,
+      "y": 494.67,
+      "label": "(5)D.",
+      "green": 0.877
+    }
+  },
+  "calculus-Q161": {
+    "reference_pages": [
+      50,
+      51
+    ],
+    "anchor": null
+  },
+  "calculus-Q162": {
+    "reference_pages": [
+      51
+    ],
+    "anchor": {
+      "page": 51,
+      "y": 215.0,
+      "label": "(7)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q163": {
+    "reference_pages": [
+      51,
+      52
+    ],
+    "anchor": {
+      "page": 51,
+      "y": 584.67,
+      "label": "(8)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q164": {
+    "reference_pages": [
+      51,
+      52
+    ],
+    "anchor": null
+  },
+  "calculus-Q165": {
+    "reference_pages": [
+      52,
+      53
+    ],
+    "anchor": {
+      "page": 52,
+      "y": 646.33,
+      "label": "(10)D.",
+      "green": 0.9
+    }
+  },
+  "calculus-Q166": {
+    "reference_pages": [
+      53,
+      54
+    ],
+    "anchor": {
+      "page": 53,
+      "y": 457.0,
+      "label": "(11)B.",
+      "green": 0.658
+    }
+  },
+  "calculus-Q167": {
+    "reference_pages": [
+      53,
+      54
+    ],
+    "anchor": null
+  },
+  "calculus-Q168": {
+    "reference_pages": [
+      54
+    ],
+    "anchor": {
+      "page": 54,
+      "y": 266.33,
+      "label": "(13)B.",
+      "green": 0.832
+    }
+  },
+  "calculus-Q169": {
+    "reference_pages": [
+      54
+    ],
+    "anchor": {
+      "page": 54,
+      "y": 413.67,
+      "label": "(14)B.",
+      "green": 0.854
+    }
+  },
+  "calculus-Q170": {
+    "reference_pages": [
+      54
+    ],
+    "anchor": {
+      "page": 54,
+      "y": 511.0,
+      "label": "(15)C.",
+      "green": 0.894
+    }
+  },
+  "calculus-Q171": {
+    "reference_pages": [
+      54,
+      55
+    ],
+    "anchor": {
+      "page": 54,
+      "y": 623.33,
+      "label": "(16)D.",
+      "green": 0.854
+    }
+  },
+  "calculus-Q172": {
+    "reference_pages": [
+      55
+    ],
+    "anchor": {
+      "page": 55,
+      "y": 253.67,
+      "label": "(17)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q173": {
+    "reference_pages": [
+      55
+    ],
+    "anchor": {
+      "page": 55,
+      "y": 402.67,
+      "label": "(18)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q174": {
+    "reference_pages": [
+      55
+    ],
+    "anchor": {
+      "page": 55,
+      "y": 477.0,
+      "label": "(19)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q175": {
+    "reference_pages": [
+      55,
+      56
+    ],
+    "anchor": {
+      "page": 55,
+      "y": 555.67,
+      "label": "(20)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q176": {
+    "reference_pages": [
+      56
+    ],
+    "anchor": {
+      "page": 56,
+      "y": 92.33,
+      "label": "(21)B.",
+      "green": 0.867
+    }
+  },
+  "calculus-Q177": {
+    "reference_pages": [
+      56
+    ],
+    "anchor": {
+      "page": 56,
+      "y": 343.33,
+      "label": "(22)D.",
+      "green": 0.852
+    }
+  },
+  "calculus-Q178": {
+    "reference_pages": [
+      56
+    ],
+    "anchor": {
+      "page": 56,
+      "y": 475.33,
+      "label": "(23)C.",
+      "green": 0.855
+    }
+  },
+  "calculus-Q179": {
+    "reference_pages": [
+      56,
+      57
+    ],
+    "anchor": {
+      "page": 56,
+      "y": 559.67,
+      "label": "(24)C.",
+      "green": 0.852
+    }
+  },
+  "calculus-Q180": {
+    "reference_pages": [
+      57
+    ],
+    "anchor": {
+      "page": 57,
+      "y": 82.33,
+      "label": "(25)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q181": {
+    "reference_pages": [
+      57
+    ],
+    "anchor": {
+      "page": 57,
+      "y": 286.0,
+      "label": "(26)C,",
+      "green": 1
+    }
+  },
+  "calculus-Q182": {
+    "reference_pages": [
+      57,
+      58
+    ],
+    "anchor": {
+      "page": 57,
+      "y": 654.33,
+      "label": "(27)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q183": {
+    "reference_pages": [
+      58
+    ],
+    "anchor": {
+      "page": 58,
+      "y": 247.67,
+      "label": "(28)D.",
+      "green": 0.883
+    }
+  },
+  "calculus-Q184": {
+    "reference_pages": [
+      58
+    ],
+    "anchor": {
+      "page": 58,
+      "y": 421.67,
+      "label": "(29)A,",
+      "green": 0.895
+    }
+  },
+  "calculus-Q185": {
+    "reference_pages": [
+      58,
+      59
+    ],
+    "anchor": {
+      "page": 58,
+      "y": 638.67,
+      "label": "(30)B.",
+      "green": 0.927
+    }
+  },
+  "calculus-Q186": {
+    "reference_pages": [
+      58,
+      59
+    ],
+    "anchor": null
+  },
+  "calculus-Q187": {
+    "reference_pages": [
+      59
+    ],
+    "anchor": {
+      "page": 59,
+      "y": 398.33,
+      "label": "(2)64.",
+      "green": 0.629
+    }
+  },
+  "calculus-Q188": {
+    "reference_pages": [
+      59
+    ],
+    "anchor": {
+      "page": 59,
+      "y": 524.67,
+      "label": "(3)1.",
+      "green": 0.853
+    }
+  },
+  "calculus-Q189": {
+    "reference_pages": [
+      59,
+      60
+    ],
+    "anchor": {
+      "page": 59,
+      "y": 592.33,
+      "label": "(4)2.",
+      "green": 1
+    }
+  },
+  "calculus-Q190": {
+    "reference_pages": [
+      60
+    ],
+    "anchor": {
+      "page": 60,
+      "y": 154.0,
+      "label": "(5)>.",
+      "green": 0.847
+    }
+  },
+  "calculus-Q191": {
+    "reference_pages": [
+      60
+    ],
+    "anchor": {
+      "page": 60,
+      "y": 271.33,
+      "label": "(6)4,3.F(x)",
+      "green": 0.506
+    }
+  },
+  "calculus-Q192": {
+    "reference_pages": [
+      60
+    ],
+    "anchor": {
+      "page": 60,
+      "y": 398.67,
+      "label": "(7)9.",
+      "green": 0.561
+    }
+  },
+  "calculus-Q193": {
+    "reference_pages": [
+      60,
+      61
+    ],
+    "anchor": {
+      "page": 60,
+      "y": 591.33,
+      "label": "(8)n!@obpe",
+      "green": 0.578
+    }
+  },
+  "calculus-Q194": {
+    "reference_pages": [
+      60,
+      61
+    ],
+    "anchor": null
+  },
+  "calculus-Q195": {
+    "reference_pages": [
+      60,
+      61
+    ],
+    "anchor": null
+  },
+  "calculus-Q196": {
+    "reference_pages": [
+      61
+    ],
+    "anchor": {
+      "page": 61,
+      "y": 485.67,
+      "label": "(11)1.",
+      "green": 0.87
+    }
+  },
+  "calculus-Q197": {
+    "reference_pages": [
+      61,
+      62
+    ],
+    "anchor": {
+      "page": 61,
+      "y": 616.0,
+      "label": "(12)2*+(y->)mae",
+      "green": 0.814
+    }
+  },
+  "calculus-Q198": {
+    "reference_pages": [
+      62
+    ],
+    "anchor": {
+      "page": 62,
+      "y": 175.0,
+      "label": "(1)Blimf(r)=e,limf(x)=0.fO)=e,",
+      "green": 0.854
+    }
+  },
+  "calculus-Q199": {
+    "reference_pages": [
+      62
+    ],
+    "anchor": {
+      "page": 62,
+      "y": 423.33,
+      "label": "(2)辆考虑到fo)的周期性及f(r)在z=1处可导,所以解本题的关键是求AC1)和广(1).",
+      "green": 0.882
+    }
+  },
+  "calculus-Q200": {
+    "reference_pages": [
+      62,
+      63
+    ],
+    "anchor": {
+      "page": 62,
+      "y": 580.0,
+      "label": "(3)BXfe)REE",
+      "green": 0.914
+    }
+  },
+  "calculus-Q201": {
+    "reference_pages": [
+      63
+    ],
+    "anchor": {
+      "page": 63,
+      "y": 135.0,
+      "label": "(4)@BC1)4pSOLlimfCr)一lim|x1\"sin二,极限不存在,故<=058f(x)的间断点;",
+      "green": 1
+    }
+  },
+  "calculus-Q202": {
+    "reference_pages": [
+      63,
+      64
+    ],
+    "anchor": {
+      "page": 63,
+      "y": 380.0,
+      "label": "(5)GERD这是相关变化率问题,先建立漏斗中液面高度与圆柱形简中液面高度的关系.如图2-7所示,设",
+      "green": 1
+    }
+  },
+  "calculus-Q203": {
+    "reference_pages": [
+      64,
+      65
+    ],
+    "anchor": {
+      "page": 64,
+      "y": 91.33,
+      "label": "(6)3(1)eh",
+      "green": 0.892
+    }
+  },
+  "calculus-Q204": {
+    "reference_pages": [
+      64,
+      65
+    ],
+    "anchor": null
+  },
+  "calculus-Q205": {
+    "reference_pages": [
+      64,
+      65
+    ],
+    "anchor": null
+  },
+  "calculus-Q206": {
+    "reference_pages": [
+      65
+    ],
+    "anchor": {
+      "page": 65,
+      "y": 91.33,
+      "label": "(9)@B(1)HAM,Sa)fo)<0,RWF(a)<0,fF)之0.由",
+      "green": 1
+    }
+  },
+  "calculus-Q207": {
+    "reference_pages": [
+      65,
+      66
+    ],
+    "anchor": {
+      "page": 65,
+      "y": 254.33,
+      "label": "(10)GIR先证存在5E(ao,0),使得Fe)=0.用反证法.",
+      "green": 1
+    }
+  },
+  "calculus-Q208": {
+    "reference_pages": [
+      65,
+      66
+    ],
+    "anchor": null
+  },
+  "calculus-Q209": {
+    "reference_pages": [
+      66
+    ],
+    "anchor": {
+      "page": 66,
+      "y": 91.33,
+      "label": "(12)3(1)fe)=at(<3)=0，",
+      "green": 0.917
+    }
+  },
+  "calculus-Q210": {
+    "reference_pages": [
+      66
+    ],
+    "anchor": {
+      "page": 66,
+      "y": 376.67,
+      "label": "(13)GB当z,fo)的极值点时,有f(a)=0.将zw代入已知条件,得",
+      "green": 0.941
+    }
+  },
+  "calculus-Q211": {
+    "reference_pages": [
+      66
+    ],
+    "anchor": {
+      "page": 66,
+      "y": 492.0,
+      "label": "(14)GBB本题是隐范数求最值问题.",
+      "green": 0.919
+    }
+  },
+  "calculus-Q212": {
+    "reference_pages": [
+      66,
+      67
+    ],
+    "anchor": {
+      "page": 66,
+      "y": 625.33,
+      "label": "(15)(3ehf(x)=arctanz,有广(z)=59",
+      "green": 0.919
+    }
+  },
+  "calculus-Q213": {
+    "reference_pages": [
+      67
+    ],
+    "anchor": {
+      "page": 67,
+      "y": 346.33,
+      "label": "(16)C1)f(x)=aycosx+2az©cos2x十…十mavcosnxtt",
+      "green": 1
+    }
+  },
+  "calculus-Q214": {
+    "reference_pages": [
+      67
+    ],
+    "anchor": {
+      "page": 67,
+      "y": 419.33,
+      "label": "(17)(HS只要证明两曲线在交点处导数相等.",
+      "green": 1
+    }
+  },
+  "calculus-Q215": {
+    "reference_pages": [
+      67,
+      68
+    ],
+    "anchor": {
+      "page": 67,
+      "y": 597.33,
+      "label": "(18)GBity=vzAiyDe=lee",
+      "green": 1
+    }
+  },
+  "calculus-Q216": {
+    "reference_pages": [
+      68
+    ],
+    "anchor": {
+      "page": 68,
+      "y": 185.33,
+      "label": "(19)By=fOr)ECsf(x))处的切线方程为",
+      "green": 0.896
+    }
+  },
+  "calculus-Q217": {
+    "reference_pages": [
+      68,
+      69
+    ],
+    "anchor": {
+      "page": 68,
+      "y": 354.0,
+      "label": "(20)§3由已知,不妨设rz,<r,SxHar,+U—AdxyMay<a<p,",
+      "green": 0.938
+    }
+  },
+  "calculus-Q218": {
+    "reference_pages": [
+      69
+    ],
+    "anchor": {
+      "page": 69,
+      "y": 223.67,
+      "label": "(21)G3|A|的第二行X(一1)加到第三行,再将第一行X(一1)BSFRE|A|的第一列展",
+      "green": 1
+    }
+  },
+  "calculus-Q219": {
+    "reference_pages": [
+      69,
+      70
+    ],
+    "anchor": {
+      "page": 69,
+      "y": 608.0,
+      "label": "(22)GB(工)由拉格朗日中值定理,知存在一点6©(0.7),使得",
+      "green": 1
+    }
+  },
+  "calculus-Q220": {
+    "reference_pages": [
+      70
+    ],
+    "anchor": {
+      "page": 70,
+      "y": 409.67,
+      "label": "(1)(BEM.RCf(x)处的切线方程为",
+      "green": 0.927
+    }
+  },
+  "calculus-Q221": {
+    "reference_pages": [
+      70,
+      71
+    ],
+    "anchor": {
+      "page": 70,
+      "y": 604.33,
+      "label": "(2)GBC1)4fr)SOL,RDAALL.不妨设fe)AOA|feo)|=max|fi)|,",
+      "green": 0.931
+    }
+  },
+  "calculus-Q222": {
+    "reference_pages": [
+      71,
+      72,
+      73
+    ],
+    "anchor": {
+      "page": 71,
+      "y": 474.33,
+      "label": "(3)G39(1)4Fa)=F)rearFO=0,F(1)=1,8F’G@)=Sfx).",
+      "green": 1
+    }
+  },
+  "calculus-Q223": {
+    "reference_pages": [
+      73
+    ],
+    "anchor": {
+      "page": 73,
+      "y": 178.67,
+      "label": "(1)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q224": {
+    "reference_pages": [
+      73
+    ],
+    "anchor": {
+      "page": 73,
+      "y": 297.0,
+      "label": "(2)A,",
+      "green": 1
+    }
+  },
+  "calculus-Q225": {
+    "reference_pages": [
+      73
+    ],
+    "anchor": {
+      "page": 73,
+      "y": 334.0,
+      "label": "(3)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q226": {
+    "reference_pages": [
+      73
+    ],
+    "anchor": {
+      "page": 73,
+      "y": 462.67,
+      "label": "(4)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q227": {
+    "reference_pages": [
+      73,
+      74
+    ],
+    "anchor": {
+      "page": 73,
+      "y": 518.33,
+      "label": "(5)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q228": {
+    "reference_pages": [
+      74
+    ],
+    "anchor": {
+      "page": 74,
+      "y": 64.0,
+      "label": "(6)D.",
+      "green": 0.869
+    }
+  },
+  "calculus-Q229": {
+    "reference_pages": [
+      74
+    ],
+    "anchor": {
+      "page": 74,
+      "y": 282.33,
+      "label": "(7)C.",
+      "green": 0.884
+    }
+  },
+  "calculus-Q230": {
+    "reference_pages": [
+      74
+    ],
+    "anchor": {
+      "page": 74,
+      "y": 438.33,
+      "label": "(8)B.",
+      "green": 0.87
+    }
+  },
+  "calculus-Q231": {
+    "reference_pages": [
+      74,
+      75
+    ],
+    "anchor": {
+      "page": 74,
+      "y": 558.33,
+      "label": "(9)D.",
+      "green": 0.932
+    }
+  },
+  "calculus-Q232": {
+    "reference_pages": [
+      75
+    ],
+    "anchor": {
+      "page": 75,
+      "y": 135.0,
+      "label": "(10)和A.",
+      "green": 1
+    }
+  },
+  "calculus-Q233": {
+    "reference_pages": [
+      75
+    ],
+    "anchor": {
+      "page": 75,
+      "y": 302.67,
+      "label": "(11)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q234": {
+    "reference_pages": [
+      75
+    ],
+    "anchor": {
+      "page": 75,
+      "y": 487.0,
+      "label": "(12)C，",
+      "green": 1
+    }
+  },
+  "calculus-Q235": {
+    "reference_pages": [
+      75,
+      76
+    ],
+    "anchor": {
+      "page": 75,
+      "y": 640.33,
+      "label": "(13)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q236": {
+    "reference_pages": [
+      76
+    ],
+    "anchor": {
+      "page": 76,
+      "y": 175.0,
+      "label": "(14)C.",
+      "green": 0.891
+    }
+  },
+  "calculus-Q237": {
+    "reference_pages": [
+      76,
+      77
+    ],
+    "anchor": {
+      "page": 76,
+      "y": 424.67,
+      "label": "(15)C.",
+      "green": 0.881
+    }
+  },
+  "calculus-Q238": {
+    "reference_pages": [
+      77
+    ],
+    "anchor": {
+      "page": 77,
+      "y": 76.0,
+      "label": "(16)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q239": {
+    "reference_pages": [
+      77,
+      78
+    ],
+    "anchor": {
+      "page": 77,
+      "y": 589.0,
+      "label": "(17)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q240": {
+    "reference_pages": [
+      78
+    ],
+    "anchor": {
+      "page": 78,
+      "y": 120.33,
+      "label": "(18)C.",
+      "green": 0.919
+    }
+  },
+  "calculus-Q241": {
+    "reference_pages": [
+      78
+    ],
+    "anchor": null
+  },
+  "calculus-Q242": {
+    "reference_pages": [
+      78
+    ],
+    "anchor": {
+      "page": 78,
+      "y": 491.33,
+      "label": "(2)3",
+      "green": 0.879
+    }
+  },
+  "calculus-Q243": {
+    "reference_pages": [
+      78,
+      79
+    ],
+    "anchor": {
+      "page": 78,
+      "y": 648.33,
+      "label": "(3)sinx’.",
+      "green": 0.528
+    }
+  },
+  "calculus-Q244": {
+    "reference_pages": [
+      79
+    ],
+    "anchor": {
+      "page": 79,
+      "y": 119.0,
+      "label": "(4)z2f(z?).",
+      "green": 0.608
+    }
+  },
+  "calculus-Q245": {
+    "reference_pages": [
+      79
+    ],
+    "anchor": {
+      "page": 79,
+      "y": 232.67,
+      "label": "(5)才.",
+      "green": 1
+    }
+  },
+  "calculus-Q246": {
+    "reference_pages": [
+      79
+    ],
+    "anchor": {
+      "page": 79,
+      "y": 402.67,
+      "label": "(6)Ze?+0,",
+      "green": 1
+    }
+  },
+  "calculus-Q247": {
+    "reference_pages": [
+      79,
+      80
+    ],
+    "anchor": {
+      "page": 79,
+      "y": 642.0,
+      "label": "(7)3ln2—1.",
+      "green": 0.536
+    }
+  },
+  "calculus-Q248": {
+    "reference_pages": [
+      80,
+      81
+    ],
+    "anchor": {
+      "page": 80,
+      "y": 221.0,
+      "label": "(8)—.",
+      "green": 0.86
+    }
+  },
+  "calculus-Q249": {
+    "reference_pages": [
+      80,
+      81
+    ],
+    "anchor": null
+  },
+  "calculus-Q250": {
+    "reference_pages": [
+      80,
+      81
+    ],
+    "anchor": null
+  },
+  "calculus-Q251": {
+    "reference_pages": [
+      80,
+      81
+    ],
+    "anchor": null
+  },
+  "calculus-Q252": {
+    "reference_pages": [
+      81
+    ],
+    "anchor": {
+      "page": 81,
+      "y": 103.67,
+      "label": "(12)",
+      "green": 1
+    }
+  },
+  "calculus-Q253": {
+    "reference_pages": [
+      81
+    ],
+    "anchor": {
+      "page": 81,
+      "y": 305.67,
+      "label": "(13)有",
+      "green": 1
+    }
+  },
+  "calculus-Q254": {
+    "reference_pages": [
+      81
+    ],
+    "anchor": null
+  },
+  "calculus-Q255": {
+    "reference_pages": [
+      81,
+      82
+    ],
+    "anchor": {
+      "page": 81,
+      "y": 575.33,
+      "label": "(15)1.",
+      "green": 0.872
+    }
+  },
+  "calculus-Q256": {
+    "reference_pages": [
+      82
+    ],
+    "anchor": {
+      "page": 82,
+      "y": 112.67,
+      "label": "(16)3°",
+      "green": 0.926
+    }
+  },
+  "calculus-Q257": {
+    "reference_pages": [
+      82
+    ],
+    "anchor": {
+      "page": 82,
+      "y": 196.67,
+      "label": "(17)4.",
+      "green": 0.701
+    }
+  },
+  "calculus-Q258": {
+    "reference_pages": [
+      82
+    ],
+    "anchor": {
+      "page": 82,
+      "y": 264.67,
+      "label": "(18)3.了y=(e+1-x",
+      "green": 0.906
+    }
+  },
+  "calculus-Q259": {
+    "reference_pages": [
+      82
+    ],
+    "anchor": {
+      "page": 82,
+      "y": 362.0,
+      "label": "(19)Sx+4n.",
+      "green": 0.937
+    }
+  },
+  "calculus-Q260": {
+    "reference_pages": [
+      82
+    ],
+    "anchor": {
+      "page": 82,
+      "y": 502.0,
+      "label": "(20)52.",
+      "green": 0.924
+    }
+  },
+  "calculus-Q261": {
+    "reference_pages": [
+      82,
+      83
+    ],
+    "anchor": {
+      "page": 82,
+      "y": 649.0,
+      "label": "(21)17",
+      "green": 0.87
+    }
+  },
+  "calculus-Q262": {
+    "reference_pages": [
+      83
+    ],
+    "anchor": {
+      "page": 83,
+      "y": 128.67,
+      "label": "(22)0.",
+      "green": 0.867
+    }
+  },
+  "calculus-Q263": {
+    "reference_pages": [
+      83,
+      84
+    ],
+    "anchor": {
+      "page": 83,
+      "y": 304.67,
+      "label": "(23)4;1—5e”.",
+      "green": 0.756
+    }
+  },
+  "calculus-Q264": {
+    "reference_pages": [
+      83,
+      84
+    ],
+    "anchor": null
+  },
+  "calculus-Q265": {
+    "reference_pages": [
+      84,
+      85,
+      86
+    ],
+    "anchor": {
+      "page": 84,
+      "y": 588.33,
+      "label": "(2)f8(1)Ove=二则z=2°He",
+      "green": 0.92
+    }
+  },
+  "calculus-Q266": {
+    "reference_pages": [
+      86,
+      87
+    ],
+    "anchor": {
+      "page": 86,
+      "y": 123.33,
+      "label": "(3)二cI|sin’.cos‘wat~_人中一ie+cos’二5de",
+      "green": 0.858
+    }
+  },
+  "calculus-Q267": {
+    "reference_pages": [
+      87,
+      88
+    ],
+    "anchor": {
+      "page": 87,
+      "y": 457.0,
+      "label": "(4)GBC1)用分部积分法.",
+      "green": 1
+    }
+  },
+  "calculus-Q268": {
+    "reference_pages": [
+      88,
+      89
+    ],
+    "anchor": {
+      "page": 88,
+      "y": 609.33,
+      "label": "(5)(3CL)在对称区间上积分,考查被积函数的奇偶性.",
+      "green": 0.912
+    }
+  },
+  "calculus-Q269": {
+    "reference_pages": [
+      89
+    ],
+    "anchor": {
+      "page": 89,
+      "y": 224.67,
+      "label": "(6)@BC1)[Ge—v*Varade=fe—DtVI=G@—Daz",
+      "green": 1
+    }
+  },
+  "calculus-Q270": {
+    "reference_pages": [
+      89,
+      90
+    ],
+    "anchor": {
+      "page": 89,
+      "y": 483.33,
+      "label": "(7)&B(1)WFmin{2,27)一4z2，Bonee",
+      "green": 1
+    }
+  },
+  "calculus-Q271": {
+    "reference_pages": [
+      90,
+      91
+    ],
+    "anchor": {
+      "page": 90,
+      "y": 352.0,
+      "label": "(8)CL)由题可知,zcos:zSEAPHBL,sin’xcos’x为偶函数,故",
+      "green": 0.866
+    }
+  },
+  "calculus-Q272": {
+    "reference_pages": [
+      91
+    ],
+    "anchor": {
+      "page": 91,
+      "y": 118.0,
+      "label": "(9)@BC1)42-1=¢,50",
+      "green": 1
+    }
+  },
+  "calculus-Q273": {
+    "reference_pages": [
+      91,
+      92
+    ],
+    "anchor": {
+      "page": 91,
+      "y": 405.33,
+      "label": "(10)&B4a<ont.A",
+      "green": 1
+    }
+  },
+  "calculus-Q274": {
+    "reference_pages": [
+      92
+    ],
+    "anchor": {
+      "page": 92,
+      "y": 102.0,
+      "label": "(11)B1=ye)+/evinot=|\"sinade二|cosinxdr,a)",
+      "green": 0.889
+    }
+  },
+  "calculus-Q275": {
+    "reference_pages": [
+      92
+    ],
+    "anchor": {
+      "page": 92,
+      "y": 282.67,
+      "label": "(12)(B42A0M,",
+      "green": 0.888
+    }
+  },
+  "calculus-Q276": {
+    "reference_pages": [
+      92,
+      93
+    ],
+    "anchor": {
+      "page": 92,
+      "y": 536.0,
+      "label": "(13)EBAEAAG/Ce)在=一分处展开为",
+      "green": 0.816
+    }
+  },
+  "calculus-Q277": {
+    "reference_pages": [
+      93
+    ],
+    "anchor": {
+      "page": 93,
+      "y": 67.33,
+      "label": "(14)3利用单调性证明.令Fe)=|BLfoe<x去0,则",
+      "green": 1
+    }
+  },
+  "calculus-Q278": {
+    "reference_pages": [
+      93
+    ],
+    "anchor": {
+      "page": 93,
+      "y": 263.0,
+      "label": "(15)QBetf(z)REAyf’G)=2gpz)=0s=H.",
+      "green": 1
+    }
+  },
+  "calculus-Q279": {
+    "reference_pages": [
+      93
+    ],
+    "anchor": {
+      "page": 93,
+      "y": 423.33,
+      "label": "(16)GB依题设,如图3-5所示,由y一+2ALy(O)=+",
+      "green": 1
+    }
+  },
+  "calculus-Q280": {
+    "reference_pages": [
+      93,
+      94
+    ],
+    "anchor": {
+      "page": 93,
+      "y": 614.0,
+      "label": "(17)GB由已知,如图3-6所示.",
+      "green": 1
+    }
+  },
+  "calculus-Q281": {
+    "reference_pages": [
+      94
+    ],
+    "anchor": {
+      "page": 94,
+      "y": 249.33,
+      "label": "(18)(3(1)如图3-7所示,用微元法.",
+      "green": 0.886
+    }
+  },
+  "calculus-Q282": {
+    "reference_pages": [
+      94,
+      95
+    ],
+    "anchor": {
+      "page": 94,
+      "y": 408.33,
+      "label": "(19)(3(1)星形线如图3-8所示.所围面积",
+      "green": 0.897
+    }
+  },
+  "calculus-Q283": {
+    "reference_pages": [
+      95
+    ],
+    "anchor": {
+      "page": 95,
+      "y": 65.67,
+      "label": "(20)(3依题意,立体图形如图3-9所示,先求垂直于z轴截面的面积",
+      "green": 1
+    }
+  },
+  "calculus-Q284": {
+    "reference_pages": [
+      95
+    ],
+    "anchor": {
+      "page": 95,
+      "y": 207.67,
+      "label": "(21)EBaaron",
+      "green": 1
+    }
+  },
+  "calculus-Q285": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q286": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q287": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q288": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q289": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q290": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q291": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q292": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q293": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q294": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q295": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q296": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q297": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q298": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q299": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q300": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q301": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q302": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q303": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q304": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q305": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q306": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q307": {
+    "reference_pages": [
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "anchor": null
+  },
+  "calculus-Q308": {
+    "reference_pages": [
+      103
+    ],
+    "anchor": {
+      "page": 103,
+      "y": 179.0,
+      "label": "(2)f(x)—f(a).",
+      "green": 1
+    }
+  },
+  "calculus-Q309": {
+    "reference_pages": [
+      103
+    ],
+    "anchor": {
+      "page": 103,
+      "y": 407.67,
+      "label": "(3)",
+      "green": 1
+    }
+  },
+  "calculus-Q310": {
+    "reference_pages": [
+      103,
+      104
+    ],
+    "anchor": {
+      "page": 103,
+      "y": 605.0,
+      "label": "(4)+",
+      "green": 1
+    }
+  },
+  "calculus-Q311": {
+    "reference_pages": [
+      104
+    ],
+    "anchor": {
+      "page": 104,
+      "y": 66.33,
+      "label": "(5)1.y",
+      "green": 0.639
+    }
+  },
+  "calculus-Q312": {
+    "reference_pages": [
+      104
+    ],
+    "anchor": {
+      "page": 104,
+      "y": 160.67,
+      "label": "(6)8.",
+      "green": 0.598
+    }
+  },
+  "calculus-Q313": {
+    "reference_pages": [
+      104
+    ],
+    "anchor": {
+      "page": 104,
+      "y": 298.67,
+      "label": "(7)2+In3.",
+      "green": 0.508
+    }
+  },
+  "calculus-Q314": {
+    "reference_pages": [
+      104,
+      105
+    ],
+    "anchor": {
+      "page": 104,
+      "y": 497.33,
+      "label": "(8)Sx.",
+      "green": 0.889
+    }
+  },
+  "calculus-Q315": {
+    "reference_pages": [
+      105
+    ],
+    "anchor": {
+      "page": 105,
+      "y": 94.67,
+      "label": "(9)Cozy",
+      "green": 1
+    }
+  },
+  "calculus-Q316": {
+    "reference_pages": [
+      105
+    ],
+    "anchor": null
+  },
+  "calculus-Q317": {
+    "reference_pages": [
+      105,
+      106
+    ],
+    "anchor": {
+      "page": 105,
+      "y": 593.0,
+      "label": "(11)2.",
+      "green": 0.824
+    }
+  },
+  "calculus-Q318": {
+    "reference_pages": [
+      106
+    ],
+    "anchor": {
+      "page": 106,
+      "y": 79.33,
+      "label": "(12)1.",
+      "green": 0.71
+    }
+  },
+  "calculus-Q319": {
+    "reference_pages": [
+      106
+    ],
+    "anchor": {
+      "page": 106,
+      "y": 234.0,
+      "label": "(13)o,",
+      "green": 0.723
+    }
+  },
+  "calculus-Q320": {
+    "reference_pages": [
+      106
+    ],
+    "anchor": {
+      "page": 106,
+      "y": 322.67,
+      "label": "(14)e一e.",
+      "green": 0.707
+    }
+  },
+  "calculus-Q321": {
+    "reference_pages": [
+      106
+    ],
+    "anchor": {
+      "page": 106,
+      "y": 392.67,
+      "label": "(15)广一天3.",
+      "green": 0.932
+    }
+  },
+  "calculus-Q322": {
+    "reference_pages": [
+      106,
+      107
+    ],
+    "anchor": {
+      "page": 106,
+      "y": 632.33,
+      "label": "(16)>.",
+      "green": 0.909
+    }
+  },
+  "calculus-Q323": {
+    "reference_pages": [
+      107
+    ],
+    "anchor": {
+      "page": 107,
+      "y": 94.0,
+      "label": "(17)0.",
+      "green": 0.831
+    }
+  },
+  "calculus-Q324": {
+    "reference_pages": [
+      107
+    ],
+    "anchor": {
+      "page": 107,
+      "y": 288.67,
+      "label": "(18)r一2ln2.",
+      "green": 0.878
+    }
+  },
+  "calculus-Q325": {
+    "reference_pages": [
+      107,
+      108
+    ],
+    "anchor": {
+      "page": 107,
+      "y": 473.33,
+      "label": "(19)1.",
+      "green": 0.891
+    }
+  },
+  "calculus-Q326": {
+    "reference_pages": [
+      107,
+      108
+    ],
+    "anchor": null
+  },
+  "calculus-Q327": {
+    "reference_pages": [
+      108
+    ],
+    "anchor": {
+      "page": 108,
+      "y": 243.67,
+      "label": "(21)y=—xe4+1.",
+      "green": 0.838
+    }
+  },
+  "calculus-Q328": {
+    "reference_pages": [
+      108,
+      109
+    ],
+    "anchor": {
+      "page": 108,
+      "y": 410.33,
+      "label": "(22)r.",
+      "green": 0.694
+    }
+  },
+  "calculus-Q329": {
+    "reference_pages": [
+      108,
+      109
+    ],
+    "anchor": null
+  },
+  "calculus-Q330": {
+    "reference_pages": [
+      109
+    ],
+    "anchor": {
+      "page": 109,
+      "y": 336.67,
+      "label": "(2)圈令sinz=2,Wsine=士上.由Vz0,VI—2zS0,Mx>0,1-2S0,MO<e<1,",
+      "green": 1
+    }
+  },
+  "calculus-Q331": {
+    "reference_pages": [
+      109,
+      110
+    ],
+    "anchor": {
+      "page": 109,
+      "y": 542.0,
+      "label": "(3)(3I=e(xcosxie",
+      "green": 1
+    }
+  },
+  "calculus-Q332": {
+    "reference_pages": [
+      110
+    ],
+    "anchor": {
+      "page": 110,
+      "y": 64.0,
+      "label": "(4)图I-|天-2sin\n5\t1\t2\t1\t1\t7\t662\t199\t49\t14\t29.146515\txcos\n5\t1\t2\t1\t1\t",
+      "green": 0.88
+    }
+  },
+  "calculus-Q333": {
+    "reference_pages": [
+      110
+    ],
+    "anchor": {
+      "page": 110,
+      "y": 240.0,
+      "label": "(5)(84Ine=rM2=e.fl)=fUnz)=ROT!58",
+      "green": 0.902
+    }
+  },
+  "calculus-Q334": {
+    "reference_pages": [
+      110
+    ],
+    "anchor": {
+      "page": 110,
+      "y": 330.33,
+      "label": "(6)图TI=f(x)de=f(x)—|'xf'(de",
+      "green": 0.923
+    }
+  },
+  "calculus-Q335": {
+    "reference_pages": [
+      110,
+      111
+    ],
+    "anchor": {
+      "page": 110,
+      "y": 550.67,
+      "label": "(7)B42ont,VIFae1~Setea2",
+      "green": 0.868
+    }
+  },
+  "calculus-Q336": {
+    "reference_pages": [
+      111
+    ],
+    "anchor": {
+      "page": 111,
+      "y": 67.0,
+      "label": "(8)BF",
+      "green": 1
+    }
+  },
+  "calculus-Q337": {
+    "reference_pages": [
+      111,
+      112
+    ],
+    "anchor": {
+      "page": 111,
+      "y": 344.67,
+      "label": "(9)(3因为",
+      "green": 1
+    }
+  },
+  "calculus-Q338": {
+    "reference_pages": [
+      111,
+      112
+    ],
+    "anchor": null
+  },
+  "calculus-Q339": {
+    "reference_pages": [
+      112
+    ],
+    "anchor": {
+      "page": 112,
+      "y": 197.67,
+      "label": "(11)3上1一志sintdt了||1一x|sinCzu)dz.",
+      "green": 0.865
+    }
+  },
+  "calculus-Q340": {
+    "reference_pages": [
+      112
+    ],
+    "anchor": {
+      "page": 112,
+      "y": 386.0,
+      "label": "(12)(3在已知等式两端同时对z求导,得",
+      "green": 0.825
+    }
+  },
+  "calculus-Q341": {
+    "reference_pages": [
+      112,
+      113
+    ],
+    "anchor": {
+      "page": 112,
+      "y": 528.0,
+      "label": "(13)(3Bhet?—2°y=11.4x一0时,>=0,BN£00)=0.",
+      "green": 0.873
+    }
+  },
+  "calculus-Q342": {
+    "reference_pages": [
+      113
+    ],
+    "anchor": {
+      "page": 113,
+      "y": 138.33,
+      "label": "(14)&B[ie-2aSEeenye",
+      "green": 1
+    }
+  },
+  "calculus-Q343": {
+    "reference_pages": [
+      113
+    ],
+    "anchor": {
+      "page": 113,
+      "y": 267.0,
+      "label": "(15)(BAYfx)是偶函数,所以只需求f(a)在[0,十cc)上的最值即可.",
+      "green": 1
+    }
+  },
+  "calculus-Q344": {
+    "reference_pages": [
+      113
+    ],
+    "anchor": {
+      "page": 113,
+      "y": 362.33,
+      "label": "(16)G3方法一:利用夹台准则.当zE[0,1]时，AOS<a\",”",
+      "green": 1
+    }
+  },
+  "calculus-Q345": {
+    "reference_pages": [
+      113,
+      114
+    ],
+    "anchor": {
+      "page": 113,
+      "y": 552.0,
+      "label": "(17)@B4z,PrGaspte工,则",
+      "green": 1
+    }
+  },
+  "calculus-Q346": {
+    "reference_pages": [
+      114,
+      115
+    ],
+    "anchor": {
+      "page": 114,
+      "y": 67.33,
+      "label": "(18)§342,=Yn(n#1)(n$2)**(2n—1)Wl",
+      "green": 0.914
+    }
+  },
+  "calculus-Q347": {
+    "reference_pages": [
+      114,
+      115
+    ],
+    "anchor": null
+  },
+  "calculus-Q348": {
+    "reference_pages": [
+      114,
+      115
+    ],
+    "anchor": null
+  },
+  "calculus-Q349": {
+    "reference_pages": [
+      115
+    ],
+    "anchor": {
+      "page": 115,
+      "y": 67.67,
+      "label": "(21)四由于|JCz)dz收敛,记|f(r)=A(AWHO.",
+      "green": 1
+    }
+  },
+  "calculus-Q350": {
+    "reference_pages": [
+      115
+    ],
+    "anchor": {
+      "page": 115,
+      "y": 250.67,
+      "label": "(22)图令tan>|viiiie",
+      "green": 1
+    }
+  },
+  "calculus-Q351": {
+    "reference_pages": [
+      115
+    ],
+    "anchor": {
+      "page": 115,
+      "y": 345.0,
+      "label": "(23)Chai=vxsinzdz=-|=sin\"'xd(cosx)",
+      "green": 1
+    }
+  },
+  "calculus-Q352": {
+    "reference_pages": [
+      115,
+      116
+    ],
+    "anchor": {
+      "page": 115,
+      "y": 600.33,
+      "label": "(24)GB利用分部积分法,得",
+      "green": 1
+    }
+  },
+  "calculus-Q353": {
+    "reference_pages": [
+      116
+    ],
+    "anchor": {
+      "page": 116,
+      "y": 173.67,
+      "label": "(25)(8(1)4nS18.",
+      "green": 0.878
+    }
+  },
+  "calculus-Q354": {
+    "reference_pages": [
+      116,
+      117
+    ],
+    "anchor": {
+      "page": 116,
+      "y": 511.33,
+      "label": "(26)图由广(z)=(a—x\")sin’*e=0,ERcy=le,=kak=1,25).",
+      "green": 0.915
+    }
+  },
+  "calculus-Q355": {
+    "reference_pages": [
+      117
+    ],
+    "anchor": {
+      "page": 117,
+      "y": 67.0,
+      "label": "(27)ff[Pera—a)Fde=[aadfy]",
+      "green": 1
+    }
+  },
+  "calculus-Q356": {
+    "reference_pages": [
+      117,
+      118
+    ],
+    "anchor": {
+      "page": 117,
+      "y": 547.0,
+      "label": "(28)图由已知,得>=f(r)的图形如图3-13所示.",
+      "green": 1
+    }
+  },
+  "calculus-Q357": {
+    "reference_pages": [
+      118
+    ],
+    "anchor": {
+      "page": 118,
+      "y": 242.67,
+      "label": "(29)34F(x)=六reod,则F(a)=0,F)一0.又",
+      "green": 0.868
+    }
+  },
+  "calculus-Q358": {
+    "reference_pages": [
+      118,
+      119
+    ],
+    "anchor": {
+      "page": 118,
+      "y": 522.33,
+      "label": "(30)(BCL)依题设,需证存在zx，E(0.1)AEMxof(x0)=fede",
+      "green": 0.878
+    }
+  },
+  "calculus-Q359": {
+    "reference_pages": [
+      119
+    ],
+    "anchor": {
+      "page": 119,
+      "y": 71.0,
+      "label": "(31)@B(1)HEMfC)=0,即(azz?一4az+3)一4一刀十3一0,解得c=3,a=1.",
+      "green": 1
+    }
+  },
+  "calculus-Q360": {
+    "reference_pages": [
+      119
+    ],
+    "anchor": {
+      "page": 119,
+      "y": 313.0,
+      "label": "(32)BC1)利用换元法证明.",
+      "green": 1
+    }
+  },
+  "calculus-Q361": {
+    "reference_pages": [
+      119,
+      120
+    ],
+    "anchor": {
+      "page": 119,
+      "y": 576.0,
+      "label": "(33)(3由积分中值定理,有",
+      "green": 1
+    }
+  },
+  "calculus-Q362": {
+    "reference_pages": [
+      120
+    ],
+    "anchor": {
+      "page": 120,
+      "y": 188.33,
+      "label": "(34)图(CT)y=avroy=In/o的导数分别为",
+      "green": 0.869
+    }
+  },
+  "calculus-Q363": {
+    "reference_pages": [
+      120
+    ],
+    "anchor": {
+      "page": 120,
+      "y": 399.0,
+      "label": "(35)(8[xFu|/12—t'dt,",
+      "green": 0.88
+    }
+  },
+  "calculus-Q364": {
+    "reference_pages": [
+      120,
+      121
+    ],
+    "anchor": {
+      "page": 120,
+      "y": 530.33,
+      "label": "(36)(3a3-15所示,D的边界方程分别为",
+      "green": 0.866
+    }
+  },
+  "calculus-Q365": {
+    "reference_pages": [
+      121
+    ],
+    "anchor": {
+      "page": 121,
+      "y": 128.67,
+      "label": "(37)(BERf(z)=e*Ssinx(x>0)的定义域.",
+      "green": 1
+    }
+  },
+  "calculus-Q366": {
+    "reference_pages": [
+      121
+    ],
+    "anchor": {
+      "page": 121,
+      "y": 343.0,
+      "label": "(38)(3(1)如图3-17所示，",
+      "green": 1
+    }
+  },
+  "calculus-Q367": {
+    "reference_pages": [
+      121,
+      122
+    ],
+    "anchor": {
+      "page": 121,
+      "y": 553.33,
+      "label": "(39)[到(z—2)?+y?=1的参数方程为",
+      "green": 1
+    }
+  },
+  "calculus-Q368": {
+    "reference_pages": [
+      122
+    ],
+    "anchor": {
+      "page": 122,
+      "y": 123.33,
+      "label": "(40)(3双纽线如图3-18所示,由对称性,考虑0E[=],则",
+      "green": 0.893
+    }
+  },
+  "calculus-Q369": {
+    "reference_pages": [
+      122
+    ],
+    "anchor": {
+      "page": 122,
+      "y": 408.67,
+      "label": "(41)(33平面区域D如图3-19ira.",
+      "green": 0.923
+    }
+  },
+  "calculus-Q370": {
+    "reference_pages": [
+      122,
+      123
+    ],
+    "anchor": {
+      "page": 122,
+      "y": 584.33,
+      "label": "(42)(B由已知得",
+      "green": 0.888
+    }
+  },
+  "calculus-Q371": {
+    "reference_pages": [
+      123,
+      124
+    ],
+    "anchor": {
+      "page": 123,
+      "y": 224.33,
+      "label": "(43)GBC1)42之0时,jz)=limae=0",
+      "green": 1
+    }
+  },
+  "calculus-Q372": {
+    "reference_pages": [
+      123,
+      124
+    ],
+    "anchor": null
+  },
+  "calculus-Q373": {
+    "reference_pages": [
+      124
+    ],
+    "anchor": {
+      "page": 124,
+      "y": 294.0,
+      "label": "(45)(29建立如图3-21所示的坐标系,圆的方程为",
+      "green": 0.885
+    }
+  },
+  "calculus-Q374": {
+    "reference_pages": [
+      124,
+      125
+    ],
+    "anchor": {
+      "page": 124,
+      "y": 425.33,
+      "label": "(46)国如图3-22(a)所示,直线AC的方程为y=2A",
+      "green": 0.897
+    }
+  },
+  "calculus-Q375": {
+    "reference_pages": [
+      125
+    ],
+    "anchor": {
+      "page": 125,
+      "y": 65.67,
+      "label": "(47)(3C1)曲线工的参数方程为",
+      "green": 1
+    }
+  },
+  "calculus-Q376": {
+    "reference_pages": [
+      125
+    ],
+    "anchor": {
+      "page": 125,
+      "y": 412.33,
+      "label": "(48)(7B曲线的图形如图3-24所示.",
+      "green": 1
+    }
+  },
+  "calculus-Q377": {
+    "reference_pages": [
+      125,
+      126
+    ],
+    "anchor": {
+      "page": 125,
+      "y": 549.0,
+      "label": "(49)FB心形线r=4(1十cos0)的参数方程为ar",
+      "green": 1
+    }
+  },
+  "calculus-Q378": {
+    "reference_pages": [
+      126
+    ],
+    "anchor": {
+      "page": 126,
+      "y": 96.67,
+      "label": "(50)(3C1)依题设,有",
+      "green": 0.889
+    }
+  },
+  "calculus-Q379": {
+    "reference_pages": [
+      126,
+      127
+    ],
+    "anchor": {
+      "page": 126,
+      "y": 315.0,
+      "label": "(51)G3C1)4x€(0,1)BYeef(x)单调递减,有",
+      "green": 0.888
+    }
+  },
+  "calculus-Q380": {
+    "reference_pages": [
+      127
+    ],
+    "anchor": {
+      "page": 127,
+      "y": 64.67,
+      "label": "(52)(3thr=3cos0,知r’一3rcos0,其在直角坐标下为Ay",
+      "green": 1
+    }
+  },
+  "calculus-Q381": {
+    "reference_pages": [
+      127
+    ],
+    "anchor": {
+      "page": 127,
+      "y": 248.67,
+      "label": "(53)(BCL)theeLampe3-27所示.由y=tanx*(0<2<),得",
+      "green": 1
+    }
+  },
+  "calculus-Q382": {
+    "reference_pages": [
+      127,
+      128,
+      129
+    ],
+    "anchor": {
+      "page": 127,
+      "y": 536.0,
+      "label": "(54)G3CL)依题设,杆AB与质点如图3-28所示.y",
+      "green": 1
+    }
+  },
+  "calculus-Q383": {
+    "reference_pages": [
+      127,
+      128,
+      129
+    ],
+    "anchor": null
+  },
+  "calculus-Q384": {
+    "reference_pages": [
+      129
+    ],
+    "anchor": {
+      "page": 129,
+      "y": 183.67,
+      "label": "(1)GB用微元法求VC).",
+      "green": 1
+    }
+  },
+  "calculus-Q385": {
+    "reference_pages": [
+      129
+    ],
+    "anchor": {
+      "page": 129,
+      "y": 345.0,
+      "label": "(2)B(l)v=4-2”2d16|”coszd",
+      "green": 1
+    }
+  },
+  "calculus-Q386": {
+    "reference_pages": [
+      129,
+      130
+    ],
+    "anchor": {
+      "page": 129,
+      "y": 484.0,
+      "label": "(3)图先证f(z)>0.",
+      "green": 1
+    }
+  },
+  "calculus-Q387": {
+    "reference_pages": [
+      130,
+      131
+    ],
+    "anchor": {
+      "page": 130,
+      "y": 128.67,
+      "label": "(4)3C1)if(4a(x—b)fade=|(2—ad(a—b)df\"(x)",
+      "green": 0.953
+    }
+  },
+  "calculus-Q388": {
+    "reference_pages": [
+      131,
+      132
+    ],
+    "anchor": {
+      "page": 131,
+      "y": 326.67,
+      "label": "(5)GBC1)xVax€(0,1),fC)在点z处的泰勒展开式为",
+      "green": 1
+    }
+  },
+  "calculus-Q389": {
+    "reference_pages": [
+      132,
+      133,
+      134
+    ],
+    "anchor": {
+      "page": 132,
+      "y": 305.33,
+      "label": "(6)(BCL)fe)tex=>AAAI",
+      "green": 0.797
+    }
+  },
+  "calculus-Q390": {
+    "reference_pages": [
+      134
+    ],
+    "anchor": {
+      "page": 134,
+      "y": 177.0,
+      "label": "(1)B.",
+      "green": 0.786
+    }
+  },
+  "calculus-Q391": {
+    "reference_pages": [
+      134
+    ],
+    "anchor": {
+      "page": 134,
+      "y": 256.67,
+      "label": "(2)C.",
+      "green": 0.866
+    }
+  },
+  "calculus-Q392": {
+    "reference_pages": [
+      134
+    ],
+    "anchor": {
+      "page": 134,
+      "y": 447.0,
+      "label": "(3)B.",
+      "green": 0.877
+    }
+  },
+  "calculus-Q393": {
+    "reference_pages": [
+      134,
+      135
+    ],
+    "anchor": {
+      "page": 134,
+      "y": 664.0,
+      "label": "(4)D.",
+      "green": 0.893
+    }
+  },
+  "calculus-Q394": {
+    "reference_pages": [
+      135
+    ],
+    "anchor": {
+      "page": 135,
+      "y": 291.0,
+      "label": "(5)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q395": {
+    "reference_pages": [
+      135
+    ],
+    "anchor": null
+  },
+  "calculus-Q396": {
+    "reference_pages": [
+      135
+    ],
+    "anchor": null
+  },
+  "calculus-Q397": {
+    "reference_pages": [
+      135,
+      136
+    ],
+    "anchor": {
+      "page": 135,
+      "y": 613.33,
+      "label": "(8)和A.",
+      "green": 1
+    }
+  },
+  "calculus-Q398": {
+    "reference_pages": [
+      136
+    ],
+    "anchor": {
+      "page": 136,
+      "y": 106.67,
+      "label": "(9)D.",
+      "green": 0.914
+    }
+  },
+  "calculus-Q399": {
+    "reference_pages": [
+      136
+    ],
+    "anchor": {
+      "page": 136,
+      "y": 167.33,
+      "label": "(1)ln2.",
+      "green": 0.911
+    }
+  },
+  "calculus-Q400": {
+    "reference_pages": [
+      136
+    ],
+    "anchor": {
+      "page": 136,
+      "y": 232.0,
+      "label": "(2)0.",
+      "green": 0.657
+    }
+  },
+  "calculus-Q401": {
+    "reference_pages": [
+      136
+    ],
+    "anchor": {
+      "page": 136,
+      "y": 334.33,
+      "label": "(3)e*.",
+      "green": 0.625
+    }
+  },
+  "calculus-Q402": {
+    "reference_pages": [
+      136
+    ],
+    "anchor": {
+      "page": 136,
+      "y": 382.33,
+      "label": "(4)dx++2ln2)dy.",
+      "green": 0.559
+    }
+  },
+  "calculus-Q403": {
+    "reference_pages": [
+      136
+    ],
+    "anchor": {
+      "page": 136,
+      "y": 525.0,
+      "label": "(5)47.",
+      "green": 0.617
+    }
+  },
+  "calculus-Q404": {
+    "reference_pages": [
+      136,
+      137
+    ],
+    "anchor": {
+      "page": 136,
+      "y": 588.0,
+      "label": "(6)gett—9W-",
+      "green": 0.934
+    }
+  },
+  "calculus-Q405": {
+    "reference_pages": [
+      136,
+      137
+    ],
+    "anchor": null
+  },
+  "calculus-Q406": {
+    "reference_pages": [
+      137
+    ],
+    "anchor": {
+      "page": 137,
+      "y": 194.67,
+      "label": "(8)",
+      "green": 1
+    }
+  },
+  "calculus-Q407": {
+    "reference_pages": [
+      137
+    ],
+    "anchor": {
+      "page": 137,
+      "y": 335.0,
+      "label": "(9)oat+etg’,cosy.",
+      "green": 0.716
+    }
+  },
+  "calculus-Q408": {
+    "reference_pages": [
+      137,
+      138
+    ],
+    "anchor": {
+      "page": 137,
+      "y": 428.0,
+      "label": "(10)ALG.D+F,0.)—f30,D.",
+      "green": 1
+    }
+  },
+  "calculus-Q409": {
+    "reference_pages": [
+      137,
+      138
+    ],
+    "anchor": null
+  },
+  "calculus-Q410": {
+    "reference_pages": [
+      138
+    ],
+    "anchor": {
+      "page": 138,
+      "y": 92.33,
+      "label": "(12)4.",
+      "green": 0.752
+    }
+  },
+  "calculus-Q411": {
+    "reference_pages": [
+      138,
+      139
+    ],
+    "anchor": {
+      "page": 138,
+      "y": 207.33,
+      "label": "(13)到十zy一zy一到十CCC为任意常数)，",
+      "green": 0.926
+    }
+  },
+  "calculus-Q412": {
+    "reference_pages": [
+      138,
+      139
+    ],
+    "anchor": null
+  },
+  "calculus-Q413": {
+    "reference_pages": [
+      138,
+      139
+    ],
+    "anchor": null
+  },
+  "calculus-Q414": {
+    "reference_pages": [
+      139
+    ],
+    "anchor": {
+      "page": 139,
+      "y": 106.33,
+      "label": "(16)2.",
+      "green": 0.831
+    }
+  },
+  "calculus-Q415": {
+    "reference_pages": [
+      139
+    ],
+    "anchor": {
+      "page": 139,
+      "y": 237.0,
+      "label": "(17)[一1,1].",
+      "green": 0.796
+    }
+  },
+  "calculus-Q416": {
+    "reference_pages": [
+      139
+    ],
+    "anchor": {
+      "page": 139,
+      "y": 430.67,
+      "label": "(1)GB依题设,有",
+      "green": 1
+    }
+  },
+  "calculus-Q417": {
+    "reference_pages": [
+      139,
+      140
+    ],
+    "anchor": {
+      "page": 139,
+      "y": 614.67,
+      "label": "(2)CEB方程组两边同时对ae求导,得",
+      "green": 1
+    }
+  },
+  "calculus-Q418": {
+    "reference_pages": [
+      140
+    ],
+    "anchor": {
+      "page": 140,
+      "y": 186.67,
+      "label": "(3)加ja?—y?|en<kGFR<(-yer<k.",
+      "green": 0.894
+    }
+  },
+  "calculus-Q419": {
+    "reference_pages": [
+      140
+    ],
+    "anchor": {
+      "page": 140,
+      "y": 376.67,
+      "label": "(4)(BeFst",
+      "green": 0.936
+    }
+  },
+  "calculus-Q420": {
+    "reference_pages": [
+      140,
+      141
+    ],
+    "anchor": {
+      "page": 140,
+      "y": 574.67,
+      "label": "(5)图设S上任一点为(zy,z),则(0,0,0)Bapysz)的距离的平方为dz=2?+y?+2\",",
+      "green": 0.926
+    }
+  },
+  "calculus-Q421": {
+    "reference_pages": [
+      141
+    ],
+    "anchor": {
+      "page": 141,
+      "y": 148.67,
+      "label": "(6)G9在zy=4KHER—AP(r,y)WWPBR22十y=1的距离为",
+      "green": 1
+    }
+  },
+  "calculus-Q422": {
+    "reference_pages": [
+      141,
+      142
+    ],
+    "anchor": {
+      "page": 141,
+      "y": 388.33,
+      "label": "(7)BD4Diz?+y?<16A.HH",
+      "green": 1
+    }
+  },
+  "calculus-Q423": {
+    "reference_pages": [
+      142
+    ],
+    "anchor": {
+      "page": 142,
+      "y": 251.67,
+      "label": "(8)RuHaity+2CREeHa’+y?Maetyte=4下的最值,利用拉格朗日乘数法.",
+      "green": 0.901
+    }
+  },
+  "calculus-Q424": {
+    "reference_pages": [
+      142,
+      143
+    ],
+    "anchor": {
+      "page": 142,
+      "y": 381.67,
+      "label": "(9)设第一象限内,曲线上任一点为PC(z,y).方程3z?十2zy十3光一4两边同时对xz求导,解得",
+      "green": 0.945
+    }
+  },
+  "calculus-Q425": {
+    "reference_pages": [
+      143
+    ],
+    "anchor": {
+      "page": 143,
+      "y": 67.0,
+      "label": "(10)G3BEEy为中间变量,zVy为自变量.由已知,得",
+      "green": 1
+    }
+  },
+  "calculus-Q426": {
+    "reference_pages": [
+      143
+    ],
+    "anchor": {
+      "page": 143,
+      "y": 371.0,
+      "label": "(11)GBth2=bem+fw)it",
+      "green": 1
+    }
+  },
+  "calculus-Q427": {
+    "reference_pages": [
+      143,
+      144
+    ],
+    "anchor": {
+      "page": 143,
+      "y": 560.33,
+      "label": "(12)&34esiny=u,Il",
+      "green": 1
+    }
+  },
+  "calculus-Q428": {
+    "reference_pages": [
+      144
+    ],
+    "anchor": {
+      "page": 144,
+      "y": 103.33,
+      "label": "(1)A.",
+      "green": 0.894
+    }
+  },
+  "calculus-Q429": {
+    "reference_pages": [
+      144
+    ],
+    "anchor": {
+      "page": 144,
+      "y": 169.33,
+      "label": "(2)B.",
+      "green": 0.894
+    }
+  },
+  "calculus-Q430": {
+    "reference_pages": [
+      144
+    ],
+    "anchor": {
+      "page": 144,
+      "y": 208.0,
+      "label": "(3)C.",
+      "green": 0.916
+    }
+  },
+  "calculus-Q431": {
+    "reference_pages": [
+      144,
+      145
+    ],
+    "anchor": {
+      "page": 144,
+      "y": 472.33,
+      "label": "(4)D.",
+      "green": 0.905
+    }
+  },
+  "calculus-Q432": {
+    "reference_pages": [
+      145
+    ],
+    "anchor": {
+      "page": 145,
+      "y": 69.33,
+      "label": "(5)C.",
+      "green": 1
+    }
+  },
+  "calculus-Q433": {
+    "reference_pages": [
+      145
+    ],
+    "anchor": null
+  },
+  "calculus-Q434": {
+    "reference_pages": [
+      145
+    ],
+    "anchor": null
+  },
+  "calculus-Q435": {
+    "reference_pages": [
+      145,
+      146
+    ],
+    "anchor": {
+      "page": 145,
+      "y": 617.67,
+      "label": "(8)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q436": {
+    "reference_pages": [
+      145,
+      146
+    ],
+    "anchor": null
+  },
+  "calculus-Q437": {
+    "reference_pages": [
+      146
+    ],
+    "anchor": {
+      "page": 146,
+      "y": 340.33,
+      "label": "(2)ptytory\"tat+y’.",
+      "green": 0.916
+    }
+  },
+  "calculus-Q438": {
+    "reference_pages": [
+      146
+    ],
+    "anchor": {
+      "page": 146,
+      "y": 527.67,
+      "label": "(3)nt[1+SP]",
+      "green": 0.871
+    }
+  },
+  "calculus-Q439": {
+    "reference_pages": [
+      146,
+      147
+    ],
+    "anchor": {
+      "page": 146,
+      "y": 637.33,
+      "label": "(4)一V2e*.",
+      "green": 0.934
+    }
+  },
+  "calculus-Q440": {
+    "reference_pages": [
+      146,
+      147
+    ],
+    "anchor": null
+  },
+  "calculus-Q441": {
+    "reference_pages": [
+      147,
+      148
+    ],
+    "anchor": {
+      "page": 147,
+      "y": 606.33,
+      "label": "(2)G3(必要性)设==7/全)人二=uM",
+      "green": 1
+    }
+  },
+  "calculus-Q442": {
+    "reference_pages": [
+      148
+    ],
+    "anchor": {
+      "page": 148,
+      "y": 257.67,
+      "label": "(3)国方法一:方程F(二一二一二)=二,两边分别对x,y求导,得",
+      "green": 0.924
+    }
+  },
+  "calculus-Q443": {
+    "reference_pages": [
+      148,
+      149
+    ],
+    "anchor": {
+      "page": 148,
+      "y": 519.67,
+      "label": "(4)(3利用拉格朗日乘数法.",
+      "green": 0.864
+    }
+  },
+  "calculus-Q444": {
+    "reference_pages": [
+      149
+    ],
+    "anchor": {
+      "page": 149,
+      "y": 170.33,
+      "label": "(5)G3先求fCz,>)的驻点.由",
+      "green": 1
+    }
+  },
+  "calculus-Q445": {
+    "reference_pages": [
+      149,
+      150
+    ],
+    "anchor": {
+      "page": 149,
+      "y": 525.0,
+      "label": "(6)(BB依题意,有",
+      "green": 1
+    }
+  },
+  "calculus-Q446": {
+    "reference_pages": [
+      150
+    ],
+    "anchor": {
+      "page": 150,
+      "y": 131.33,
+      "label": "(7)BOL=2?+2ryty?+aAd—2x?—y*)TU",
+      "green": 0.87
+    }
+  },
+  "calculus-Q447": {
+    "reference_pages": [
+      150
+    ],
+    "anchor": {
+      "page": 150,
+      "y": 394.67,
+      "label": "(8)(Bhaus解得驻点为(1,0),(一1,0).又由",
+      "green": 0.88
+    }
+  },
+  "calculus-Q448": {
+    "reference_pages": [
+      150,
+      151
+    ],
+    "anchor": {
+      "page": 150,
+      "y": 550.67,
+      "label": "(9)(EB原方程两边取对数，",
+      "green": 0.882
+    }
+  },
+  "calculus-Q449": {
+    "reference_pages": [
+      151
+    ],
+    "anchor": {
+      "page": 151,
+      "y": 318.33,
+      "label": "(10)用拉格朗日乘数法.令工=zy十2zz十2yz十(zyz一1),则",
+      "green": 1
+    }
+  },
+  "calculus-Q450": {
+    "reference_pages": [
+      151,
+      152
+    ],
+    "anchor": {
+      "page": 151,
+      "y": 552.67,
+      "label": "(11)GB在已知方程两边同时对z,y求偏导数,得",
+      "green": 1
+    }
+  },
+  "calculus-Q451": {
+    "reference_pages": [
+      152
+    ],
+    "anchor": {
+      "page": 152,
+      "y": 309.33,
+      "label": "(12)图由>=jz)lnf(y)8",
+      "green": 0.937
+    }
+  },
+  "calculus-Q452": {
+    "reference_pages": [
+      152,
+      153
+    ],
+    "anchor": {
+      "page": 152,
+      "y": 548.67,
+      "label": "(13)(B依题意,有3一y—2\",=一一1,故",
+      "green": 0.924
+    }
+  },
+  "calculus-Q453": {
+    "reference_pages": [
+      153,
+      154
+    ],
+    "anchor": {
+      "page": 153,
+      "y": 421.0,
+      "label": "(14)&B(1)HEM,f=2ax+by,f=2by+ax,则",
+      "green": 1
+    }
+  },
+  "calculus-Q454": {
+    "reference_pages": [
+      153,
+      154
+    ],
+    "anchor": null
+  },
+  "calculus-Q455": {
+    "reference_pages": [
+      154
+    ],
+    "anchor": {
+      "page": 154,
+      "y": 277.67,
+      "label": "(16)(BCI)HEM.limf@sy)=fA.D=1.",
+      "green": 0.901
+    }
+  },
+  "calculus-Q456": {
+    "reference_pages": [
+      154,
+      155
+    ],
+    "anchor": {
+      "page": 154,
+      "y": 548.67,
+      "label": "(17)GB分段函数,用偏导数的定义进行求解.",
+      "green": 0.89
+    }
+  },
+  "calculus-Q457": {
+    "reference_pages": [
+      155
+    ],
+    "anchor": {
+      "page": 155,
+      "y": 198.0,
+      "label": "(18)G3依题意,相当于求原点(0,0)到椭圆上的点的距离dA",
+      "green": 1
+    }
+  },
+  "calculus-Q458": {
+    "reference_pages": [
+      155,
+      156
+    ],
+    "anchor": {
+      "page": 155,
+      "y": 456.67,
+      "label": "(19)G3方程组等号两边同时对y求导,得",
+      "green": 1
+    }
+  },
+  "calculus-Q459": {
+    "reference_pages": [
+      156
+    ],
+    "anchor": {
+      "page": 156,
+      "y": 131.33,
+      "label": "(20)塘利用拉格朗日乘数法.令工=二+ay\"TAGay一1),则",
+      "green": 0.931
+    }
+  },
+  "calculus-Q460": {
+    "reference_pages": [
+      156,
+      157,
+      158
+    ],
+    "anchor": {
+      "page": 156,
+      "y": 218.0,
+      "label": "(21)§B¢1)元=fiaawtytfilar.cty).",
+      "green": 0.91
+    }
+  },
+  "calculus-Q461": {
+    "reference_pages": [
+      156,
+      157,
+      158
+    ],
+    "anchor": null
+  },
+  "calculus-Q462": {
+    "reference_pages": [
+      156,
+      157,
+      158
+    ],
+    "anchor": null
+  },
+  "calculus-Q463": {
+    "reference_pages": [
+      158,
+      159,
+      160
+    ],
+    "anchor": null
+  },
+  "calculus-Q464": {
+    "reference_pages": [
+      158,
+      159,
+      160
+    ],
+    "anchor": null
+  },
+  "calculus-Q465": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q466": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q467": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q468": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q469": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q470": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q471": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q472": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q473": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q474": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q475": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q476": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q477": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q478": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q479": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q480": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q481": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q482": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q483": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q484": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q485": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q486": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q487": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q488": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q489": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q490": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q491": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q492": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q493": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q494": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q495": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q496": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q497": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q498": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q499": {
+    "reference_pages": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172
+    ],
+    "anchor": null
+  },
+  "calculus-Q500": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q501": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q502": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q503": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q504": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q505": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q506": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q507": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q508": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q509": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q510": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q511": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q512": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q513": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q514": {
+    "reference_pages": [
+      172,
+      173,
+      174,
+      175,
+      176
+    ],
+    "anchor": null
+  },
+  "calculus-Q515": {
+    "reference_pages": [
+      176,
+      177
+    ],
+    "anchor": {
+      "page": 176,
+      "y": 621.33,
+      "label": "(3)Buxserm[y+|ey1ate,oon",
+      "green": 0.799
+    }
+  },
+  "calculus-Q516": {
+    "reference_pages": [
+      177,
+      178
+    ],
+    "anchor": {
+      "page": 177,
+      "y": 397.33,
+      "label": "(4)(BB+KakD如图5-45所示.",
+      "green": 1
+    }
+  },
+  "calculus-Q517": {
+    "reference_pages": [
+      178,
+      179
+    ],
+    "anchor": {
+      "page": 178,
+      "y": 437.33,
+      "label": "(5)FBGAMACe十y)=zy过原点(0,0),其在极坐标下化为",
+      "green": 0.925
+    }
+  },
+  "calculus-Q518": {
+    "reference_pages": [
+      179
+    ],
+    "anchor": {
+      "page": 179,
+      "y": 93.67,
+      "label": "(6)GB在方程z:+(一zl)?=1524+G-l¢)?=2.W—2RrHEREABA",
+      "green": 1
+    }
+  },
+  "calculus-Q519": {
+    "reference_pages": [
+      179,
+      180
+    ],
+    "anchor": {
+      "page": 179,
+      "y": 590.67,
+      "label": "(7)WHERCar?十y?)2=2V2zy过点(0,0)与点(1,1).",
+      "green": 1
+    }
+  },
+  "calculus-Q520": {
+    "reference_pages": [
+      180,
+      181
+    ],
+    "anchor": {
+      "page": 180,
+      "y": 374.33,
+      "label": "(8)&Bpao十zy一y)dzdy=Jrodeay+[co—y*)dxdy.",
+      "green": 0.752
+    }
+  },
+  "calculus-Q521": {
+    "reference_pages": [
+      181,
+      182
+    ],
+    "anchor": {
+      "page": 181,
+      "y": 67.0,
+      "label": "(9)(9B积分区域了如图5-48阴影部分所示BYRDKFHR=y对称,则",
+      "green": 1
+    }
+  },
+  "calculus-Q522": {
+    "reference_pages": [
+      181,
+      182
+    ],
+    "anchor": null
+  },
+  "calculus-Q523": {
+    "reference_pages": [
+      181,
+      182
+    ],
+    "anchor": null
+  },
+  "calculus-Q524": {
+    "reference_pages": [
+      182
+    ],
+    "anchor": {
+      "page": 182,
+      "y": 62.33,
+      "label": "(12)(3B积分区间D,如图5-51所示,故yA",
+      "green": 0.796
+    }
+  },
+  "calculus-Q525": {
+    "reference_pages": [
+      182,
+      183
+    ],
+    "anchor": {
+      "page": 182,
+      "y": 331.0,
+      "label": "(13)(EB方法一:转化为直角坐标,积分区域D如图5-52所示.",
+      "green": 0.833
+    }
+  },
+  "calculus-Q526": {
+    "reference_pages": [
+      183
+    ],
+    "anchor": {
+      "page": 183,
+      "y": 67.0,
+      "label": "(14)(FB积分区域D如图5-53所示,采用极坐标.先对0积分后对积分,则",
+      "green": 1
+    }
+  },
+  "calculus-Q527": {
+    "reference_pages": [
+      183,
+      184
+    ],
+    "anchor": {
+      "page": 183,
+      "y": 391.67,
+      "label": "(15)I=iharcesin(2V六一2)dz|‘dy一|aresin(2Vz—x*dr",
+      "green": 1
+    }
+  },
+  "calculus-Q528": {
+    "reference_pages": [
+      184
+    ],
+    "anchor": {
+      "page": 184,
+      "y": 67.67,
+      "label": "(16)(B上azLfVa?Fy\")+2]dy=二SOSAFy\"dy",
+      "green": 0.926
+    }
+  },
+  "calculus-Q529": {
+    "reference_pages": [
+      184
+    ],
+    "anchor": {
+      "page": 184,
+      "y": 245.33,
+      "label": "(17)(3积分区域D如图5-54所示,用极坐标.当上>0时，",
+      "green": 0.896
+    }
+  },
+  "calculus-Q530": {
+    "reference_pages": [
+      184,
+      185
+    ],
+    "anchor": {
+      "page": 184,
+      "y": 540.67,
+      "label": "(18)GBHELA.£00)=0.fC)是偶函数,只需讨论:>0的情况.用极坐标,有",
+      "green": 0.91
+    }
+  },
+  "calculus-Q531": {
+    "reference_pages": [
+      185
+    ],
+    "anchor": {
+      "page": 185,
+      "y": 65.67,
+      "label": "(19)(BB交换积分顺序,如图5-55所示，",
+      "green": 1
+    }
+  },
+  "calculus-Q532": {
+    "reference_pages": [
+      185
+    ],
+    "anchor": {
+      "page": 185,
+      "y": 358.0,
+      "label": "(20)it]urate=ACA为一个数).在已知等式两边同时取二重积分,得",
+      "green": 1
+    }
+  },
+  "calculus-Q533": {
+    "reference_pages": [
+      185,
+      186
+    ],
+    "anchor": {
+      "page": 185,
+      "y": 537.0,
+      "label": "(21)GB由已知,积分区域D如图5-57所示,采用极坐标,",
+      "green": 1
+    }
+  },
+  "calculus-Q534": {
+    "reference_pages": [
+      186,
+      187
+    ],
+    "anchor": {
+      "page": 186,
+      "y": 458.67,
+      "label": "(22){B44=“(42>ae?dedy,则",
+      "green": 0.886
+    }
+  },
+  "calculus-Q535": {
+    "reference_pages": [
+      187
+    ],
+    "anchor": {
+      "page": 187,
+      "y": 65.67,
+      "label": "(23)(3积分区域D如图5-58所示,D关于直线y=x对称.yax",
+      "green": 1
+    }
+  },
+  "calculus-Q536": {
+    "reference_pages": [
+      187
+    ],
+    "anchor": {
+      "page": 187,
+      "y": 238.67,
+      "label": "(24)(3积分区域如图5-59(a)所示，",
+      "green": 1
+    }
+  },
+  "calculus-Q537": {
+    "reference_pages": [
+      187,
+      188
+    ],
+    "anchor": {
+      "page": 187,
+      "y": 502.0,
+      "label": "(25)G3积分区域如图5-60(a)(a用极坐标,有",
+      "green": 1
+    }
+  },
+  "calculus-Q538": {
+    "reference_pages": [
+      188,
+      189
+    ],
+    "anchor": {
+      "page": 188,
+      "y": 353.33,
+      "label": "(1)GB积分区域D如图5-61所示,在直角坐标下，",
+      "green": 0.913
+    }
+  },
+  "calculus-Q539": {
+    "reference_pages": [
+      189,
+      190
+    ],
+    "anchor": {
+      "page": 189,
+      "y": 181.0,
+      "label": "(2)GBidf(r.y)=22—2?—y?=1—(a—1)?y?,(2—1)?+?=1,DARMD,与D,两",
+      "green": 1
+    }
+  },
+  "calculus-Q540": {
+    "reference_pages": [
+      190
+    ],
+    "anchor": {
+      "page": 190,
+      "y": 113.0,
+      "label": "(3)侠当z三1且y三1时沁为nz二ny=1,即zy一es",
+      "green": 0.904
+    }
+  },
+  "calculus-Q541": {
+    "reference_pages": [
+      190,
+      191,
+      192,
+      193
+    ],
+    "anchor": {
+      "page": 190,
+      "y": 388.67,
+      "label": "(4)(BD如图5-64所示,采用极坐标国人",
+      "green": 0.879
+    }
+  },
+  "calculus-Q542": {
+    "reference_pages": [
+      190,
+      191,
+      192,
+      193
+    ],
+    "anchor": null
+  },
+  "calculus-Q543": {
+    "reference_pages": [
+      193
+    ],
+    "anchor": {
+      "page": 193,
+      "y": 181.67,
+      "label": "(1)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q544": {
+    "reference_pages": [
+      193
+    ],
+    "anchor": {
+      "page": 193,
+      "y": 236.33,
+      "label": "(2)B.",
+      "green": 1
+    }
+  },
+  "calculus-Q545": {
+    "reference_pages": [
+      193
+    ],
+    "anchor": {
+      "page": 193,
+      "y": 329.0,
+      "label": "(3)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q546": {
+    "reference_pages": [
+      193
+    ],
+    "anchor": {
+      "page": 193,
+      "y": 402.33,
+      "label": "(4)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q547": {
+    "reference_pages": [
+      193
+    ],
+    "anchor": {
+      "page": 193,
+      "y": 524.0,
+      "label": "(5)D.",
+      "green": 1
+    }
+  },
+  "calculus-Q548": {
+    "reference_pages": [
+      193,
+      194
+    ],
+    "anchor": {
+      "page": 193,
+      "y": 596.33,
+      "label": "(6)A.",
+      "green": 1
+    }
+  },
+  "calculus-Q549": {
+    "reference_pages": [
+      194
+    ],
+    "anchor": {
+      "page": 194,
+      "y": 96.67,
+      "label": "(7)C.",
+      "green": 0.892
+    }
+  },
+  "calculus-Q550": {
+    "reference_pages": [
+      194
+    ],
+    "anchor": {
+      "page": 194,
+      "y": 264.67,
+      "label": "(1)y=二(sina—xcosx+C)(C为任意常数).",
+      "green": 0.745
+    }
+  },
+  "calculus-Q551": {
+    "reference_pages": [
+      194
+    ],
+    "anchor": {
+      "page": 194,
+      "y": 527.0,
+      "label": "(2)(27z一DC十y)=CCC为任意常数).",
+      "green": 0.529
+    }
+  },
+  "calculus-Q552": {
+    "reference_pages": [
+      194,
+      195
+    ],
+    "anchor": {
+      "page": 194,
+      "y": 633.0,
+      "label": "(3)sin=oe",
+      "green": 0.559
+    }
+  },
+  "calculus-Q553": {
+    "reference_pages": [
+      194,
+      195
+    ],
+    "anchor": null
+  },
+  "calculus-Q554": {
+    "reference_pages": [
+      195
+    ],
+    "anchor": {
+      "page": 195,
+      "y": 363.67,
+      "label": "(5)y=工[Cr+De'+(r—De'l.",
+      "green": 0.814
+    }
+  },
+  "calculus-Q555": {
+    "reference_pages": [
+      195
+    ],
+    "anchor": {
+      "page": 195,
+      "y": 537.0,
+      "label": "(6)y=e“(sina+cosx).",
+      "green": 0.831
+    }
+  },
+  "calculus-Q556": {
+    "reference_pages": [
+      195,
+      196
+    ],
+    "anchor": {
+      "page": 195,
+      "y": 654.0,
+      "label": "(7)y=arcsinz(~l<a<1).",
+      "green": 0.809
+    }
+  },
+  "calculus-Q557": {
+    "reference_pages": [
+      196
+    ],
+    "anchor": {
+      "page": 196,
+      "y": 280.33,
+      "label": "(8)>=Ce一z)二Ce一xz)十z(CC，为任意常数).",
+      "green": 0.736
+    }
+  },
+  "calculus-Q558": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": {
+      "page": 196,
+      "y": 339.0,
+      "label": "(9)y=Cye'+Cre十zer(CC为任意常数).",
+      "green": 0.862
+    }
+  },
+  "calculus-Q559": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q560": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q561": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q562": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q563": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q564": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q565": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q566": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q567": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q568": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q569": {
+    "reference_pages": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+    ],
+    "anchor": null
+  },
+  "calculus-Q570": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q571": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q572": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q573": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q574": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q575": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q576": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q577": {
+    "reference_pages": [
+      201,
+      202
+    ],
+    "anchor": null
+  },
+  "calculus-Q578": {
+    "reference_pages": [
+      202,
+      203
+    ],
+    "anchor": {
+      "page": 202,
+      "y": 585.33,
+      "label": "(2)y=e’-e*—ssinez.",
+      "green": 0.731
+    }
+  },
+  "calculus-Q579": {
+    "reference_pages": [
+      203
+    ],
+    "anchor": {
+      "page": 203,
+      "y": 185.67,
+      "label": "(3)y?一CCz十1D)一(十Din|lz十1一1(C为任意常数).",
+      "green": 0.742
+    }
+  },
+  "calculus-Q580": {
+    "reference_pages": [
+      203
+    ],
+    "anchor": {
+      "page": 203,
+      "y": 322.33,
+      "label": "(4)+n(2)+1]+arctan=+Inx=0.",
+      "green": 1
+    }
+  },
+  "calculus-Q581": {
+    "reference_pages": [
+      203,
+      204
+    ],
+    "anchor": {
+      "page": 203,
+      "y": 494.0,
+      "label": "(5)tany3(1+2Sa)",
+      "green": 0.602
+    }
+  },
+  "calculus-Q582": {
+    "reference_pages": [
+      204
+    ],
+    "anchor": {
+      "page": 204,
+      "y": 65.33,
+      "label": "(6)y=Cycos«+Cysin.x+x+frsinx(Ci,C，为任意常数).",
+      "green": 0.724
+    }
+  },
+  "calculus-Q583": {
+    "reference_pages": [
+      204
+    ],
+    "anchor": null
+  },
+  "calculus-Q584": {
+    "reference_pages": [
+      204
+    ],
+    "anchor": {
+      "page": 204,
+      "y": 394.67,
+      "label": "(8)Batty,",
+      "green": 0.908
+    }
+  },
+  "calculus-Q585": {
+    "reference_pages": [
+      204,
+      205
+    ],
+    "anchor": {
+      "page": 204,
+      "y": 595.33,
+      "label": "(9)",
+      "green": 0.891
+    }
+  },
+  "calculus-Q586": {
+    "reference_pages": [
+      205
+    ],
+    "anchor": {
+      "page": 205,
+      "y": 211.0,
+      "label": "(10)[0,十ce).",
+      "green": 1
+    }
+  },
+  "calculus-Q587": {
+    "reference_pages": [
+      205,
+      206
+    ],
+    "anchor": {
+      "page": 205,
+      "y": 392.33,
+      "label": "(1)(B已知等式中,令z=y=0,48£(0)=0.由导数的定义,有",
+      "green": 1
+    }
+  },
+  "calculus-Q588": {
+    "reference_pages": [
+      205,
+      206
+    ],
+    "anchor": null
+  },
+  "calculus-Q589": {
+    "reference_pages": [
+      206,
+      207
+    ],
+    "anchor": {
+      "page": 206,
+      "y": 377.33,
+      "label": "(3)(8Ha=sint.y=yy)及复合函数求导法则,有",
+      "green": 0.908
+    }
+  },
+  "calculus-Q590": {
+    "reference_pages": [
+      206,
+      207
+    ],
+    "anchor": null
+  },
+  "calculus-Q591": {
+    "reference_pages": [
+      207
+    ],
+    "anchor": {
+      "page": 207,
+      "y": 247.0,
+      "label": "(5)(BC1)由互为反函数的导数关系式,有yz)=a两边同时对2求导,得",
+      "green": 1
+    }
+  },
+  "calculus-Q592": {
+    "reference_pages": [
+      207
+    ],
+    "anchor": {
+      "page": 207,
+      "y": 429.33,
+      "label": "(6)GB方程的通解为",
+      "green": 1
+    }
+  },
+  "calculus-Q593": {
+    "reference_pages": [
+      207,
+      208
+    ],
+    "anchor": {
+      "page": 207,
+      "y": 626.67,
+      "label": "(7)BSye)+yCe)=F(x),BPEFEAS",
+      "green": 1
+    }
+  },
+  "calculus-Q594": {
+    "reference_pages": [
+      208
+    ],
+    "anchor": {
+      "page": 208,
+      "y": 156.67,
+      "label": "(8)(3B由已知,有fa)=e)=1_f(a),大(0)=g(0)一1,故",
+      "green": 0.841
+    }
+  },
+  "calculus-Q595": {
+    "reference_pages": [
+      208,
+      209
+    ],
+    "anchor": {
+      "page": 208,
+      "y": 286.67,
+      "label": "(9)图已知等式六z)=1十|[一6cos2¢一/CD)]d,两边对>求导,得",
+      "green": 0.845
+    }
+  },
+  "calculus-Q596": {
+    "reference_pages": [
+      208,
+      209
+    ],
+    "anchor": null
+  },
+  "calculus-Q597": {
+    "reference_pages": [
+      209
+    ],
+    "anchor": {
+      "page": 209,
+      "y": 66.0,
+      "label": "(11)坪已知方程两边同时对zx求导,得",
+      "green": 1
+    }
+  },
+  "calculus-Q598": {
+    "reference_pages": [
+      209
+    ],
+    "anchor": {
+      "page": 209,
+      "y": 289.33,
+      "label": "(12)G3C1)fhfcry)=yf(a)t+a2fly).Fy=1,8fC)=0,42€(0,+00)HA",
+      "green": 1
+    }
+  },
+  "calculus-Q599": {
+    "reference_pages": [
+      209,
+      210
+    ],
+    "anchor": {
+      "page": 209,
+      "y": 595.0,
+      "label": "(13)3(1)HEAL,f(r)一过/Gaz)=xcosx(x二0),解一阶线性微分方程,有",
+      "green": 1
+    }
+  },
+  "calculus-Q600": {
+    "reference_pages": [
+      210
+    ],
+    "anchor": {
+      "page": 210,
+      "y": 289.67,
+      "label": "(14)BCT)heOLP@)-1=2-1Be?fe)—el一工一|.",
+      "green": 0.899
+    }
+  },
+  "calculus-Q601": {
+    "reference_pages": [
+      210,
+      211
+    ],
+    "anchor": {
+      "page": 210,
+      "y": 624.67,
+      "label": "(15)memaAs=~+25(2)Se=y—24'(2)otk",
+      "green": 0.845
+    }
+  },
+  "calculus-Q602": {
+    "reference_pages": [
+      211,
+      212
+    ],
+    "anchor": {
+      "page": 211,
+      "y": 329.0,
+      "label": "(16)GBthg(x,y)=(2),有",
+      "green": 1
+    }
+  },
+  "calculus-Q603": {
+    "reference_pages": [
+      212
+    ],
+    "anchor": {
+      "page": 212,
+      "y": 122.33,
+      "label": "(17)GBCL)由题意可知/(z)十]afe)=0,将其变形为",
+      "green": 0.864
+    }
+  },
+  "calculus-Q604": {
+    "reference_pages": [
+      212,
+      213
+    ],
+    "anchor": {
+      "page": 212,
+      "y": 594.0,
+      "label": "(18)G3如图6-1所示,D关于直线y=x对称,则",
+      "green": 0.87
+    }
+  },
+  "calculus-Q605": {
+    "reference_pages": [
+      213,
+      214
+    ],
+    "anchor": {
+      "page": 213,
+      "y": 342.0,
+      "label": "(19)&BCLf+f@)=&的通解为",
+      "green": 1
+    }
+  },
+  "calculus-Q606": {
+    "reference_pages": [
+      214
+    ],
+    "anchor": {
+      "page": 214,
+      "y": 77.0,
+      "label": "(20)GB依题设,凸曲线y=y(Cz),yzz)>0,过M作>轴的垂线",
+      "green": 0.88
+    }
+  },
+  "calculus-Q607": {
+    "reference_pages": [
+      214
+    ],
+    "anchor": {
+      "page": 214,
+      "y": 368.0,
+      "label": "(21)&B由已知,光一0,于是曲率为",
+      "green": 0.89
+    }
+  },
+  "calculus-Q608": {
+    "reference_pages": [
+      214,
+      215
+    ],
+    "anchor": {
+      "page": 214,
+      "y": 559.0,
+      "label": "(22)GB依题设,知y(z)>Oye)>0,00)=2,y(0)=0,且",
+      "green": 0.911
+    }
+  },
+  "calculus-Q609": {
+    "reference_pages": [
+      215
+    ],
+    "anchor": {
+      "page": 215,
+      "y": 316.67,
+      "label": "(23)1)pace=0的通解可表示为zz)=Ce!,当是仅当|acorde发荫时，",
+      "green": 1
+    }
+  },
+  "calculus-Q610": {
+    "reference_pages": [
+      215,
+      216
+    ],
+    "anchor": {
+      "page": 215,
+      "y": 501.0,
+      "label": "(24)GB由曲率公式及y(z)>0,知开=一二一一.La为切线的倾角,所以",
+      "green": 1
+    }
+  },
+  "calculus-Q611": {
+    "reference_pages": [
+      216
+    ],
+    "anchor": {
+      "page": 216,
+      "y": 131.0,
+      "label": "(25)(By=yx)在点PCz,y)处的切线方程为了一》=y(CX—2),ESx轴的交点为",
+      "green": 0.865
+    }
+  },
+  "calculus-Q612": {
+    "reference_pages": [
+      216,
+      217
+    ],
+    "anchor": {
+      "page": 216,
+      "y": 292.33,
+      "label": "(26)(3依题设,有",
+      "green": 0.856
+    }
+  },
+  "calculus-Q613": {
+    "reference_pages": [
+      217,
+      218
+    ],
+    "anchor": {
+      "page": 217,
+      "y": 184.67,
+      "label": "(27)(8C1)they=yx)在点(0,1)处有水平切线,知y(0)=1,y(0)=0.",
+      "green": 1
+    }
+  },
+  "calculus-Q614": {
+    "reference_pages": [
+      218
+    ],
+    "anchor": {
+      "page": 218,
+      "y": 89.0,
+      "label": "(28)图由牛顿第二定律,Fa=ma,故由已知条件,有一如=mx",
+      "green": 0.833
+    }
+  },
+  "calculus-Q615": {
+    "reference_pages": [
+      218,
+      219
+    ],
+    "anchor": {
+      "page": 218,
+      "y": 269.33,
+      "label": "(29)(Bo=S292=9一。(加速度).由牛顿第二定律,知忆一ma,故",
+      "green": 0.847
+    }
+  },
+  "calculus-Q616": {
+    "reference_pages": [
+      219
+    ],
+    "anchor": {
+      "page": 219,
+      "y": 332.67,
+      "label": "(1)GB依题意,设该物体温度为TCD),则",
+      "green": 1
+    }
+  },
+  "calculus-Q617": {
+    "reference_pages": [
+      219,
+      220
+    ],
+    "anchor": {
+      "page": 219,
+      "y": 453.33,
+      "label": "(2)G9C1)由于积分区域z?十y%<4e?关于直线y=z对称,故",
+      "green": 1
+    }
+  },
+  "calculus-Q618": {
+    "reference_pages": [
+      220,
+      221
+    ],
+    "anchor": {
+      "page": 220,
+      "y": 61.67,
+      "label": "(3)国将=rule)代入原方程,得",
+      "green": 0.871
+    }
+  },
+  "algebra-Q001": {
+    "reference_pages": [
+      221
+    ],
+    "anchor": {
+      "page": 221,
+      "y": 201.0,
+      "label": "(1)A,",
+      "green": 1
+    }
+  },
+  "algebra-Q002": {
+    "reference_pages": [
+      221
+    ],
+    "anchor": {
+      "page": 221,
+      "y": 395.33,
+      "label": "(2)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q003": {
+    "reference_pages": [
+      221
+    ],
+    "anchor": {
+      "page": 221,
+      "y": 480.0,
+      "label": "(3)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q004": {
+    "reference_pages": [
+      221,
+      222
+    ],
+    "anchor": {
+      "page": 221,
+      "y": 611.33,
+      "label": "(4)和A.",
+      "green": 1
+    }
+  },
+  "algebra-Q005": {
+    "reference_pages": [
+      222
+    ],
+    "anchor": {
+      "page": 222,
+      "y": 179.0,
+      "label": "(1)k2(k?—4).",
+      "green": 0.434
+    }
+  },
+  "algebra-Q006": {
+    "reference_pages": [
+      222
+    ],
+    "anchor": {
+      "page": 222,
+      "y": 304.33,
+      "label": "(2)ja十1或<一2.",
+      "green": 0.619
+    }
+  },
+  "algebra-Q007": {
+    "reference_pages": [
+      222
+    ],
+    "anchor": {
+      "page": 222,
+      "y": 390.67,
+      "label": "(3)13.",
+      "green": 0.567
+    }
+  },
+  "algebra-Q008": {
+    "reference_pages": [
+      222,
+      223
+    ],
+    "anchor": {
+      "page": 222,
+      "y": 510.33,
+      "label": "(4)一4",
+      "green": 0.643
+    }
+  },
+  "algebra-Q009": {
+    "reference_pages": [
+      222,
+      223
+    ],
+    "anchor": null
+  },
+  "algebra-Q010": {
+    "reference_pages": [
+      223
+    ],
+    "anchor": {
+      "page": 223,
+      "y": 116.0,
+      "label": "(6)6.",
+      "green": 0.776
+    }
+  },
+  "algebra-Q011": {
+    "reference_pages": [
+      223
+    ],
+    "anchor": {
+      "page": 223,
+      "y": 199.33,
+      "label": "(7)0.",
+      "green": 0.762
+    }
+  },
+  "algebra-Q012": {
+    "reference_pages": [
+      223
+    ],
+    "anchor": {
+      "page": 223,
+      "y": 269.0,
+      "label": "(8)0.",
+      "green": 0.811
+    }
+  },
+  "algebra-Q013": {
+    "reference_pages": [
+      223
+    ],
+    "anchor": {
+      "page": 223,
+      "y": 401.0,
+      "label": "(9)2.",
+      "green": 0.771
+    }
+  },
+  "algebra-Q014": {
+    "reference_pages": [
+      223
+    ],
+    "anchor": null
+  },
+  "algebra-Q015": {
+    "reference_pages": [
+      223,
+      224
+    ],
+    "anchor": {
+      "page": 223,
+      "y": 584.0,
+      "label": "(11)1.",
+      "green": 0.865
+    }
+  },
+  "algebra-Q016": {
+    "reference_pages": [
+      224,
+      225
+    ],
+    "anchor": {
+      "page": 224,
+      "y": 85.0,
+      "label": "(12)>.",
+      "green": 0.809
+    }
+  },
+  "algebra-Q017": {
+    "reference_pages": [
+      224,
+      225
+    ],
+    "anchor": null
+  },
+  "algebra-Q018": {
+    "reference_pages": [
+      224,
+      225
+    ],
+    "anchor": null
+  },
+  "algebra-Q019": {
+    "reference_pages": [
+      224,
+      225
+    ],
+    "anchor": null
+  },
+  "algebra-Q020": {
+    "reference_pages": [
+      224,
+      225
+    ],
+    "anchor": null
+  },
+  "algebra-Q021": {
+    "reference_pages": [
+      225,
+      226
+    ],
+    "anchor": {
+      "page": 225,
+      "y": 589.33,
+      "label": "(1)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q022": {
+    "reference_pages": [
+      226
+    ],
+    "anchor": {
+      "page": 226,
+      "y": 261.0,
+      "label": "(2)B.",
+      "green": 0.826
+    }
+  },
+  "algebra-Q023": {
+    "reference_pages": [
+      226,
+      227
+    ],
+    "anchor": {
+      "page": 226,
+      "y": 477.0,
+      "label": "(3)C.",
+      "green": 0.868
+    }
+  },
+  "algebra-Q024": {
+    "reference_pages": [
+      227
+    ],
+    "anchor": {
+      "page": 227,
+      "y": 70.0,
+      "label": "(4)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q025": {
+    "reference_pages": [
+      227
+    ],
+    "anchor": null
+  },
+  "algebra-Q026": {
+    "reference_pages": [
+      227
+    ],
+    "anchor": {
+      "page": 227,
+      "y": 387.67,
+      "label": "(2)0.",
+      "green": 0.783
+    }
+  },
+  "algebra-Q027": {
+    "reference_pages": [
+      227
+    ],
+    "anchor": {
+      "page": 227,
+      "y": 437.33,
+      "label": "(3)>.",
+      "green": 1
+    }
+  },
+  "algebra-Q028": {
+    "reference_pages": [
+      227,
+      228
+    ],
+    "anchor": {
+      "page": 227,
+      "y": 586.33,
+      "label": "(4)126.",
+      "green": 0.578
+    }
+  },
+  "algebra-Q029": {
+    "reference_pages": [
+      228
+    ],
+    "anchor": {
+      "page": 228,
+      "y": 249.67,
+      "label": "(5)2.",
+      "green": 0.614
+    }
+  },
+  "algebra-Q030": {
+    "reference_pages": [
+      228,
+      229
+    ],
+    "anchor": {
+      "page": 228,
+      "y": 491.67,
+      "label": "(6)12.",
+      "green": 0.578
+    }
+  },
+  "algebra-Q031": {
+    "reference_pages": [
+      229,
+      230,
+      231
+    ],
+    "anchor": {
+      "page": 229,
+      "y": 74.67,
+      "label": "(7)z",
+      "green": 1
+    }
+  },
+  "algebra-Q032": {
+    "reference_pages": [
+      229,
+      230,
+      231
+    ],
+    "anchor": null
+  },
+  "algebra-Q033": {
+    "reference_pages": [
+      229,
+      230,
+      231
+    ],
+    "anchor": null
+  },
+  "algebra-Q034": {
+    "reference_pages": [
+      229,
+      230,
+      231
+    ],
+    "anchor": null
+  },
+  "algebra-Q035": {
+    "reference_pages": [
+      229,
+      230,
+      231
+    ],
+    "anchor": null
+  },
+  "algebra-Q036": {
+    "reference_pages": [
+      231
+    ],
+    "anchor": {
+      "page": 231,
+      "y": 111.0,
+      "label": "(1)@BrhAT=A‘AA‘一4447三|4|五,知",
+      "green": 1
+    }
+  },
+  "algebra-Q037": {
+    "reference_pages": [
+      231
+    ],
+    "anchor": {
+      "page": 231,
+      "y": 308.67,
+      "label": "(2)G3(1)AHAAO,AWEay,#0.HAT=RA’lay一Ai",
+      "green": 1
+    }
+  },
+  "algebra-Q038": {
+    "reference_pages": [
+      231
+    ],
+    "anchor": {
+      "page": 231,
+      "y": 571.67,
+      "label": "(3)BaF",
+      "green": 1
+    }
+  },
+  "algebra-Q039": {
+    "reference_pages": [
+      231,
+      232,
+      233
+    ],
+    "anchor": {
+      "page": 231,
+      "y": 666.0,
+      "label": "(4)(B由已知,有",
+      "green": 1
+    }
+  },
+  "algebra-Q040": {
+    "reference_pages": [
+      233
+    ],
+    "anchor": {
+      "page": 233,
+      "y": 174.0,
+      "label": "(1)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q041": {
+    "reference_pages": [
+      233,
+      234
+    ],
+    "anchor": {
+      "page": 233,
+      "y": 299.67,
+      "label": "(2)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q042": {
+    "reference_pages": [
+      233,
+      234
+    ],
+    "anchor": null
+  },
+  "algebra-Q043": {
+    "reference_pages": [
+      234
+    ],
+    "anchor": {
+      "page": 234,
+      "y": 118.33,
+      "label": "(4)B.",
+      "green": 0.906
+    }
+  },
+  "algebra-Q044": {
+    "reference_pages": [
+      234
+    ],
+    "anchor": {
+      "page": 234,
+      "y": 277.67,
+      "label": "(5)D.",
+      "green": 0.859
+    }
+  },
+  "algebra-Q045": {
+    "reference_pages": [
+      234,
+      235
+    ],
+    "anchor": {
+      "page": 234,
+      "y": 559.67,
+      "label": "(6)B.",
+      "green": 0.887
+    }
+  },
+  "algebra-Q046": {
+    "reference_pages": [
+      235
+    ],
+    "anchor": {
+      "page": 235,
+      "y": 358.0,
+      "label": "(7)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q047": {
+    "reference_pages": [
+      235,
+      236
+    ],
+    "anchor": {
+      "page": 235,
+      "y": 530.0,
+      "label": "(1)3Baik3",
+      "green": 0.827
+    }
+  },
+  "algebra-Q048": {
+    "reference_pages": [
+      235,
+      236
+    ],
+    "anchor": null
+  },
+  "algebra-Q049": {
+    "reference_pages": [
+      236
+    ],
+    "anchor": {
+      "page": 236,
+      "y": 280.33,
+      "label": "(3)|02\"0",
+      "green": 0.862
+    }
+  },
+  "algebra-Q050": {
+    "reference_pages": [
+      236
+    ],
+    "anchor": {
+      "page": 236,
+      "y": 452.0,
+      "label": "(4)}010",
+      "green": 0.59
+    }
+  },
+  "algebra-Q051": {
+    "reference_pages": [
+      236,
+      237
+    ],
+    "anchor": {
+      "page": 236,
+      "y": 634.0,
+      "label": "(5)|03Oj.",
+      "green": 0.556
+    }
+  },
+  "algebra-Q052": {
+    "reference_pages": [
+      237
+    ],
+    "anchor": {
+      "page": 237,
+      "y": 151.67,
+      "label": "(6)(一2)一!.",
+      "green": 1
+    }
+  },
+  "algebra-Q053": {
+    "reference_pages": [
+      237
+    ],
+    "anchor": {
+      "page": 237,
+      "y": 210.67,
+      "label": "(7)2.",
+      "green": 0.695
+    }
+  },
+  "algebra-Q054": {
+    "reference_pages": [
+      237
+    ],
+    "anchor": null
+  },
+  "algebra-Q055": {
+    "reference_pages": [
+      237
+    ],
+    "anchor": {
+      "page": 237,
+      "y": 420.0,
+      "label": "(9)E.",
+      "green": 0.6
+    }
+  },
+  "algebra-Q056": {
+    "reference_pages": [
+      237
+    ],
+    "anchor": {
+      "page": 237,
+      "y": 526.0,
+      "label": "(10)+—3E).",
+      "green": 1
+    }
+  },
+  "algebra-Q057": {
+    "reference_pages": [
+      237,
+      238
+    ],
+    "anchor": {
+      "page": 237,
+      "y": 616.33,
+      "label": "(11)28),",
+      "green": 1
+    }
+  },
+  "algebra-Q058": {
+    "reference_pages": [
+      238
+    ],
+    "anchor": {
+      "page": 238,
+      "y": 170.67,
+      "label": "(12)一1.",
+      "green": 0.905
+    }
+  },
+  "algebra-Q059": {
+    "reference_pages": [
+      238
+    ],
+    "anchor": {
+      "page": 238,
+      "y": 231.33,
+      "label": "(13)—1aK.",
+      "green": 0.883
+    }
+  },
+  "algebra-Q060": {
+    "reference_pages": [
+      238
+    ],
+    "anchor": {
+      "page": 238,
+      "y": 344.0,
+      "label": "(14)100.",
+      "green": 0.574
+    }
+  },
+  "algebra-Q061": {
+    "reference_pages": [
+      238,
+      239
+    ],
+    "anchor": {
+      "page": 238,
+      "y": 564.33,
+      "label": "(1)GBthBA=0O,知rQA)二r(B)过3,由r(B)二1,得r4)近3一r(B)反1.而显然rA)之1,故",
+      "green": 0.875
+    }
+  },
+  "algebra-Q062": {
+    "reference_pages": [
+      239
+    ],
+    "anchor": {
+      "page": 239,
+      "y": 201.33,
+      "label": "(2)@BthA®=(E+aB\")(E+a8\")=E+af\"+af\"+a(B'a)p*",
+      "green": 1
+    }
+  },
+  "algebra-Q063": {
+    "reference_pages": [
+      239
+    ],
+    "anchor": {
+      "page": 239,
+      "y": 360.33,
+      "label": "(3)GBA‘)=(A4)*,MATA)\"=|A7|EBA)\"一|414.",
+      "green": 1
+    }
+  },
+  "algebra-Q064": {
+    "reference_pages": [
+      239,
+      240
+    ],
+    "anchor": {
+      "page": 239,
+      "y": 549.67,
+      "label": "(4)GBA是对称矩阵,将4TRE.",
+      "green": 1
+    }
+  },
+  "algebra-Q065": {
+    "reference_pages": [
+      240
+    ],
+    "anchor": {
+      "page": 240,
+      "y": 139.67,
+      "label": "(5)园考虑到(4—ED)无公式可用,在已知等式两边同时乘以(4—ED.",
+      "green": 0.853
+    }
+  },
+  "algebra-Q066": {
+    "reference_pages": [
+      240
+    ],
+    "anchor": {
+      "page": 240,
+      "y": 287.0,
+      "label": "(6)G3由于[(了十B)22=(E+BY).",
+      "green": 0.835
+    }
+  },
+  "algebra-Q067": {
+    "reference_pages": [
+      240
+    ],
+    "anchor": {
+      "page": 240,
+      "y": 430.0,
+      "label": "(7)(3求抽象矩阵的逆,常用可道的定义与CAB)一BUA.",
+      "green": 0.886
+    }
+  },
+  "algebra-Q068": {
+    "reference_pages": [
+      240
+    ],
+    "anchor": {
+      "page": 240,
+      "y": 549.33,
+      "label": "(8)G3只要证明|4—E|=0BPAY.pHAIEEE,AAT=ATA一已,所以",
+      "green": 0.886
+    }
+  },
+  "algebra-Q069": {
+    "reference_pages": [
+      240,
+      241
+    ],
+    "anchor": {
+      "page": 240,
+      "y": 620.0,
+      "label": "(9)13只要证明|4十B|=0即可.",
+      "green": 0.927
+    }
+  },
+  "algebra-Q070": {
+    "reference_pages": [
+      241
+    ],
+    "anchor": {
+      "page": 241,
+      "y": 107.33,
+      "label": "(10)(ehAB+E=A?+B,\"]7$AB—B=A?—E,(A—E)B=A°—E,",
+      "green": 1
+    }
+  },
+  "algebra-Q071": {
+    "reference_pages": [
+      241
+    ],
+    "anchor": {
+      "page": 241,
+      "y": 315.67,
+      "label": "(11)@§HiCATB™)\"—A(BTA)\"!=(E—B\"')\",#8",
+      "green": 1
+    }
+  },
+  "algebra-Q072": {
+    "reference_pages": [
+      241
+    ],
+    "anchor": {
+      "page": 241,
+      "y": 401.0,
+      "label": "(12)9fhA'BA=6A+BA,/§A'BA—BA一64,即(4一已)B4=GA.",
+      "green": 1
+    }
+  },
+  "algebra-Q073": {
+    "reference_pages": [
+      241,
+      242
+    ],
+    "anchor": {
+      "page": 241,
+      "y": 665.33,
+      "label": "(13)(BA与B为初等矩阵,故可道,由4XB=C,得X=ACB”ti",
+      "green": 1
+    }
+  },
+  "algebra-Q074": {
+    "reference_pages": [
+      242
+    ],
+    "anchor": {
+      "page": 242,
+      "y": 166.33,
+      "label": "(14)OB已知邱隆方程无法利用拒阵运算化简,则令4=(\"8\"),代入等式转化为解方程,有",
+      "green": 0.929
+    }
+  },
+  "algebra-Q075": {
+    "reference_pages": [
+      242
+    ],
+    "anchor": {
+      "page": 242,
+      "y": 378.0,
+      "label": "(1)B.",
+      "green": 0.852
+    }
+  },
+  "algebra-Q076": {
+    "reference_pages": [
+      242
+    ],
+    "anchor": {
+      "page": 242,
+      "y": 448.33,
+      "label": "(2)C.",
+      "green": 0.883
+    }
+  },
+  "algebra-Q077": {
+    "reference_pages": [
+      242,
+      243
+    ],
+    "anchor": {
+      "page": 242,
+      "y": 635.67,
+      "label": "(3)A.",
+      "green": 0.843
+    }
+  },
+  "algebra-Q078": {
+    "reference_pages": [
+      243
+    ],
+    "anchor": {
+      "page": 243,
+      "y": 69.33,
+      "label": "(4)A.",
+      "green": 1
+    }
+  },
+  "algebra-Q079": {
+    "reference_pages": [
+      243
+    ],
+    "anchor": {
+      "page": 243,
+      "y": 245.67,
+      "label": "(5)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q080": {
+    "reference_pages": [
+      243,
+      244
+    ],
+    "anchor": {
+      "page": 243,
+      "y": 514.67,
+      "label": "(6)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q081": {
+    "reference_pages": [
+      244
+    ],
+    "anchor": {
+      "page": 244,
+      "y": 80.67,
+      "label": "(7)C,",
+      "green": 0.869
+    }
+  },
+  "algebra-Q082": {
+    "reference_pages": [
+      244
+    ],
+    "anchor": {
+      "page": 244,
+      "y": 268.67,
+      "label": "(1)(O2B\"上",
+      "green": 0.574
+    }
+  },
+  "algebra-Q083": {
+    "reference_pages": [
+      244,
+      245
+    ],
+    "anchor": {
+      "page": 244,
+      "y": 420.67,
+      "label": "(2)",
+      "green": 0.6
+    }
+  },
+  "algebra-Q084": {
+    "reference_pages": [
+      244,
+      245
+    ],
+    "anchor": null
+  },
+  "algebra-Q085": {
+    "reference_pages": [
+      245,
+      246
+    ],
+    "anchor": {
+      "page": 245,
+      "y": 475.33,
+      "label": "(4)001-1)\"|",
+      "green": 1
+    }
+  },
+  "algebra-Q086": {
+    "reference_pages": [
+      246
+    ],
+    "anchor": {
+      "page": 246,
+      "y": 143.33,
+      "label": "(5)n.",
+      "green": 0.64
+    }
+  },
+  "algebra-Q087": {
+    "reference_pages": [
+      246,
+      247,
+      248,
+      249
+    ],
+    "anchor": {
+      "page": 246,
+      "y": 245.67,
+      "label": "(6)—.",
+      "green": 0.863
+    }
+  },
+  "algebra-Q088": {
+    "reference_pages": [
+      246,
+      247,
+      248,
+      249
+    ],
+    "anchor": null
+  },
+  "algebra-Q089": {
+    "reference_pages": [
+      246,
+      247,
+      248,
+      249
+    ],
+    "anchor": null
+  },
+  "algebra-Q090": {
+    "reference_pages": [
+      246,
+      247,
+      248,
+      249
+    ],
+    "anchor": null
+  },
+  "algebra-Q091": {
+    "reference_pages": [
+      246,
+      247,
+      248,
+      249
+    ],
+    "anchor": null
+  },
+  "algebra-Q092": {
+    "reference_pages": [
+      246,
+      247,
+      248,
+      249
+    ],
+    "anchor": null
+  },
+  "algebra-Q093": {
+    "reference_pages": [
+      246,
+      247,
+      248,
+      249
+    ],
+    "anchor": null
+  },
+  "algebra-Q094": {
+    "reference_pages": [
+      249,
+      250
+    ],
+    "anchor": null
+  },
+  "algebra-Q095": {
+    "reference_pages": [
+      249,
+      250
+    ],
+    "anchor": null
+  },
+  "algebra-Q096": {
+    "reference_pages": [
+      250
+    ],
+    "anchor": {
+      "page": 250,
+      "y": 177.33,
+      "label": "(1)A.",
+      "green": 0.82
+    }
+  },
+  "algebra-Q097": {
+    "reference_pages": [
+      250
+    ],
+    "anchor": {
+      "page": 250,
+      "y": 262.67,
+      "label": "(2)C.",
+      "green": 0.818
+    }
+  },
+  "algebra-Q098": {
+    "reference_pages": [
+      250,
+      251
+    ],
+    "anchor": {
+      "page": 250,
+      "y": 664.0,
+      "label": "(3)B.",
+      "green": 0.886
+    }
+  },
+  "algebra-Q099": {
+    "reference_pages": [
+      251
+    ],
+    "anchor": {
+      "page": 251,
+      "y": 249.0,
+      "label": "(4)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q100": {
+    "reference_pages": [
+      251
+    ],
+    "anchor": {
+      "page": 251,
+      "y": 291.33,
+      "label": "(5)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q101": {
+    "reference_pages": [
+      251
+    ],
+    "anchor": {
+      "page": 251,
+      "y": 498.0,
+      "label": "(6)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q102": {
+    "reference_pages": [
+      251,
+      252
+    ],
+    "anchor": {
+      "page": 251,
+      "y": 640.67,
+      "label": "(7)A.",
+      "green": 1
+    }
+  },
+  "algebra-Q103": {
+    "reference_pages": [
+      252
+    ],
+    "anchor": {
+      "page": 252,
+      "y": 65.33,
+      "label": "(8)B.",
+      "green": 0.84
+    }
+  },
+  "algebra-Q104": {
+    "reference_pages": [
+      252
+    ],
+    "anchor": null
+  },
+  "algebra-Q105": {
+    "reference_pages": [
+      252
+    ],
+    "anchor": null
+  },
+  "algebra-Q106": {
+    "reference_pages": [
+      252
+    ],
+    "anchor": {
+      "page": 252,
+      "y": 415.0,
+      "label": "(1)GB利用结论:列(行)向量组作初等行(列)变换,相关性不变(且向量的位置不变).",
+      "green": 0.914
+    }
+  },
+  "algebra-Q107": {
+    "reference_pages": [
+      252,
+      253
+    ],
+    "anchor": {
+      "page": 252,
+      "y": 646.67,
+      "label": "(2)雯及是否可由ww,as线性表示,等价于方程组有一ziai十za;十zs&s是否有解,即考虑方",
+      "green": 0.872
+    }
+  },
+  "algebra-Q108": {
+    "reference_pages": [
+      253
+    ],
+    "anchor": {
+      "page": 253,
+      "y": 351.0,
+      "label": "(3)塘由及可由o@,0,0,线性表示,知方程组",
+      "green": 1
+    }
+  },
+  "algebra-Q109": {
+    "reference_pages": [
+      253,
+      254
+    ],
+    "anchor": {
+      "page": 253,
+      "y": 650.67,
+      "label": "(4)GB向量组(工)SCI)等价的充分必要条件为rrI)=r(I)=r(C1),CID).",
+      "green": 1
+    }
+  },
+  "algebra-Q110": {
+    "reference_pages": [
+      254
+    ],
+    "anchor": {
+      "page": 254,
+      "y": 259.0,
+      "label": "(5)G9ds:RSETEww:,as,as一cs线性无关即可,用定义证明.",
+      "green": 0.883
+    }
+  },
+  "algebra-Q111": {
+    "reference_pages": [
+      254,
+      255
+    ],
+    "anchor": {
+      "page": 254,
+      "y": 470.33,
+      "label": "(6)Gar-:由特征值的定义,有4w,=—2a,,Aa,=a).",
+      "green": 0.855
+    }
+  },
+  "algebra-Q112": {
+    "reference_pages": [
+      255
+    ],
+    "anchor": {
+      "page": 255,
+      "y": 65.67,
+      "label": "(7)GBAx=0的基础解系所含解向量的个数为一rC4)=4-2=2.Lae,的分量不成比例,知",
+      "green": 1
+    }
+  },
+  "algebra-Q113": {
+    "reference_pages": [
+      255
+    ],
+    "anchor": null
+  },
+  "algebra-Q114": {
+    "reference_pages": [
+      255
+    ],
+    "anchor": {
+      "page": 255,
+      "y": 374.0,
+      "label": "(2)C,",
+      "green": 1
+    }
+  },
+  "algebra-Q115": {
+    "reference_pages": [
+      255
+    ],
+    "anchor": {
+      "page": 255,
+      "y": 444.67,
+      "label": "(3)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q116": {
+    "reference_pages": [
+      255,
+      256
+    ],
+    "anchor": {
+      "page": 255,
+      "y": 542.0,
+      "label": "(4)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q117": {
+    "reference_pages": [
+      256
+    ],
+    "anchor": {
+      "page": 256,
+      "y": 153.0,
+      "label": "(5)和A.",
+      "green": 0.766
+    }
+  },
+  "algebra-Q118": {
+    "reference_pages": [
+      256
+    ],
+    "anchor": {
+      "page": 256,
+      "y": 320.0,
+      "label": "(6)B.",
+      "green": 0.847
+    }
+  },
+  "algebra-Q119": {
+    "reference_pages": [
+      256,
+      257
+    ],
+    "anchor": {
+      "page": 256,
+      "y": 635.0,
+      "label": "(7)D.",
+      "green": 0.566
+    }
+  },
+  "algebra-Q120": {
+    "reference_pages": [
+      257
+    ],
+    "anchor": {
+      "page": 257,
+      "y": 313.0,
+      "label": "(8)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q121": {
+    "reference_pages": [
+      257
+    ],
+    "anchor": null
+  },
+  "algebra-Q122": {
+    "reference_pages": [
+      257,
+      258
+    ],
+    "anchor": {
+      "page": 257,
+      "y": 549.67,
+      "label": "(1)BC1)对4进行初等行变换,得",
+      "green": 1
+    }
+  },
+  "algebra-Q123": {
+    "reference_pages": [
+      258
+    ],
+    "anchor": {
+      "page": 258,
+      "y": 210.0,
+      "label": "(2)(347%3AEEBB..Bs.0,=1.2.3)一定线性相关.4BBoBsRVETCK.Mla,G=1,2,3)",
+      "green": 0.822
+    }
+  },
+  "algebra-Q124": {
+    "reference_pages": [
+      258,
+      259
+    ],
+    "anchor": {
+      "page": 258,
+      "y": 447.67,
+      "label": "(3)(3C1)对增广矩阵(4|BD施行初等行变换,有",
+      "green": 0.791
+    }
+  },
+  "algebra-Q125": {
+    "reference_pages": [
+      259
+    ],
+    "anchor": {
+      "page": 259,
+      "y": 94.67,
+      "label": "(4)GIBrds.FAEB.",
+      "green": 1
+    }
+  },
+  "algebra-Q126": {
+    "reference_pages": [
+      259
+    ],
+    "anchor": {
+      "page": 259,
+      "y": 336.33,
+      "label": "(5)Ci)&B=210,+2724,+2303,)",
+      "green": 1
+    }
+  },
+  "algebra-Q127": {
+    "reference_pages": [
+      259,
+      260
+    ],
+    "anchor": {
+      "page": 259,
+      "y": 540.0,
+      "label": "(6)G9(1)用定义法.设",
+      "green": 1
+    }
+  },
+  "algebra-Q128": {
+    "reference_pages": [
+      260
+    ],
+    "anchor": {
+      "page": 260,
+      "y": 106.67,
+      "label": "(7)3+",
+      "green": 0.93
+    }
+  },
+  "algebra-Q129": {
+    "reference_pages": [
+      260
+    ],
+    "anchor": {
+      "page": 260,
+      "y": 265.33,
+      "label": "(8)figHiAa,=@,Aa,=2a,,Aa,=305,Ha,.a,,0,RAEIAAE.Moe,a,0,是不同特征值",
+      "green": 0.925
+    }
+  },
+  "algebra-Q130": {
+    "reference_pages": [
+      260,
+      261
+    ],
+    "anchor": {
+      "page": 260,
+      "y": 470.67,
+      "label": "(9)G3C1)XtA=Co)0,5.0.)作初等行变换.",
+      "green": 0.921
+    }
+  },
+  "algebra-Q131": {
+    "reference_pages": [
+      261,
+      262
+    ],
+    "anchor": {
+      "page": 261,
+      "y": 280.67,
+      "label": "(10)(3C1)依题设,有",
+      "green": 1
+    }
+  },
+  "algebra-Q132": {
+    "reference_pages": [
+      262,
+      263,
+      264
+    ],
+    "anchor": null
+  },
+  "algebra-Q133": {
+    "reference_pages": [
+      264
+    ],
+    "anchor": {
+      "page": 264,
+      "y": 174.67,
+      "label": "(1)B.",
+      "green": 0.845
+    }
+  },
+  "algebra-Q134": {
+    "reference_pages": [
+      264
+    ],
+    "anchor": {
+      "page": 264,
+      "y": 493.33,
+      "label": "(2)C.",
+      "green": 0.875
+    }
+  },
+  "algebra-Q135": {
+    "reference_pages": [
+      264,
+      265
+    ],
+    "anchor": {
+      "page": 264,
+      "y": 562.0,
+      "label": "(3)A.",
+      "green": 0.814
+    }
+  },
+  "algebra-Q136": {
+    "reference_pages": [
+      265
+    ],
+    "anchor": {
+      "page": 265,
+      "y": 69.0,
+      "label": "(4)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q137": {
+    "reference_pages": [
+      265
+    ],
+    "anchor": {
+      "page": 265,
+      "y": 125.67,
+      "label": "(5)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q138": {
+    "reference_pages": [
+      265
+    ],
+    "anchor": {
+      "page": 265,
+      "y": 260.33,
+      "label": "(6)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q139": {
+    "reference_pages": [
+      265
+    ],
+    "anchor": null
+  },
+  "algebra-Q140": {
+    "reference_pages": [
+      265
+    ],
+    "anchor": {
+      "page": 265,
+      "y": 582.0,
+      "label": "(8)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q141": {
+    "reference_pages": [
+      265,
+      266
+    ],
+    "anchor": {
+      "page": 265,
+      "y": 612.67,
+      "label": "(9)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q142": {
+    "reference_pages": [
+      266
+    ],
+    "anchor": {
+      "page": 266,
+      "y": 108.33,
+      "label": "(10)D.",
+      "green": 0.869
+    }
+  },
+  "algebra-Q143": {
+    "reference_pages": [
+      266
+    ],
+    "anchor": {
+      "page": 266,
+      "y": 268.0,
+      "label": "(11)B.",
+      "green": 0.871
+    }
+  },
+  "algebra-Q144": {
+    "reference_pages": [
+      266,
+      267
+    ],
+    "anchor": {
+      "page": 266,
+      "y": 550.67,
+      "label": "(12)C.",
+      "green": 0.922
+    }
+  },
+  "algebra-Q145": {
+    "reference_pages": [
+      267,
+      268
+    ],
+    "anchor": {
+      "page": 267,
+      "y": 133.67,
+      "label": "(13)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q146": {
+    "reference_pages": [
+      267,
+      268
+    ],
+    "anchor": null
+  },
+  "algebra-Q147": {
+    "reference_pages": [
+      267,
+      268
+    ],
+    "anchor": null
+  },
+  "algebra-Q148": {
+    "reference_pages": [
+      267,
+      268
+    ],
+    "anchor": null
+  },
+  "algebra-Q149": {
+    "reference_pages": [
+      268
+    ],
+    "anchor": {
+      "page": 268,
+      "y": 287.33,
+      "label": "(1)GB对增广矩阵4作初等行变换，",
+      "green": 0.841
+    }
+  },
+  "algebra-Q150": {
+    "reference_pages": [
+      268,
+      269
+    ],
+    "anchor": {
+      "page": 268,
+      "y": 423.67,
+      "label": "(2)GB已知方程组的系数矩阵4为3阶方阵,可以通过行列式讨论参数》,确定其解的情况.",
+      "green": 0.894
+    }
+  },
+  "algebra-Q151": {
+    "reference_pages": [
+      269
+    ],
+    "anchor": {
+      "page": 269,
+      "y": 174.0,
+      "label": "(3)(BCD方程组©的系数失阵为4一(。，'9),可求得基础解系为",
+      "green": 1
+    }
+  },
+  "algebra-Q152": {
+    "reference_pages": [
+      269,
+      270
+    ],
+    "anchor": {
+      "page": 269,
+      "y": 555.67,
+      "label": "(4)国方程组(I)waseere=(—101",
+      "green": 1
+    }
+  },
+  "algebra-Q153": {
+    "reference_pages": [
+      270
+    ],
+    "anchor": {
+      "page": 270,
+      "y": 64.0,
+      "label": "(5)GBC1)对方程组@O的增广矩阵作初等行变换，",
+      "green": 0.907
+    }
+  },
+  "algebra-Q154": {
+    "reference_pages": [
+      270
+    ],
+    "anchor": {
+      "page": 270,
+      "y": 364.33,
+      "label": "(6)GBth|A|=0.Ay40,f8(A)=n—1,fer(A*)=1,BASx一0等价于方程",
+      "green": 0.883
+    }
+  },
+  "algebra-Q155": {
+    "reference_pages": [
+      270,
+      271
+    ],
+    "anchor": {
+      "page": 270,
+      "y": 482.33,
+      "label": "(7)(BrhAx=及的通解结构及已知条件,知rCA)=r(@),0.,0;)=3-1=2.",
+      "green": 0.883
+    }
+  },
+  "algebra-Q156": {
+    "reference_pages": [
+      271
+    ],
+    "anchor": {
+      "page": 271,
+      "y": 217.0,
+      "label": "(8)G9由已知条件及4x=b的通解结构,只需求hx=0的基础解系,而基础解系有)汪一r(C4)=",
+      "green": 1
+    }
+  },
+  "algebra-Q157": {
+    "reference_pages": [
+      271
+    ],
+    "anchor": {
+      "page": 271,
+      "y": 410.67,
+      "label": "(9)(BB依题设,r(B)=2,r(AB)=1,81A不可逆,故",
+      "green": 1
+    }
+  },
+  "algebra-Q158": {
+    "reference_pages": [
+      271,
+      272
+    ],
+    "anchor": {
+      "page": 271,
+      "y": 583.0,
+      "label": "(1)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q159": {
+    "reference_pages": [
+      271,
+      272
+    ],
+    "anchor": null
+  },
+  "algebra-Q160": {
+    "reference_pages": [
+      272
+    ],
+    "anchor": {
+      "page": 272,
+      "y": 205.67,
+      "label": "(3)A.",
+      "green": 0.77
+    }
+  },
+  "algebra-Q161": {
+    "reference_pages": [
+      272
+    ],
+    "anchor": {
+      "page": 272,
+      "y": 337.0,
+      "label": "(4)A.",
+      "green": 0.622
+    }
+  },
+  "algebra-Q162": {
+    "reference_pages": [
+      272
+    ],
+    "anchor": {
+      "page": 272,
+      "y": 567.0,
+      "label": "(5)D.",
+      "green": 0.836
+    }
+  },
+  "algebra-Q163": {
+    "reference_pages": [
+      272,
+      273
+    ],
+    "anchor": {
+      "page": 272,
+      "y": 665.0,
+      "label": "(6)B.",
+      "green": 0.905
+    }
+  },
+  "algebra-Q164": {
+    "reference_pages": [
+      273
+    ],
+    "anchor": {
+      "page": 273,
+      "y": 351.33,
+      "label": "(7)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q165": {
+    "reference_pages": [
+      273,
+      274
+    ],
+    "anchor": {
+      "page": 273,
+      "y": 520.67,
+      "label": "(8)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q166": {
+    "reference_pages": [
+      274
+    ],
+    "anchor": {
+      "page": 274,
+      "y": 66.67,
+      "label": "(9)C.",
+      "green": 0.846
+    }
+  },
+  "algebra-Q167": {
+    "reference_pages": [
+      274,
+      275
+    ],
+    "anchor": {
+      "page": 274,
+      "y": 551.33,
+      "label": "(10)A.",
+      "green": 0.845
+    }
+  },
+  "algebra-Q168": {
+    "reference_pages": [
+      275
+    ],
+    "anchor": {
+      "page": 275,
+      "y": 198.67,
+      "label": "(11)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q169": {
+    "reference_pages": [
+      275
+    ],
+    "anchor": {
+      "page": 275,
+      "y": 395.67,
+      "label": "(1)(1,1,2,3)7.",
+      "green": 0.616
+    }
+  },
+  "algebra-Q170": {
+    "reference_pages": [
+      275
+    ],
+    "anchor": {
+      "page": 275,
+      "y": 526.0,
+      "label": "(2)€x1522.23)\"=(0,0,1)7.",
+      "green": 0.746
+    }
+  },
+  "algebra-Q171": {
+    "reference_pages": [
+      275,
+      276
+    ],
+    "anchor": {
+      "page": 275,
+      "y": 624.67,
+      "label": "(3)—15.",
+      "green": 0.799
+    }
+  },
+  "algebra-Q172": {
+    "reference_pages": [
+      276
+    ],
+    "anchor": {
+      "page": 276,
+      "y": 249.33,
+      "label": "(4)一2.",
+      "green": 0.612
+    }
+  },
+  "algebra-Q173": {
+    "reference_pages": [
+      276,
+      277
+    ],
+    "anchor": {
+      "page": 276,
+      "y": 474.33,
+      "label": "(1)(3WOREFRAYAx=0的基础解及4x=b的一个特解.",
+      "green": 0.791
+    }
+  },
+  "algebra-Q174": {
+    "reference_pages": [
+      277
+    ],
+    "anchor": {
+      "page": 277,
+      "y": 66.33,
+      "label": "(2)图CI)由4x=有的解的结构,知r(A)=r(ai,os,as,ai)一3,并有",
+      "green": 0.986
+    }
+  },
+  "algebra-Q175": {
+    "reference_pages": [
+      277
+    ],
+    "anchor": {
+      "page": 277,
+      "y": 436.33,
+      "label": "(3)GBtha,,0,,0,,0,SFAx一0的基础解系等价,知wi,as,as,w,必是hx一0的解.又r(4)=1,",
+      "green": 1
+    }
+  },
+  "algebra-Q176": {
+    "reference_pages": [
+      277,
+      278
+    ],
+    "anchor": {
+      "page": 277,
+      "y": 653.0,
+      "label": "(4)(3求抽象方程组hx=的通解,首先要讨论秩,从而确定解的情况",
+      "green": 1
+    }
+  },
+  "algebra-Q177": {
+    "reference_pages": [
+      278
+    ],
+    "anchor": {
+      "page": 278,
+      "y": 147.33,
+      "label": "(5)(EB(TD)4是正交和矩阵,则4的列向量为两两正交的单位向量,故",
+      "green": 0.817
+    }
+  },
+  "algebra-Q178": {
+    "reference_pages": [
+      278,
+      279
+    ],
+    "anchor": {
+      "page": 278,
+      "y": 362.67,
+      "label": "(6)G3C1)依题设,(1.1.1)7是4Ax三及的特解,(1.2,一2)7.02.1.2)fbAx=0fySEMIAER«We",
+      "green": 0.84
+    }
+  },
+  "algebra-Q179": {
+    "reference_pages": [
+      279
+    ],
+    "anchor": {
+      "page": 279,
+      "y": 137.0,
+      "label": "(7)GBC1)依题设",
+      "green": 1
+    }
+  },
+  "algebra-Q180": {
+    "reference_pages": [
+      279,
+      280
+    ],
+    "anchor": {
+      "page": 279,
+      "y": 408.67,
+      "label": "(8)(3(1)由已知,有",
+      "green": 1
+    }
+  },
+  "algebra-Q181": {
+    "reference_pages": [
+      280
+    ],
+    "anchor": {
+      "page": 280,
+      "y": 162.67,
+      "label": "(9)(8(1)HAA2BARBEHK",
+      "green": 0.868
+    }
+  },
+  "algebra-Q182": {
+    "reference_pages": [
+      280,
+      281
+    ],
+    "anchor": {
+      "page": 280,
+      "y": 524.33,
+      "label": "(10)G3C1)对(4,a)作初等行变换:",
+      "green": 0.896
+    }
+  },
+  "algebra-Q183": {
+    "reference_pages": [
+      281,
+      282
+    ],
+    "anchor": {
+      "page": 281,
+      "y": 385.67,
+      "label": "(11)OBCL)x\n5\t1\t22\t1\t1\t5\t467\t1190\t6\t6\t90.635735\t一\n5\t1\t22\t1\t1\t6\t487",
+      "green": 1
+    }
+  },
+  "algebra-Q184": {
+    "reference_pages": [
+      282
+    ],
+    "anchor": {
+      "page": 282,
+      "y": 235.33,
+      "label": "(1)全4中有.6个未知参数,不能用初等行变换求解,可利用特征向量的定义",
+      "green": 0.861
+    }
+  },
+  "algebra-Q185": {
+    "reference_pages": [
+      282
+    ],
+    "anchor": {
+      "page": 282,
+      "y": 449.0,
+      "label": "(2)图只要证明r(4T4)=r(ATA|AT),",
+      "green": 0.826
+    }
+  },
+  "algebra-Q186": {
+    "reference_pages": [
+      282,
+      283,
+      284
+    ],
+    "anchor": {
+      "page": 282,
+      "y": 536.33,
+      "label": "(3)加(1)4m=nit,RB=A',MAAB=E,",
+      "green": 0.857
+    }
+  },
+  "algebra-Q187": {
+    "reference_pages": [
+      284
+    ],
+    "anchor": null
+  },
+  "algebra-Q188": {
+    "reference_pages": [
+      284
+    ],
+    "anchor": {
+      "page": 284,
+      "y": 364.67,
+      "label": "(2)和A.",
+      "green": 0.842
+    }
+  },
+  "algebra-Q189": {
+    "reference_pages": [
+      284,
+      285
+    ],
+    "anchor": {
+      "page": 284,
+      "y": 523.33,
+      "label": "(3)D.",
+      "green": 0.853
+    }
+  },
+  "algebra-Q190": {
+    "reference_pages": [
+      285
+    ],
+    "anchor": {
+      "page": 285,
+      "y": 183.33,
+      "label": "(4)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q191": {
+    "reference_pages": [
+      285
+    ],
+    "anchor": {
+      "page": 285,
+      "y": 227.0,
+      "label": "(5)A.",
+      "green": 1
+    }
+  },
+  "algebra-Q192": {
+    "reference_pages": [
+      285
+    ],
+    "anchor": {
+      "page": 285,
+      "y": 379.33,
+      "label": "(6)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q193": {
+    "reference_pages": [
+      285,
+      286
+    ],
+    "anchor": {
+      "page": 285,
+      "y": 494.33,
+      "label": "(7)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q194": {
+    "reference_pages": [
+      286
+    ],
+    "anchor": {
+      "page": 286,
+      "y": 78.67,
+      "label": "(1):—1.",
+      "green": 0.686
+    }
+  },
+  "algebra-Q195": {
+    "reference_pages": [
+      286
+    ],
+    "anchor": {
+      "page": 286,
+      "y": 214.67,
+      "label": "(2)",
+      "green": 0.86
+    }
+  },
+  "algebra-Q196": {
+    "reference_pages": [
+      286
+    ],
+    "anchor": {
+      "page": 286,
+      "y": 344.33,
+      "label": "(3)0,一3.",
+      "green": 0.611
+    }
+  },
+  "algebra-Q197": {
+    "reference_pages": [
+      286,
+      287
+    ],
+    "anchor": {
+      "page": 286,
+      "y": 533.0,
+      "label": "(4)&(C2,一1,1)7,其中心为任意常数，",
+      "green": 0.483
+    }
+  },
+  "algebra-Q198": {
+    "reference_pages": [
+      287
+    ],
+    "anchor": {
+      "page": 287,
+      "y": 127.67,
+      "label": "(5)1.",
+      "green": 0.892
+    }
+  },
+  "algebra-Q199": {
+    "reference_pages": [
+      287,
+      288
+    ],
+    "anchor": {
+      "page": 287,
+      "y": 388.67,
+      "label": "(1)8(1)th",
+      "green": 1
+    }
+  },
+  "algebra-Q200": {
+    "reference_pages": [
+      288,
+      289
+    ],
+    "anchor": {
+      "page": 288,
+      "y": 362.0,
+      "label": "(2)(EBCLyA为实对称和矩阵,B为对角和矩阵,而实对称矩阵必相似于对角矩阵,且与其相似的对角矩",
+      "green": 0.861
+    }
+  },
+  "algebra-Q201": {
+    "reference_pages": [
+      289
+    ],
+    "anchor": {
+      "page": 289,
+      "y": 200.33,
+      "label": "(3)(8C1)GAA的一个特征向量x,确定4中的参数e,0,利用定义4a=Ma,得",
+      "green": 1
+    }
+  },
+  "algebra-Q202": {
+    "reference_pages": [
+      289
+    ],
+    "anchor": {
+      "page": 289,
+      "y": 427.33,
+      "label": "(4)出由4一4,知4有3个线性无关的特征向量.》=2是二重特征值,应该对应有两个线性无关的",
+      "green": 1
+    }
+  },
+  "algebra-Q203": {
+    "reference_pages": [
+      289,
+      290
+    ],
+    "anchor": {
+      "page": 289,
+      "y": 621.67,
+      "label": "(5)(2B(1)由已知,有",
+      "green": 1
+    }
+  },
+  "algebra-Q204": {
+    "reference_pages": [
+      290
+    ],
+    "anchor": {
+      "page": 290,
+      "y": 389.67,
+      "label": "(6)(3(1)tH",
+      "green": 0.836
+    }
+  },
+  "algebra-Q205": {
+    "reference_pages": [
+      290,
+      291
+    ],
+    "anchor": {
+      "page": 290,
+      "y": 617.33,
+      "label": "(7)圈(CT)由4一B知,4与了有相同的特征值,而由|w巨一B|=0.973BAURMENp=p.一0，",
+      "green": 0.829
+    }
+  },
+  "algebra-Q206": {
+    "reference_pages": [
+      291
+    ],
+    "anchor": {
+      "page": 291,
+      "y": 213.67,
+      "label": "(8)(BhA~B,AIA,B有相同的特征值M;=A,=b.a,=c.|",
+      "green": 1
+    }
+  },
+  "algebra-Q207": {
+    "reference_pages": [
+      291,
+      292,
+      293
+    ],
+    "anchor": {
+      "page": 291,
+      "y": 538.0,
+      "label": "(9)GBC1)thABAM.(A)一r(B),而r(B)=2(a40).Mili",
+      "green": 1
+    }
+  },
+  "algebra-Q208": {
+    "reference_pages": [
+      293
+    ],
+    "anchor": {
+      "page": 293,
+      "y": 360.33,
+      "label": "(10)G3CT)BEA,=一1对应的特征向量为ws=Crgaygag)\",由实对称矩阵不同特征值对应的特",
+      "green": 1
+    }
+  },
+  "algebra-Q209": {
+    "reference_pages": [
+      293,
+      294
+    ],
+    "anchor": {
+      "page": 293,
+      "y": 518.67,
+      "label": "(11)GBCI)由4是实对称矩阵,知4必相似于对角和矩阵4.由4:一4,知4的特征值的取值是0与1.",
+      "green": 1
+    }
+  },
+  "algebra-Q210": {
+    "reference_pages": [
+      294
+    ],
+    "anchor": {
+      "page": 294,
+      "y": 473.67,
+      "label": "(12)fAC1)HA~A.A|A|=A|.tr(A)=tr(A).Bf",
+      "green": 0.908
+    }
+  },
+  "algebra-Q211": {
+    "reference_pages": [
+      294,
+      295
+    ],
+    "anchor": {
+      "page": 294,
+      "y": 618.33,
+      "label": "(13)GBC1)rhATM.A~BABAT,|A|=|BI.",
+      "green": 0.882
+    }
+  },
+  "algebra-Q212": {
+    "reference_pages": [
+      295
+    ],
+    "anchor": {
+      "page": 295,
+      "y": 93.33,
+      "label": "(14)GB(1)先求4的特征值,由4a,=2,0,=1,2,3)有",
+      "green": 1
+    }
+  },
+  "algebra-Q213": {
+    "reference_pages": [
+      295,
+      296
+    ],
+    "anchor": {
+      "page": 295,
+      "y": 623.0,
+      "label": "(15)GBC1)对(4,0)作初等行变换,有",
+      "green": 1
+    }
+  },
+  "algebra-Q214": {
+    "reference_pages": [
+      296
+    ],
+    "anchor": {
+      "page": 296,
+      "y": 446.33,
+      "label": "(1)D.",
+      "green": 0.868
+    }
+  },
+  "algebra-Q215": {
+    "reference_pages": [
+      296,
+      297
+    ],
+    "anchor": {
+      "page": 296,
+      "y": 549.33,
+      "label": "(2)D.",
+      "green": 0.892
+    }
+  },
+  "algebra-Q216": {
+    "reference_pages": [
+      297
+    ],
+    "anchor": {
+      "page": 297,
+      "y": 215.67,
+      "label": "(3)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q217": {
+    "reference_pages": [
+      297,
+      298
+    ],
+    "anchor": {
+      "page": 297,
+      "y": 344.33,
+      "label": "(4)A.",
+      "green": 1
+    }
+  },
+  "algebra-Q218": {
+    "reference_pages": [
+      298
+    ],
+    "anchor": {
+      "page": 298,
+      "y": 129.0,
+      "label": "(5)D.",
+      "green": 0.834
+    }
+  },
+  "algebra-Q219": {
+    "reference_pages": [
+      298
+    ],
+    "anchor": {
+      "page": 298,
+      "y": 311.67,
+      "label": "(6)B.",
+      "green": 0.881
+    }
+  },
+  "algebra-Q220": {
+    "reference_pages": [
+      298,
+      299
+    ],
+    "anchor": {
+      "page": 298,
+      "y": 453.67,
+      "label": "(7)C.",
+      "green": 0.837
+    }
+  },
+  "algebra-Q221": {
+    "reference_pages": [
+      298,
+      299
+    ],
+    "anchor": null
+  },
+  "algebra-Q222": {
+    "reference_pages": [
+      299
+    ],
+    "anchor": {
+      "page": 299,
+      "y": 219.0,
+      "label": "(9)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q223": {
+    "reference_pages": [
+      299
+    ],
+    "anchor": {
+      "page": 299,
+      "y": 416.0,
+      "label": "(1)一4.",
+      "green": 0.72
+    }
+  },
+  "algebra-Q224": {
+    "reference_pages": [
+      299,
+      300
+    ],
+    "anchor": {
+      "page": 299,
+      "y": 608.0,
+      "label": "(2)a@.=(1,1,0)7,@,一(1,0,1)7.",
+      "green": 0.622
+    }
+  },
+  "algebra-Q225": {
+    "reference_pages": [
+      300
+    ],
+    "anchor": {
+      "page": 300,
+      "y": 81.33,
+      "label": "(3)1.",
+      "green": 0.695
+    }
+  },
+  "algebra-Q226": {
+    "reference_pages": [
+      300
+    ],
+    "anchor": null
+  },
+  "algebra-Q227": {
+    "reference_pages": [
+      300,
+      301
+    ],
+    "anchor": {
+      "page": 300,
+      "y": 440.67,
+      "label": "(1)(3Fh0FEA的特征值,知",
+      "green": 0.842
+    }
+  },
+  "algebra-Q228": {
+    "reference_pages": [
+      301
+    ],
+    "anchor": {
+      "page": 301,
+      "y": 162.0,
+      "label": "(2)@B(1)由已知,有",
+      "green": 1
+    }
+  },
+  "algebra-Q229": {
+    "reference_pages": [
+      301,
+      302
+    ],
+    "anchor": {
+      "page": 301,
+      "y": 567.67,
+      "label": "(3)图C1)用定义证明.设",
+      "green": 1
+    }
+  },
+  "algebra-Q230": {
+    "reference_pages": [
+      302,
+      303
+    ],
+    "anchor": {
+      "page": 302,
+      "y": 286.67,
+      "label": "(4)GBC1依题设，",
+      "green": 0.889
+    }
+  },
+  "algebra-Q231": {
+    "reference_pages": [
+      303
+    ],
+    "anchor": {
+      "page": 303,
+      "y": 166.67,
+      "label": "(5)图(1)用定义证明.设",
+      "green": 1
+    }
+  },
+  "algebra-Q232": {
+    "reference_pages": [
+      303,
+      304
+    ],
+    "anchor": {
+      "page": 303,
+      "y": 532.33,
+      "label": "(6)GB(1)th|AE—A|=0.44WHEWA,=a,=1,a,=a,=—1.",
+      "green": 1
+    }
+  },
+  "algebra-Q233": {
+    "reference_pages": [
+      304,
+      305
+    ],
+    "anchor": {
+      "page": 304,
+      "y": 229.33,
+      "label": "(7)(BCA=of?=|)(yd.0b,)=",
+      "green": 0.85
+    }
+  },
+  "algebra-Q234": {
+    "reference_pages": [
+      305
+    ],
+    "anchor": {
+      "page": 305,
+      "y": 249.33,
+      "label": "(8)&B(14=:时aae|=(a—DE+B.",
+      "green": 1
+    }
+  },
+  "algebra-Q235": {
+    "reference_pages": [
+      305,
+      306,
+      307
+    ],
+    "anchor": {
+      "page": 305,
+      "y": 650.67,
+      "label": "(9)GBC1)BEA,=一1对应的特征向量为gw;=(zzszor,由4是实对称矩阵,知xi,as,a，两",
+      "green": 1
+    }
+  },
+  "algebra-Q236": {
+    "reference_pages": [
+      305,
+      306,
+      307
+    ],
+    "anchor": null
+  },
+  "algebra-Q237": {
+    "reference_pages": [
+      307
+    ],
+    "anchor": {
+      "page": 307,
+      "y": 158.33,
+      "label": "(11)@B(1)HBA=|12a2a,5|,得",
+      "green": 1
+    }
+  },
+  "algebra-Q238": {
+    "reference_pages": [
+      307,
+      308
+    ],
+    "anchor": {
+      "page": 307,
+      "y": 525.0,
+      "label": "(12)@BcliwaA=]0aO}SBSOnl:To—af",
+      "green": 1
+    }
+  },
+  "algebra-Q239": {
+    "reference_pages": [
+      308,
+      309,
+      310
+    ],
+    "anchor": {
+      "page": 308,
+      "y": 604.67,
+      "label": "(13)(BC1)对(4BD作初等行变换:",
+      "green": 0.891
+    }
+  },
+  "algebra-Q240": {
+    "reference_pages": [
+      310,
+      311
+    ],
+    "anchor": {
+      "page": 310,
+      "y": 321.33,
+      "label": "(14)图C1A.B均是抽象矩阵,用特征值,特征向量的定义证明.",
+      "green": 0.914
+    }
+  },
+  "algebra-Q241": {
+    "reference_pages": [
+      311
+    ],
+    "anchor": {
+      "page": 311,
+      "y": 80.67,
+      "label": "(15)9(1)HhAB+B=A+E,79(A+E)(B—E)=O,",
+      "green": 1
+    }
+  },
+  "algebra-Q242": {
+    "reference_pages": [
+      311,
+      312
+    ],
+    "anchor": {
+      "page": 311,
+      "y": 665.33,
+      "label": "(16)圈C1)只需证明|E+A|40,R00A,子一1.由4B一4一及,知",
+      "green": 1
+    }
+  },
+  "algebra-Q243": {
+    "reference_pages": [
+      312
+    ],
+    "anchor": {
+      "page": 312,
+      "y": 290.67,
+      "label": "(17)QBC1)用反证法证明.假设oe,4c线性相关,则存在不全为零的常数人,,>使得",
+      "green": 0.926
+    }
+  },
+  "algebra-Q244": {
+    "reference_pages": [
+      312,
+      313
+    ],
+    "anchor": {
+      "page": 312,
+      "y": 502.33,
+      "label": "(18)G23(1)由已知,4=|0a—10|,4x=有有无穷多解,故r(4)=(A.B)<3,",
+      "green": 0.897
+    }
+  },
+  "algebra-Q245": {
+    "reference_pages": [
+      313,
+      314
+    ],
+    "anchor": {
+      "page": 313,
+      "y": 465.33,
+      "label": "(19)(3B(1)HA~B.A",
+      "green": 1
+    }
+  },
+  "algebra-Q246": {
+    "reference_pages": [
+      314,
+      315
+    ],
+    "anchor": {
+      "page": 314,
+      "y": 416.67,
+      "label": "(20)GBC1)对刀作初等行变换,有",
+      "green": 0.841
+    }
+  },
+  "algebra-Q247": {
+    "reference_pages": [
+      315,
+      316,
+      317
+    ],
+    "anchor": null
+  },
+  "algebra-Q248": {
+    "reference_pages": [
+      315,
+      316,
+      317
+    ],
+    "anchor": null
+  },
+  "algebra-Q249": {
+    "reference_pages": [
+      317
+    ],
+    "anchor": {
+      "page": 317,
+      "y": 178.67,
+      "label": "(1)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q250": {
+    "reference_pages": [
+      317
+    ],
+    "anchor": {
+      "page": 317,
+      "y": 270.33,
+      "label": "(2)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q251": {
+    "reference_pages": [
+      317,
+      318
+    ],
+    "anchor": {
+      "page": 317,
+      "y": 581.67,
+      "label": "(3)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q252": {
+    "reference_pages": [
+      318
+    ],
+    "anchor": {
+      "page": 318,
+      "y": 186.33,
+      "label": "(4)A.",
+      "green": 0.791
+    }
+  },
+  "algebra-Q253": {
+    "reference_pages": [
+      318
+    ],
+    "anchor": {
+      "page": 318,
+      "y": 259.67,
+      "label": "(5)A.",
+      "green": 0.811
+    }
+  },
+  "algebra-Q254": {
+    "reference_pages": [
+      318
+    ],
+    "anchor": {
+      "page": 318,
+      "y": 349.0,
+      "label": "(6)D.",
+      "green": 0.838
+    }
+  },
+  "algebra-Q255": {
+    "reference_pages": [
+      318,
+      319
+    ],
+    "anchor": {
+      "page": 318,
+      "y": 561.33,
+      "label": "(7)D.",
+      "green": 0.851
+    }
+  },
+  "algebra-Q256": {
+    "reference_pages": [
+      319
+    ],
+    "anchor": {
+      "page": 319,
+      "y": 65.67,
+      "label": "(8)和A.",
+      "green": 1
+    }
+  },
+  "algebra-Q257": {
+    "reference_pages": [
+      319
+    ],
+    "anchor": {
+      "page": 319,
+      "y": 282.67,
+      "label": "(9)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q258": {
+    "reference_pages": [
+      319,
+      320
+    ],
+    "anchor": {
+      "page": 319,
+      "y": 446.0,
+      "label": "(10)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q259": {
+    "reference_pages": [
+      319,
+      320
+    ],
+    "anchor": null
+  },
+  "algebra-Q260": {
+    "reference_pages": [
+      319,
+      320
+    ],
+    "anchor": null
+  },
+  "algebra-Q261": {
+    "reference_pages": [
+      320,
+      321
+    ],
+    "anchor": {
+      "page": 320,
+      "y": 340.33,
+      "label": "(1)(3B(1)二次型三的矩阵为4=|254)",
+      "green": 0.895
+    }
+  },
+  "algebra-Q262": {
+    "reference_pages": [
+      321
+    ],
+    "anchor": {
+      "page": 321,
+      "y": 176.33,
+      "label": "(2)FB二次型广的矩阵为4=]03|,则",
+      "green": 1
+    }
+  },
+  "algebra-Q263": {
+    "reference_pages": [
+      321
+    ],
+    "anchor": {
+      "page": 321,
+      "y": 364.0,
+      "label": "(3)好(充分性)对Vx天0,则PxAOCAPAT,Pr=0只有零解)，",
+      "green": 1
+    }
+  },
+  "algebra-Q264": {
+    "reference_pages": [
+      321,
+      322
+    ],
+    "anchor": {
+      "page": 321,
+      "y": 577.67,
+      "label": "(4)&BC1)由已知,有",
+      "green": 1
+    }
+  },
+  "algebra-Q265": {
+    "reference_pages": [
+      322,
+      323
+    ],
+    "anchor": {
+      "page": 322,
+      "y": 501.67,
+      "label": "(5)GBC1)依题设,FCzreer)=0,当且仅当",
+      "green": 0.894
+    }
+  },
+  "algebra-Q266": {
+    "reference_pages": [
+      323,
+      324
+    ],
+    "anchor": {
+      "page": 323,
+      "y": 364.0,
+      "label": "(6)GB(1)tha,+2a,—a,=0,4",
+      "green": 1
+    }
+  },
+  "algebra-Q267": {
+    "reference_pages": [
+      324,
+      325,
+      326
+    ],
+    "anchor": {
+      "page": 324,
+      "y": 114.67,
+      "label": "(7)(3(1)H(A—2EDa=0,BlAa=2x,知:一2是4的特征值,其对应的特征向量为c,=oF一",
+      "green": 0.847
+    }
+  },
+  "algebra-Q268": {
+    "reference_pages": [
+      324,
+      325,
+      326
+    ],
+    "anchor": null
+  },
+  "algebra-Q269": {
+    "reference_pages": [
+      324,
+      325,
+      326
+    ],
+    "anchor": null
+  },
+  "algebra-Q270": {
+    "reference_pages": [
+      326,
+      327
+    ],
+    "anchor": {
+      "page": 326,
+      "y": 480.33,
+      "label": "(1)A.",
+      "green": 0.826
+    }
+  },
+  "algebra-Q271": {
+    "reference_pages": [
+      327
+    ],
+    "anchor": {
+      "page": 327,
+      "y": 67.67,
+      "label": "(2)C.",
+      "green": 1
+    }
+  },
+  "algebra-Q272": {
+    "reference_pages": [
+      327,
+      328
+    ],
+    "anchor": {
+      "page": 327,
+      "y": 230.67,
+      "label": "(3)A.7",
+      "green": 1
+    }
+  },
+  "algebra-Q273": {
+    "reference_pages": [
+      328
+    ],
+    "anchor": {
+      "page": 328,
+      "y": 170.33,
+      "label": "(4)D.",
+      "green": 0.855
+    }
+  },
+  "algebra-Q274": {
+    "reference_pages": [
+      328
+    ],
+    "anchor": {
+      "page": 328,
+      "y": 240.33,
+      "label": "(5)B.",
+      "green": 0.879
+    }
+  },
+  "algebra-Q275": {
+    "reference_pages": [
+      328,
+      329
+    ],
+    "anchor": {
+      "page": 328,
+      "y": 579.67,
+      "label": "(6)C.",
+      "green": 0.826
+    }
+  },
+  "algebra-Q276": {
+    "reference_pages": [
+      329
+    ],
+    "anchor": {
+      "page": 329,
+      "y": 159.0,
+      "label": "(7)A.",
+      "green": 1
+    }
+  },
+  "algebra-Q277": {
+    "reference_pages": [
+      329
+    ],
+    "anchor": {
+      "page": 329,
+      "y": 311.0,
+      "label": "(8)A.",
+      "green": 1
+    }
+  },
+  "algebra-Q278": {
+    "reference_pages": [
+      329,
+      330
+    ],
+    "anchor": {
+      "page": 329,
+      "y": 623.0,
+      "label": "(9)D.",
+      "green": 1
+    }
+  },
+  "algebra-Q279": {
+    "reference_pages": [
+      330
+    ],
+    "anchor": {
+      "page": 330,
+      "y": 259.0,
+      "label": "(10)C.",
+      "green": 0.891
+    }
+  },
+  "algebra-Q280": {
+    "reference_pages": [
+      330
+    ],
+    "anchor": {
+      "page": 330,
+      "y": 409.0,
+      "label": "(11)C.",
+      "green": 0.862
+    }
+  },
+  "algebra-Q281": {
+    "reference_pages": [
+      330,
+      331
+    ],
+    "anchor": {
+      "page": 330,
+      "y": 525.0,
+      "label": "(12)C.",
+      "green": 0.882
+    }
+  },
+  "algebra-Q282": {
+    "reference_pages": [
+      331,
+      332
+    ],
+    "anchor": {
+      "page": 331,
+      "y": 148.0,
+      "label": "(13)B.",
+      "green": 1
+    }
+  },
+  "algebra-Q283": {
+    "reference_pages": [
+      331,
+      332
+    ],
+    "anchor": null
+  },
+  "algebra-Q284": {
+    "reference_pages": [
+      331,
+      332
+    ],
+    "anchor": null
+  },
+  "algebra-Q285": {
+    "reference_pages": [
+      331,
+      332
+    ],
+    "anchor": null
+  },
+  "algebra-Q286": {
+    "reference_pages": [
+      331,
+      332
+    ],
+    "anchor": null
+  },
+  "algebra-Q287": {
+    "reference_pages": [
+      331,
+      332
+    ],
+    "anchor": null
+  },
+  "algebra-Q288": {
+    "reference_pages": [
+      332,
+      333
+    ],
+    "anchor": {
+      "page": 332,
+      "y": 619.33,
+      "label": "(1)(BCL)二次型的矩阵为4=|1a一直.由已知记+一2一r(C4),故",
+      "green": 0.902
+    }
+  },
+  "algebra-Q289": {
+    "reference_pages": [
+      333,
+      334
+    ],
+    "anchor": {
+      "page": 333,
+      "y": 424.67,
+      "label": "(2)GBC1)HEMA*o=4ax,等式两边同时左乘4,得44'a=44a,即",
+      "green": 1
+    }
+  },
+  "algebra-Q290": {
+    "reference_pages": [
+      334,
+      335
+    ],
+    "anchor": {
+      "page": 334,
+      "y": 160.67,
+      "label": "(3)国CIL)7Czizszn)",
+      "green": 0.884
+    }
+  },
+  "algebra-Q291": {
+    "reference_pages": [
+      335
+    ],
+    "anchor": {
+      "page": 335,
+      "y": 66.67,
+      "label": "(4)GioC1)由已知,齐次线性方程组有非零解,故其系数行列式为零,即",
+      "green": 1
+    }
+  },
+  "algebra-Q292": {
+    "reference_pages": [
+      335
+    ],
+    "anchor": {
+      "page": 335,
+      "y": 264.67,
+      "label": "(5)GBC1)BA,对应的特征向量为x=Coysxester,HA是实对称矩阵,得Te,=0,其中",
+      "green": 1
+    }
+  },
+  "algebra-Q293": {
+    "reference_pages": [
+      335,
+      336
+    ],
+    "anchor": {
+      "page": 335,
+      "y": 650.33,
+      "label": "(6)G3(必要性)ALATBEB=AFHA是实对称和矩阵,有",
+      "green": 1
+    }
+  },
+  "algebra-Q294": {
+    "reference_pages": [
+      336,
+      337
+    ],
+    "anchor": {
+      "page": 336,
+      "y": 175.0,
+      "label": "(7)侠(1)7与g对应的矩阵分别为4A=|0—a0/,B=|1—1Of.",
+      "green": 0.884
+    }
+  },
+  "algebra-Q295": {
+    "reference_pages": [
+      337,
+      338
+    ],
+    "anchor": {
+      "page": 337,
+      "y": 347.67,
+      "label": "(8)@BC1)由已知,7的矩阵为4=|0a一1",
+      "green": 1
+    }
+  },
+  "algebra-Q296": {
+    "reference_pages": [
+      338,
+      339
+    ],
+    "anchor": {
+      "page": 338,
+      "y": 294.33,
+      "label": "(9)园HERA=|1a1~A=|010,则e+a+a=1+1+4,得ac=一2.",
+      "green": 0.853
+    }
+  },
+  "algebra-Q297": {
+    "reference_pages": [
+      339,
+      340
+    ],
+    "anchor": {
+      "page": 339,
+      "y": 340.0,
+      "label": "(10)3BC1)依题设,4X=0的基础解系为",
+      "green": 1
+    }
+  },
+  "algebra-Q298": {
+    "reference_pages": [
+      340,
+      341
+    ],
+    "anchor": {
+      "page": 340,
+      "y": 209.0,
+      "label": "(11)GB(IT)二次型FCzizzs)与gCyi,yiyy3s)对应的矩阵分别为",
+      "green": 0.871
+    }
+  },
+  "algebra-Q299": {
+    "reference_pages": [
+      341,
+      342
+    ],
+    "anchor": {
+      "page": 341,
+      "y": 253.0,
+      "label": "(12)G3C1)&FGzizzas)一XIBX一zi十z3十2z3十2zizi,用配方法,得",
+      "green": 1
+    }
+  },
+  "algebra-Q300": {
+    "reference_pages": [
+      342,
+      343
+    ],
+    "anchor": {
+      "page": 342,
+      "y": 94.33,
+      "label": "(13)HBC1)二次型太的矩阵为4=|020|.",
+      "green": 0.85
+    }
+  },
+  "algebra-Q301": {
+    "reference_pages": [
+      343,
+      344
+    ],
+    "anchor": {
+      "page": 343,
+      "y": 369.33,
+      "label": "(14)GB(1)th(a,+a@;.—a,+2a,,a,+@,)=|0一2—1|.4",
+      "green": 1
+    }
+  },
+  "algebra-Q302": {
+    "reference_pages": [
+      344,
+      345
+    ],
+    "anchor": {
+      "page": 344,
+      "y": 105.0,
+      "label": "(15)(3C1)依题设,4ABX=045BX=一0同解,故rCAB)=rB).",
+      "green": 0.773
+    }
+  },
+  "algebra-Q303": {
+    "reference_pages": [
+      345,
+      346
+    ],
+    "anchor": {
+      "page": 345,
+      "y": 68.0,
+      "label": "(16)(3C1)*VXA0.X\"(A—kE)X<0,8XTAXSAX™X变形TeSk.FDRA的特",
+      "green": 1
+    }
+  },
+  "algebra-Q304": {
+    "reference_pages": [
+      346,
+      347
+    ],
+    "anchor": {
+      "page": 346,
+      "y": 139.33,
+      "label": "(17)GBC1)EA.Cryrene)的矩阵为",
+      "green": 0.835
+    }
+  },
+  "algebra-Q305": {
+    "reference_pages": [
+      347
+    ],
+    "anchor": {
+      "page": 347,
+      "y": 266.33,
+      "label": "(1)&B4(2.=91—y2Sx=|1一10|y,故",
+      "green": 1
+    }
+  },
+  "algebra-Q306": {
+    "reference_pages": [
+      347
+    ],
+    "anchor": {
+      "page": 347,
+      "y": 496.33,
+      "label": "(2)G3CT)由二次型在正交变换x=Oy下的标准形为一ii十2y;十ay;,知矩阵4的特征值分别为|",
+      "green": 1
+    }
+  },
+  "algebra-Q307": {
+    "reference_pages": [
+      347,
+      348
+    ],
+    "anchor": {
+      "page": 347,
+      "y": 664.33,
+      "label": "(3)出(LI)由@是正交矩阵,知@的列向量是两两正交的单位向量,故有",
+      "green": 1
+    }
+  },
+  "algebra-Q308": {
+    "reference_pages": [
+      348,
+      349,
+      350
+    ],
+    "anchor": {
+      "page": 348,
+      "y": 545.67,
+      "label": "(4)GBC1)由二次型三经正交变换X=OY化为标准形2yi—yi—yi.MIAWOPRIEA,=2.",
+      "green": 0.86
+    }
+  },
+  "algebra-Q309": {
+    "reference_pages": [
+      350,
+      351
+    ],
+    "anchor": {
+      "page": 350,
+      "y": 60.67,
+      "label": "(5)FBC1)依题设,太与g的矩阵分别为",
+      "green": 0.777
+    }
+  },
+  "algebra-Q310": {
+    "reference_pages": [
+      351,
+      352,
+      353
+    ],
+    "anchor": {
+      "page": 351,
+      "y": 666.33,
+      "label": "(6)(BCL)由已知,4与妃合同,且r(B)=2,41r(A)=2,故",
+      "green": 1
+    }
+  },
+  "algebra-Q311": {
+    "reference_pages": [
+      353,
+      354
+    ],
+    "anchor": {
+      "page": 353,
+      "y": 198.0,
+      "label": "(7)C1)H(A—4EDa=0,8)Aa一4x,知4有特征值4,记为1):=4,@,=@一(1,1,1)7为其特",
+      "green": 0.634
+    }
+  }
+}

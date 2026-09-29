@@ -4,7 +4,7 @@ import sqlite3
 import json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(HERE, 'data', 'study.db')
+DB_PATH = os.environ.get('STUDY_DB_PATH') or os.path.join(HERE, 'data', 'study.db')
 PENDING_880_PREFIX = '李林880·'
 PENDING_880_SUFFIX = '·待归纳'
 
@@ -115,7 +115,7 @@ def connect() -> sqlite3.Connection:
     # "database is locked" 而不是等一等。这三行照搬 204english 的 platform/db.py。
     conn.execute('PRAGMA journal_mode=WAL')
     conn.execute('PRAGMA busy_timeout=30000')
-    conn.execute('PRAGMA synchronous=NORMAL')
+    conn.execute('PRAGMA synchronous=FULL')
     return conn
 
 
@@ -202,6 +202,8 @@ def backfill_choice_options(conn) -> int:
 
 def init_db(conn) -> None:
     conn.executescript(SCHEMA)
+    import study
+    study.init(conn)
     cols = {r[1] for r in conn.execute('PRAGMA table_info(questions)')}
     if 'plain' not in cols:
         conn.execute("ALTER TABLE questions ADD COLUMN plain TEXT NOT NULL DEFAULT ''")

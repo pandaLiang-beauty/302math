@@ -24,6 +24,8 @@ import db                                                 # noqa: E402
 import practice                                           # noqa: E402
 import notes                                              # noqa: E402
 import drafts                                             # noqa: E402
+import study                                              # noqa: E402
+import workbook as workbook_content                       # noqa: E402
 from practice_catalog import FOCUS_YEARS                   # noqa: E402
 from typedefs import PAPER_CN, QTYPE_CN                   # noqa: E402
 
@@ -85,6 +87,15 @@ async def lifespan(app):
 app = FastAPI(title='math-题型体系', lifespan=lifespan)
 app.include_router(notes.router)
 app.include_router(drafts.router)
+app.include_router(study.router)
+
+
+@app.middleware('http')
+async def learning_no_cache(request, call_next):
+    response = await call_next(request)
+    if request.url.path.startswith('/api/'):
+        response.headers['Cache-Control'] = 'no-store'
+    return response
 
 
 @app.exception_handler(HTTPException)
@@ -176,7 +187,7 @@ def _progress(name):
     correct = sum(1 for p in probs if p['last'] == 'correct')
     wrong = sum(1 for p in probs if p['last'] == 'wrong')
     st = one("SELECT status FROM type_progress WHERE type_name=?", (name,))
-    return probs, {'status': st['status'] if st else 'learning',
+    return workbook_content.enrich(probs), {'status': st['status'] if st else 'learning',
                    'total': len(probs), 'done': done, 'correct': correct, 'wrong': wrong}
 
 
@@ -204,6 +215,15 @@ def question(id: int):
     if not r:
         raise HTTPException(404, '题不存在')
     r['options'] = json.loads(r.pop('options_json') or '[]')
+    content = one('SELECT solution_markdown,solution_source FROM workbook_text WHERE question_id=?', (id,))
+    if content:
+        r.update(content)
+    else:
+        content = one('SELECT e.* FROM exam_explanations e WHERE question_id=?', (id,))
+        source = one('SELECT stem_html,options_json FROM questions WHERE id=?', (id,))
+        if content and content['content_hash'] == study.question_hash(source['stem_html'], source['options_json']):
+            r.update({k:content[k] for k in ('solution_markdown','solution_source')})
+            r['answer_checkable'] = bool(content['answer_checkable'])
     return r
 
 

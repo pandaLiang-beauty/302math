@@ -1,0 +1,11 @@
+{
+  "calculus-Q163": {
+    "replacements": [
+      [
+        "\\left|x-a\\right|^{a}",
+        "\\left|x-a\\right|^{\\alpha}"
+      ]
+    ],
+    "note": "已对照高数做题本 PDF 第 62 页：④中指数应为 α，上传转写中的 a 已更正。"
+  }
+}

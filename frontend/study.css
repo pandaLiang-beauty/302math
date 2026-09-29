@@ -1,0 +1,15 @@
+.study-answer{margin-top:16px;padding:14px 16px;background:#f5f1e9;border:1px solid var(--line);border-radius:6px}
+.study-answer-top{display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:13px;margin-bottom:10px}
+.study-save{font-size:11px;color:var(--ok)}.study-save.error{color:var(--bad)}
+.study-text{display:block;width:100%;resize:vertical;min-height:70px;border:1px solid var(--line);border-radius:5px;padding:10px;background:var(--card);color:var(--ink);font-family:inherit;font-size:14px;line-height:1.8}
+.study-thinking{margin:10px 0;font-size:13px}.study-thinking summary{cursor:pointer;margin:5px 0}
+.study-actions,.study-completed{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:12px;font-size:13px}
+.study-solution{margin-top:16px;padding:16px;background:var(--card);border-left:3px solid var(--accent);font-family:var(--reading-font);font-size:16px;line-height:1.9;overflow-wrap:anywhere}
+.study-solution img{max-width:100%}.solution-source{font:12px/1.7 sans-serif;color:var(--sub)}
+.study-rating{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:12px}.study-rating>span{width:100%}.study-rating select{max-width:100%;padding:6px;background:var(--card);border:1px solid var(--line);border-radius:4px}
+.study-sync-problem{border-top:1px solid var(--bad);margin-top:12px;padding-top:8px;font-size:13px;color:var(--bad)}.study-sync-problem button{margin:4px}
+.study-conflict-compare pre{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink)}
+.study-history{font-size:13px;margin-top:14px}.study-history details{padding:10px;border:1px solid var(--line);margin-bottom:8px}.study-history summary{cursor:pointer}
+.study-answer textarea:disabled{opacity:.8;cursor:default}.choice-text p{margin:0}.related-reason{font-size:13px;color:var(--sub);margin:8px 0}.related-skill{font-size:12px;color:var(--accent);font-weight:600}
+.workbook-figure{display:block;max-width:100%;margin:12px auto}.paper-progress{font-size:12px;color:var(--ok);margin-top:8px}
+@media(max-width:600px){.study-answer{padding:12px 10px}.study-answer-top{align-items:flex-start}.study-solution{padding:12px 10px}}

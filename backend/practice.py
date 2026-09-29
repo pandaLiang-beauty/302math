@@ -1,6 +1,7 @@
 """Read-only exam-to-workbook navigation; no reseeding or learning-data changes."""
 import json
 import re
+import workbook as workbook_content
 from pathlib import Path
 
 from fastapi import HTTPException
@@ -154,5 +155,5 @@ def get_practice(conn, *, question_id=None, chapter='', topic=''):
         'chapter': chapter_data, 'topic': selected, 'origin': origin,
         'suggested_topics': suggested['topics'] if suggested else [],
         'match': 'topic' if selected else 'chapter',
-        'problems': problems, 'progress': progress(problems), 'books': books,
+        'problems': workbook_content.enrich(problems), 'progress': progress(problems), 'books': books,
     }

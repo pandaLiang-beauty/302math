@@ -1,0 +1,767 @@
+{
+  "17141": {
+    "key": "exam:17141",
+    "answer": "D",
+    "solution": "令各选项对应的无穷小分别为 $A,B,C,D$，比较它们的等价无穷小阶数。\n\n**A项：**当 $t\\to0$ 时，$e^{t^2}-1\\sim t^2$，因此\n$$\n\\int_0^x(e^{t^2}-1)\\,dt\\sim\\int_0^x t^2\\,dt=\\frac{x^3}{3}.\n$$\n故 A 项为 $3$ 阶无穷小。\n\n**B项：**当 $t\\to0^+$ 时，$\\ln(1+\\sqrt{t^3})=\\ln(1+t^{3/2})\\sim t^{3/2}$，因此\n$$\n\\int_0^x\\ln(1+\\sqrt{t^3})\\,dt\n\\sim\\int_0^x t^{3/2}\\,dt\n=\\frac{2}{5}x^{5/2}.\n$$\n故 B 项为 $\\frac52$ 阶无穷小。\n\n**C项：**当 $x\\to0^+$ 时，$\\sin x\\sim x$；同时当 $t\\to0$ 时，$\\sin t^2\\sim t^2$，所以\n$$\n\\int_0^{\\sin x}\\sin t^2\\,dt\n\\sim\\int_0^{\\sin x}t^2\\,dt\n=\\frac{(\\sin x)^3}{3}\\sim\\frac{x^3}{3}.\n$$\n故 C 项为 $3$ 阶无穷小。\n\n**D项：**当 $t\\to0^+$ 时，$\\sin t\\sim t$，且\n$$\n\\sqrt{\\sin^3t}=(\\sin t)^{3/2}\\sim t^{3/2}.\n$$\n又因为 $1-\\cos x\\sim\\frac{x^2}{2}$，所以\n$$\n\\int_0^{1-\\cos x}\\sqrt{\\sin^3t}\\,dt\n\\sim\\int_0^{1-\\cos x}t^{3/2}\\,dt\n=\\frac25(1-\\cos x)^{5/2}\n\\sim\\frac25\\left(\\frac{x^2}{2}\\right)^{5/2}\n=\\frac{x^5}{10\\sqrt2}.\n$$\n故 D 项为 $5$ 阶无穷小。\n\n比较可得，$5$ 阶无穷小的阶数最高，因此选 D。易错点是要同时考虑被积函数的等价阶和积分上限的阶，D 项的上限 $1-\\cos x$ 本身是 $2$ 阶无穷小。",
+    "issue": "",
+    "question_id": 17141,
+    "content_hash": "c50083c7d1ca3c3ee2ea6f82673fb3c50e8b2fd9b09d9922572c40fa0d71d994",
+    "review": {
+      "key": "exam:17141",
+      "verdict": "pass",
+      "findings": "逐项核算正确：A项被积函数为2阶、积分上限为1阶，积分为3阶无穷小；B项被积函数为3/2阶，积分为5/2阶；C项上限sin x为1阶、被积函数sin(t^2)为2阶，积分为3阶；D项上限1-cos x为2阶、被积函数sqrt(sin^3 t)为3/2阶，积分为5阶。因此最高阶为5阶，选D。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17142": {
+    "key": "exam:17142",
+    "answer": "C",
+    "solution": "函数为\n$$\nf(x)=\\frac{e^{\\frac{1}{x-1}}\\ln|1+x|}{(e^x-1)(x-2)}.\n$$\n先找可能的间断点：\n\n- $x=-1$：由于 $\\ln|1+x|$ 无定义；\n- $x=0$：由于 $e^x-1=0$；\n- $x=1$：由于 $e^{\\frac1{x-1}}$ 无定义；\n- $x=2$：由于 $x-2=0$。\n\n逐点判断间断类型。\n\n**1. $x=-1$：**除对数因子外，其余因子在 $x=-1$ 附近均有有限非零极限，而\n$$\n\\ln|1+x|\\to-\\infty.\n$$\n因此 $f(x)$ 在 $x=-1$ 附近至少有一侧趋于无穷，属于第二类间断点。\n\n**2. $x=0$：**利用等价无穷小\n$$\n\\ln(1+x)\\sim x,\n\\qquad e^x-1\\sim x.\n$$\n于是\n$$\n\\lim_{x\\to0}f(x)\n=\\lim_{x\\to0}\\frac{e^{\\frac1{x-1}}\\ln(1+x)}{(e^x-1)(x-2)}\n=\\frac{e^{-1}}{-2}\n=-\\frac{1}{2e}.\n$$\n极限存在且为有限值，所以 $x=0$ 是可去间断点，属于第一类间断点，不计入第二类间断点。\n\n**3. $x=1$：**当 $x\\to1^-$ 时，$\\frac1{x-1}\\to-\\infty$，故\n$$\n e^{\\frac1{x-1}}\\to0,\n$$\n从而 $f(x)\\to0$。当 $x\\to1^+$ 时，$\\frac1{x-1}\\to+\\infty$，故\n$$\n e^{\\frac1{x-1}}\\to+\\infty.\n$$\n而 $\\ln|1+x|$ 及分母中的其他因子在 $x=1$ 附近均趋于有限非零值，因此右极限发散。左右极限不相等，且一侧发散，所以 $x=1$ 是第二类间断点。\n\n**4. $x=2$：**在 $x=2$ 附近，$e^x-1$、$e^{\\frac1{x-1}}$ 和 $\\ln|1+x|$ 均趋于有限非零值，而 $x-2\\to0$，因此函数趋于无穷，$x=2$ 是第二类间断点。\n\n所以第二类间断点共有\n$$\n-1,\\ 1,\\ 2\n$$\n共 $3$ 个，选 C。易错点是 $x=0$ 虽然函数无定义，但分子分母中的 $x$ 可以约去到极限存在，因此它是可去间断点，不属于第二类间断点。",
+    "issue": "",
+    "question_id": 17142,
+    "content_hash": "86526562bee88123be645a1e45e492b35f58508eb5804d8fc2c75ab7fa6a8471",
+    "review": {
+      "key": "exam:17142",
+      "verdict": "pass",
+      "findings": "定义域临界点为x=-1、0、1、2。x=-1处ln|1+x|趋于负无穷，属第二类；x=0处利用ln(1+x)与e^x-1等价，极限为-1/(2e)，属可去间断；x=1左极限为0、右侧因e^{1/(x-1)}发散而为无穷，属第二类；x=2处分母因子x-2趋于0且其余因子非零，属第二类。共3个，选C。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17143": {
+    "key": "exam:17143",
+    "answer": "A",
+    "solution": "考查含有反三角函数和根式的定积分，看到 $\\arcsin\\sqrt{x}$ 以及 $\\sqrt{x(1-x)}$，可令\n$$\n\\sqrt{x}=\\sin t,\n\\qquad x=\\sin^2t.\n$$\n当 $x=0$ 时，$t=0$；当 $x=1$ 时，$t=\\frac\\pi2$。并且在 $t\\in[0,\\frac\\pi2]$ 上，$\\sin t,\\cos t\\ge0$，所以\n$$\ndx=2\\sin t\\cos t\\,dt,\n$$\n以及\n$$\n\\sqrt{x(1-x)}\n=\\sqrt{\\sin^2t\\cos^2t}\n=\\sin t\\cos t.\n$$\n因此原积分为\n$$\n\\begin{aligned}\nI&=\\int_0^1\\frac{\\arcsin\\sqrt{x}}{\\sqrt{x(1-x)}}\\,dx\\\\\n&=\\int_0^{\\pi/2}\\frac{t}{\\sin t\\cos t}\\cdot2\\sin t\\cos t\\,dt\\\\\n&=2\\int_0^{\\pi/2}t\\,dt\\\\\n&=\\left.t^2\\right|_0^{\\pi/2}\n=\\frac{\\pi^2}{4}.\n\\end{aligned}\n$$\n所以结果为 $\\frac{\\pi^2}{4}$，选 A。易错点是换元后应利用 $t\\in[0,\\frac\\pi2]$ 判断 $\\sqrt{\\sin^2t\\cos^2t}=\\sin t\\cos t$，不能直接写成带绝对值但又忽略其符号。",
+    "issue": "",
+    "question_id": 17143,
+    "content_hash": "08da7e85ae041fe7ad83bab38fb4b658047cb6d9172ad9424c5315b915da7aba",
+    "review": {
+      "key": "exam:17143",
+      "verdict": "pass",
+      "findings": "令sqrt{x}=sin t，则x=sin^2 t，t从0到pi/2，dx=2 sin t cos t dt，且sqrt{x(1-x)}=sin t cos t。积分化为2∫_0^{pi/2}t dt=pi^2/4，与选项A一致。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17144": {
+    "key": "exam:17144",
+    "answer": "A",
+    "solution": "设 $f(x)=x^2\\ln(1-x)$。看到题目要求 $f^{(n)}(0)$，且函数含有 $\\ln(1-x)$，适合直接使用麦克劳林展开：\n\n$$\n\\ln(1-x)=-\\sum_{k=1}^{\\infty}\\frac{x^k}{k},\\qquad |x|<1.\n$$\n\n因此\n\n$$\nf(x)=x^2\\ln(1-x)=-\\sum_{k=1}^{\\infty}\\frac{x^{k+2}}{k}.\n$$\n\n令 $n=k+2$，则 $k=n-2$。当 $n\\ge 3$ 时，$x^n$ 的系数为\n\n$$\n-\\frac{1}{n-2}.\n$$\n\n而麦克劳林展开中 $x^n$ 的系数为 $\\dfrac{f^{(n)}(0)}{n!}$，所以\n\n$$\n\\frac{f^{(n)}(0)}{n!}=-\\frac{1}{n-2},\n$$\n\n从而\n\n$$\nf^{(n)}(0)=-\\frac{n!}{n-2}.\n$$\n\n因此选 $\\mathrm{A}$。\n\n易错点：不能把 $x^2$ 忽略；它会使 $\\ln(1-x)$ 展开式中的 $x^k$ 整体变为 $x^{k+2}$，所以对应项的指标是 $k=n-2$。",
+    "issue": "",
+    "question_id": 17144,
+    "content_hash": "10604330b4f9126dbfd144a6db4e4e680f65055ebf9c1758253a0a507d0288a9",
+    "review": {
+      "key": "exam:17144",
+      "verdict": "pass",
+      "findings": "由 \\(\\ln(1-x)=-\\sum_{k=1}^{\\infty}x^k/k\\)，得 \\(x^2\\ln(1-x)=-\\sum_{n=3}^{\\infty}x^n/(n-2)\\)，故 \\(f^{(n)}(0)=-n!/(n-2)\\)，对应选项 A。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17145": {
+    "key": "exam:17145",
+    "answer": "B",
+    "solution": "函数定义为\n\n$$\nf(x,y)=\n\\begin{cases}\nxy,&xy\\ne 0,\\\\\nx,&y=0,\\\\\ny,&x=0.\n\\end{cases}\n$$\n\n先注意在原点 $f(0,0)=0$。\n\n**判断（1）**\n\n由偏导数定义，\n\n$$\n\\frac{\\partial f}{\\partial x}(0,0)\n=\\lim_{h\\to0}\\frac{f(h,0)-f(0,0)}{h}.\n$$\n\n当 $h\\ne0$ 时，$f(h,0)=h$，且 $f(0,0)=0$，因此\n\n$$\n\\frac{\\partial f}{\\partial x}(0,0)\n=\\lim_{h\\to0}\\frac{h}{h}=1.\n$$\n\n所以（1）正确。\n\n**判断（2）**\n\n混合偏导数需要先求一个一阶偏导，再对所得函数求另一个偏导。无论采用哪一种求导顺序，在原点附近都会遇到一阶偏导不存在的情况。\n\n例如先对 $x$ 求偏导。对于固定的 $y\\ne0$，\n\n$$\n\\frac{\\partial f}{\\partial x}(0,y)\n=\\lim_{h\\to0}\\frac{f(h,y)-f(0,y)}{h}.\n$$\n\n当 $h\\ne0$ 时，$f(h,y)=hy$；由于 $0\\cdot y=0$，有 $f(0,y)=y$。于是\n\n$$\n\\frac{f(h,y)-f(0,y)}{h}\n=\\frac{hy-y}{h}=y-\\frac{y}{h}.\n$$\n\n当 $y\\ne0$ 时，该极限不存在。因此 $f_x(0,y)$ 在任意 $y\\ne0$ 处不存在，不能再对其关于 $y$ 求导，故题中混合偏导数不等于 $1$，甚至该混合偏导数不存在。\n\n所以（2）错误。\n\n**判断（3）**\n\n当 $xy\\ne0$ 时，$f(x,y)=xy$；当 $y=0$ 时，$f(x,0)=x$；当 $x=0$ 时，$f(0,y)=y$。\n\n沿任意趋于原点的路径：\n\n- 若 $xy\\ne0$，则 $|xy|\\le \\dfrac{x^2+y^2}{2}\\to0$；\n- 若 $y=0$，则 $f(x,0)=x\\to0$；\n- 若 $x=0$，则 $f(0,y)=y\\to0$。\n\n因此\n\n$$\n\\lim_{(x,y)\\to(0,0)}f(x,y)=0.\n$$\n\n所以（3）正确。\n\n**判断（4）**\n\n先固定 $y$，求 $x\\to0$ 的极限。\n\n当 $y\\ne0$ 时，$x\\ne0$ 附近有 $f(x,y)=xy$，所以\n\n$$\n\\lim_{x\\to0}f(x,y)=\\lim_{x\\to0}xy=0.\n$$\n\n当 $y=0$ 时，$f(x,0)=x$，同样有\n\n$$\n\\lim_{x\\to0}f(x,0)=0.\n$$\n\n故内层极限对所有 $y$ 都等于 $0$，于是\n\n$$\n\\lim_{y\\to0}\\lim_{x\\to0}f(x,y)=\\lim_{y\\to0}0=0.\n$$\n\n所以（4）正确。\n\n共有 $3$ 个正确结论，选项中 $3$ 对应 $\\mathrm{B}$。\n\n易错点：在计算混合偏导时，不能直接把 $xy$ 当作在坐标轴上也成立。坐标轴上的函数值由分段定义给出，正是这些特殊定义导致相关一阶偏导在邻近点不存在。",
+    "issue": "",
+    "question_id": 17145,
+    "content_hash": "fa4e47ae71f489b647e6ad3b79f8b5f16b8ff171413fe91eebd63385a55847cf",
+    "review": {
+      "key": "exam:17145",
+      "verdict": "pass",
+      "findings": "原点处沿 \\(y=0\\) 有 \\(f(h,0)=h\\)，故 (1) 正确；混合偏导所需的一阶偏导在坐标轴邻近点不存在，故 (2) 错误；各分支趋于原点时均趋于 0，故 (3) 正确；固定任意 \\(y\\) 后 \\(\\lim_{x\\to0}f(x,y)=0\\)，故 (4) 正确，共 3 个正确结论，对应 B。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17146": {
+    "key": "exam:17146",
+    "answer": "B",
+    "solution": "已知在 $[-2,2]$ 上有\n\n$$\nf'(x)>f(x)>0.\n$$\n\n由于 $f(x)>0$，可以对 $f(x)$ 取对数。令\n\n$$\ng(x)=\\ln f(x),\n$$\n\n则\n\n$$\ng'(x)=\\frac{f'(x)}{f(x)}>1.\n$$\n\n因此对任意 $a<b$，由积分可得\n\n$$\n\\ln\\frac{f(b)}{f(a)}\n=\\int_a^b\\frac{f'(x)}{f(x)}\\,dx\n>\\int_a^b1\\,dx=b-a.\n$$\n\n所以\n\n$$\n\\frac{f(b)}{f(a)}>e^{b-a}.\n$$\n\n逐项判断：\n\n**A.** 取 $a=-2,b=-1$，有\n\n$$\n\\frac{f(-1)}{f(-2)}>e.\n$$\n\n于是\n\n$$\n\\frac{f(-2)}{f(-1)}<e^{-1}<1,\n$$\n\n不可能大于 $1$，故 A 错误。\n\n**B.** 取 $a=-1,b=0$，有\n\n$$\n\\frac{f(0)}{f(-1)}>e^{0-(-1)}=e.\n$$\n\n故 B 正确。\n\n**C.** 取 $a=-1,b=1$，有\n\n$$\n\\frac{f(1)}{f(-1)}>e^{1-(-1)}=e^2,\n$$\n\n与选项中的小于 $e^2$ 矛盾，故 C 错误。\n\n**D.** 取 $a=-1,b=2$，有\n\n$$\n\\frac{f(2)}{f(-1)}>e^{2-(-1)}=e^3,\n$$\n\n与选项中的小于 $e^3$ 矛盾，故 D 错误。\n\n因此正确选项为 $\\mathrm{B}$。\n\n易错点：由 $f'(x)>f(x)>0$ 得到的是 $\\dfrac{f'(x)}{f(x)}>1$，积分后应得到函数比值的**下界** $\\dfrac{f(b)}{f(a)}>e^{b-a}$，不能误判成上界。",
+    "issue": "",
+    "question_id": 17146,
+    "content_hash": "8e30887489270d73eef274b77b990bb5c712aba7c1bbbc8168c05b3d0ab3d658",
+    "review": {
+      "key": "exam:17146",
+      "verdict": "pass",
+      "findings": "令 \\(g=\\ln f\\)，则 \\(g'(x)=f'(x)/f(x)>1\\)。由拉格朗日中值定理，任意 \\(a<b\\) 有 \\(f(b)/f(a)>e^{b-a}\\)。因此 A 中反向比值不可能大于 1，B 正确，C、D 分别应大于而非小于 \\(e^2,e^3\\)，答案为 B。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17147": {
+    "key": "exam:17147",
+    "answer": "C",
+    "solution": "由 $A_{12}\\neq 0$ 可知，删去第 $1$ 行、第 $2$ 列后得到的三阶子式非零，因此 $\\operatorname{rank}(A)\\geq 3$。又因为 $A$ 不可逆，所以 $\\operatorname{rank}(A)\\leq 3$，从而\n$$\n\\operatorname{rank}(A)=3.\n$$\n\n由于 $A$ 是四阶矩阵且秩为 $3$，其伴随矩阵满足\n$$\n\\operatorname{rank}(A^*)=1,\n$$\n所以\n$$\n\\dim N(A^*)=4-1=3.\n$$\n\n又由伴随矩阵的性质\n$$\nA^*A=|A|I=0,\n$$\n可知 $A$ 的每一个列向量都属于齐次方程组 $A^*x=0$ 的解空间，即\n$$\nA^*\\alpha_i=0,\\qquad i=1,2,3,4.\n$$\n\n条件 $A_{12}\\neq 0$ 对应的三阶子式使用第 $1,3,4$ 列以及第 $2,3,4$ 行，因此列向量 $\\alpha_1,\\alpha_3,\\alpha_4$ 线性无关。它们又都属于三维空间 $N(A^*)$，故\n$$\nN(A^*)=\\operatorname{span}\\{\\alpha_1,\\alpha_3,\\alpha_4\\}.\n$$\n\n因此方程的通解为\n$$\nx=k_1\\alpha_1+k_2\\alpha_3+k_3\\alpha_4,\n$$\n其中 $k_1,k_2,k_3$ 为任意常数，选 **C**。\n\n易错点：$A_{12}\\neq0$ 不是说明 $\\alpha_1,\\alpha_2$ 等任意列组线性无关，而是说明删去第 $1$ 行、第 $2$ 列后的三阶子式非零，因而能够确定 $\\alpha_1,\\alpha_3,\\alpha_4$ 线性无关。",
+    "issue": "",
+    "question_id": 17147,
+    "content_hash": "c65b62f47b8e9cc1416923a54c0aa2e8a7c7d3d28b6ed6214d17f8e7cd775478",
+    "review": {
+      "key": "exam:17147",
+      "verdict": "pass",
+      "findings": "独立核算正确：A_{12}\\ne0对应删去第1行、第2列的三阶子式非零，故\\alpha_1、\\alpha_3、\\alpha_4线性无关；A不可逆且存在三阶子式非零，故\\operatorname{rank}(A)=3。由A^*A=0及\\dim N(A^*)=3，这三个列向量构成N(A^*)的一组基，故选C。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17148": {
+    "key": "exam:17148",
+    "answer": "D",
+    "solution": "设\n$$\nD=\\begin{pmatrix}1&0&0\\\\0&-1&0\\\\0&0&1\\end{pmatrix}.\n$$\n由\n$$\nP^{-1}AP=D\n$$\n可得\n$$\nAP=PD.\n$$\n因此，若将 $P$ 的三列记为 $p_1,p_2,p_3$，则\n$$\nAp_1=p_1,\\qquad Ap_2=-p_2,\\qquad Ap_3=p_3.\n$$\n也就是说，$P$ 的第 $1$、第 $3$ 列必须是特征值 $1$ 的特征向量，第 $2$ 列必须是特征值 $-1$ 的特征向量。\n\n已知 $\\alpha_1,\\alpha_2$ 是特征值 $1$ 的线性无关特征向量，$\\alpha_3$ 是特征值 $-1$ 的特征向量。因此：\n\n- $\\alpha_1+\\alpha_2$ 仍是特征值 $1$ 的特征向量；\n- $-\\alpha_3$ 仍是特征值 $-1$ 的特征向量；\n- $\\alpha_2$ 仍是特征值 $1$ 的特征向量。\n\n所以取\n$$\nP=(\\alpha_1+\\alpha_2,\\,-\\alpha_3,\\,\\alpha_2)\n$$\n时，三列依次对应特征值 $1,-1,1$，且三列线性无关，满足题设。\n\n逐项判断：\n\n- A 中第一列 $\\alpha_1+\\alpha_3$ 混合了两个不同特征值的特征向量，一般不是特征向量；\n- B 中第二列 $\\alpha_2$ 对应特征值 $1$，不符合第二列应对应 $-1$；\n- C 中第一列 $\\alpha_1+\\alpha_3$ 同样不是特征值 $1$ 的特征向量；\n- D 中三列依次属于特征值 $1,-1,1$ 的特征空间。\n\n故选 **D**。看到相似对角矩阵时，关键是按对角线上特征值的顺序安排特征向量；同一特征值对应的特征向量可以作非零线性组合。",
+    "issue": "",
+    "question_id": 17148,
+    "content_hash": "4f8d11b46d5da7aad0c0117fd1097c0dbc02a615425fe28cea4936349a40a332",
+    "review": {
+      "key": "exam:17148",
+      "verdict": "pass",
+      "findings": "由AP=PD，P的三列须依次对应特征值1、-1、1。选项D的三列\\alpha_1+\\alpha_2、-\\alpha_3、\\alpha_2分别属于对应特征空间，且线性无关；其余选项至少有一列特征值顺序错误或混合不同特征值的特征向量，故选D。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17164": {
+    "key": "exam:17164",
+    "answer": "C",
+    "solution": "记\n$$\nI(x)=\\int_0^{x^2}(e^{t^3}-1)\\,dt.\n$$\n当 $t\\to0$ 时，由 $e^u-1\\sim u$，取 $u=t^3$，得到\n$$\n e^{t^3}-1\\sim t^3.\n$$\n因此\n$$\nI(x)\\sim\\int_0^{x^2}t^3\\,dt\n=\\left.\\frac{t^4}{4}\\right|_0^{x^2}\n=\\frac{x^8}{4}.\n$$\n\n也可以用展开式写成\n$$\ne^{t^3}-1=t^3+O(t^6),\n$$\n从而\n$$\nI(x)=\\frac{x^8}{4}+O(x^{14}).\n$$\n\n于是\n$$\n\\frac{I(x)}{x^7}\\sim\\frac{x^8/4}{x^7}=\\frac{x}{4}\\to0.\n$$\n所以 $I(x)$ 相对于 $x^7$ 是高阶无穷小，选 **C**。\n\n易错点：上限是 $x^2$，所以\n$$\n\\int_0^{x^2}t^3\\,dt=\\frac{(x^2)^4}{4}=\\frac{x^8}{4},\n$$\n不能误写成 $x^6/4$。判断阶数时应先求出积分的主阶，再与 $x^7$ 比较。",
+    "issue": "",
+    "question_id": 17164,
+    "content_hash": "f9b196215b5ba432a291b479e502a94eef148424770dea01593eaa6246dc7549",
+    "review": {
+      "key": "exam:17164",
+      "verdict": "pass",
+      "findings": "e^{t^3}-1=t^3+O(t^6)，积分得\\int_0^{x^2}(e^{t^3}-1)\\,dt=\\frac{x^8}{4}+O(x^{14})。除以x^7后趋于0，因此该积分是x^7的高阶无穷小，选C；积分上限和余项阶数均处理正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17165": {
+    "key": "exam:17165",
+    "answer": "D",
+    "solution": "设 $f(x)=\\dfrac{e^x-1}{x}$（$x\\ne0$），且 $f(0)=1$。\n\n先判断连续性：\n$$\n\\lim_{x\\to0}\\frac{e^x-1}{x}=1=f(0)，\n$$\n所以 $f(x)$ 在 $x=0$ 处连续。\n\n再用导数定义计算：\n$$\n\\begin{aligned}\nf'(0)\n&=\\lim_{h\\to0}\\frac{f(h)-f(0)}{h}\\\\\n&=\\lim_{h\\to0}\\frac{\\dfrac{e^h-1}{h}-1}{h}\\\\\n&=\\lim_{h\\to0}\\frac{e^h-1-h}{h^2}.\n\\end{aligned}\n$$\n由 $e^h=1+h+\\dfrac{h^2}{2}+o(h^2)$，得\n$$\nf'(0)=\\frac12\\ne0.\n$$\n因此 $f(x)$ 在 $x=0$ 处可导，且导数不为 $0$。\n\n逐项判断：\n- A、B：可导函数在某点导数不为 $0$ 时，不可能在该点取得极值，因此不选；\n- C：函数在 $x=0$ 处不仅连续，而且可导，因此不选；\n- D：符合 $f'(0)=\\dfrac12\\ne0$。\n\n易错点：不能只根据 $\\lim_{x\\to0}f(x)=f(0)$ 判断极值或导数，必须进一步使用导数定义计算 $f'(0)$。",
+    "issue": "",
+    "question_id": 17165,
+    "content_hash": "223c762d47490363ed354b3842622bd3d79da93f081f2f1b48b444649aafaaca",
+    "review": {
+      "key": "exam:17165",
+      "verdict": "pass",
+      "findings": "独立核算得 f'(0)=lim_{h→0}(e^h-1-h)/h^2=1/2≠0，故函数在 x=0 处可导且导数不为 0，选项 D 正确；A、B 与可导且导数非零的结论矛盾，C 错误。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17166": {
+    "key": "exam:17166",
+    "answer": "C",
+    "solution": "圆柱体的底面半径为 $r$，高为 $h$。已知\n$$\nr'=2\\ \\mathrm{cm/s},\\qquad h'=-3\\ \\mathrm{cm/s},\\qquad r=10\\ \\mathrm{cm},\\qquad h=5\\ \\mathrm{cm}.\n$$\n\n圆柱体体积为\n$$\nV=\\pi r^2h.\n$$\n对时间 $t$ 求导，使用乘积法则：\n$$\n\\frac{dV}{dt}=2\\pi rh\\frac{dr}{dt}+\\pi r^2\\frac{dh}{dt}.\n$$\n代入已知量：\n$$\n\\begin{aligned}\n\\frac{dV}{dt}\n&=2\\pi\\cdot10\\cdot5\\cdot2+\\pi\\cdot10^2\\cdot(-3)\\\\\n&=200\\pi-300\\pi\\\\\n&=-100\\pi\\ \\mathrm{cm^3/s}.\n\\end{aligned}\n$$\n\n圆柱体表面积为\n$$\nS=2\\pi r^2+2\\pi rh,\n$$\n其中 $2\\pi r^2$ 是两个底面的面积，$2\\pi rh$ 是侧面积。对时间求导：\n$$\n\\frac{dS}{dt}=4\\pi r\\frac{dr}{dt}+2\\pi\\left(h\\frac{dr}{dt}+r\\frac{dh}{dt}\\right).\n$$\n代入：\n$$\n\\begin{aligned}\n\\frac{dS}{dt}\n&=4\\pi\\cdot10\\cdot2+2\\pi(5\\cdot2+10\\cdot(-3))\\\\\n&=80\\pi+2\\pi(10-30)\\\\\n&=40\\pi\\ \\mathrm{cm^2/s}.\n\\end{aligned}\n$$\n所以体积变化率为 $-100\\pi\\ \\mathrm{cm^3/s}$，表面积变化率为 $40\\pi\\ \\mathrm{cm^2/s}$，选 C。\n\n易错点：$h'=-3$ 表示圆柱高度正在减小；求表面积时必须包含两个底面，不能只计算侧面积。",
+    "issue": "",
+    "question_id": 17166,
+    "content_hash": "5d07d79f1aefc5a8f8178780d3d01a1e89f31d0e51db23fa8246922acf4bd580",
+    "review": {
+      "key": "exam:17166",
+      "verdict": "pass",
+      "findings": "由 V=πr^2h 得 dV/dt=2πrh·r'+πr^2h'=-100π cm^3/s；由 S=2πr^2+2πrh 得 dS/dt=4πr·r'+2π(hr'+rh')=40π cm^2/s，选项 C 正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17167": {
+    "key": "exam:17167",
+    "answer": "",
+    "solution": "设 $f(x)=ax-b\\ln x$，其中 $a>0$，定义域为 $x>0$。要使函数有两个零点，需要考察参数 $b$ 的符号以及函数的极小值。\n\n当 $b\\le 0$ 时，\n$$\nf'(x)=a-\\frac{b}{x}>0\\qquad (x>0),\n$$\n所以 $f(x)$ 在 $(0,+\\infty)$ 上严格递增，至多有一个零点，不可能有两个零点。\n\n当 $b>0$ 时，\n$$\nf'(x)=a-\\frac{b}{x},\\qquad f''(x)=\\frac{b}{x^2}>0.\n$$\n令 $f'(x)=0$，得到唯一极小值点\n$$\nx=\\frac{b}{a}.\n$$\n同时，\n$$\n\\lim_{x\\to0^+}f(x)=+\\infty,\\qquad \\lim_{x\\to+\\infty}f(x)=+\\infty.\n$$\n因此，函数有两个零点的充要条件是极小值小于 $0$。计算极小值：\n$$\n\\begin{aligned}\nf\\left(\\frac ba\\right)&=a\\cdot\\frac ba-b\\ln\\frac ba\\\\\n&=b\\left(1-\\ln\\frac ba\\right).\n\\end{aligned}\n$$\n由于 $b>0$，有\n$$\nf\\left(\\frac ba\\right)<0\\iff 1-\\ln\\frac ba<0\\iff \\ln\\frac ba>1\\iff \\frac ba>e.\n$$\n故\n$$\nb>ae.\n$$\n所以按题干实际给出的函数，正确的参数范围是 $b\\in(ae,+\\infty)$。但图片中的选项为 $(e,+\\infty)$、$(0,e)$、$(0,1)$、$(1/e,+\\infty)$，均不等于 $(ae,+\\infty)$，因此无法选择 A、B、C 或 D。\n\n易错点：极小值点是 $x=b/a$，不能误写成 $x=b$；相应的临界条件是 $b>ae$，不能无依据地省略参数 $a$。",
+    "issue": "按图片给出的题干，函数含有系数 $a$，且仅知 $a>0$，推得范围为 $b\\in(ae,+\\infty)$；该结果不在给定选项中。 复算结果与题库原参考答案不一致，需要核对。",
+    "question_id": 17167,
+    "content_hash": "a1c4043a38bfe864a3a868eabfb0c1e78002f5a781f7a6e9f63c6105dc92e86f",
+    "review": {
+      "key": "exam:17167",
+      "verdict": "uncertain",
+      "findings": "按给定题干 f(x)=ax-b ln x（a>0，定义域 x>0）独立核算：有两个零点的充要条件为 b>ae，而 A-D 中没有该条件，因此不能确定任何一个选项为正确答案。初稿关于极小值点 x=b/a 及条件 b>ae 的推导正确。",
+      "answer": "",
+      "solution": "设 $f(x)=ax-b\\ln x$，其中 $a>0$，定义域为 $x>0$。要使函数有两个零点，需要考察参数 $b$ 的符号以及函数的极小值。\\n\\n当 $b\\le 0$ 时，\\n$$\\nf'(x)=a-\\frac{b}{x}>0\\qquad (x>0),\\n$$\\n所以 $f(x)$ 在 $(0,+\\infty)$ 上严格递增，至多有一个零点，不可能有两个零点。\\n\\n当 $b>0$ 时，\\n$$\\nf'(x)=a-\\frac{b}{x},\\qquad f''(x)=\\frac{b}{x^2}>0.\\n$$\\n令 $f'(x)=0$，得到唯一极小值点\\n$$\\nx=\\frac{b}{a}.\\n$$\\n同时，\\n$$\\n\\lim_{x\\to0^+}f(x)=+\\infty,\\qquad \\lim_{x\\to+\\infty}f(x)=+\\infty.\\n$$\\n因此，函数有两个零点的充要条件是极小值小于 $0$。计算极小值：\\n$$\\n\\begin{aligned}\\nf\\left(\\frac ba\\right)&=a\\cdot\\frac ba-b\\ln\\frac ba\\\\\\n&=b\\left(1-\\ln\\frac ba\\right).\\n\\end{aligned}\\n$$\\n由于 $b>0$，有\\n$$\\nf\\left(\\frac ba\\right)<0\\iff 1-\\ln\\frac ba<0\\iff \\ln\\frac ba>1\\iff \\frac ba>e.\\n$$\\n故\\n$$\\nb>ae.\\n$$\\n所以按题干实际给出的函数，正确的参数范围是 $b\\in(ae,+\\infty)$。但图片中的选项为 $(e,+\\infty)$、$(0,e)$、$(0,1)$、$(1/e,+\\infty)$，均不等于 $(ae,+\\infty)$，因此无法选择 A、B、C 或 D。\\n\\n易错点：极小值点是 $x=b/a$，不能误写成 $x=b$；相应的临界条件是 $b>ae$，不能无依据地省略参数 $a$。",
+      "issue": "按图片给出的题干，函数含有系数 $a$，且仅知 $a>0$，推得范围为 $b\\in(ae,+\\infty)$；该结果不在给定选项中。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17168": {
+    "key": "exam:17168",
+    "answer": "D",
+    "solution": "由麦克劳林公式，二阶泰勒多项式为\n$$\nP_2(x)=f(0)+f'(0)x+\\frac{f''(0)}{2}x^2.\n$$\n这里 $f(x)=\\sec x$，因此\n$$\nf(0)=1,\n$$\n$$\nf'(x)=\\sec x\\tan x\\quad\\Longrightarrow\\quad f'(0)=0.\n$$\n再求二阶导数：\n$$\nf''(x)=\\sec x\\tan^2x+\\sec^3x,\n$$\n所以\n$$\nf''(0)=0+1=1.\n$$\n于是\n$$\nP_2(x)=1+0x+\\frac{1}{2}x^2.\n$$\n故 $a=0,b=\\frac12$，选 **D**。\n\n判断要点：看到“在某点的二阶泰勒多项式”，直接使用\n$$\nf(x_0)+f'(x_0)(x-x_0)+\\frac{f''(x_0)}{2}(x-x_0)^2.\n$$\n本题展开点为 $0$，且 $\\sec x$ 是偶函数，因此一次项系数也可直接判断为 $0$。易错点是将二阶导数值 $f''(0)=1$ 直接作为 $b$，忽略了泰勒公式中的 $2!$，正确的二次项系数应为 $\\frac{f''(0)}{2}=\\frac12$。",
+    "issue": "",
+    "question_id": 17168,
+    "content_hash": "b3909683de8cb1363dd2c03d7e17719a3d670344cbeab3bd4e6ce8addd2a979a",
+    "review": {
+      "key": "exam:17168",
+      "verdict": "pass",
+      "findings": "麦克劳林展开中，\\(\\sec 0=1\\)，\\((\\sec x)'|_{x=0}=0\\)，\\((\\sec x)''|_{x=0}=1\\)，故二阶项系数为 \\(1/2\\)，即 \\(a=0,b=1/2\\)，选项 D 正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17169": {
+    "key": "exam:17169",
+    "answer": "C",
+    "solution": "记 $f_1=\\frac{\\partial f}{\\partial x}$，$f_2=\\frac{\\partial f}{\\partial y}$。题目要求求 $df(1,1)$，先利用两个复合函数关系求出 $f_1(1,1)$ 和 $f_2(1,1)$。\n\n由\n$$\nf(x+1,e^x)=x(x+1)^2,\n$$\n对 $x$ 求导，使用链式法则：\n$$\nf_1(x+1,e^x)+e^x f_2(x+1,e^x)\n=\\frac{d}{dx}\\left[x(x+1)^2\\right].\n$$\n右端为\n$$\n\\frac{d}{dx}\\left[x(x+1)^2\\right]=(x+1)^2+2x(x+1)=(x+1)(3x+1).\n$$\n令 $x=0$，得到\n$$\nf_1(1,1)+f_2(1,1)=1. \\tag{1}\n$$\n\n再由\n$$\nf(x,x^2)=2x^2\\ln x,\n$$\n对 $x$ 求导：\n$$\nf_1(x,x^2)+2x f_2(x,x^2)=\\frac{d}{dx}(2x^2\\ln x).\n$$\n右端为\n$$\n\\frac{d}{dx}(2x^2\\ln x)=4x\\ln x+2x.\n$$\n令 $x=1$，得到\n$$\nf_1(1,1)+2f_2(1,1)=2. \\tag{2}\n$$\n\n用式 $(2)$ 减去式 $(1)$，得\n$$\nf_2(1,1)=1.\n$$\n代回式 $(1)$，得\n$$\nf_1(1,1)=0.\n$$\n因此全微分为\n$$\ndf(1,1)=f_1(1,1)\\,dx+f_2(1,1)\\,dy=0\\,dx+1\\,dy=dy.\n$$\n故选 **C**。\n\n判断要点：题目给出的是含有 $x,y$ 的复合函数关系，要求偏导数时应对两边作一元复合函数求导，不能把 $x$ 和 $y$ 当作彼此独立后直接比较。求出两个偏导数后，再代入全微分公式 $df=f_xdx+f_y dy$。",
+    "issue": "",
+    "question_id": 17169,
+    "content_hash": "3626885b25cf298e9531dad92090593fe0e6adea32fbc060b06225f0b00b2245",
+    "review": {
+      "key": "exam:17169",
+      "verdict": "pass",
+      "findings": "分别对两条复合函数关系求导，在 \\(x=0\\) 与 \\(x=1\\) 处得到 \\(f_x(1,1)+f_y(1,1)=1\\) 及 \\(f_x(1,1)+2f_y(1,1)=2\\)，解得 \\(f_x(1,1)=0,f_y(1,1)=1\\)，所以 \\(df(1,1)=dy\\)，选项 C 正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17170": {
+    "key": "exam:17170",
+    "answer": "B",
+    "solution": "将区间 $[0,1]$ 等分为 $n$ 个小区间，取分点\n$$\nx_k=\\frac{k}{n},\\qquad \\Delta x=\\frac1n.\n$$\n第 $k$ 个小区间\n$$\n\\left[\\frac{k-1}{n},\\frac{k}{n}\\right]\n$$\n的中点为\n$$\n\\frac12\\left(\\frac{k-1}{n}+\\frac{k}{n}\\right)=\\frac{2k-1}{2n}.\n$$\n因此中点矩形法对应的黎曼和为\n$$\n\\int_0^1 f(x)\\,dx\n=\\lim_{n\\to\\infty}\\sum_{k=1}^n f\\left(\\frac{2k-1}{2n}\\right)\\frac1n.\n$$\n这正是选项 **B**。\n\n逐项检查：\n\n- A 的取样点是每个小区间的中点，但权重写成了 $\\frac1{2n}$，少了一半；正确权重应为小区间长度 $\\frac1n$。\n- B 的取样点为 $\\frac{2k-1}{2n}$，权重为 $\\frac1n$，完全符合中点黎曼和。\n- C 将区间分成 $2n$ 份，取样点 $\\frac{k-1}{2n}$，但每份长度应为 $\\frac1{2n}$，选项使用了 $\\frac1n$，权重错误。\n- D 虽然取样点 $\\frac{k}{2n}$ 可看作将区间分成 $2n$ 份时的右端点，但每份长度应为 $\\frac1{2n}$，而选项使用了 $\\frac2n$，权重是正确值的 $4$ 倍。\n\n判断要点：识别黎曼和时必须同时检查取样点和权重。权重必须等于对应小区间长度，不能只看函数自变量的形式。",
+    "issue": "",
+    "question_id": 17170,
+    "content_hash": "4c4ab1aa61a6d44caef442d85822b7fec3858eaf91611e9bafc463aa09fbf880",
+    "review": {
+      "key": "exam:17170",
+      "verdict": "pass",
+      "findings": "将 \\([0,1]\\) 等分为 \\(n\\) 份并取中点，样本点为 \\((2k-1)/(2n)\\)，小区间长度为 \\(1/n\\)，因此黎曼和为选项 B。其余选项的权重与对应分割长度不符。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17171": {
+    "key": "exam:17171",
+    "answer": "C",
+    "solution": "令二次型的矩阵为 $A$。先展开：\n$$\n\\begin{aligned}\nf&=(x_1+x_2)^2+(x_2+x_3)^2-(x_3-x_1)^2\\\\\n&=x_1^2+2x_1x_2+x_2^2+x_2^2+2x_2x_3+x_3^2\\\\\n&\\quad-x_3^2+2x_1x_3-x_1^2\\\\\n&=2x_1x_2+2x_2^2+2x_2x_3+2x_1x_3.\n\\end{aligned}\n$$\n因此\n$$\nA=\\begin{pmatrix}0&1&1\\\\1&2&1\\\\1&1&0\\end{pmatrix}.\n$$\n计算行列式：\n$$\n\\det A=0\\cdot\\begin{vmatrix}2&1\\\\1&0\\end{vmatrix}-1\\cdot\\begin{vmatrix}1&1\\\\1&0\\end{vmatrix}+1\\cdot\\begin{vmatrix}1&2\\\\1&1\\end{vmatrix}=1-1=0.\n$$\n又因为左上角的二阶主子式为\n$$\n\\begin{vmatrix}0&1\\\\1&2\\end{vmatrix}=-1<0,\n$$\n所以二次型既有正平方项方向，也有负平方项方向，即正惯性指数和负惯性指数都至少为 $1$。由于 $\\det A=0$，且矩阵不满秩，至少有一个零特征值；事实上 $A(1,-1,1)^T=0$，故矩阵秩为 $2$。因此正、负惯性指数之和为 $2$，只能是\n$$\n(p,q)=(1,1).\n$$\n所以应选 **C**。\n\n易错点：不能只看展开式中出现了正项和负项就直接确定惯性指数，还要结合矩阵的秩或特征值个数。",
+    "issue": "参考答案给出的为 B，但独立计算得到正惯性指数为 1、负惯性指数为 1，正确选项应为 C。 复算结果与题库原参考答案不一致，需要核对。",
+    "question_id": 17171,
+    "content_hash": "69d6059ea2ac56aed899a61acf3264dde4307c296cfca4bafbea404a85d23767",
+    "review": {
+      "key": "exam:17171",
+      "verdict": "pass",
+      "findings": "展开得到对称矩阵 A=[[0,1,1],[1,2,1],[1,1,0]]，det A=0，且 A(1,-1,1)^T=0、二阶主子式为 -1<0，因此秩为2且正负惯性指数各为1，答案确为C。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17172": {
+    "key": "exam:17172",
+    "answer": "D",
+    "solution": "条件“向量组 $\\alpha_1,\\alpha_2,\\alpha_3$ 可以由向量组 $\\beta_1,\\beta_2$ 线性表示”表示每个 $\\alpha_j$ 都是 $\\beta_1,\\beta_2$ 的线性组合。于是若某个向量 $x$ 满足\n$$\nB^Tx=0,\n$$\n则\n$$\n\\beta_1^Tx=\\beta_2^Tx=\\beta_3^Tx=0.\n$$\n由于每个 $\\alpha_j$ 都可表示为\n$$\n\\alpha_j=c_{1j}\\beta_1+c_{2j}\\beta_2,\n$$\n所以\n$$\n\\alpha_j^Tx=c_{1j}\\beta_1^Tx+c_{2j}\\beta_2^Tx=0.\n$$\n对 $j=1,2,3$ 都成立，故\n$$\nA^Tx=0.\n$$\n因此\n$$\nB^Tx=0\\text{ 的解都是 }A^Tx=0\\text{ 的解}，\n$$\n即选 **D**。\n\n逐项判断：\n\n- A、C涉及 $Ax=0$ 与 $Bx=0$ 的解空间。已知的是 $A$ 的列向量由 $B$ 的前两列表示，不能直接推出这两个零空间之间的包含关系。\n- B给出的方向与正交补空间的包含关系相反。由 $\\operatorname{Col}(A)\\subseteq\\operatorname{Col}(B)$，应有 $\\operatorname{Col}(B)^\\perp\\subseteq\\operatorname{Col}(A)^\\perp$，即 $N(B^T)\\subseteq N(A^T)$。\n- D正好符合上述包含关系。\n\n易错点：列空间的包含关系转化为转置矩阵的零空间关系时，正交补的包含方向会反向。",
+    "issue": "",
+    "question_id": 17172,
+    "content_hash": "51a1d7771d4dec5eb6b4d10b097851b9e9dc22d087fbb6bba7f5863a4def811b",
+    "review": {
+      "key": "exam:17172",
+      "verdict": "pass",
+      "findings": "由 alpha_j∈span(beta_1,beta_2)⊂Col(B)，得 Col(A)⊂Col(B)，取正交补后 N(B^T)⊂N(A^T)，所以 B^T x=0 的解都是 A^T x=0 的解，答案D正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17173": {
+    "key": "exam:17173",
+    "answer": "C",
+    "solution": "要判断哪一组 $P,Q$ 能使 $PAQ$ 为对角矩阵，直接对各选项计算 $AQ$，再左乘 $P$ 即可。选项 C 中\n$$\nP=\\begin{pmatrix}1&0&0\\\\2&-1&0\\\\-3&2&1\\end{pmatrix},\\qquad\nQ=\\begin{pmatrix}1&0&1\\\\0&1&3\\\\0&0&1\\end{pmatrix}.\n$$\n先求 $AQ$。矩阵 $Q$ 的三列分别为 $(1,0,0)^T,(0,1,0)^T,(1,3,1)^T$，所以\n$$\nAQ=\\left(A\\begin{pmatrix}1\\\\0\\\\0\\end{pmatrix},A\\begin{pmatrix}0\\\\1\\\\0\\end{pmatrix},A\\begin{pmatrix}1\\\\3\\\\1\\end{pmatrix}\\right).\n$$\n由\n$$\nA=\\begin{pmatrix}1&0&-1\\\\2&-1&1\\\\-1&2&-5\\end{pmatrix},\n$$\n有\n$$\nA\\begin{pmatrix}1\\\\0\\\\0\\end{pmatrix}=\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix},\\qquad\nA\\begin{pmatrix}0\\\\1\\\\0\\end{pmatrix}=\\begin{pmatrix}0\\\\-1\\\\2\\end{pmatrix}.\n$$\n第三列为\n$$\nA\\begin{pmatrix}1\\\\3\\\\1\\end{pmatrix}\n=\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix}+3\\begin{pmatrix}0\\\\-1\\\\2\\end{pmatrix}+\\begin{pmatrix}-1\\\\1\\\\-5\\end{pmatrix}\n=\\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix}.\n$$\n因此\n$$\nAQ=\\begin{pmatrix}1&0&0\\\\2&-1&0\\\\-1&2&0\\end{pmatrix}.\n$$\n再左乘 $P$：\n$$\n\\begin{aligned}\nPAQ\n&=\\begin{pmatrix}1&0&0\\\\2&-1&0\\\\-3&2&1\\end{pmatrix}\n\\begin{pmatrix}1&0&0\\\\2&-1&0\\\\-1&2&0\\end{pmatrix}\\\\\n&=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&0&0\\end{pmatrix},\n\\end{aligned}\n$$\n这是对角矩阵，所以选 **C**。\n\n方法提示：若题目要求寻找 $P,Q$ 使 $PAQ$ 对角化，通常先利用右乘 $Q$ 对列进行线性组合，使某些列变为零或形成简单列，再利用左乘 $P$ 对行进行消元。这里 $Q$ 的第三列对应列组合 $A_1+3A_2+A_3=0$，随后 $P$ 完成行消元。",
+    "issue": "",
+    "question_id": 17173,
+    "content_hash": "5bdf1cceed0a40c60627270f1e5e32c42bf50e8461ecda4ebd187ce71cc5fe8a",
+    "review": {
+      "key": "exam:17173",
+      "verdict": "pass",
+      "findings": "选项C中 Q 的第三列为(1,3,1)^T，满足 A_1+3A_2+A_3=0；计算得 AQ=[[1,0,0],[2,-1,0],[-1,2,0]]，再左乘 P 得 diag(1,1,0)，故 PAQ为对角矩阵，答案C正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17186": {
+    "key": "exam:17186",
+    "answer": "C",
+    "solution": "由等价无穷小的定义，\\(\\alpha(x)\\sim\\beta(x)\\) 等价于\n$$\n\\frac{\\alpha(x)}{\\beta(x)}\\to 1\\quad (x\\to 0).\n$$\n\n逐项判断：\n\n① 若\\(\\alpha(x)\\sim\\beta(x)\\)，则\n$$\n\\frac{\\alpha^2(x)}{\\beta^2(x)}=\\left(\\frac{\\alpha(x)}{\\beta(x)}\\right)^2\\to 1,\n$$\n因此\\(\\alpha^2(x)\\sim\\beta^2(x)\\)，正确。\n\n② 由\\(\\alpha^2(x)\\sim\\beta^2(x)\\)只能得到\n$$\n\\left|\\frac{\\alpha(x)}{\\beta(x)}\\right|\\to 1,\n$$\n不能确定\\(\\alpha(x)/\\beta(x)\\to 1\\)。例如\\(\\alpha(x)=-\\beta(x)\\)时，\\(\\alpha^2(x)=\\beta^2(x)\\)，但\\(\\alpha(x)\\not\\sim\\beta(x)\\)，错误。\n\n③ 若\\(\\alpha(x)\\sim\\beta(x)\\)，则\n$$\n\\frac{\\alpha(x)-\\beta(x)}{\\beta(x)}\\to 0.\n$$\n又因为\\(\\alpha(x)/\\beta(x)\\to1\\)，所以\\(\\alpha(x)\\)与\\(\\beta(x)\\)是同阶无穷小，从而\n$$\n\\frac{\\alpha(x)-\\beta(x)}{\\alpha(x)}\n=\\frac{\\alpha(x)-\\beta(x)}{\\beta(x)}\\cdot\\frac{\\beta(x)}{\\alpha(x)}\\to0.\n$$\n故\\(\\alpha(x)-\\beta(x)=o(\\alpha(x))\\)，正确。\n\n④ 若\\(\\alpha(x)-\\beta(x)=o(\\alpha(x))\\)，则\n$$\n\\frac{\\alpha(x)-\\beta(x)}{\\alpha(x)}\\to0.\n$$\n于是\n$$\n\\frac{\\beta(x)}{\\alpha(x)}=1-\\frac{\\alpha(x)-\\beta(x)}{\\alpha(x)}\\to1,\n$$\n即\\(\\alpha(x)\\sim\\beta(x)\\)，正确。\n\n因此正确的序号为①③④，对应选项\\(\\boxed{\\mathrm C}\\)。易错点是：平方后等价关系成立，但由平方等价反推原式时会丢失正负号信息。",
+    "issue": "",
+    "question_id": 17186,
+    "content_hash": "b0ac3e5b567d4e9d44983927b6c58c5361a9ec05a1e35218b29efef312df7f5a",
+    "review": {
+      "key": "exam:17186",
+      "verdict": "pass",
+      "findings": "①由 α/β→1 得 (α/β)^2→1，正确；②平方等价只能推出 |α/β|→1，取 α=-β 可反例，错误；③α∼β 时 (α-β)/α=(1-β/α)→0，正确；④α-β=o(α) 直接给出 β/α→1，故 α∼β，正确。正确序号为①③④，对应 C。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17187": {
+    "key": "exam:17187",
+    "answer": "D",
+    "solution": "原积分为\n$$\nI=\\int_0^2\\mathrm dy\\int_y^2\\frac{y}{\\sqrt{1+x^3}}\\,\\mathrm dx.\n$$\n\n积分区域为\n$$\nD=\\{(x,y)\\mid 0\\le y\\le2,\\ y\\le x\\le2\\}.\n$$\n若交换积分次序，则先确定\\(x\\)的范围。由区域条件可知\\(0\\le x\\le2\\)，对于固定的\\(x\\)，有\\(0\\le y\\le x\\)。因此\n$$\nI=\\int_0^2\\mathrm dx\\int_0^x\\frac{y}{\\sqrt{1+x^3}}\\,\\mathrm dy.\n$$\n\n将与\\(y\\)无关的部分提出，并计算内层积分：\n$$\n\\begin{aligned}\nI\n&=\\int_0^2\\frac{1}{\\sqrt{1+x^3}}\\left(\\int_0^x y\\,\\mathrm dy\\right)\\mathrm dx\\\\\n&=\\int_0^2\\frac{1}{\\sqrt{1+x^3}}\\cdot\\frac{x^2}{2}\\,\\mathrm dx\\\\\n&=\\frac12\\int_0^2\\frac{x^2}{\\sqrt{1+x^3}}\\,\\mathrm dx.\n\\end{aligned}\n$$\n令\\(u=1+x^3\\)，则\\(\\mathrm du=3x^2\\mathrm dx\\)，所以\n$$\n\\begin{aligned}\nI\n&=\\frac16\\int_1^9u^{-1/2}\\,\\mathrm du\\\\\n&=\\frac16\\cdot2\\left.\\sqrt u\\right|_1^9\\\\\n&=\\frac13(3-1)=\\frac23.\n\\end{aligned}\n$$\n\n故选\\(\\boxed{\\mathrm D}\\)。看到积分限中出现\\(y\\le x\\le2\\)，且被积函数中含有\\(x^3\\)，交换次序后先对\\(y\\)积分可以直接得到\\(\\int y\\,\\mathrm dy\\)，再用\\(u=1+x^3\\)换元。易错点是交换积分次序时，固定\\(x\\)后应取\\(0\\le y\\le x\\)，不能仍然使用原来的\\(y\\le x\\le2\\)。",
+    "issue": "",
+    "question_id": 17187,
+    "content_hash": "fed9e45d80fb5ffa937391a4b9f521992ab7085198404fab7b95b311bf48c2c1",
+    "review": {
+      "key": "exam:17187",
+      "verdict": "pass",
+      "findings": "积分区域为 0≤y≤2、y≤x≤2，交换次序得 0≤x≤2、0≤y≤x。计算为 1/2∫₀²x²(1+x³)^(-1/2)dx=1/6∫₁⁹u^(-1/2)du=2/3，对应 D。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17188": {
+    "key": "exam:17188",
+    "answer": "B",
+    "solution": "已知\\(f(x)\\)在\\(x=x_0\\)处有二阶导数，意味着\\(f'(x)\\)在\\(x_0\\)处可导，因此\\(f'(x)\\)在\\(x_0\\)处连续。\n\n逐项判断：\n\nA项错误。函数在某邻域内单调增加，只能推出在可导点处\n$$\nf'(x_0)\\ge0,\n$$\n不能保证严格大于零。例如\\(f(x)\\equiv C\\)在任意邻域内都是单调不减的，但\\(f'(x_0)=0\\)。即使将“单调增加”理解为严格单调，也不能仅由单调性保证导数严格为正，例如\\(f(x)=x^3\\)在\\(x_0=0\\)附近严格增加，但\\(f'(0)=0\\)。\n\nB项正确。若\\(f'(x_0)>0\\)，由于\\(f'\\)在\\(x_0\\)处连续，存在\\(x_0\\)的某个邻域，使得\n$$\nf'(x)>0.\n$$\n对该邻域内任意\\(x_1<x_2\\)，由拉格朗日中值定理，存在\\(\\xi\\in(x_1,x_2)\\)，使\n$$\nf(x_2)-f(x_1)=f'(\\xi)(x_2-x_1)>0.\n$$\n因此\\(f(x)\\)在\\(x_0\\)的某邻域内单调增加。\n\nC项错误。若函数在\\(x_0\\)的某邻域内是凸函数，且\\(f''(x_0)\\)存在，只能推出\n$$\nf''(x_0)\\ge0,\n$$\n不能推出严格大于零。例如\\(f(x)=x^4\\)在\\(x_0=0\\)附近是凸函数，但\n$$\nf''(0)=0.\n$$\n\nD项错误。\\(f''(x_0)>0\\)只说明二阶导数在一个点的取值为正，并不能保证整个邻域内的二阶导数都非负，因而不能直接推出邻域内为凸函数。要判断邻域内凸性，通常需要有\\(f''(x)\\ge0\\)在该邻域内成立。\n\n因此正确选项为\\(\\boxed{\\mathrm B}\\)。看到“某点导数为正”且已知函数在该点具有二阶导数时，应利用二阶导数存在推出一阶导数在该点连续，再把点上的正性扩大到一个邻域；而“单调”与“凸”分别对应导数非负、二阶导数非负，不能把非严格不等式擅自改成严格不等式。",
+    "issue": "",
+    "question_id": 17188,
+    "content_hash": "02fc7c65bf2c0053cc4d26b0b7f171417c661eecd49326cc6bd82bd2a594e114",
+    "review": {
+      "key": "exam:17188",
+      "verdict": "pass",
+      "findings": "二阶导数存在意味着 f' 在 x₀ 处可导，因而连续；f'(x₀)>0 可推出邻域内 f'>0，从而函数单调增加，B 正确。A、C 只能推出非严格结论，分别可由 x³ 和 x⁴ 在 0 处反例；仅有 f''(x₀)>0 不能保证邻域内凸，D 错误。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17189": {
+    "key": "exam:17189",
+    "answer": "C",
+    "solution": "令 $u=x-y$，并设\n$$H(u)=\\int_0^u (u-t)f(t)\\,dt,$$\n则 $F(x,y)=H(x-y)$。\n\n由变上限积分求导公式，注意上端点处的被积函数为 $(u-u)f(u)=0$，有\n$$H'(u)=(u-u)f(u)+\\int_0^u \\frac{\\partial}{\\partial u}\\bigl[(u-t)f(t)\\bigr]\\,dt=\\int_0^u f(t)\\,dt,$$\n从而\n$$H''(u)=f(u)。$$\n\n因此\n$$\\frac{\\partial F}{\\partial x}=H'(x-y),$$\n而\n$$\\frac{\\partial F}{\\partial y}=-H'(x-y)。$$\n所以\n$$\\frac{\\partial F}{\\partial x}=-\\frac{\\partial F}{\\partial y}。$$\n\n再求二阶偏导：\n$$\\frac{\\partial^2F}{\\partial x^2}=H''(x-y),$$\n$$\\frac{\\partial^2F}{\\partial y^2}=(-1)^2H''(x-y)=H''(x-y)。$$\n因此\n$$\\frac{\\partial^2F}{\\partial x^2}=\\frac{\\partial^2F}{\\partial y^2}。$$\n故选 $\\mathrm{C}$。\n\n易错点：由于 $F$ 只依赖于 $x-y$，对 $x$ 求导和对 $y$ 求导时符号相反；但二阶求导时负号平方为正。",
+    "issue": "",
+    "question_id": 17189,
+    "content_hash": "61da54e72262dd5ba9ee57b345ed2c3cd5d5d5ee3af71bfdac2a1fc391d1b0bc",
+    "review": {
+      "key": "exam:17189",
+      "verdict": "pass",
+      "findings": "令 u=x-y，则 F=H(u)，其中 H(u)=∫_0^u(u-t)f(t)dt。由变上限积分求导得 H'(u)=∫_0^u f(t)dt，H''(u)=f(u)，故 F_x=H'(u)=-F_y，且 F_xx=H''(u)=F_yy。A、B、D的符号关系均不成立，C正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17190": {
+    "key": "exam:17190",
+    "answer": "A",
+    "solution": "考察反常积分\n$$\\int_0^1 \\frac{\\ln x}{x^p(1-x)^{1-p}}\\,dx\n=\\int_0^1 (\\ln x)x^{-p}(1-x)^{p-1}\\,dx。$$\n\n需要分别考察 $x\\to0^+$ 和 $x\\to1^-$ 两个端点。\n\n当 $x\\to0^+$ 时，$(1-x)^{p-1}\\to1$，故被积函数的绝对值与\n$$|\\ln x|x^{-p}$$\n同阶。令 $x=e^{-t}$，则 $dx=-e^{-t}dt$，于是相应积分的尾部与\n$$\\int^\\infty t e^{-(1-p)t}\\,dt$$\n同阶。该积分收敛的条件是\n$$1-p>0，即 p<1。$$\n当 $p=1$ 时相当于考察 $\\int_0 |\\ln x|x^{-1}dx$，发散；当 $p>1$ 时发散得更快。\n\n当 $x\\to1^-$ 时，令 $s=1-x$。由\n$$\\ln x=\\ln(1-s)\\sim -s,$$\n且 $x^{-p}\\to1$，可知被积函数的绝对值与\n$$s\\cdot s^{p-1}=s^p$$\n同阶。因此需要\n$$\\int_0 s^p\\,ds$$\n收敛，即\n$$p>-1。$$\n\n综合两个端点的条件：\n$$-1<p<1。$$\n所以选 $\\mathrm{A}$。\n\n易错点：不能只考察 $x=0$ 端点；$x=1$ 处虽然 $\\ln x\\to0$，但仍需结合 $(1-x)^{p-1}$ 判断，得到条件 $p>-1$。",
+    "issue": "",
+    "question_id": 17190,
+    "content_hash": "b924d8284609d53e1b82f21d28757189a16195f9380e7a339f5147b9d3baced1",
+    "review": {
+      "key": "exam:17190",
+      "verdict": "pass",
+      "findings": "x→0+时，被积函数绝对值与 |ln x|x^{-p} 同阶，收敛条件为 p<1；x→1−时 ln x∼-(1-x)，被积函数绝对值与 (1-x)^p 同阶，收敛条件为 p>-1。综合得 -1<p<1，选项A正确，端点均为发散临界情形。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17191": {
+    "key": "exam:17191",
+    "answer": "D",
+    "solution": "已知\n$$-\\frac{\\pi}{2}\\le x_n\\le\\frac{\\pi}{2}。$$\n因此\n$$0\\le\\cos x_n\\le1。$$\n\n若 $\\lim_{n\\to\\infty}\\sin(\\cos x_n)$ 存在，由于正弦函数在区间 $[0,1]$ 上严格单调且连续，可对其取反函数，得到\n$$\\cos x_n=\\arcsin\\bigl(\\sin(\\cos x_n)\\bigr)。$$\n所以\n$$\\lim_{n\\to\\infty}\\cos x_n$$\n一定存在。\n\n但是，$\\cos x$ 在区间 $[-\\frac{\\pi}{2},\\frac{\\pi}{2}]$ 上不是一一对应的，因为 $\\cos(-x)=\\cos x$。例如取某个 $a\\in(0,\\frac{\\pi}{2}]$，令\n$$x_n=(-1)^n a。$$\n则\n$$\\cos x_n=\\cos a,$$\n从而 $\\sin(\\cos x_n)=\\sin(\\cos a)$ 为常数，极限存在；但 $x_n$ 在 $a$ 与 $-a$ 之间交替变化，故 $\\lim_{n\\to\\infty}x_n$ 不存在。\n\n逐项判断：\n\n- A 错。取上述 $x_n$，则 $\\cos(\\sin x_n)=\\cos(\\sin a)$ 恒定，但 $x_n$ 不收敛。\n- B 错。同样的反例中，$\\sin(\\cos x_n)$ 恒定，但 $x_n$ 不收敛。\n- C 错。同样的反例中，$\\cos(\\sin x_n)$ 有极限，但 $\\sin x_n$ 在 $\\sin a$ 与 $-\\sin a$ 之间交替，不收敛。\n- D 对。由 $\\sin$ 在 $[0,1]$ 上的可逆性可知 $\\cos x_n$ 有极限，但由 $\\cos$ 的偶性，$x_n$ 不一定有极限。\n\n故选 $\\mathrm{D}$。",
+    "issue": "",
+    "question_id": 17191,
+    "content_hash": "003eae12b47cb44eb9c8714d8c31148cc2ec65f92fbcb4bbffc8676fa6dfa0a5",
+    "review": {
+      "key": "exam:17191",
+      "verdict": "pass",
+      "findings": "在区间 [-π/2,π/2] 上，sin(cos x_n)存在极限时，由 cos x_n∈[0,1] 且 sin在[0,1]上严格单调可知 cos x_n收敛，但不能推出 x_n收敛，故D正确。取 x_n=(-1)^n a（0<a≤π/2）可使 cos(sin x_n)与 sin(cos x_n)分别恒定而 x_n不收敛，故A、B错误；同一反例中 sin x_n不收敛，故C错误。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17192": {
+    "key": "exam:17192",
+    "answer": "A",
+    "solution": "由题目中的积分区间均为 $[0,1]$，可比较被积函数。\n\n先比较 $I_1$ 与 $I_2$。令\n$$f(x)=\\ln(1+x)-\\frac{x}{2}.$$\n则\n$$f(0)=0,\\qquad f'(x)=\\frac{1}{1+x}-\\frac12=\\frac{1-x}{2(1+x)}>0\\quad(0<x<1).$$\n因此在 $0<x<1$ 时，$\\ln(1+x)>x/2$。又因为 $1+\\cos x>0$，所以\n$$\\frac{\\ln(1+x)}{1+\\cos x}>\\frac{x}{2(1+\\cos x)}.$$\n两边在 $[0,1]$ 上积分，得到\n$$I_2>I_1.$$\n\n再比较 $I_2$ 与 $I_3$。当 $0<x\\leq 1$ 时，$\\ln(1+x)<x$，且\n$$\\frac{2}{1+\\sin x}>\\frac{1}{1+\\cos x},$$\n因为这等价于\n$$2(1+\\cos x)>1+\\sin x\\iff 1+2\\cos x-\\sin x>0.$$\n在 $[0,1]$ 上有 $\\sin x\\leq 1$、$\\cos x>0$，故上式成立。因此\n$$\\frac{2x}{1+\\sin x}>\\frac{x}{1+\\cos x}>\\frac{\\ln(1+x)}{1+\\cos x}.$$\n积分可得\n$$I_3>I_2.$$\n综上，\n$$I_1<I_2<I_3.$$\n所以选择 **A**。\n\n**易错点：** 比较 $I_1$ 和 $I_2$ 时，不能只使用 $\\ln(1+x)<x$，还需要证明 $\\ln(1+x)>x/2$；比较 $I_2$ 和 $I_3$ 时，应同时利用对数不等式和三角函数分母的比较。",
+    "issue": "",
+    "question_id": 17192,
+    "content_hash": "4869ed25426390ddf4b9bc7a2bbe3d67ea0b1a06f4915c30f1b3367c26a5b150",
+    "review": {
+      "key": "exam:17192",
+      "verdict": "pass",
+      "findings": "在 $0<x<1$ 上有 $x/2<\\ln(1+x)$，故 $I_1<I_2$；又 $2(1+\\cos x)>1+\\sin x$ 且 $\\ln(1+x)<x$，故 $I_2<I_3$。结论 $I_1<I_2<I_3$ 与选项 A 一致。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17193": {
+    "key": "exam:17193",
+    "answer": "",
+    "solution": "设\n$$\nA=\\begin{pmatrix}1&0&0\\\\0&-1&0\\\\0&0&0\\end{pmatrix}.\n$$\n逐项验证：\n\n- A 项：取 $P=Q=I_3$，则 $P,Q$ 均可逆，且\n  $$PAQ=I_3AI_3=A.$$\n- B 项：取 $P=I_3$，则 $P$ 可逆，且\n  $$PAP^{-1}=I_3AI_3=A.$$\n- C 项：取 $Q=I_3$。单位矩阵是正交矩阵，且\n  $$QAQ^{-1}=I_3AI_3=A.$$\n- D 项：取 $P=I_3$，则 $P$ 可逆，且\n  $$PAP^T=I_3AI_3^T=A.$$\n\n因此 A、B、C、D 四项都成立，题目没有唯一的单项选择答案。\n\n**易错点：** 题目只要求“存在”可逆矩阵或正交矩阵，并未排除单位矩阵，不能擅自附加非平凡性条件。",
+    "issue": "给定题干的四个选项均可由取单位矩阵直接验证成立，作为单项选择题缺少使答案唯一的限制。 复算结果与题库原参考答案不一致，需要核对。",
+    "question_id": 17193,
+    "content_hash": "a4eb0cb3db147eb9d552126a0662ef6ddf319e2bdb8d59efebfa5d6285b5faf5",
+    "review": {
+      "key": "exam:17193",
+      "verdict": "corrected",
+      "findings": "四个选项均可取单位矩阵成立，因此作为单项选择题没有唯一答案；初稿关于存在参考答案 B 的说法不属于给定题干内容，应删除。",
+      "answer": "",
+      "solution": "设\n$$\nA=\\begin{pmatrix}1&0&0\\\\0&-1&0\\\\0&0&0\\end{pmatrix}.\n$$\n逐项验证：\n\n- A 项：取 $P=Q=I_3$，则 $P,Q$ 均可逆，且\n  $$PAQ=I_3AI_3=A.$$\n- B 项：取 $P=I_3$，则 $P$ 可逆，且\n  $$PAP^{-1}=I_3AI_3=A.$$\n- C 项：取 $Q=I_3$。单位矩阵是正交矩阵，且\n  $$QAQ^{-1}=I_3AI_3=A.$$\n- D 项：取 $P=I_3$，则 $P$ 可逆，且\n  $$PAP^T=I_3AI_3^T=A.$$\n\n因此 A、B、C、D 四项都成立，题目没有唯一的单项选择答案。\n\n**易错点：** 题目只要求“存在”可逆矩阵或正交矩阵，并未排除单位矩阵，不能擅自附加非平凡性条件。",
+      "issue": "给定题干的四个选项均可由取单位矩阵直接验证成立，作为单项选择题缺少使答案唯一的限制。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17194": {
+    "key": "exam:17194",
+    "answer": "D",
+    "solution": "设未知向量为 $x=(x_1,x_2,x_3)^T$，则方程组 $Ax=b$ 等价于寻找二次多项式\n$$p(t)=x_1+x_2t+x_3t^2,$$\n使其满足\n$$p(1)=1,\\qquad p(a)=2,\\qquad p(b)=4.$$\n\n也可以直接考察系数矩阵的行列式。它是范德蒙德行列式：\n$$\\det A=(a-1)(b-1)(b-a).$$\n\n**情况一：** 当 $1,a,b$ 两两不相等时，\n$$\\det A\\neq 0,$$\n所以矩阵 $A$ 可逆，方程组有且只有一个解。\n\n**情况二：** 当 $\\det A=0$ 时，至少有两个数相等：\n\n1. 若 $a=1$，则矩阵的第一行和第二行相同，但方程右端对应分量分别为 $1$ 和 $2$，从而要求同一个左端表达式同时等于 $1$ 和 $2$，矛盾，方程组无解。\n2. 若 $b=1$，则第一行和第三行相同，而右端对应分量分别为 $1$ 和 $4$，矛盾，方程组无解。\n3. 若 $a=b$，则第二行和第三行相同，而右端对应分量分别为 $2$ 和 $4$，矛盾，方程组无解。\n\n这些情形的交集仍然属于无解情形。因此方程组不可能有无穷多解，只可能有唯一解或无解。\n\n所以选择 **D**。\n\n**易错点：** 不能仅由 $\\det A=0$ 就断定有无穷多解；还要比较增广矩阵对应行的右端常数。本题中相同的系数行对应不同的右端值，因而退化时必然无解。",
+    "issue": "",
+    "question_id": 17194,
+    "content_hash": "4480de59ecfb43e2e3296eee13cca41c6b943841700a985fab6b3404614e2615",
+    "review": {
+      "key": "exam:17194",
+      "verdict": "pass",
+      "findings": "系数矩阵为节点 $1,a,b$ 的范德蒙德矩阵，行列式为 $(a-1)(b-1)(b-a)$。节点两两不等时有唯一解；任意两节点相等时对应系数行相同而右端分别为 $1,2$、$1,4$ 或 $2,4$，均矛盾无解。因此只能有唯一解或无解，选 D。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17195": {
+    "key": "exam:17195",
+    "answer": "C",
+    "solution": "设\n$$A_3=(\\alpha_1,\\alpha_2,\\alpha_3),\\qquad A_4=(\\alpha_1,\\alpha_2,\\alpha_4).$$\n\n两组向量前两个向量相同，因此要判断它们是否等价，关键是比较它们生成的向量空间。\n\n先计算三阶行列式：\n$$\n\\begin{aligned}\n\\det A_3\n&=\\begin{vmatrix}\n\\lambda&1&1\\\\\n1&\\lambda&1\\\\\n1&1&\\lambda\n\\end{vmatrix}\\\\\n&=\\lambda^3-3\\lambda+2\\\\\n&=(\\lambda-1)^2(\\lambda+2),\n\\end{aligned}\n$$\n以及\n$$\n\\begin{aligned}\n\\det A_4\n&=\\begin{vmatrix}\n\\lambda&1&1\\\\\n1&\\lambda&\\lambda\\\\\n1&1&\\lambda^2\n\\end{vmatrix}\\\\\n&=(\\lambda^2-1)^2\\\\\n&=(\\lambda-1)^2(\\lambda+1)^2.\n\\end{aligned}\n$$\n\n当\n$$\\lambda\\ne1,-2,-1$$\n时，两个行列式都不为零，两组向量都构成三维空间的一组基，因此两组向量等价。\n\n需要单独检查行列式同时可能为零的情形：\n\n- 当 $\\lambda=1$ 时，\n  $$\\alpha_1=\\alpha_2=\\alpha_3=\\alpha_4=(1,1,1)^T,$$\n  两组向量生成的空间相同，仍然等价；\n- 当 $\\lambda=-2$ 时，$\\det A_3=0$ 而 $\\det A_4\\ne0$，两组向量生成空间的维数不同，不等价；\n- 当 $\\lambda=-1$ 时，$\\det A_4=0$ 而 $\\det A_3\\ne0$，两组向量生成空间的维数不同，不等价。\n\n所以允许的取值为\n$$\\{\\lambda\\mid \\lambda\\in\\mathbb R,\\ \\lambda\\ne-1,\\ \\lambda\\ne-2\\},$$\n故选 **C**。易错点是不能仅根据两个行列式都非零的情形下结论，还要检查 $\\lambda=1$ 这个两个行列式同时为零的特殊值。",
+    "issue": "",
+    "question_id": 17195,
+    "content_hash": "ea8f0b66f0ac0ec9b3fe81c72f1e9a446ad16f59e3fcc99f213b3c0792a85575",
+    "review": {
+      "key": "exam:17195",
+      "verdict": "pass",
+      "findings": "独立核算正确：\\det(\\alpha_1,\\alpha_2,\\alpha_3)=(\\lambda-1)^2(\\lambda+2)，\\det(\\alpha_1,\\alpha_2,\\alpha_4)=(\\lambda^2-1)^2。除\\lambda=-2,-1外两组均为基；\\lambda=1时四向量均为(1,1,1)^T，生成空间仍相同。因此答案为C。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17208": {
+    "key": "exam:17208",
+    "answer": "B",
+    "solution": "求无穷远处的渐近线时，考察 $x\\to\\pm\\infty$ 时函数与某条直线的差是否趋于零。\n\n原函数为\n$$y=x\\ln\\left(e+\\frac1{x-1}\\right).$$\n将对数中的 $e$ 提出：\n$$\ny=x\\left[1+\\ln\\left(1+\\frac1{e(x-1)}\\right)\\right].\n$$\n因此\n$$y-x=x\\ln\\left(1+\\frac1{e(x-1)}\\right).$$\n令\n$$u=\\frac1{e(x-1)},$$\n则当 $x\\to\\pm\\infty$ 时 $u\\to0$，并且\n$$\\ln(1+u)\\sim u.$$\n所以\n$$\n\\lim_{x\\to\\pm\\infty}(y-x)\n=\\lim_{x\\to\\pm\\infty}x\\cdot\\frac1{e(x-1)}\n=\\frac1e.\n$$\n也可以进一步写成\n$$\ny=x+\\frac1e+o(1).$$\n故渐近线为\n$$y=x+\\frac1e,$$\n选 **B**。\n\n看到函数中含有 $x\\ln(\\text{常数}+\\text{趋于零的量})$ 时，应先利用\n$$\\ln(e+t)=1+\\ln\\left(1+\\frac te\\right)$$\n并结合 $\\ln(1+u)\\sim u$ 判断直线渐近线。",
+    "issue": "",
+    "question_id": 17208,
+    "content_hash": "18fbf760615502836085413d41da2daa99e1bfb07c5716b414ce641c762eacdf",
+    "review": {
+      "key": "exam:17208",
+      "verdict": "pass",
+      "findings": "独立核算正确：\\ln\\left(e+\\frac1{x-1}\\right)=1+\\ln\\left(1+\\frac1{e(x-1)}\\right)，且\\lim_{x\\to\\pm\\infty}x\\ln\\left(1+\\frac1{e(x-1)}\\right)=\\frac1e。因此渐近线为y=x+\\frac1e，答案为B。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17209": {
+    "key": "exam:17209",
+    "answer": "D",
+    "solution": "原函数为\n$$\nf(x)=\\begin{cases}\n\\dfrac1{\\sqrt{1+x^2}},&x\\le0,\\\\\n(x+1)\\cos x,&x>0.\n\\end{cases}$$\n\n先求两段的原函数。\n\n当 $x\\le0$ 时，利用\n$$\\frac{\\mathrm d}{\\mathrm dx}\\ln\\left(\\sqrt{1+x^2}+x\\right)\n=\\frac1{\\sqrt{1+x^2}},$$\n可得左段原函数为\n$$F_1(x)=\\ln\\left(\\sqrt{1+x^2}+x\\right)+C_1.$$\n注意\n$$\\frac{\\mathrm d}{\\mathrm dx}\\ln\\left(\\sqrt{1+x^2}-x\\right)\n=-\\frac1{\\sqrt{1+x^2}},$$\n所以选项 A、B 左段的符号不正确。\n\n当 $x>0$ 时，分部积分或直接求导可得\n$$\\int (x+1)\\cos x\\,\\mathrm dx=(x+1)\\sin x+\\cos x+C_2,$$\n因为\n$$\\frac{\\mathrm d}{\\mathrm dx}\\left[(x+1)\\sin x+\\cos x\\right]\n=\\sin x+(x+1)\\cos x-\\sin x\n=(x+1)\\cos x.$$\n因此右段应为\n$$F_2(x)=(x+1)\\sin x+\\cos x+C_2.$$\n\n要使 $F(x)$ 在 $x=0$ 处成为一个原函数，至少要连续。选择常数使两段在 $0$ 处相等：\n$$F_1(0)=\\ln(1)+C_1=C_1,$$\n而\n$$F_2(0)=1+C_2.$$\n取 $C_1=1,C_2=0$，得到\n$$\nF(x)=\\begin{cases}\n\\ln\\left(\\sqrt{1+x^2}+x\\right)+1,&x\\le0,\\\\\n(x+1)\\sin x+\\cos x,&x>0.\n\\end{cases}\n$$\n在 $x=0$ 处，左导数和右导数都等于 $1=f(0)$，所以它确实是原函数。\n\n故选 **D**。易错点有两个：一是 $\\ln(\\sqrt{1+x^2}-x)$ 的导数为负的被积函数；二是分段原函数的积分常数必须通过 $x=0$ 处的连续性进行匹配。",
+    "issue": "",
+    "question_id": 17209,
+    "content_hash": "12aa315566a3854a33359d4ad0cef518e8ff4365eb32dc4695f0f862646320ae",
+    "review": {
+      "key": "exam:17209",
+      "verdict": "pass",
+      "findings": "独立核算正确：\\frac{d}{dx}\\ln(\\sqrt{1+x^2}+x)=\\frac1{\\sqrt{1+x^2}}，且\\int(x+1)\\cos x\\,dx=(x+1)\\sin x+\\cos x+C。选项D两段在x=0处函数值均为1，左右导数均为1=f(0)，确为原函数。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17210": {
+    "key": "exam:17210",
+    "answer": "B",
+    "solution": "设初值为正。由于当 $x\\in(0,1/2]$ 时有 $0<\\sin x<x$，所以 $\\{x_n\\}$ 单调递减且有极限。设极限为 $L$，由递推式得 $L=\\sin L$，因此 $L=0$。\\n\\n在 $x_n\\to0$ 时，利用展开式\\n$$\\sin x_n=x_n-\\frac{x_n^3}{6}+O(x_n^5),$$\\n可得\\n$$x_{n+1}=x_n\\left(1-\\frac{x_n^2}{6}+O(x_n^4)\\right).$$\\n于是\\n$$\\frac{1}{x_{n+1}^2}=\\frac{1}{x_n^2}\\left(1-\\frac{x_n^2}{6}+O(x_n^4)\\right)^{-2}=\\frac{1}{x_n^2}+\\frac13+O(x_n^2).$$\\n因此\\n$$\\frac{1}{x_n^2}\\sim\\frac n3,\\qquad x_n\\sim\\sqrt{\\frac3n}.$$\\n所以 $x_n$ 只按 $n^{-1/2}$ 的速度趋于 $0$。\\n\\n另一方面，$y_{n+1}=y_n^2$ 且 $y_1=1/2$，直接得到\\n$$y_n=\\left(\\frac12\\right)^{2^{n-1}}=2^{-2^{n-1}}.$$\\n对任意正整数 $k$，有\\n$$\\frac{y_n}{x_n^k}\\sim 2^{-2^{n-1}}\\left(\\frac n3\\right)^{k/2}\\longrightarrow0.$$\\n这说明 $y_n$ 是 $x_n$ 的高阶无穷小。\\n\\n逐项判断：\\n- A 错：$x_n/y_n^k$ 不趋于 $0$，而是趋于无穷大；\\n- B 对：$y_n=o(x_n^k)$ 对任意正整数 $k$ 成立；\\n- C 错：$x_n/y_n\\to+\\infty$；\\n- D 错：二者的衰减速度不同，分别是幂函数级和指数的指数级。\\n\\n故选 **B**。",
+    "issue": "",
+    "question_id": 17210,
+    "content_hash": "74f7fdba9ece9e3b9205e9f9686e83061319cd63fc2a3fdb1c799a9b65936ae0",
+    "review": {
+      "key": "exam:17210",
+      "verdict": "pass",
+      "findings": "独立核算得 x_n→0 且 1/x_n^2∼ n/3，y_n=2^{-2^{n-1}}，故对任意正整数 k 有 y_n/x_n^k→0，即 y_n 是 x_n 的高阶无穷小，选项 B 正确。初稿结论及主要推导无误。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17211": {
+    "key": "exam:17211",
+    "answer": "C",
+    "solution": "考虑齐次常系数微分方程的特征方程\\n$$r^2+ar+b=0.$$\\n若方程的通解在整个 $(-\\infty,+\\infty)$ 上有界，则特征根不能有非零实部：\\n- 若某特征根满足 $\\operatorname{Re}r>0$，则相应项在 $x\\to+\\infty$ 时无界；\\n- 若某特征根满足 $\\operatorname{Re}r<0$，则相应项在 $x\\to-\\infty$ 时无界；\\n- 若有重根 $r=0$，通解中会出现 $x$ 项，也无界。\\n\\n因此，两个特征根必须为共轭的纯虚根 $r=\\pm i\\omega$，其中 $\\omega>0$。于是\\n$$r^2+\\omega^2=0,$$\\n与原特征方程比较可得\\n$$a=0,\\qquad b=\\omega^2>0.$$\\n此时通解为\\n$$y=C_1\\cos(\\sqrt b\\,x)+C_2\\sin(\\sqrt b\\,x),$$\\n确实在整个实轴上有界。\\n\\n逐项判断：\\n- A：$a<0$ 时特征根的实部为正或存在正实根，不能在整个实轴上有界；\\n- B：$a>0,b>0$ 时特征根的实部为负或存在负实根，向 $x\\to-\\infty$ 时无界；\\n- C：$a=0,b>0$，通解为正弦、余弦的线性组合，有界；\\n- D：$a=0,b<0$ 时特征根为一正一负的实根，解含指数增长项。\\n\\n故选 **C**。",
+    "issue": "",
+    "question_id": 17211,
+    "content_hash": "7f1064d54989d14e188e6595eaf0977bca385fd61c8c975e758f32040b315d67",
+    "review": {
+      "key": "exam:17211",
+      "verdict": "pass",
+      "findings": "特征方程为 r^2+ar+b=0。要使通解在整个实轴有界，特征根必须为共轭纯虚根 r=±iω（ω>0），从而 a=0、b>0；此时通解为正弦余弦线性组合。选项 C 正确，初稿判断无误。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17212": {
+    "key": "exam:17212",
+    "answer": "C",
+    "solution": "先根据 $t$ 的正负去掉绝对值，并分别表示 $x,y$。\\n\\n当 $t\\ge0$ 时，\\n$$x=2t+t=3t,\\qquad y=t\\sin t.$$\\n由于 $t=x/3$，所以当 $x\\ge0$ 时\\n$$f(x)=\\frac{x}{3}\\sin\\frac{x}{3}.$$\\n\\n当 $t<0$ 时，\\n$$x=2t-t=t,\\qquad y=-t\\sin t.$$\\n由于此时 $t=x$，所以当 $x<0$ 时\\n$$f(x)=-x\\sin x.$$\\n因此\\n$$f(x)=\\begin{cases}-x\\sin x,&x<0,\\\\[4pt] \\dfrac{x}{3}\\sin\\dfrac{x}{3},&x\\ge0.\\end{cases}$$\\n\\n先求一阶导数。当 $x<0$ 时，\\n$$f'(x)=-\\sin x-x\\cos x.$$\\n当 $x>0$ 时，\\n$$f'(x)=\\frac13\\sin\\frac{x}{3}+\\frac{x}{9}\\cos\\frac{x}{3}.$$\\n由 $f(x)=O(x^2)$，有\\n$$f'(0)=\\lim_{h\\to0}\\frac{f(h)-f(0)}h=0.$$\\n并且\\n$$\\lim_{x\\to0^-}f'(x)=0,\\qquad \\lim_{x\\to0^+}f'(x)=0,$$\\n所以 $f'(x)$ 在 $x=0$ 处连续，$f'(x)$ 在全体定义域上连续。\\n\\n再考察二阶导数。对 $x\\ne0$ 求导：\\n当 $x<0$ 时，\\n$$f''(x)=-2\\cos x+x\\sin x,$$\\n故\\n$$\\lim_{x\\to0^-}f''(x)=-2.$$\\n当 $x>0$ 时，\\n$$f''(x)=\\frac29\\cos\\frac{x}{3}-\\frac{x}{27}\\sin\\frac{x}{3},$$\\n故\\n$$\\lim_{x\\to0^+}f''(x)=\\frac29.$$\\n\\n也可以直接由 $f'(0)=0$ 检验二阶导数：\\n$$\\lim_{h\\to0^-}\\frac{f'(h)-f'(0)}h=-2,\\qquad \\lim_{h\\to0^+}\\frac{f'(h)-f'(0)}h=\\frac29.$$\\n左右极限不相等，因此 $f''(0)$ 不存在。\\n\\n逐项判断：\\n- A 错：$f'(0)$ 存在；\\n- B 错：$f'(0)$ 存在且 $f'$ 在 $0$ 处连续；\\n- C 对：$f'$ 连续，但 $f''(0)$ 不存在；\\n- D 错：$f''(0)$ 不存在。\\n\\n故选 **C**。",
+    "issue": "",
+    "question_id": 17212,
+    "content_hash": "9de1be6388e78c684777f2f1d6df939fa25de580e522efe71e3ea72f39d65668",
+    "review": {
+      "key": "exam:17212",
+      "verdict": "pass",
+      "findings": "分 t≥0 与 t<0 消去参数得 f(x)=-x sin x（x<0），f(x)=x/3·sin(x/3)（x≥0）。两侧一阶导数均趋于 0，故 f'(0) 存在且 f' 连续；二阶导数左右极限分别为 -2 与 2/9，因此 f''(0) 不存在。选项 C 正确，初稿推导无误。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17213": {
+    "key": "exam:17213",
+    "answer": "A",
+    "solution": "令 $t=\\ln x$，则 $dt=\\dfrac{dx}{x}$，积分下限变为 $\\ln 2$，因此\n\n$$f(\\alpha)=\\int_{\\ln 2}^{+\\infty}t^{-\\alpha-1}\\,dt.$$ \n\n要使积分收敛，必须有 $\\alpha>0$。当 $\\alpha>0$ 时，\n\n$$f(\\alpha)=\\left[-\\frac{1}{\\alpha}t^{-\\alpha}\\right]_{\\ln 2}^{+\\infty}=\\frac{1}{\\alpha(\\ln 2)^\\alpha}.$$\n\n由于 $0<\\ln 2<1$，令 $L=-\\ln(\\ln 2)>0$，则\n\n$$f(\\alpha)=\\frac{e^{L\\alpha}}{\\alpha}.$$\n\n求导得\n\n$$f'(\\alpha)=\\frac{e^{L\\alpha}(L\\alpha-1)}{\\alpha^2}.$$\n\n因此当 $0<\\alpha<\\dfrac1L$ 时，$f'(\\alpha)<0$；当 $\\alpha>\\dfrac1L$ 时，$f'(\\alpha)>0$。所以函数在 $\\alpha_0=\\dfrac1L$ 处取得最小值，即\n\n$$\\alpha_0=\\frac{1}{-\\ln(\\ln 2)}=-\\frac{1}{\\ln(\\ln 2)}.$$\n\n因为 $\\ln 2<1$，所以 $\\ln(\\ln 2)<0$，该结果为正，符合积分收敛条件。故选 A。易错点是忘记先判断反常积分的收敛范围，或者把 $\\dfrac{1}{\\alpha(\\ln 2)^\\alpha}$ 的求导符号判断错误。",
+    "issue": "",
+    "question_id": 17213,
+    "content_hash": "d49d756ceb325e88c40b67f9e79723b38921014aba6110a76d390afaf9498d90",
+    "review": {
+      "key": "exam:17213",
+      "verdict": "pass",
+      "findings": "令 t=ln x 后积分化为 ∫_{ln 2}^{+∞}t^{-α-1}dt，收敛条件为 α>0，且 f(α)=1/[α(ln 2)^α]。由 f'(α)=e^{Lα}(Lα-1)/α²（L=-ln(ln 2)>0），最小值在 α=-1/ln(ln 2) 处取得，对应选项 A。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17214": {
+    "key": "exam:17214",
+    "answer": "C",
+    "solution": "已知\n\n$$f(x)=(x^2+a)e^x.$$\n\n由于 $e^x>0$，先求一阶导数：\n\n$$f'(x)=(x^2+2x+a)e^x.$$\n\n令 $q(x)=x^2+2x+a=(x+1)^2+a-1$。\n\n若 $a<1$，则 $q(x)$ 有两个不同实根，且二次函数在两根之间为负、外部为正，所以 $f'(x)$ 会发生正负变化，曲线存在极值点。\n\n若 $a=1$，则\n\n$$f'(x)=(x+1)^2e^x\\geq 0,$$\n\n虽然在 $x=-1$ 处 $f'(x)=0$，但导数不发生正负变化，因此没有极值点。若 $a>1$，则 $q(x)>0$，同样没有极值点。所以没有极值点的条件为\n\n$$a\\geq 1.$$\n\n再求二阶导数：\n\n$$f''(x)=(x^2+4x+a+2)e^x=\\bigl((x+2)^2+a-2\\bigr)e^x.$$\n\n因为 $e^x>0$，曲线有拐点要求二阶导数在某点变号。于是需要\n\n$$x^2+4x+a+2=0$$\n\n有两个不同实根，即\n\n$$\\Delta=16-4(a+2)=8-4a>0,$$\n\n从而 $a<2$。当 $a=2$ 时，二阶导数只在 $x=-2$ 处为零，但不变号，不能产生拐点；当 $a>2$ 时没有二阶导数为零的点。\n\n综合两个条件：\n\n$$a\\geq1,\\qquad a<2,$$\n\n所以\n\n$$a\\in[1,2).$$\n\n故选 C。易错点是把 $f'(x)=0$ 误认为一定有极值；在 $a=1$ 时，导数虽为零，但不变号，因此没有极值点。",
+    "issue": "",
+    "question_id": 17214,
+    "content_hash": "e4ef2686e14be30c03908a779c0a9cfd227e838bec0a3ea2b4cc10c82d3e9b3a",
+    "review": {
+      "key": "exam:17214",
+      "verdict": "pass",
+      "findings": "f'(x)=e^x[(x+1)^2+a-1]，无极值点当且仅当 a≥1；f''(x)=e^x[(x+2)^2+a-2]，发生变号当且仅当 a<2。综合得 a∈[1,2)，对应选项 C；a=1时虽有驻点但导数不变号，a=2时二阶导数不变号。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17215": {
+    "key": "exam:17215",
+    "answer": "D",
+    "solution": "设\n\n$$M=\\begin{pmatrix}A&E\\\\O&B\\end{pmatrix},$$\n\n其中 $E$ 为相应阶的单位矩阵，$O$ 为零矩阵，题中的上标 $*$ 表示伴随矩阵。要求的是 $V=M^*$。\n\n先在 $A,B$ 可逆时计算。分块上三角矩阵的行列式为\n\n$$|M|=|A||B|,$$\n\n其逆矩阵为\n\n$$M^{-1}=\\begin{pmatrix}A^{-1}&-A^{-1}EB^{-1}\\\\O&B^{-1}\\end{pmatrix}.$$\n\n伴随矩阵满足 $M^*=|M|M^{-1}$，所以\n\n$$M^*=|A||B|\\begin{pmatrix}A^{-1}&-A^{-1}EB^{-1}\\\\O&B^{-1}\\end{pmatrix}.$$\n\n逐块化简：\n\n$$|A||B|A^{-1}=|B|A^*,$$\n\n$$-|A||B|A^{-1}EB^{-1}=-A^*EB^*=-A^*B^*,$$\n\n$$|A||B|B^{-1}=|A|B^*.$$\n\n因此\n\n$$V=M^*=\\begin{pmatrix}|B|A^*&-A^*B^*\\\\O&|A|B^*\\end{pmatrix}.$$\n\n该分块公式作为关于矩阵元素的恒等式，对 $A,B$ 奇异的情形也成立。由此可见，左上、右下两个对角块分别应为 $|B|A^*$ 与 $|A|B^*$，且右上块的乘法顺序为 $-A^*B^*$。故选 D。A、C 的右上块顺序错误，A、B 的两个对角块位置也错误。",
+    "issue": "",
+    "question_id": 17215,
+    "content_hash": "d3acafde6644a61c9c6469bc2516aaf3dc865ef8c59d7c666b398697d1bd0d19",
+    "review": {
+      "key": "exam:17215",
+      "verdict": "pass",
+      "findings": "对分块矩阵 M=(A E; O B)，伴随矩阵为 M*=|M|M^{-1}，得到 M*=(|B|A*,-A*B*;O,|A|B*)。该分块恒等式也适用于奇异情形，对应选项 D。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17216": {
+    "key": "exam:17216",
+    "answer": "B",
+    "solution": "**思路：**二次型作可逆线性变换后，比较其正、负惯性指数及秩。原式中出现了 $x_1+x_2$、$x_1+x_3$ 和 $x_2-x_3$，先令 $u=x_1+x_2$，$v=x_1+x_3$，则 $x_2-x_3=v-u$，从而\n\n$$\n\\begin{aligned}\nf&=u^2+v^2-4(v-u)^2\\\\\n&=u^2+v^2-4(u^2-2uv+v^2)\\\\\n&=-3u^2+8uv-3v^2.\n\\end{aligned}\n$$\n\n再令 $p=u+v$，$q=u-v$，即 $u=(p+q)/2$，$v=(p-q)/2$。于是\n\n$$\nu^2+v^2=\\frac{p^2+q^2}{2},\\qquad v-u=-q,\n$$\n\n所以\n\n$$\nf=\\frac{p^2+q^2}{2}-4q^2=\\frac12p^2-\\frac72q^2.\n$$\n\n令 $y_1=p/\\sqrt{2}$，$y_2=\\sqrt{7/2}\\,q$，并取一个与前两者共同构成可逆变换的变量 $y_3$，则\n\n$$f=y_1^2-y_2^2.$$\n\n因此该二次型的规范形为 $y_1^2-y_2^2$。\n\n**选项判断：**\n\n- A 为 $y_1^2+y_2^2$，正惯性指数为 $2$，没有负项，不符；\n- B 为 $y_1^2-y_2^2$，正、负惯性指数各为 $1$，且秩为 $2$，符合；\n- C 和 D 都含有三个非零平方项，秩为 $3$，不符。\n\n故选 **B**。易错点是不能只看原式中有减号就直接判断，还要先通过可逆变换确定二次型的秩以及正、负惯性指数。",
+    "issue": "",
+    "question_id": 17216,
+    "content_hash": "da48c2e2c23ab22d42e0e597fcb31383f1421e862b1d4e54625b82d41adf5e82",
+    "review": {
+      "key": "exam:17216",
+      "verdict": "pass",
+      "findings": "令u=x_1+x_2、v=x_1+x_3，则x_2-x_3=v-u；再令p=u+v、q=u-v，可得f=\\frac12p^2-\\frac72q^2。相关线性变换可扩充为可逆变换，二次型正、负惯性指数均为1且秩为2，规范形为y_1^2-y_2^2，故选B。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17217": {
+    "key": "exam:17217",
+    "answer": "D",
+    "solution": "**思路：**向量 $\\gamma$ 同时属于 $\\operatorname{span}\\{\\alpha_1,\\alpha_2\\}$ 和 $\\operatorname{span}\\{\\beta_1,\\beta_2\\}$，因此它位于两个平面的交线上。求两个平面的法向量，再求法向量的叉积即可得到交线方向。\n\n由\n\n$$\\alpha_1=(1,2,3),\\qquad \\alpha_2=(2,1,1),$$\n\n可得第一个平面的法向量\n\n$$\n\\alpha_1\\times\\alpha_2=(-1,5,-3).\n$$\n\n又由\n\n$$\\beta_1=(2,5,9),\\qquad \\beta_2=(1,0,1),$$\n\n可得第二个平面的法向量\n\n$$\n\\beta_1\\times\\beta_2=(5,7,-5).\n$$\n\n所以交线方向为\n\n$$\n\\begin{aligned}\n(\\alpha_1\\times\\alpha_2)\\times(\\beta_1\\times\\beta_2)\n&=(-1,5,-3)\\times(5,7,-5)\\\\\n&=(-4,-20,-32)\\\\\n&=-4(1,5,8).\n\\end{aligned}\n$$\n\n因此\n\n$$\\gamma=k(1,5,8),\\qquad k\\in\\mathbb R.$$\n\n也可以直接验证该方向确实同时属于两个张成空间：\n\n$$\n(1,5,8)=3\\alpha_1-\\alpha_2=\\beta_1-\\beta_2.\n$$\n\n所以所有满足条件的 $\\gamma$ 都是 $(1,5,8)$ 的实数倍。\n\n**选项判断：**只有 D 给出的向量方向为 $(1,5,8)$；A、B、C 的方向均不满足同时属于两个平面。\n\n故选 **D**。易错点是求交线时应取两个平面的法向量的叉积，而不是直接比较四个已知向量。",
+    "issue": "",
+    "question_id": 17217,
+    "content_hash": "02be6c2013dfcbb3fbd0ac24128958afa3a1768d9b341c4a087e631a99efd21b",
+    "review": {
+      "key": "exam:17217",
+      "verdict": "pass",
+      "findings": "\\alpha_1\\times\\alpha_2=(-1,5,-3)，\\beta_1\\times\\beta_2=(5,7,-5)，两平面交线方向为二者叉积(-4,-20,-32)，即(1,5,8)。且(1,5,8)=3\\alpha_1-\\alpha_2=\\beta_1-\\beta_2，故选D。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17230": {
+    "key": "exam:17230",
+    "answer": "C",
+    "solution": "函数为\n\n$$f(x)=|x|^{\\frac{1}{(1-x)(x-2)}}.$$\n\n先确定可能的间断点。由于指数中的分母不能为零，必须排除 $x=1,2$；当 $x=0$ 时，底数为 $0$，而指数趋于 $-1/2$，函数也没有定义。因此只需检查 $x=0,1,2$，其余点处底数为正且指数函数、幂函数和有理函数均连续。\n\n**1. 检查 $x=0$**\n\n当 $x\\to0$ 时，\n\n$$\\frac{1}{(1-x)(x-2)}\\to-\\frac12,$$\n\n所以\n\n$$f(x)\\sim |x|^{-1/2}\\to+\\infty.$$\n\n这是无穷间断点，属于第二类间断点。\n\n**2. 检查 $x=1$**\n\n在 $x=1$ 附近，$x>0$，可以取对数：\n\n$$\n\\ln f(x)=\\frac{\\ln x}{(1-x)(x-2)}.\n$$\n\n令 $h=x-1$，则\n\n$$\n(1-x)(x-2)=h(1-h),\\qquad \\ln x=\\ln(1+h).\n$$\n\n因此\n\n$$\n\\lim_{x\\to1}\\ln f(x)\n=\\lim_{h\\to0}\\frac{\\ln(1+h)}{h(1-h)}=1,\n$$\n\n从而\n\n$$\\lim_{x\\to1}f(x)=e.$$\n\n虽然 $f(1)$ 没有定义，但左右极限均为有限值且相等，所以 $x=1$ 是可去间断点，属于第一类间断点。\n\n**3. 检查 $x=2$**\n\n令 $h=x-2$，则\n\n$$\n(1-x)(x-2)=-(1+h)h.\n$$\n\n因为 $\\ln|x|\\to\\ln2>0$，所以\n\n$$\n\\lim_{x\\to2^-}f(x)=+\\infty,\n\\qquad\n\\lim_{x\\to2^+}f(x)=0.\n$$\n\n左右极限不都是有限值，因此 $x=2$ 是第二类间断点。\n\n综上，第一类间断点只有 $x=1$，共有 $1$ 个。\n\n**选项判断：**A、B、D 分别对应 $3$、$2$、$0$ 个，均不符；C 对应 $1$ 个。\n\n故选 **C**。易错点是 $x=0$ 处虽然左右函数值都趋于 $+\\infty$，但无穷极限不属于第一类间断点；第一类间断点要求左右极限为有限值。",
+    "issue": "",
+    "question_id": 17230,
+    "content_hash": "3aac6f65cdb3f2ce7a3a29c408648942ee9e9ed7e73b7b1f4b54b2a0b181d55e",
+    "review": {
+      "key": "exam:17230",
+      "verdict": "pass",
+      "findings": "定义域需排除x=0,1,2。x=0时f(x)趋于+\\infty，为第二类间断点；x\\to1时\\ln f(x)=\\frac{\\ln x}{(1-x)(x-2)}趋于1，故为可去间断点；x\\to2^-时f趋于+\\infty、x\\to2^+时f趋于0，为第二类间断点。第一类间断点仅x=1，共1个，故选C。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17231": {
+    "key": "exam:17231",
+    "answer": "B",
+    "solution": "设参数为 $t$，由\n$$x=1+t^3,\\qquad y=e^{t^2}$$\n确定函数 $y=f(x)$。\n\n当 $x=2$ 时，$1+t^3=2$，故 $t=1$。由参数方程求导：\n$$f'(x)=\\frac{dy}{dx}=\\frac{dy/dt}{dx/dt}=\\frac{2te^{t^2}}{3t^2}=\\frac{2e^{t^2}}{3t}.$$\n因此\n$$f'(2)=\\left.\\frac{2e^{t^2}}{3t}\\right|_{t=1}=\\frac{2e}{3}.$$\n\n原极限为\n$$\\lim_{x\\to+\\infty}x\\left[f\\left(2+\\frac{2}{x}\\right)-f(2)\\right].$$\n令 $h=\\frac{2}{x}$，则 $h\\to0^+$，且 $x=\\frac{2}{h}$，所以\n$$\\begin{aligned}\n\\lim_{x\\to+\\infty}x\\left[f\\left(2+\\frac{2}{x}\\right)-f(2)\\right]\n&=2\\lim_{h\\to0}\\frac{f(2+h)-f(2)}{h}\\\\\n&=2f'(2)=2\\cdot\\frac{2e}{3}=\\frac{4e}{3}.\n\\end{aligned}$$\n\n故选 **B**。\n\n易错点：不能直接把 $x$ 看作参数方程中的参数；应先用参数方程求出 $f'(2)$，再利用导数定义处理极限。",
+    "issue": "",
+    "question_id": 17231,
+    "content_hash": "124fc19ef75abaa4ccddafd9d72b268590d16ffdfc2487d228954350c35387c1",
+    "review": {
+      "key": "exam:17231",
+      "verdict": "pass",
+      "findings": "参数方程在 t=1 时对应 x=2，且 f'(2)=\\frac{dy/dt}{dx/dt}=\\frac{2e}{3}；令 h=\\frac{2}{x} 得原极限为 2f'(2)=\\frac{4e}{3}，对应选项 B。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17232": {
+    "key": "exam:17232",
+    "answer": "D",
+    "solution": "记\n$$F(u)=\\int_0^u\\sin t^3\\,dt,$$\n则 $f(x)=F(\\sin x)$。\n\n先判断 $F$ 的奇偶性。因为\n$$\\sin((-t)^3)=\\sin(-t^3)=-\\sin t^3,$$\n所以被积函数 $\\sin t^3$ 是奇函数。于是\n$$F(-u)=\\int_0^{-u}\\sin t^3\\,dt=\\int_0^u\\sin t^3\\,dt=F(u),$$\n故 $F(u)$ 是偶函数。\n\n因此\n$$f(-x)=F(\\sin(-x))=F(-\\sin x)=F(\\sin x)=f(x),$$\n所以 $f(x)$ 是偶函数。\n\n再看\n$$g(x)=\\int_0^x f(t)\\,dt.$$\n由于 $f(t)$ 是偶函数，原函数从 $0$ 到 $x$ 的积分是奇函数：\n$$g(-x)=\\int_0^{-x}f(t)\\,dt=-\\int_0^x f(t)\\,dt=-g(x).$$\n所以 $g(x)$ 是奇函数。\n\n故选 **D**。\n\n易错点：$\\sin t^3$ 是奇函数，但“奇函数从 $0$ 到 $x$ 的积分”是偶函数；再对这个偶函数从 $0$ 到 $x$ 积分，所得函数才是奇函数。",
+    "issue": "",
+    "question_id": 17232,
+    "content_hash": "483cbc3f951a2baa32ef30da5945b647e37b5617b06b93e245b10ab65643e254",
+    "review": {
+      "key": "exam:17232",
+      "verdict": "pass",
+      "findings": "\\sin t^3 为奇函数，因此 F(u)=\\int_0^u\\sin t^3\\,dt 为偶函数；f(x)=F(\\sin x) 为偶函数；偶函数从 0 到 x 的积分 g(x) 为奇函数，故选项 D 正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17233": {
+    "key": "exam:17233",
+    "answer": "D",
+    "solution": "题目要求判断：当数列 $\\{a_n\\}$ 发散且 $a_n\\ne0$ 时，哪一个新数列必然发散。关键方法是：若某个变换后的数列收敛，能否由它反推出 $a_n$ 收敛。\n\n**A、B、C 均不一定发散。**\n\nA 项中取数列交替取 $2$ 和 $\\frac12$：\n$$a_n=\\begin{cases}2,&n\\text{为奇数},\\\\\\frac12,&n\\text{为偶数}.\n\\end{cases}$$\n此数列发散，但\n$$a_n+\\frac1{a_n}=\\frac52$$\n恒成立，因此 A 错。\n\nB 项中取数列交替取 $2$ 和 $-\\frac12$：\n$$a_n=\\begin{cases}2,&n\\text{为奇数},\\\\-\\frac12,&n\\text{为偶数}.\n\\end{cases}$$\n此数列发散，但\n$$2-\\frac12=-\\frac12-\\frac1{-\\frac12}=\\frac32,$$\n所以 $a_n-\\frac1{a_n}$ 恒为 $\\frac32$，B 错。\n\nC 项中取数列交替取 $1$ 和 $-1$。该数列发散，但\n$$e^1+e^{-1}=e^{-1}+e^1,$$\n所以 $e^{a_n}+\\frac1{e^{a_n}}=e^{a_n}+e^{-a_n}$ 恒定，C 错。\n\nD 项考察\n$$b_n=e^{a_n}-\\frac1{e^{a_n}}=e^{a_n}-e^{-a_n}.$$\n若 $\\{b_n\\}$ 收敛，设 $b_n\\to L$。函数\n$$\\varphi(x)=e^x-e^{-x}$$\n在 $\\mathbb R$ 上严格递增，且值域为 $\\mathbb R$，其反函数为\n$$\\varphi^{-1}(y)=\\ln\\frac{y+\\sqrt{y^2+4}}{2}.$$\n因此\n$$a_n=\\varphi^{-1}(b_n)=\\ln\\frac{b_n+\\sqrt{b_n^2+4}}{2}\n$$\n也收敛。这与题设 $\\{a_n\\}$ 发散矛盾。\n\n所以 $\\{e^{a_n}-\\frac1{e^{a_n}}\\}$ 必然发散，故选 **D**。\n\n易错点：$e^x+e^{-x}$ 是偶函数，可能把 $a_n$ 与 $-a_n$ 的振荡消掉；而 $e^x-e^{-x}$ 在整个实数范围内严格单调，因此可以通过反函数恢复 $a_n$ 的收敛性。",
+    "issue": "",
+    "question_id": 17233,
+    "content_hash": "4d480d0e1fc9857d3cee39fa9268f2f980252dec5afea2ae7403bf1ce1d6c4e7",
+    "review": {
+      "key": "exam:17233",
+      "verdict": "pass",
+      "findings": "A、B、C 分别可由交替取 2 与 \\frac12、2 与 -\\frac12、1 与 -1 构造使变换后数列恒定；\\varphi(x)=e^x-e^{-x} 在 \\mathbb R 上严格递增且值域为 \\mathbb R，若 D 收敛则 a_n 也收敛，矛盾，故 D 正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17234": {
+    "key": "exam:17234",
+    "answer": "C",
+    "solution": "设 $f_x(0,0)$ 由定义计算。由于 $f(h,0)=0$，所以\n\n$$\nf_x(0,0)=\\lim_{h\\to 0}\\frac{f(h,0)-f(0,0)}{h}=0.\n$$\n\n再判断 $f$ 在原点是否可微。注意到对任意 $(x,y)$，都有\n\n$$\n|f(x,y)|\\le x^2+y^2.\n$$\n\n而 $f_x(0,0)=f_y(0,0)=0$，因此\n\n$$\n\\frac{|f(x,y)-f(0,0)-f_x(0,0)x-f_y(0,0)y|}{\\sqrt{x^2+y^2}}\n=\\frac{|f(x,y)|}{\\sqrt{x^2+y^2}}\n\\le \\sqrt{x^2+y^2}\\to 0.\n$$\n\n所以 $f$ 在 $(0,0)$ 处可微。\n\n下面判断 $f_x$ 在原点是否连续。当 $xy\\ne 0$ 时，直接求偏导得\n\n$$\nf_x(x,y)=2x\\sin\\frac{1}{xy}-\\frac{x^2+y^2}{x^2y}\\cos\\frac{1}{xy}.\n$$\n\n取 $y=x$，则\n\n$$\nf_x(x,x)=2x\\sin\\frac{1}{x^2}-\\frac{2}{x}\\cos\\frac{1}{x^2}.\n$$\n\n令 $x_n=\\dfrac{1}{\\sqrt{2\\pi n}}$，则 $x_n\\to 0$，且\n\n$$\n\\sin\\frac{1}{x_n^2}=\\sin(2\\pi n)=0,\n\\qquad\n\\cos\\frac{1}{x_n^2}=\\cos(2\\pi n)=1.\n$$\n\n于是\n\n$$\nf_x(x_n,x_n)=-\\frac{2}{x_n}\\to -\\infty,\n$$\n\n而 $f_x(0,0)=0$，故 $f_x$ 在原点不连续。实际上，在 $x=0,y\\ne 0$ 时，关于 $x$ 的偏导数甚至不存在，但仅沿 $xy\\ne0$ 的点就已经足以说明其不连续。\n\n因此选择 **C**：偏导数在原点存在但不连续，函数在原点可微。\n\n易错点：函数可微不要求各偏导数在该点附近连续；本题正是利用 $|f(x,y)|\\le x^2+y^2$ 判断可微，而用偏导数表达式的振荡和无界性判断 $f_x$ 不连续。",
+    "issue": "",
+    "question_id": 17234,
+    "content_hash": "2ed2a6c1454aa6b409b627e22d62eab9102e7780da0dbb6e98fb60392f70dab5",
+    "review": {
+      "key": "exam:17234",
+      "verdict": "pass",
+      "findings": "逐项核算通过：沿坐标轴可得 f_x(0,0)=0，且 |f(x,y)|≤x²+y²，故 f 在原点可微；当 xy≠0 时 f_x=2x\\sin(1/(xy))-(x²+y²)\\cos(1/(xy))/(x²y)，取 x=y=1/√(2πn) 得 f_x=-2/x→-∞，故偏导数在原点不连续，选 C。坐标轴上其他点处偏导数不存在不影响对原点处偏导数存在性的判断。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17235": {
+    "key": "exam:17235",
+    "answer": "A",
+    "solution": "原积分为\n\n$$\n\\int_{\\pi/6}^{\\pi/2}dx\\int_{\\sin x}^{1}f(x,y)\\,dy.\n$$\n\n其积分区域为\n\n$$\nD=\\left\\{(x,y)\\middle|\\frac{\\pi}{6}\\le x\\le\\frac{\\pi}{2},\\ \\sin x\\le y\\le 1\\right\\}.\n$$\n\n交换积分次序。由于 $x\\in[\\pi/6,\\pi/2]$，且 $\\sin x$ 在该区间上单调递增，所以 $y$ 的最小值为\n\n$$\n\\sin\\frac{\\pi}{6}=\\frac12,\n$$\n\n最大值为 $1$。固定 $y\\in[1/2,1]$ 后，由 $y\\ge\\sin x$ 得\n\n$$\nx\\le\\arcsin y.\n$$\n\n同时还要满足 $x\\ge\\pi/6$，因此\n\n$$\n\\frac{\\pi}{6}\\le x\\le\\arcsin y.\n$$\n\n所以交换积分次序后\n\n$$\n\\int_{\\pi/6}^{\\pi/2}dx\\int_{\\sin x}^{1}f(x,y)\\,dy\n=\\int_{1/2}^{1}dy\\int_{\\pi/6}^{\\arcsin y}f(x,y)\\,dx.\n$$\n\n这正是选项 A。\n\n选项 B 的 $x$ 区间取成了 $[\\arcsin y,\\pi/2]$，对应的是不等式 $y\\le\\sin x$ 的区域；选项 C、D 的 $y$ 范围为 $[0,1/2]$，与原区域的实际范围不符。\n\n易错点：交换二重积分次序时，先确定 $y$ 的整体范围，再根据 $y\\ge\\sin x$ 解出 $x\\le\\arcsin y$，不能把不等式方向写反。",
+    "issue": "",
+    "question_id": 17235,
+    "content_hash": "2f84673026633d5c76a10ffc1813666da800c1d23532747ff924f4d5bb419ff8",
+    "review": {
+      "key": "exam:17235",
+      "verdict": "pass",
+      "findings": "积分区域为 π/6≤x≤π/2、sin x≤y≤1；因 sin x 单调递增，y 范围为 1/2≤y≤1，固定 y 时 π/6≤x≤arcsin y，交换次序所得为选项 A。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17236": {
+    "key": "exam:17236",
+    "answer": "B",
+    "solution": "逐项判断三个命题。\n\n**（1）错误。**\n\n已知 $f(x)\\ge 0$ 且 $\\displaystyle\\int_0^{+\\infty}f^2(x)\\,dx$ 收敛，并不能推出 $\\displaystyle\\int_0^{+\\infty}f(x)\\,dx$ 收敛。取\n\n$$\nf(x)=\\frac{1}{(1+x)^{3/4}},\n$$\n\n则 $f$ 在 $[0,+\\infty)$ 上连续且非负，并且\n\n$$\n\\int_0^{+\\infty}f^2(x)\\,dx\n=\\int_0^{+\\infty}\\frac{1}{(1+x)^{3/2}}\\,dx\n$$\n\n收敛，但\n\n$$\n\\int_0^{+\\infty}f(x)\\,dx\n=\\int_0^{+\\infty}\\frac{1}{(1+x)^{3/4}}\\,dx\n$$\n\n发散。因此（1）不成立。\n\n**（2）正确。**\n\n若存在 $p>1$，使得有限极限\n\n$$\n\\lim_{x\\to+\\infty}x^pf(x)=L\n$$\n\n存在，则 $x^pf(x)$ 在充分大的 $x$ 上有界。于是存在常数 $M>0$ 和 $X>0$，使得当 $x\\ge X$ 时\n\n$$\n0\\le f(x)\\le\\frac{M}{x^p}.\n$$\n\n由于 $p>1$，有\n\n$$\n\\int_X^{+\\infty}\\frac{M}{x^p}\\,dx\n$$\n\n收敛。由比较判别法，$\\displaystyle\\int_X^{+\\infty}f(x)\\,dx$ 收敛；又因为 $f$ 在有限区间上连续，所以 $\\displaystyle\\int_0^{+\\infty}f(x)\\,dx$ 收敛。因此（2）成立。\n\n**（3）错误。**\n\n取连续非负函数\n\n$$\nf(x)=\n\\begin{cases}\n\\dfrac{1}{e},&0\\le x\\le e,\\\\[6pt]\n\\dfrac{1}{x(\\ln x)^2},&x>e.\n\\end{cases}\n$$\n\n在 $x=e$ 处两段函数值均为 $1/e$，所以 $f$ 连续。并且\n\n$$\n\\int_e^{+\\infty}\\frac{1}{x(\\ln x)^2}\\,dx\n=\\int_1^{+\\infty}\\frac{1}{u^2}\\,du\n=1,\n$$\n\n其中令 $u=\\ln x$。因此 $\\displaystyle\\int_0^{+\\infty}f(x)\\,dx$ 收敛。\n\n但是对任意 $p>1$，都有\n\n$$\n x^pf(x)=\\frac{x^{p-1}}{(\\ln x)^2}\\to+\\infty,\n$$\n\n所以不存在有限极限 $\\displaystyle\\lim_{x\\to+\\infty}x^pf(x)$。因此（3）不成立。\n\n三个命题中只有（2）正确，正确命题的个数为 $1$，故选择 **B**。\n\n易错点：$\\int f^2$ 收敛并不等于 $\\int f$ 收敛；在无穷区间上不能直接套用有限区间的整体估计。对于（2），关键是 $p>1$ 使 $f(x)$ 最终被 $x^{-p}$ 控制。",
+    "issue": "",
+    "question_id": 17236,
+    "content_hash": "5a45f8bd6b5418be99d8c2f02660fc261a06aa393f5fcbf8c0d34d08a196406b",
+    "review": {
+      "key": "exam:17236",
+      "verdict": "pass",
+      "findings": "(1) 反例 f(x)=(1+x)^(-3/4) 使 ∫f² 收敛而 ∫f 发散；(2) 若按通常约定“极限存在”指有限极限，则 x^p f(x) 有界且 f(x)=O(x^(-p))，p>1 时积分收敛；(3) 连续函数 f=1/e（0≤x≤e）、f=1/[x(ln x)^2]（x>e）满足 ∫f 收敛，但任意 p>1 时 x^p f(x)→∞。故仅(2)正确，选 B。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17237": {
+    "key": "exam:17237",
+    "answer": "C",
+    "solution": "题图中的条件是\n$$\nP^TAP^2=\\begin{pmatrix}a+2c&0&c\\\\0&b&0\\\\2c&0&c\\end{pmatrix},\n\\qquad\nP=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\1&0&1\\end{pmatrix}.\n$$\n注意这里是 $P^TAP^2$，右侧为 $P^2$，不能误读为 $P^TAP$。\n\n由\n$$\nP^{-1}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-1&0&1\\end{pmatrix},\n$$\n可得\n$$\nP^{-2}=(P^{-1})^2=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix},\n\\qquad\nP^{-T}=\\begin{pmatrix}1&0&-1\\\\0&1&0\\\\0&0&1\\end{pmatrix}.\n$$\n因此\n$$\nA=P^{-T}\\left(P^TAP^2\\right)P^{-2}.\n$$\n先计算\n$$\n\\begin{pmatrix}a+2c&0&c\\\\0&b&0\\\\2c&0&c\\end{pmatrix}\n\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix}\n=\n\\begin{pmatrix}a&0&c\\\\0&b&0\\\\0&0&c\\end{pmatrix}.\n$$\n再计算\n$$\nA=\n\\begin{pmatrix}1&0&-1\\\\0&1&0\\\\0&0&1\\end{pmatrix}\n\\begin{pmatrix}a&0&c\\\\0&b&0\\\\0&0&c\\end{pmatrix}\n=\n\\begin{pmatrix}a&0&0\\\\0&b&0\\\\0&0&c\\end{pmatrix}.\n$$\n所以\n$$\nA=\\operatorname{diag}(a,b,c)，\n$$\n对应选项 **C**。\n\n易错点：若把题目中的 $P^2$ 看成 $P$，会错误地使用 $A=P^{-T}(P^TAP)P^{-1}$，从而得到不属于选项的矩阵。",
+    "issue": "",
+    "question_id": 17237,
+    "content_hash": "0d70110e2aa85cdb3a52cec7c75c1a41258db36ab52a1d3dffbb830c343a75f3",
+    "review": {
+      "key": "exam:17237",
+      "verdict": "corrected",
+      "answer": "C",
+      "solution": "题图中的条件是\n$$\nP^TAP^2=\\begin{pmatrix}a+2c&0&c\\\\0&b&0\\\\2c&0&c\\end{pmatrix},\n\\qquad\nP=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\1&0&1\\end{pmatrix}.\n$$\n注意这里是 $P^TAP^2$，右侧为 $P^2$，不能误读为 $P^TAP$。\n\n由\n$$\nP^{-1}=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-1&0&1\\end{pmatrix},\n$$\n可得\n$$\nP^{-2}=(P^{-1})^2=\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix},\n\\qquad\nP^{-T}=\\begin{pmatrix}1&0&-1\\\\0&1&0\\\\0&0&1\\end{pmatrix}.\n$$\n因此\n$$\nA=P^{-T}\\left(P^TAP^2\\right)P^{-2}.\n$$\n先计算\n$$\n\\begin{pmatrix}a+2c&0&c\\\\0&b&0\\\\2c&0&c\\end{pmatrix}\n\\begin{pmatrix}1&0&0\\\\0&1&0\\\\-2&0&1\\end{pmatrix}\n=\n\\begin{pmatrix}a&0&c\\\\0&b&0\\\\0&0&c\\end{pmatrix}.\n$$\n再计算\n$$\nA=\n\\begin{pmatrix}1&0&-1\\\\0&1&0\\\\0&0&1\\end{pmatrix}\n\\begin{pmatrix}a&0&c\\\\0&b&0\\\\0&0&c\\end{pmatrix}\n=\n\\begin{pmatrix}a&0&0\\\\0&b&0\\\\0&0&c\\end{pmatrix}.\n$$\n所以\n$$\nA=\\operatorname{diag}(a,b,c)，\n$$\n对应选项 **C**。\n\n易错点：若把题目中的 $P^2$ 看成 $P$，会错误地使用 $A=P^{-T}(P^TAP)P^{-1}$，从而得到不属于选项的矩阵。",
+      "findings": "初稿将题图中的条件 $P^TAP^2$ 误读为 $P^TAP$，因此反解使用了错误的 $P^{-1}$；按实际题干应使用 $P^{-2}$，计算得到 $A=\\operatorname{diag}(a,b,c)$，答案为 C。",
+      "issue": ""
+    },
+    "model": "gpt-6-sol"
+  },
+  "17238": {
+    "key": "exam:17238",
+    "answer": "D",
+    "solution": "记 $A^*$ 为 $A$ 的伴随矩阵。由伴随矩阵的基本性质，\n$$\nAA^*=|A|I_4.\n$$\n题设\n$$\nA(A-A^*)=0\n$$\n等价于\n$$\nA^2-AA^*=0,\n$$\n即\n$$\nA^2=|A|I_4.\n$$\n先说明 $A$ 不可能可逆。若 $A$ 可逆，则\n$$\nA^*=|A|A^{-1},\n$$\n从而由 $A^2=|A|I_4$ 可得 $A^*=A$，这与题设 $A\\ne A^*$ 矛盾。因此 $A$ 必为奇异矩阵，$|A|=0$，于是\n$$\nA^2=0.\n$$\n由 $A^2=0$ 可知\n$$\n\\operatorname{Im}A\\subseteq\\ker A.\n$$\n设 $r(A)=r$，则\n$$\n\\dim\\operatorname{Im}A=r,\\qquad \\dim\\ker A=4-r.\n$$\n因为像空间包含于核空间，必有\n$$\nr\\le 4-r,\n$$\n所以 $r\\le2$。\n\n又因为 $A\\ne A^*$，特别地 $A\\ne0$。若 $r(A)=0$，则 $A=0$，且 $A^*=0$，与题设矛盾。因此 $r(A)\\ge1$。综合得\n$$\nr(A)=1\\text{ 或 }2.\n$$\n这两个秩都可以实现，例如秩为 $1$ 的矩阵 $E_{12}$ 以及秩为 $2$ 的矩阵\n$$\n\\begin{pmatrix}\n0&0&1&0\\\\\n0&0&0&1\\\\\n0&0&0&0\\\\\n0&0&0&0\n\\end{pmatrix}\n$$\n都满足 $A^2=0$，且因秩不超过 $2$ 有 $A^*=0$，从而满足题设条件。因此答案为 D。易错点是不能只由 $A^2=0$ 直接断定秩为 $1$，还要利用 $\\operatorname{Im}A\\subseteq\\ker A$ 得到秩不超过 $2$，再排除秩 $0$。",
+    "issue": "",
+    "question_id": 17238,
+    "content_hash": "bfb1f887792470719f5c255cf3a83ba14cb3c53585fa419e5a71d36ca222daa9",
+    "review": {
+      "key": "exam:17238",
+      "verdict": "pass",
+      "findings": "由 $A(A-A^*)=0$ 及 $AA^*=|A|I$ 得 $A^2=|A|I$；若 $A$ 可逆则推出 $A=A^*$，矛盾，故 $|A|=0$ 且 $A^2=0$。于是 $\\operatorname{Im}A\\subseteq\\ker A$，得到 $r(A)\\le2$；又 $A\\ne A^*$ 排除 $r(A)=0$，秩为 1 或 2，选 D。两种秩均可由非零平方为零的 4 阶矩阵实现。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17239": {
+    "key": "exam:17239",
+    "answer": "B",
+    "solution": "设命题\n$$\nP：A\\text{ 有两个不相等的特征值},\n$$\n结论\n$$\nQ：B\\text{ 可对角化}.\n$$\n先证明 $P$ 是 $Q$ 的充分条件。若 $A$ 有两个不相等的特征值 $\\lambda_1,\\lambda_2$，则取由对应特征向量组成的基，可令\n$$\nA=\\begin{pmatrix}\\lambda_1&0\\\\0&\\lambda_2\\end{pmatrix}.\n$$\n在同一基下设\n$$\nB=\\begin{pmatrix}b_{11}&b_{12}\\\\b_{21}&b_{22}\\end{pmatrix}.\n$$\n由 $AB=BA$，比较非对角元可得\n$$\n\\lambda_1b_{12}=\\lambda_2b_{12},\\qquad\n\\lambda_2b_{21}=\\lambda_1b_{21}.\n$$\n因为 $\\lambda_1\\ne\\lambda_2$，所以\n$$\nb_{12}=b_{21}=0.\n$$\n因此 $B$ 在该基下已经是对角矩阵，故 $B$ 可对角化。于是 $P$ 是 $Q$ 的充分条件。\n\n但 $P$ 不是 $Q$ 的必要条件。例如取\n$$\nA=I_2,\\qquad B=\\begin{pmatrix}1&0\\\\0&2\\end{pmatrix}.\n$$\n显然 $AB=BA$，且 $B$ 可对角化，但 $A=I_2$ 只有一个特征值 $1$，不满足 $P$。\n\n所以 A 有两个不相等的特征值是 B 可对角化的充分不必要条件，答案为 B。看到两个矩阵可交换且其中一个矩阵有互异特征值时，应优先在该矩阵的特征向量基下考察另一个矩阵。",
+    "issue": "",
+    "question_id": 17239,
+    "content_hash": "e4fd568763e3a3b516e5f18e71e1afd1951fe70ac97479d07c2261c1cab80e11",
+    "review": {
+      "key": "exam:17239",
+      "verdict": "pass",
+      "findings": "若 $A$ 有两个不相等的特征值，在其特征向量基下 $A=\\operatorname{diag}(\\lambda_1,\\lambda_2)$；由 $AB=BA$ 且 $\\lambda_1\\ne\\lambda_2$，可得 $B$ 的两个非对角元均为零，因此 $B$ 可对角化。反之取 $A=I_2$、$B=\\operatorname{diag}(1,2)$，条件 $AB=BA$ 且 $B$ 可对角化，但 $A$ 只有一个特征值，故不是必要条件，答案 B。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17252": {
+    "key": "exam:17252",
+    "answer": "A",
+    "solution": "由题设隐函数关系\n$$z+\\ln z-\\int_y^x e^{-t^2}\\,dt=0,$$\n且因含有 $\\ln z$，有 $z>0$。\n\n对 $x$ 求偏导，利用变上限积分求导公式：\n$$\\left(1+\\frac1z\\right)\\frac{\\partial z}{\\partial x}-e^{-x^2}=0,$$\n所以\n$$\\frac{\\partial z}{\\partial x}=\\frac{z}{z+1}e^{-x^2}.$$\n\n对 $y$ 求偏导时，注意下限含有 $y$：\n$$\\frac{\\partial}{\\partial y}\\int_y^x e^{-t^2}\\,dt=-e^{-y^2}.$$\n因此\n$$\\left(1+\\frac1z\\right)\\frac{\\partial z}{\\partial y}+e^{-y^2}=0,$$\n从而\n$$\\frac{\\partial z}{\\partial y}=-\\frac{z}{z+1}e^{-y^2}.$$\n\n两式相加得\n$$\\frac{\\partial z}{\\partial x}+\\frac{\\partial z}{\\partial y}=\\frac{z}{z+1}\\left(e^{-x^2}-e^{-y^2}\\right).$$\n故选 A。易错点是对积分下限 $y$ 求导时会产生负号，而原式中积分前还有一个负号，最终使得 $\\partial z/\\partial y$ 为负。",
+    "issue": "",
+    "question_id": 17252,
+    "content_hash": "5c4555e02aeb3735cd3fdd615cd7a6875c2a52d5ba8d3c2dbd188560a179f431",
+    "review": {
+      "key": "exam:17252",
+      "verdict": "pass",
+      "findings": "对隐式方程分别求偏导：\\((1+1/z)z_x=e^{-x^2}\\)，\\((1+1/z)z_y=-e^{-y^2}\\)，故\\(z_x+z_y=\\frac{z}{z+1}(e^{-x^2}-e^{-y^2})\\)，与选项A一致；积分下限求导符号正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17253": {
+    "key": "exam:17253",
+    "answer": "B",
+    "solution": "先分别研究 $f$ 和 $g$ 在 $x=0$ 附近的性质。\n\n对于\n$$f(x)=\\int_0^x e^{t^2}\\sin t\\,dt,$$\n由微积分基本定理，\n$$f'(x)=e^{x^2}\\sin x.$$\n因为 $e^{x^2}>0$，所以在 $x=0$ 附近，$f'(x)$ 与 $\\sin x$ 同号：当 $x<0$ 时 $f'(x)<0$，当 $x>0$ 时 $f'(x)>0$。因此 $x=0$ 是 $f(x)$ 的极小值点。\n\n再看\n$$g(x)=\\left(\\int_0^x e^{t^2}\\,dt\\right)\\sin^2x.$$\n令\n$$H(x)=\\int_0^x e^{t^2}\\,dt.$$\n在 $x=0$ 附近展开：\n$$H(x)=x+O(x^3),\\qquad \\sin^2x=x^2+O(x^4).$$\n因此\n$$g(x)=x^3+O(x^5).$$\n于是\n$$g''(x)=6x+O(x^3),$$\n当 $x$ 穿过 $0$ 时，$g''(x)$ 由负变正，或由正变负，故曲线 $y=g(x)$ 在 $(0,0)$ 处发生凹凸性改变，$(0,0)$ 是其拐点。\n\n逐项判断：\n- A 错：$x=0$ 不是 $g(x)$ 的极值点，因为 $g(x)\\sim x^3$，函数值在原点两侧异号。\n- B 对：$x=0$ 是 $f(x)$ 的极小值点，且 $(0,0)$ 是曲线 $y=g(x)$ 的拐点。\n- C 错：$f''(0)=1\\ne0$，且 $f''(x)$ 在 $0$ 附近保持为正，故 $(0,0)$ 不是曲线 $y=f(x)$ 的拐点。\n- D 错：同样因为 $f''(0)=1\\ne0$，曲线 $y=f(x)$ 在 $(0,0)$ 处不是拐点。\n\n故选 B。看到含有 $\\int_0^x$ 的函数时，先用变上限积分求导；判断极值看一阶导数变号，判断拐点则看二阶导数是否变号。",
+    "issue": "",
+    "question_id": 17253,
+    "content_hash": "581679c2a20b5391614ad55d67799cbf596f89809c8d78655d2a2ce1dc854355",
+    "review": {
+      "key": "exam:17253",
+      "verdict": "pass",
+      "findings": "\\(f'(x)=e^{x^2}\\sin x\\)，在0左侧为负、右侧为正，故\\(x=0\\)为极小值点。令\\(H(x)=\\int_0^x e^{t^2}dt\\)，则\\(H=x+O(x^3)\\)、\\(\\sin^2x=x^2+O(x^4)\\)，从而\\(g=x^3+O(x^5)\\)，\\(g''=6x+O(x^3)\\)变号，故\\((0,0)\\)为\\(y=g(x)\\)的拐点；选项B正确。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17254": {
+    "key": "exam:17254",
+    "answer": "C",
+    "solution": "对应的特征方程为\n$$r^2-2ar+(a+2)=0.$$\n要使任意解 $y(x)$ 的反常积分\n$$\\int_0^{+\\infty}y(x)\\,dx$$\n都收敛，微分方程的所有特征根都必须具有负实部。对于二阶方程\n$$r^2+pr+q=0,$$\n所有根实部为负的条件是 $p>0$ 且 $q>0$。本题中\n$$p=-2a,\\qquad q=a+2.$$\n因此必须满足\n$$-2a>0,\\qquad a+2>0,$$\n即\n$$a<0,\\qquad a>-2.$$\n所以\n$$-2<a<0.$$\n\n也可以直接检查边界及区间外情形：\n- 当 $a=-2$ 时，特征方程为 $r(r+4)=0$，存在常数解，积分发散；\n- 当 $a=0$ 时，特征根为 $\\pm i\\sqrt2$，存在正弦、余弦型解，积分不收敛；\n- 当 $a<-2$ 或 $a>0$ 时，至少存在实部为正的特征根，从而有指数增长解，积分发散；\n- 当 $-2<a<0$ 时，所有解均为衰减指数型，若出现重根也只是 $(C_1+C_2x)e^{rx}$ 且 $r<0$，其积分仍收敛。\n\n故选 C。判断这类题的关键是把积分收敛转化为所有特征根实部均为负，再使用二阶常系数方程的稳定性条件。",
+    "issue": "",
+    "question_id": 17254,
+    "content_hash": "2661e90c1047fc5f6a6a3ce9607b8e5f130d832a2c26e24b84e96de0048cc849",
+    "review": {
+      "key": "exam:17254",
+      "verdict": "pass",
+      "findings": "特征方程为\\(r^2-2ar+(a+2)=0\\)。任意解的积分均收敛要求全部特征根实部为负，对二阶方程等价于\\(-2a>0\\)且\\(a+2>0\\)，即\\(-2<a<0\\)，与选项C一致；边界\\(a=-2,0\\)分别出现零根、纯虚根，均不能满足条件。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17255": {
+    "key": "exam:17255",
+    "answer": "C",
+    "solution": "由“$f(x)$是$g(x)$的高阶无穷小”可知\n$$\n\\frac{f(x)}{g(x)}\\to 0,\\qquad g(x)\\to 0\\quad (x\\to0).\n$$\n逐项判断：\n\n- **A**：\n  $$\n  \\frac{f(x)+g(x)}{g(x)}=\\frac{f(x)}{g(x)}+1\\to1\\ne0，\n  $$\n  因而$f(x)+g(x)$不是$g(x)$的高阶无穷小。\n\n- **B**：要有$f(x)g(x)=o(f^2(x))$，需要\n  $$\n  \\frac{f(x)g(x)}{f^2(x)}=\\frac{g(x)}{f(x)}\\to0。\n  $$\n  但由$\\frac{f(x)}{g(x)}\\to0$可知$\\left|\\frac{g(x)}{f(x)}\\right|\\to\\infty$，所以不成立。\n\n- **C**：利用基本等价无穷小\n  $$\n  e^{g(x)}-1\\sim g(x)，\n  $$\n  有\n  $$\n  \\frac{f(x)}{e^{g(x)}-1}\n  =\\frac{f(x)}{g(x)}\\cdot\\frac{g(x)}{e^{g(x)}-1}\n  \\to0\\cdot1=0。\n  $$\n  因此$f(x)=o\\bigl(e^{g(x)}-1\\bigr)$。\n\n- **D**：$f=o(g)$不能推出$f=o(g^2)$。例如取$g(x)=x^2$，$f(x)=x^3$，则$f/g=x\\to0$，但\n  $$\n  \\frac{f(x)}{g^2(x)}=\\frac{x^3}{x^4}=\\frac1x\n  $$\n  不趋于$0$。\n\n因此选$\\boxed{\\mathrm C}$。易错点是：由$f=o(g)$只能说明$f$比$g$高阶，不能随意把分母$g$换成更高次的$g^2$。",
+    "issue": "",
+    "question_id": 17255,
+    "content_hash": "bc2f8605dc0c2e3a5a298e3dd95c58f2dd26329ab9ad00a1a262c5655980d50b",
+    "review": {
+      "key": "exam:17255",
+      "verdict": "pass",
+      "findings": "由 f(x)=o(g(x)) 得 f/g→0 且 g→0。A 中 (f+g)/g→1，错误；B 中 (fg)/f²=g/f，不能趋于0，错误；C 利用 e^{g}-1∼g，得 f/(e^{g}-1)→0，正确；D 取 g=x²、f=x³ 可反例，故选 C。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17256": {
+    "key": "exam:17256",
+    "answer": "A",
+    "solution": "原积分对应的区域为\n$$\nD=\\{(x,y)\\mid -2\\le x\\le2,\\ 4-x^2\\le y\\le4\\}。\n$$\n这是直线$y=4$与抛物线$y=4-x^2$之间的区域。\n\n交换积分次序。由$4-x^2\\le y$得\n$$\n4-y\\le x^2，\n$$\n所以\n$$\n|x|\\ge\\sqrt{4-y}，\n$$\n即\n$$\n-2\\le x\\le-\\sqrt{4-y}\n\\quad\\text{或}\\quad\n\\sqrt{4-y}\\le x\\le2。\n$$\n当$y$从最低值$0$变化到最高值$4$时，积分化为\n$$\n\\int_0^4\\left[\n\\int_{-2}^{-\\sqrt{4-y}}f(x,y)\\,dx\n+\\int_{\\sqrt{4-y}}^2f(x,y)\\,dx\n\\right]dy。\n$$\n这正是选项A。\n\n选项B把中间区域$-\\sqrt{4-y}<x<\\sqrt{4-y}$也包含进来；选项C第二段积分上下限方向相反；选项D只有在$f$关于$x$具有相应对称性时才能把两段合并为两倍，而题目只说明$f$连续，并无此条件。因此选$\\boxed{\\mathrm A}$。",
+    "issue": "",
+    "question_id": 17256,
+    "content_hash": "15ffa001ead576e5577b324e583f6ef6bd5837db272adf61683038acb94bb1f4",
+    "review": {
+      "key": "exam:17256",
+      "verdict": "pass",
+      "findings": "积分区域满足 -2≤x≤2、4-x²≤y≤4。换序后 0≤y≤4，固定 y 时 x∈[-2,-√(4-y)]∪[√(4-y),2]，恰为选项 A。其余选项分别包含区域外部分、积分方向错误或无依据地利用对称性。"
+    },
+    "model": "gpt-6-sol"
+  },
+  "17257": {
+    "key": "exam:17257",
+    "answer": "B",
+    "solution": "设$P=(x,0)$，$Q=(0,1)$。两质点间距离为\n$$\n r=\\sqrt{x^2+1}。\n$$\n由于两质点均为单位质点，$Q$对$P$的引力方向由$P$指向$Q$，因此力向量为\n$$\n\\boldsymbol F=\\frac{G}{r^3}(Q-P)\n=\\frac{G}{(x^2+1)^{3/2}}(-x,1)。\n$$\n\n$P$沿$x$轴正向移动，位移微元为\n$$\n\\mathrm d\\boldsymbol r=(\\mathrm dx,0)。\n$$\n所以引力所做的功为\n$$\n\\mathrm dW_Q=\\boldsymbol F\\cdot\\mathrm d\\boldsymbol r\n=-\\frac{Gx}{(x^2+1)^{3/2}}\\,\\mathrm dx。\n$$\n“克服引力所做的功”是外力做功，等于引力功的相反数，故\n$$\nW=-W_Q\n=\\int_0^l\\frac{Gx}{(x^2+1)^{3/2}}\\,\\mathrm dx。\n$$\n因此应选$\\boxed{\\mathrm B}$。\n\n也可由势能验证：引力势能为$U=-G/r$，从$x=0$到$x=l$时势能增加量为\n$$\n\\Delta U=-\\frac{G}{\\sqrt{l^2+1}}+G\n=\\int_0^l\\frac{Gx}{(x^2+1)^{3/2}}\\,\\mathrm dx。\n$$\n选项A、C、D分别缺少水平方向力的$x$因子、幂次不对或多出了无依据的$(x+1)$因子。",
+    "issue": "图片中的参考答案为A，但按引力的水平分量和功的定义复算，正确选项应为B；参考答案与题面不符。 复算结果与题库原参考答案不一致，需要核对。",
+    "question_id": 17257,
+    "content_hash": "41d3a8f483c1384a098a6843e6371747aba64ef253cde4d93448ea6289e12d4e",
+    "review": {
+      "key": "exam:17257",
+      "verdict": "pass",
+      "findings": "P=(x,0)、Q=(0,1) 时，引力为 G(-x,1)/(x²+1)^{3/2}。P 沿 x 轴移动，克服引力的外力功微元为 Gx/(x²+1)^{3/2} dx，故总功为选项 B。"
+    },
+    "model": "gpt-6-sol"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "calculus-Q163": {
+    "key": "calculus-Q163",
+    "answer": "D",
+    "solution": "### 怎样想到\n①②只考察了特殊形式的极限，需要用反例判断能否推出导数；③④直接检查导数定义。\n\n### 解题步骤\n①错误。取 $f(x)=|x-a|^{2/3}$，则 $f$ 在 $a$ 处连续，并且\n$$\\frac{f(a+h^3)-f(a)}{h^2}=1,$$\n但差商 $|h|^{2/3}/h$ 不存在有限极限，故 $f'(a)$ 不存在。\n\n②错误。令 $f(a)=0$，$h\\ne0$ 时令 $f(a+h)=h\\sin(\\pi/h)$。于是\n$$n[f(a+1/n)-f(a)]=\\sin(n\\pi)=0,$$\n但一般差商为 $\\sin(\\pi/h)$，当 $h\\to0$ 时无极限。\n\n③正确。$f(a)=0$，由 $\\varphi$ 的连续性，\n$$f'(a)=\\lim_{x\\to a}\\frac{(x-a)\\varphi(x)}{x-a}=\\varphi(a).$$\n\n④正确。令 $x=a$，不等式给出 $f(a)=0$。又因为 $\\alpha>1$，有\n$$0\\le\\left|\\frac{f(x)-f(a)}{x-a}\\right|\\le L|x-a|^{\\alpha-1}\\longrightarrow0.$$\n由夹逼定理可得 $f'(a)=0$。\n\n### 结果与易错点\n正确结论是③④，选 **D**。特殊序列上的差商有极限，不代表一般差商有极限。④的指数是 $\\alpha>1$；题面已按原做题本校正上传文本中的字母误识别。",
+    "source_verified": true,
+    "source_pages": [
+      51,
+      52
+    ],
+    "issue": "",
+    "content_hash": "3571ab278aa24b6579b6f59140142df85966ee46f998d32d47129152602a24bf",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "对照高数做题本 PDF 第 62 页及参考答案 PDF 第 52 页，更正转写指数，并逐项复算。"
+  },
+  "calculus-Q023": {
+    "key": "calculus-Q023",
+    "answer": "π/4、5π/4为无穷间断点；3π/4、7π/4为可去间断点",
+    "solution": "### 怎样想到\n先找幂函数形式无定义的位置，再用$f(x)=\\exp\\!\\left(\\frac{x\\ln(1+x)}{\\tan(x-\\pi/4)}\\right)$考察各处的单侧极限。这里$x\\in(0,2\\pi)$，底数始终大于$0$。\n\n### 解题步骤\n在给定区间内，$\\tan(x-\\pi/4)=0$对应$x=\\pi/4,5\\pi/4$；正切无定义对应$x=3\\pi/4,7\\pi/4$。这些点原函数均无定义，其余各点连续。\n\n在$x_0=\\pi/4$或$5\\pi/4$处，$\\tan(x-\\pi/4)\\sim x-x_0$，且$x\\ln(1+x)\\to x_0\\ln(1+x_0)>0$。因此左极限为$0$，右极限为$+\\infty$，两点均为无穷间断点。\n\n在$x_0=3\\pi/4$或$7\\pi/4$处，正切从两侧趋于无穷大，故$1/\\tan(x-\\pi/4)\\to0$，指数趋于$0$，从而$\\lim_{x\\to x_0}f(x)=e^0=1$。这两点均为可去间断点。\n\n### 结果与易错点\n间断点共四个：$\\pi/4,5\\pi/4$为无穷间断点（通常归为第二类），$3\\pi/4,7\\pi/4$为可去间断点。零点两侧的极限不同，不能把两个单侧极限都写成$+\\infty$。",
+    "source_verified": true,
+    "source_pages": [
+      9
+    ],
+    "issue": "",
+    "content_hash": "be93bc3a55f3ebe4694709cb5f4d6701156cacf4394c136c06108bd3ff110219",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "对照参考答案 PDF 第 9 页：原书写的是第二类，且显示的是右极限，初稿关于第三类和单侧极限的指责均不成立。正文推导的四个间断点及分类正确。"
+  },
+  "calculus-Q224": {
+    "key": "calculus-Q224",
+    "answer": "A",
+    "solution": "### 怎样想到\n判断原函数的奇偶性时，要检查任意常数是否影响结论。偶函数加常数仍是偶函数；奇函数加非零常数通常不再是奇函数。\n\n### 解题步骤\n若连续函数 $f$ 为奇函数，令\n$$G(x)=\\int_0^x f(t)\\,dt.$$\n换元 $t=-u$ 可得\n$$G(-x)=-\\int_0^x f(-u)\\,du=\\int_0^x f(u)\\,du=G(x).$$\n所以 $G$ 是偶函数。任意原函数 $F=G+C$ 仍是偶函数，A 正确。\n\nB 不成立：$f(x)=1$ 为偶函数，但其原函数 $F(x)=x+1$ 不是奇函数。\nC 不成立：周期函数 $f(x)=1$ 的原函数 $F(x)=x$ 不具有周期性。\nD 不成立：$f(x)=x$ 在实数轴上递增，但原函数 $F(x)=x^2/2$ 在整个实数轴上不单调。\n\n### 结果与易错点\n选 **A**。不要把“加常数会破坏奇函数的奇性”误套到偶函数；例如 $x^2+1$ 仍然是偶函数。",
+    "source_verified": true,
+    "source_pages": [
+      73
+    ],
+    "issue": "",
+    "content_hash": "4c9475baca4a5101eaa08490c64ccd599a322b79a7c460a2dc17614cdb4be66e",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "逐项独立复算，纠正初稿把 x²+1 判成非偶函数的错误。"
+  },
+  "calculus-Q252": {
+    "key": "calculus-Q252",
+    "answer": "1",
+    "solution": "### 怎样想到\n先把反常积分算成关于 $a$ 的表达式。代入 $a=1$ 得到一个解后，还要用单调性证明它是唯一解。\n\n### 解题步骤\n因为 $a>0$，\n$$\\frac1{x(a+x^3)}=\\frac1a\\left(\\frac1x-\\frac{x^2}{a+x^3}\\right).$$\n所以\n$$I(a)=\\lim_{R\\to\\infty}\\frac1a\\left[\\ln x-\\frac13\\ln(a+x^3)\\right]_1^R=\\frac{\\ln(1+a)}{3a}.$$\n题设等价于 $\\ln(1+a)/a=\\ln2$，$a=1$ 满足。\n\n令 $h(a)=\\ln(1+a)/a$。对 $a>0$，\n$$h'(a)=\\frac{a/(1+a)-\\ln(1+a)}{a^2}<0,$$\n其中不等号来自\n$$\\ln(1+a)=\\int_0^a\\frac{dt}{1+t}>\\frac{a}{1+a}.$$\n因此 $h$ 在正半轴严格递减，方程只有一个正解。\n\n### 结果与易错点\n$$\\boxed{a=1}.$$\n方程 $\\ln(1+a)=a\\ln2$ 在 $a=0$ 处也成立，但原题要求 $a>0$，且除以 $a$ 的表达式在零点不能直接代入。不存在另一个位于 $(0,1)$ 的正解。",
+    "source_verified": true,
+    "source_pages": [
+      81
+    ],
+    "issue": "",
+    "content_hash": "94ff0daa8277220f95e09fffdff6a12a56fe7a89f9ed9aceaa6ed81dab7e9d48",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "通过积分与严格单调性证明唯一正解，纠正初稿虚构第二个正根。"
+  },
+  "calculus-Q317": {
+    "key": "calculus-Q317",
+    "answer": "4",
+    "solution": "### 怎样想到\n积分变量是 $t$，外面的 $x$ 对积分而言是常数。先提出 $x$，再对乘积求导；积分上限仍是题面给出的 $x$。\n\n### 解题步骤\n按照当前题干，\n$$g(x)=\\int_0^x xf(t)\\,dt=x\\int_0^x f(t)\\,dt.$$\n由 $g(1)=1$ 得\n$$\\int_0^1 f(t)\\,dt=1.$$\n再由乘积求导和变上限积分求导，\n$$g'(x)=\\int_0^x f(t)\\,dt+xf(x).$$\n令 $x=1$，得到 $5=1+f(1)$，故 $f(1)=4$。\n\n答案册对应题使用的是另一上限 $x^2$。若题干为 $g(x)=x\\int_0^{x^2}f(t)\\,dt$，则\n$$g'(x)=\\int_0^{x^2}f(t)\\,dt+2x^2f(x^2),$$\n此时才有 $5=1+2f(1)$，得到 $f(1)=2$。这两个题面不能混用。\n\n### 结果与易错点\n当前显示题面的结果是 $\\boxed{f(1)=4}$。提出积分中的常因子不会把上限 $x$ 改成 $x^2$。",
+    "source_verified": true,
+    "source_pages": [
+      105,
+      106
+    ],
+    "issue": "做题本 PDF 第 121 页及上传文本的积分上限是 x；参考答案 PDF 第 105—106 页对应题的上限是 x²，故答案不同。下文按当前题面作答，并说明另一版本。",
+    "content_hash": "49f3b3245c4c693d84a925da7a88ac596853a54859bd631c32f3798306d8a474",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "直接对照做题本第 121 页及答案册第 105—106 页，确认上限差异，分别复算得 4 与 2。"
+  },
+  "calculus-Q302": {
+    "key": "calculus-Q302",
+    "answer": "C",
+    "solution": "### 怎样想到\n先按反常积分定义检查奇点和无穷区间，再利用对称性判断有限积分是否为零。\n\n### 解题步骤\n**A**：被积函数在$x=\\frac14$处有奇点。其原函数为\n$$\n\\int\\frac{dx}{(4x-1)^3}=-\\frac{1}{8(4x-1)^2}.\n$$\n在奇点左侧，\n$$\n\\int_0^{1/4-\\varepsilon}\\frac{dx}{(4x-1)^3}\n=\\frac18-\\frac{1}{128\\varepsilon^2}\\longrightarrow-\\infty.\n$$\n因此该反常积分不存在。\n\n**B**：虽然被积函数是奇函数，但无穷反常积分必须分别检查两侧。因为\n$$\n\\int_0^R\\frac{x}{\\sqrt{1+x^2}}dx\n=\\sqrt{1+R^2}-1\\longrightarrow+\\infty,\n$$\n所以右侧积分发散，整个反常积分不存在。不能用对称主值代替通常反常积分。\n\n**C**：在$[-1,1]$上，$\\dfrac{2+x}{2-x}>0$，故被积函数连续。函数\n$$\n\\ln\\frac{2+x}{2-x}\n$$\n是奇函数，与$x$相乘后为偶函数。对$x\\in(0,1]$，有$x>0$且$2+x>2-x$，所以\n$$\n x\\ln\\frac{2+x}{2-x}>0.\n$$\n因此\n$$\n\\int_{-1}^{1}x\\ln\\frac{2+x}{2-x}dx\n=2\\int_0^1x\\ln\\frac{2+x}{2-x}dx>0.\n$$\n\n**D**：$e^{x^2}$是偶函数，$\\sin x$是奇函数，所以$e^{x^2}\\sin x$是奇函数，且在区间上连续。因此\n$$\n\\int_{-\\pi/2}^{\\pi/2}e^{x^2}\\sin x\\,dx=0.\n$$\n\n故存在且不为零的是\n$$\n\\boxed{\\mathrm C}.\n$$\n\n### 结果与易错点\n奇函数在对称区间上的结论只适用于积分确实存在的情形；B的对称截断主值不能作为通常反常积分的值。A左侧发散方向为负无穷，但只要有一侧发散，积分就不存在。",
+    "source_verified": false,
+    "source_pages": [
+      100,
+      101
+    ],
+    "issue": "",
+    "content_hash": "1071cf425340078e077387e483b966bf617621c2d8404e802b898daf080af6a5",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "保留逐项复算后的数学讲解，去除未经核实的原书符号错误指责；按补充推导标注来源。"
+  },
+  "calculus-Q329": {
+    "key": "calculus-Q329",
+    "answer": "(I) $\\dfrac{1-\\sqrt2}{6}$；(II) $\\dfrac{e^{-1}-1}{4}$。",
+    "solution": "### 怎样想到\n两问中的$f$都是变上限积分。对所求积分分部积分时，把$f(x)$作为一部分，并用微积分基本定理求$f'(x)$，即可消去$f$。\n\n### 解题步骤\n**(I)** 由\n$$\nf(x)=\\int_1^x\\frac{dt}{\\sqrt{1+t^4}},\n$$\n得\n$$\nf'(x)=\\frac1{\\sqrt{1+x^4}},\\qquad f(1)=0.\n$$\n对\n$$\nI=\\int_0^1x^2f(x)dx\n$$\n分部积分，取$u=f(x)$、$dv=x^2dx$，则$v=x^3/3$。于是\n$$\n\\begin{aligned}\nI\n&=\\left[\\frac{x^3}{3}f(x)\\right]_0^1\n-\\frac13\\int_0^1\\frac{x^3}{\\sqrt{1+x^4}}dx\\\\\n&=-\\frac13\\int_0^1\\frac{x^3}{\\sqrt{1+x^4}}dx.\n\\end{aligned}\n$$\n令$u=1+x^4$，则$du=4x^3dx$，所以\n$$\n\\int_0^1\\frac{x^3}{\\sqrt{1+x^4}}dx\n=\\frac14\\int_1^2u^{-1/2}du\n=\\frac12(\\sqrt2-1).\n$$\n因此\n$$\n\\boxed{I=\\frac{1-\\sqrt2}{6}}.\n$$\n\n**(II)** 由\n$$\nf(x)=\\int_1^{x^2}e^{-t^2}dt,\n$$\n得\n$$\nf'(x)=2xe^{-x^4},\\qquad f(1)=0.\n$$\n对\n$$\nI=\\int_0^1xf(x)dx\n$$\n分部积分，取$u=f(x)$、$dv=x\\,dx$，则$v=x^2/2$。于是\n$$\n\\begin{aligned}\nI\n&=\\left[\\frac{x^2}{2}f(x)\\right]_0^1\n-\\frac12\\int_0^1x^2f'(x)dx\\\\\n&=-\\frac12\\int_0^1x^2\\cdot2xe^{-x^4}dx\\\\\n&=-\\int_0^1x^3e^{-x^4}dx.\n\\end{aligned}\n$$\n令$u=x^4$，则$du=4x^3dx$，从而\n$$\nI=-\\frac14\\int_0^1e^{-u}du\n=\\frac{e^{-1}-1}{4}.\n$$\n故\n$$\n\\boxed{I=\\frac{e^{-1}-1}{4}}.\n$$\n\n### 结果与易错点\n在$0\\le x<1$时两问中的$f(x)$均为负，因此所得积分应为负。分部积分的边界项因$f(1)=0$以及$x=0$处的幂因子为零而消失。",
+    "source_verified": false,
+    "source_pages": [
+      109
+    ],
+    "issue": "",
+    "content_hash": "a5542665291ab96016c93d43fdba58abf9f646f3bf9db1df569f1182ec04346b",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "保留逐项复算后的数学讲解，去除未经核实的原书符号错误指责；按补充推导标注来源。"
+  },
+  "calculus-Q279": {
+    "key": "calculus-Q279",
+    "answer": "在上述通常几何约定下，$S=\\dfrac a2(a^2+1)$，$S_1=\\dfrac a3\\left(a^2+\\dfrac32\\right)$，故$\\dfrac{S}{S_1}=\\dfrac{3(a^2+1)}{2a^2+3}<\\dfrac32$。",
+    "solution": "### 怎样想到\n若$OABC$按通常图形理解为由曲线$y=\\frac12+x^2$在$x=0$和$x=a$处的竖直截线构成，则两条平行边是$OC$和$AB$，而曲线下方区域是曲边梯形。分别用梯形面积公式和定积分计算即可。\n\n### 解题步骤\n按该约定，\n$$\nO=(0,0),\\quad A=(a,0),\\quad C=\\left(0,\\frac12\\right),\\quad B=\\left(a,\\frac12+a^2\\right).\n$$\n梯形的两条平行边长度分别为\n$$\nOC=\\frac12,\\qquad AB=\\frac12+a^2,\n$$\n两平行边之间的距离为$a$，所以\n$$\nS=\\frac12\\left(\\frac12+\\frac12+a^2\\right)a\n=\\frac a2(a^2+1).\n$$\n曲边梯形面积为\n$$\nS_1=\\int_0^a\\left(\\frac12+x^2\\right)dx\n=\\frac a2+\\frac{a^3}{3}\n=\\frac a3\\left(a^2+\\frac32\\right).\n$$\n因为$a>0$，所以\n$$\n\\frac{S}{S_1}\n=\\frac{\\frac a2(a^2+1)}{\\frac a3(a^2+\\frac32)}\n=\\frac{3(a^2+1)}{2a^2+3}.\n$$\n又有\n$$\n\\frac{3(a^2+1)}{2a^2+3}<\\frac32\n\\iff 2(a^2+1)<2a^2+3\n\\iff 2<3,\n$$\n故\n$$\n\\boxed{\\frac{S}{S_1}<\\frac32}.\n$$\n\n### 结果与易错点\n梯形面积使用直线段$BC$围成的梯形面积，曲边梯形面积才使用定积分。严格证明上述结果需要明确$B,C$的位置；题干文字本身没有给出这一几何信息。",
+    "source_verified": false,
+    "source_pages": [
+      93
+    ],
+    "issue": "做题本及上传文字没有明确标出 B、C。下文采用通常的曲边梯形约定：C 为曲线与 y 轴交点，B 为曲线上横坐标为 a 的点。",
+    "content_hash": "490e81c095858f5bfd5dbcf79b0865011e87316f278ddf453a3729cd90072e03",
+    "model": "gpt-6-sol",
+    "review_status": "manual",
+    "manual_review": "对照做题本 PDF 第 107 页确认文字缺少 B、C 定义；保留通常约定下的面积证明，去掉内部审核过程说明。"
+  }
+}

@@ -7,13 +7,10 @@ const textEl = (tag, className, text) => { const node = el(tag, className); node
 function studyLink(label, href, className = 'btn') {
   const link = textEl('a', className, label); link.href = href; return link;
 }
-let choiceStorage;
-try { choiceStorage = window.localStorage; } catch { /* In-memory selection still works. */ }
-const savedChoices = flow.createChoiceStore(choiceStorage);
 
 async function api(path, opts) {
   const r = await fetch('/api' + path, opts);
-  if (!r.ok) { let d; try { d = (await r.json()).detail; } catch (e) {} throw new Error(d || ('HTTP ' + r.status)); }
+  if (!r.ok) { let d; try { d = (await r.json()).detail; } catch (e) {} const error=new Error(typeof d==='string'?d:d?.message||('HTTP '+r.status));error.current=d?.current;error.status=r.status;throw error; }
   return r.json();
 }
 const WRONG_REASON_CN = { idea: '想不到', calculation: '算错', speed: '太慢' };
@@ -31,6 +28,8 @@ let disposeView = () => {};
 async function route() {
   closeQuestionDrafts();
   disposeView();
+  activeStudy = null;
+  studyOpenVersion++;
   disposeView = () => {};
   const current = flow.parseRoute(location.hash);
   const m = el('main', 'content-sheet'); m.id = 'main';
@@ -73,7 +72,14 @@ function problemCard(p, opts = {}) {
   if (!opts.paper && p.level) head.appendChild(textEl('span', 'badge ' + p.level, p.level));
   if (!opts.paper && p.qtype_cn) head.appendChild(textEl('span', 'badge kind', p.qtype_cn));
   q.appendChild(head);
-  q.appendChild(el('div', 'stem', p.stem_html));
+  const stem=el('div','stem',p.stem_markdown?MathMarkdown.render(p.stem_markdown.replace(/^【图示文字转写】[^\n]+/gm,'')):p.stem_html);
+  if(p.figure_url){
+    const figure=el('img','workbook-figure');figure.src=p.figure_url;figure.alt='本题原书数学图';figure.style.width=p.source_key==='calculus-Q374'||p.source_key==='calculus-Q385'?'420px':'260px';stem.append(figure);
+    const description=p.stem_markdown.match(/^【图示文字转写】([^\n]+)/m);
+    if(description){const detail=el('details');detail.append(textEl('summary','text-action','图形文字说明'),el('div','',MathMarkdown.render(description[1])));stem.append(detail);}
+  }
+  q.appendChild(stem);
+  if(p.relation){q.prepend(textEl('p','related-reason',p.relation.reason));q.prepend(textEl('div','related-skill',p.relation.stage+' · '+p.relation.skill));}
   if (p.qtype === 'choice' && Array.isArray(p.options) && p.options.length) {
     const choices = el('div', 'choices');
     choices.setAttribute('role', 'radiogroup');
@@ -82,11 +88,12 @@ function problemCard(p, opts = {}) {
     p.options.forEach(option => {
       const choice = el('button', 'choice');
       choice.type = 'button';
+      choice.dataset.key = option.key;
       choice.setAttribute('role', 'radio');
       const selected = savedChoices.get(p.id) === option.key;
       choice.setAttribute('aria-checked', String(selected));
       choice.classList.toggle('selected', selected);
-      choice.innerHTML = `<b class="choice-key">${option.key}</b><span class="choice-text">${option.text}</span>`;
+      choice.innerHTML = `<b class="choice-key">${option.key}</b><span class="choice-text">${p.options_are_markdown?MathMarkdown.render(option.text):option.text}</span>`;
       choice.onclick = () => {
         savedChoices.set(p.id, option.key);
         buttons.forEach(btn => {
@@ -104,7 +111,7 @@ function problemCard(p, opts = {}) {
   const acts = el('div', 'acts');
   const sol = el('div', 'sol');
   sol.id = 'solution-' + p.id;
-  if (p.has_sol) {
+  if (p.has_sol && !activeStudy) {
     const bSol = textEl('button', 'text-action', '查看解析');
     bSol.type = 'button';
     bSol.setAttribute('aria-controls', sol.id);
@@ -129,9 +136,9 @@ function problemCard(p, opts = {}) {
     acts.appendChild(bSol);
   }
   if (opts.practiceLink) {
-    acts.appendChild(studyLink('880 补练 →', p.practice ? flow.practiceHash({ questionId: p.id }) : '#/chapters', 'text-action practice-link'));
+    acts.appendChild(studyLink('练同法题与变式 →', flow.practiceHash({ questionId: p.id }), 'text-action practice-link'));
   }
-  if (p.answer_url) {
+  if (p.answer_url && !activeStudy) {
     const answer = studyLink('查看原版解析 ↗', p.answer_url, 'text-action book-link');
     answer.target = '_blank'; answer.rel = 'noopener';
     answer.title = '打开本章对应难度的答案，按题型与原书题号查阅';
@@ -151,29 +158,38 @@ function problemCard(p, opts = {}) {
   const tools = el('div', 'question-tools'); head.appendChild(tools);
   attachQuestionDrafts(q, p, tools);
   attachQuestionNotes(q, p, tools);
+  studyControls(q,p);
   return q;
 }
 
 // ---------- 视图:首页(套卷) ----------
 async function viewHome() {
   const m = $('main');
-  const papers = await api('/papers');
+  await migrateChoices();
+  const [papers,sessions] = await Promise.all([api('/papers'),api('/study/summary')]);
+  papers.forEach(p=>{p.study=sessions.find(s=>s.scope==='exam:'+p.year);});
   if (!m.isConnected) return;
   m.replaceChildren();
   m.appendChild(textEl('h1', 'title', '2020—2026 · 数二真题套卷'));
-  m.appendChild(textEl('p', 'lead', '按年份做套卷。遇到不会的题，进入对应知识点练880，练完返回原题继续。'));
-  const first = flow.focusPapers(papers)[0];
+  m.appendChild(textEl('p', 'lead', '以真题为主线：做题、核对解析、补练同法题与变式，再回到原题检验。'));
+  const focused=flow.focusPapers(papers);
+  const continuing=sessions.map(s=>focused.find(p=>s.scope==='exam:'+p.year&&s.started&&s.done<p.total)).find(Boolean);
+  const first = continuing||focused.find(p=>!p.study||p.study.done<p.total)||focused[0];
   const start = el('div', 'paper-start');
   const intro = el('div');
-  intro.appendChild(textEl('div', 'eyebrow', '从第一套开始'));
+  intro.appendChild(textEl('div', 'eyebrow', first.study?.started?'继续上次的套卷':'从这一套开始'));
   intro.appendChild(textEl('h2', '', `${first.year} 年数学二`));
-  intro.appendChild(textEl('p', '', first.available ? `${first.total} 道真题 · 选择题选项自动保留` : '这份套卷尚未入库。'));
+  intro.appendChild(textEl('p', '', first.available ? `${first.total} 道真题 · 答案与演算自动保存到服务器` : '这份套卷尚未入库。'));
   start.appendChild(intro);
   if (first.available) start.appendChild(studyLink('打开试卷 →', flow.paperHash(first.year), 'btn primary start-paper'));
   m.appendChild(start);
   const grid = el('div', 'grid priority-papers');
   flow.focusPapers(papers).forEach((paper, index) => grid.appendChild(yearCard(paper, index + 1)));
   m.appendChild(grid);
+  if(legacyMigrationError)m.appendChild(textEl('p','hint',legacyMigrationError));
+  if(legacyConflicts.length)m.appendChild(textEl('p','hint',`本机有 ${legacyConflicts.length} 道旧选项与服务器记录不同，未覆盖服务器。原始内容仍保留，可用下方“导出本机待同步与旧记录”下载。`));
+  const exports=el('div','study-actions');exports.append(studyLink('导出服务器学习记录','/api/study/export','text-action'));
+  const localBackup=textEl('button','text-action','导出本机待同步与旧记录');localBackup.onclick=downloadStudyDrafts;exports.append(localBackup);m.append(exports);
   const older = papers.filter(paper => !flow.YEARS.includes(paper.year));
   if (older.length) {
     const detail = el('details', 'older-papers');
@@ -191,7 +207,8 @@ function yearCard(paper, order) {
   if (order) card.appendChild(textEl('div', 'paper-order', `第 ${order} 套`));
   card.appendChild(textEl('div', 'y', paper.year));
   card.appendChild(textEl('div', 's', paper.available ? `${paper.total} 道真题` : '尚未入库'));
-  if (paper.available) card.appendChild(textEl('span', 'year-action', '打开试卷 →'));
+  if (paper.available) card.appendChild(textEl('span', 'year-action', paper.study?.started?'继续／回看试卷 →':'打开试卷 →'));
+  if(paper.study)card.appendChild(textEl('div','paper-progress',`已开始 ${paper.study.started} · 已复盘 ${paper.study.done} / ${paper.total}`));
   return card;
 }
 
@@ -199,6 +216,8 @@ function yearCard(paper, order) {
 async function viewPaper(year, focusId = null) {
   const m = $('main');
   const d = await api('/paper?year=' + year);
+  if (!m.isConnected) return;
+  await openStudy('exam:'+year,year+' 年数学二真题',d.problems);
   if (!m.isConnected) return;
   m.replaceChildren();
   m.className = 'paper-sheet';
@@ -285,6 +304,8 @@ async function viewPaper(year, focusId = null) {
 async function viewType(name, focusId = null) {
   const m = $('main'); m.innerHTML = '加载中…';
   let d; try { d = await api('/type?name=' + enc(name)); } catch (e) { m.innerHTML = ''; m.appendChild(el('div', 'empty', '出错:' + e.message)); return; }
+  if (!m.isConnected) return;
+  await openStudy('type:'+name,'题型练习 · '+name,d.problems);
   if (!m.isConnected) return;
   m.innerHTML = '';
   const t = d.type;
