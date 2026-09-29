@@ -63,10 +63,26 @@ d.commit();d.close();s.close()`,path.join(root,'backend/data/study.db'),database
     await pa.screenshot({path:path.join(tmp,'practice-mobile.png'),fullPage:false});
     const overflow=await pa.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+2);
     if(overflow)throw Error('Mobile page overflows horizontally');
+    await pa.goto(base+'/#/practice?question_id=17283');await pa.waitForSelector('.linked-exams');
+    await expect(pa.getByRole('heading',{name:/基础衔接/})).toBeVisible();
+    const direct=pa.locator('[data-qid="13519"]');
+    // Matching cards may be folded after the first six in a group.
+    await direct.evaluate(node=>node.classList.remove('folded'));
+    await direct.locator('.linked-exams summary').click();
+    await direct.locator('.linked-exam a[href*="question=17283"]').click();
+    await expect(pa).toHaveURL(/paper\/2026\?question=17283/);
+    await expect(pa.locator('[data-qid="17283"]')).toBeVisible();
+    await pa.goto(base+'/#/practice?question_id=17071');await pa.waitForSelector('.linked-exams');
+    const older=pa.locator('[data-qid="13482"]');
+    await older.evaluate(node=>node.classList.remove('folded'));
+    await older.locator('.linked-exams summary').click();
+    await older.locator('.linked-exam a[href*="question=17071"]').click();
+    await expect(pa).toHaveURL(/paper\/2016\?question=17071/);
+    await expect(pa.locator('[data-qid="17071"]')).toBeVisible();
     const legacy=await browser.newContext();await legacy.addInitScript(({qid})=>localStorage.setItem('math302-paper-choices-v1',JSON.stringify({[qid]:'D'})),{qid});
     const pl=await legacy.newPage();await pl.goto(base+'/#/home');await pl.waitForSelector('.priority-papers');
     await expect(pl.locator('.hint')).toContainText('未覆盖服务器');
     if(errors.length)throw Error(errors.join('\n'));
-    console.log(JSON.stringify({passed:['cross-browser restore','version conflict','offline close and recovery','attempt history and redo','inline text and answers','exam-linked practice','mobile layout','legacy conflict protection'],artifacts:tmp}));
+    console.log(JSON.stringify({passed:['cross-browser restore','version conflict','offline close and recovery','attempt history and redo','inline text and answers','exam-linked practice','mobile layout','legacy conflict protection','foundation groups','reverse current and older exam navigation'],artifacts:tmp}));
   }finally{if(browser)await browser.close();server.kill('SIGTERM');}
 })().catch(e=>{console.error(e);process.exitCode=1});

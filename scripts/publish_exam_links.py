@@ -87,7 +87,7 @@ def apply():
                 identity = (pair['source_id'], pair['target_id'])
                 if identity in seen: raise ValueError(f'Duplicate pair {identity}')
                 seen.add(identity)
-                if pair['stage'] not in ('同法练习', '变式检验') or not pair['reason'] or not pair['skill']: raise ValueError('Invalid relation')
+                if pair['stage'] not in ('同法练习', '变式检验', '基础衔接') or not pair['reason'] or not pair['skill']: raise ValueError('Invalid relation')
                 row = conn.execute('SELECT content_hash FROM workbook_text WHERE question_id=?', (pair['target_id'],)).fetchone()
                 if not row or row[0] != pair['target_hash']: raise ValueError(f'Stale target {pair["target_id"]}')
                 if not any(m['id']==pair['source_id'] and m['source_hash']==pair['source_hash'] for m in manifests): raise ValueError('Unreviewed source')

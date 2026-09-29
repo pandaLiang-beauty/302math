@@ -79,6 +79,30 @@ function problemCard(p, opts = {}) {
     if(description){const detail=el('details');detail.append(textEl('summary','text-action','图形文字说明'),el('div','',MathMarkdown.render(description[1])));stem.append(detail);}
   }
   q.appendChild(stem);
+  if (p.source_key || p.paper === 'lilin880') {
+    const linked = el('details', 'linked-exams');
+    linked.appendChild(textEl('summary', 'text-action', '对应真题'));
+    const links = el('div', 'linked-exam-list'); linked.appendChild(links);
+    let loaded = false, loading = false;
+    linked.addEventListener('toggle', async () => {
+      if (!linked.open || loaded || loading) return;
+      loading = true; links.textContent = '正在加载对应真题…';
+      try {
+        const data = await api('/study/exams?question_id=' + p.id);
+        links.replaceChildren();
+        for (const exam of data.exams) {
+          const row = el('div', 'linked-exam');
+          row.appendChild(studyLink(`${exam.year} 年第 ${exam.number} 题 · ${exam.stage}`, flow.paperHash(exam.year, exam.id), 'text-action'));
+          row.appendChild(textEl('p', 'related-reason', exam.reason));
+          links.appendChild(row);
+        }
+        if (!data.exams.length) links.textContent = '对应关系需要更新';
+        loaded = true;
+      } catch (e) { links.textContent = '加载失败，请收起后重试：' + e.message; }
+      finally { loading = false; }
+    });
+    q.appendChild(linked);
+  }
   if(p.relation){q.prepend(textEl('p','related-reason',p.relation.reason));q.prepend(textEl('div','related-skill',p.relation.stage+' · '+p.relation.skill));}
   if (p.qtype === 'choice' && Array.isArray(p.options) && p.options.length) {
     const choices = el('div', 'choices');

@@ -57,7 +57,7 @@ async function viewPractice({ questionId, chapter, topic, focusId }) {
   m.appendChild(studyLink('← ' + backLabel, backHash, 'back-link'));
   m.appendChild(textEl('div', 'crumb', `${data.chapter.subject} › ${data.chapter.name}`));
   m.appendChild(textEl('h1', 'title', data.mode==='related'?`${origin.year} 年第 ${origin.number} 题 · 同类补练`:data.topic ? data.topic.name : data.chapter.name));
-  m.appendChild(textEl('p', 'lead', data.mode==='related'?`围绕原题的关键解法，先练同法题，再检验变式。共 ${data.problems.length} 道，练完返回原题。`:`李林880 · ${data.problems.length} 道章节习题。答案、演算和复盘分别保存。`));
+  m.appendChild(textEl('p', 'lead', data.mode==='related'?`按同法练习、变式检验和基础衔接分组；基础衔接对应原题的某个步骤。共 ${data.problems.length} 道，练完返回原题。`:`李林880 · ${data.problems.length} 道章节习题。答案、演算和复盘分别保存。`));
   if (origin && data.mode!=='related' && !data.topic && !data.suggested_topics.length) {
     m.appendChild(textEl('div', 'hint', '这道真题暂未细分到知识点，先展示对应章节；你可以在侧栏选择要补练的知识点。'));
   }
@@ -70,7 +70,7 @@ async function viewPractice({ questionId, chapter, topic, focusId }) {
     });
     m.appendChild(original);
   }
-  const tiers = data.mode==='related'?['同法练习','变式检验']:['基础', '综合', '拓展'];
+  const tiers = data.mode==='related'?['同法练习','变式检验','基础衔接']:['基础', '综合', '拓展'];
   tiers.forEach(level => {
     const list = data.problems.filter(problem => (data.mode==='related'?problem.relation.stage:problem.level) === level);
     if (!list.length) return;

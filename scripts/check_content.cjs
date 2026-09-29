@@ -17,7 +17,7 @@ function check(key,text){
 }
 for(const r of input){check(r.source_key,r.stem_markdown);for(const o of r.options)check(r.source_key+':'+o.key,o.text);}
 for(const [k,v] of Object.entries(answers))for(const field of ['answer','note'])check(k+':'+field,v[field]||'');
-const relationPath=path.join(root,'content/relations.json');
+const relationPath=path.join(root,'content/complete-relations.json');
 if(fs.existsSync(relationPath))for(const r of JSON.parse(fs.readFileSync(relationPath,'utf8'))){check(`relation:${r.source_id}:${r.target_id}`,r.skill+'\n'+r.reason);}
 const result={questions:input.length,answers:Object.keys(answers).length,formulas,errors};
 fs.mkdirSync(path.join(root,'backend/data/authoring'),{recursive:true});fs.writeFileSync(path.join(root,'backend/data/authoring/render-check.json'),JSON.stringify(result,null,2));

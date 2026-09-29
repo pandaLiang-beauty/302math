@@ -45,6 +45,7 @@ def init(conn):
       skill TEXT NOT NULL, reason TEXT NOT NULL, stage TEXT NOT NULL DEFAULT '同法练习',
       source_hash TEXT NOT NULL, target_hash TEXT NOT NULL,
       PRIMARY KEY(source_id,target_id));
+    CREATE INDEX IF NOT EXISTS idx_relations_target ON math_relations(target_id);
     CREATE TABLE IF NOT EXISTS exam_explanations(
       question_id INTEGER PRIMARY KEY REFERENCES questions(id), content_hash TEXT NOT NULL,
       solution_markdown TEXT NOT NULL, solution_source TEXT NOT NULL,
@@ -230,3 +231,22 @@ def related(question_id: int):
             problems.append(p)
     return {'origin':origin,'chapter':chapter,'topic':None,'mode':'related','suggested_topics':[],
             'problems':workbook.enrich(problems),'books':[]}
+
+
+@router.get('/exams')
+def linked_exams(question_id: int):
+    with connection() as conn:
+        target = conn.execute('SELECT content_hash FROM workbook_text WHERE question_id=?', (question_id,)).fetchone()
+        if not target:
+            raise HTTPException(404, '未找到880题目')
+        rows = conn.execute("""SELECT q.id,q.year,q.number,q.stem_html,q.options_json,
+            r.stage,r.skill,r.reason,r.source_hash,r.target_hash
+            FROM math_relations r JOIN questions q ON q.id=r.source_id
+            WHERE r.target_id=? AND q.paper='math2'
+            ORDER BY CASE r.stage WHEN '同法练习' THEN 0 WHEN '变式检验' THEN 1 ELSE 2 END,q.year DESC,q.number""", (question_id,)).fetchall()
+        exams = []
+        for row in rows:
+            if row['target_hash'] != target['content_hash'] or row['source_hash'] != question_hash(row['stem_html'], row['options_json']):
+                continue
+            exams.append({k: row[k] for k in ('id','year','number','stage','skill','reason')})
+    return {'question_id': question_id, 'exams': exams}
